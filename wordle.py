@@ -4,7 +4,8 @@ import argparse
 
 parser = argparse.ArgumentParser(description="Wordle Finder")
 parser.set_defaults(
-    word_file="/usr/share/dict/words",
+    # word_file="/usr/share/dict/words",
+    word_file="wordle.txt",
     len=5,
 )
 parser.add_argument("--verbose", "-v", action="store_true", help="Show all the steps")

@@ -2,6 +2,8 @@ use std::collections::HashSet;
 use std::fs;
 use std::io;
 
+// const WORD_FILE: &str = "/usr/share/dict/words";
+const WORD_FILE: &str = "wordle.txt";
 const LEN: usize = 5;
 
 fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
@@ -29,10 +31,11 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
     println!("valid: {:?}", valid);
     println!("invalid: {:?}", invalid);
     println!("mask: {:?}", mask);
-    println!("wrong_spot: {:?}", mask);
+    println!("wrong_spot: {:?}", wrong_spot);
     let mut choices: Vec<String> = Vec::new();
     for w in words {
         let letters: HashSet<char> = w.chars().collect();
+        // println!("word={}, letters={:?}", w, letters);
         if letters.intersection(&valid).count() != valid.len() {
             // println!("!Valid: {}", w);
         } else if !letters.is_disjoint(&invalid) {
@@ -52,6 +55,7 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
                 }
             }
             if ok {
+                // println!("Got: {}", w);
                 choices.push(w.to_owned());
             }
         }
@@ -60,7 +64,7 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
 }
 
 fn main() -> io::Result<()> {
-    let words = fs::read_to_string("/usr/share/dict/words")?
+    let words = fs::read_to_string(WORD_FILE)?
         .lines()
         .filter(|w| w.len() == LEN)
         .map(|w| w.to_uppercase())
@@ -79,9 +83,14 @@ fn main() -> io::Result<()> {
         "NYMPH=.....".into(),
         "ELVER=EL.ER".into(),
     ];
+    let _cache_guesses: Vec<String> = vec![
+        "CHAIR=Cha..".into(),
+        "CLASH=C.a.h".into(),
+        "CATCH=CA.ch".into(),
+    ];
     let _magic_guesses: Vec<String> = vec!["ADIEU=a.i..".into(), "CLOTH=c....".into()];
 
-    let choices = solve(&words, &_elder_guesses);
+    let choices = solve(&words, &_cache_guesses);
     println!("{:?}", choices);
     Ok(())
 }

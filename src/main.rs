@@ -89,8 +89,9 @@ fn main() -> io::Result<()> {
         "CATCH=CA.ch".into(),
     ];
     let _magic_guesses: Vec<String> = vec!["ADIEU=a.i..".into(), "CLOTH=c....".into()];
+    let _kiosk_guesses: Vec<String> = vec!["SATIN=s..i.".into(), "ROUGH=.o...".into()];
 
-    let choices = solve(&words, &_cache_guesses);
+    let choices = solve(&words, &_kiosk_guesses);
     println!("{:?}", choices);
     Ok(())
 }

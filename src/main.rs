@@ -1,6 +1,17 @@
+use clap::Parser;
 use std::collections::HashSet;
 use std::fs;
 use std::io;
+
+#[derive(Parser, Debug)]
+#[command(author, version, about, long_about = None)]
+struct Args {
+    #[clap(flatten)]
+    verbose: clap_verbosity_flag::Verbosity,
+
+    #[arg(num_args(1..), required(true))]
+    guesses: Vec<String>,
+}
 
 // const WORD_FILE: &str = "/usr/share/dict/words";
 const WORD_FILE: &str = "wordle.txt";
@@ -64,6 +75,7 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
 }
 
 fn main() -> io::Result<()> {
+    let args = Args::parse();
     let words = fs::read_to_string(WORD_FILE)?
         .lines()
         .filter(|w| w.len() == LEN)
@@ -91,7 +103,7 @@ fn main() -> io::Result<()> {
     let _magic_guesses: Vec<String> = vec!["ADIEU=a.i..".into(), "CLOTH=c....".into()];
     let _kiosk_guesses: Vec<String> = vec!["SATIN=s..i.".into(), "ROUGH=.o...".into()];
 
-    let choices = solve(&words, &_kiosk_guesses);
+    let choices = solve(&words, &args.guesses);
     println!("{:?}", choices);
     Ok(())
 }

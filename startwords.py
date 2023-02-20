@@ -27,17 +27,25 @@ pos_pop = {c: [0 for _ in range(namespace.len)] for c in AtoZ}
 
 for w in WORDS:
     total_letters += len(w)
-    for i,c in enumerate(w):
+    for i, c in enumerate(w):
         letter_counts[c] += 1
         pos_pop[c][i] += 1
 
 frequencies = {
-    l: round(c / total_letters, 3)
+    l: c / total_letters
     for l, c in sorted(letter_counts.items(), reverse=True, key=itemgetter(1))
 }
-print(frequencies)
+
+for i, (l, p) in enumerate(frequencies.items()):
+    print(f"{l}: {p:.4f}  ", end="")
+    if i % 6 == 5: print()
+print("\n")
+
+print("   Freq   Order      1    2    3    4    5")
 for letter, positions in pos_pop.items():
-    print(f"{letter}: {positions}")
+    order = "".join([str(x[1]) for x in sorted([(w, i) for i, w in enumerate(positions, 1)], reverse=True, key=itemgetter(0))])
+    positions = " ".join(f"{p:4}" for p in positions)
+    print(f"{letter}: {frequencies[letter]:.4f} {order} - {positions}")
 print()
 
 start_words = defaultdict(list)
@@ -65,4 +73,6 @@ for letter in AtoZ:
     topwords = sorted(alpha_words[letter], reverse=True, key=itemgetter(1))[
         : namespace.top_per_letter
     ]
-    print(f"{letter}: {' '.join(ws[0] for ws in topwords if ws[1] >= namespace.threshold_score)}")
+    print(
+        f"{letter}: {' '.join(ws[0] for ws in topwords if ws[1] >= namespace.threshold_score)}"
+    )

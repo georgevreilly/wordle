@@ -1,4 +1,5 @@
 use clap::Parser;
+use log::{debug, info, trace};
 use std::collections::HashSet;
 use std::fs;
 use std::io;
@@ -23,6 +24,7 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
     let mut mask: [char; LEN] = ['\0'; LEN];
     let mut wrong_spot: Vec<HashSet<char>> = (0..LEN).map(|_| HashSet::new()).collect();
     for guess in guesses {
+        // TODO: better validation
         if let Some((word, result)) = guess.split_once("=") {
             for i in 0..LEN {
                 let w: char = word.as_bytes()[i].into();
@@ -39,34 +41,34 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
             }
         }
     }
-    println!("valid: {:?}", valid);
-    println!("invalid: {:?}", invalid);
-    println!("mask: {:?}", mask);
-    println!("wrong_spot: {:?}", wrong_spot);
+    info!("valid: {:?}", valid);
+    info!("invalid: {:?}", invalid);
+    info!("mask: {:?}", mask);
+    info!("wrong_spot: {:?}", wrong_spot);
     let mut choices: Vec<String> = Vec::new();
     for w in words {
         let letters: HashSet<char> = w.chars().collect();
-        // println!("word={}, letters={:?}", w, letters);
+        trace!("word={}, letters={:?}", w, letters);
         if letters.intersection(&valid).count() != valid.len() {
-            // println!("!Valid: {}", w);
+            trace!("!Valid: {}", w);
         } else if !letters.is_disjoint(&invalid) {
-            // println!("Invalid: {}", w);
+            trace!("Invalid: {}", w);
         } else {
             let mut ok = true;
             for i in 0..LEN {
                 let c: char = w.as_bytes()[i].into();
                 if mask[i] != '\0' && c != mask[i] {
-                    // println!("!Mask: {}", w);
+                    trace!("!Mask: {}", w);
                     ok = false;
                     break;
                 } else if wrong_spot[i].contains(&c) {
-                    // println!("WrongSpot: {}", w);
+                    trace!("WrongSpot: {}", w);
                     ok = false;
                     break;
                 }
             }
             if ok {
-                // println!("Got: {}", w);
+                debug!("Got: {}", w);
                 choices.push(w.to_owned());
             }
         }
@@ -76,6 +78,10 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
 
 fn main() -> io::Result<()> {
     let args = Args::parse();
+    println!("{:?}", args.verbose);
+    env_logger::Builder::new()
+        .filter_level(args.verbose.log_level_filter())
+        .init();
     let words = fs::read_to_string(WORD_FILE)?
         .lines()
         .filter(|w| w.len() == LEN)
@@ -104,6 +110,6 @@ fn main() -> io::Result<()> {
     let _kiosk_guesses: Vec<String> = vec!["SATIN=s..i.".into(), "ROUGH=.o...".into()];
 
     let choices = solve(&words, &args.guesses);
-    println!("{:?}", choices);
+    println!("{}", choices.join("\n"));
     Ok(())
 }

@@ -87,28 +87,6 @@ fn main() -> io::Result<()> {
         .filter(|w| w.len() == LEN)
         .map(|w| w.to_uppercase())
         .collect::<Vec<String>>();
-    //println!("{:?}", words.as_slice()[0..20].to_vec());
-    let _crazy_guesses: Vec<String> = vec![
-        "GRAIL=.RA..".into(),
-        "TRACK=.RAc.".into(),
-        "CRAMP=CRA..".into(),
-        "CRABS=CRA..".into(),
-        "CRAZY=CRAZ.".into(),
-    ];
-    let _elder_guesses: Vec<String> = vec![
-        "RAISE=r...e".into(),
-        "CLOUT=.L...".into(),
-        "NYMPH=.....".into(),
-        "ELVER=EL.ER".into(),
-    ];
-    let _cache_guesses: Vec<String> = vec![
-        "CHAIR=Cha..".into(),
-        "CLASH=C.a.h".into(),
-        "CATCH=CA.ch".into(),
-    ];
-    let _magic_guesses: Vec<String> = vec!["ADIEU=a.i..".into(), "CLOTH=c....".into()];
-    let _kiosk_guesses: Vec<String> = vec!["SATIN=s..i.".into(), "ROUGH=.o...".into()];
-
     let choices = solve(&words, &args.guesses);
     println!("{}", choices.join("\n"));
     Ok(())

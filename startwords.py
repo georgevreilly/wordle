@@ -18,34 +18,47 @@ namespace = parser.parse_args()
 AtoZ = [chr(c) for c in range(ord("A"), ord("Z") + 1)]
 
 
+def rev_sort_by_count(pairs: list[tuple[str, int]]):
+    return sorted(pairs, reverse=True, key=itemgetter(1))
+
+
 with open(namespace.word_file) as f:
     WORDS = [w.upper() for w in f.read().splitlines() if len(w) == namespace.len]
 
+print("Letter Frequencies")
 letter_counts = {c: 0 for c in AtoZ}
-total_letters = 0
+total_letters = len(WORDS) * namespace.len
 pos_pop = {c: [0 for _ in range(namespace.len)] for c in AtoZ}
 
 for w in WORDS:
-    total_letters += len(w)
     for i, c in enumerate(w):
         letter_counts[c] += 1
         pos_pop[c][i] += 1
 
 frequencies = {
-    l: c / total_letters
-    for l, c in sorted(letter_counts.items(), reverse=True, key=itemgetter(1))
+    l: c / total_letters for l, c in rev_sort_by_count(letter_counts.items())
 }
 
 for i, (l, p) in enumerate(frequencies.items()):
     print(f"{l}: {p:.4f}  ", end="")
-    if i % 6 == 5: print()
+    if i % 6 == 5:
+        print()
 print("\n")
 
-print("   Freq   Order      1    2    3    4    5")
+print("   Freq% Order      1    2    3    4    5")
 for letter, positions in pos_pop.items():
-    order = "".join([str(x[1]) for x in sorted([(w, i) for i, w in enumerate(positions, 1)], reverse=True, key=itemgetter(0))])
+    order = "".join(
+        [
+            str(x[1])
+            for x in sorted(
+                [(n, i) for i, n in enumerate(positions, 1)],
+                reverse=True,
+                key=itemgetter(0),
+            )
+        ]
+    )
     positions = " ".join(f"{p:4}" for p in positions)
-    print(f"{letter}: {frequencies[letter]:.4f} {order} - {positions}")
+    print(f"{letter}: {100.0 * frequencies[letter]:5.2f} {order} - {positions}")
 print()
 
 start_words = defaultdict(list)
@@ -54,25 +67,59 @@ alpha_words = {c: [] for c in AtoZ}
 for w in WORDS:
     letters = {c for c in w}
     if len(letters) == namespace.len:
-        score = sum(letter_counts[c] for c in w) / total_letters
-        score += sum(pos_pop[c][i] for i, c in enumerate(w)) / total_letters
+        score = sum(letter_counts[c] for c in w)
+        score += sum(pos_pop[c][i] for i, c in enumerate(w))
+        # TODO: use ngram popularity in score
         start_words["".join(sorted(letters))].append((w, score))
         alpha_words[w[0]].append((w, score))
 
 print(f"{len(start_words)}/{len(WORDS)} words with {namespace.len} distinct letters")
+
+print("Most popular sets of letters, best position first")
 topwords = sorted(start_words.items(), reverse=True, key=lambda kv: kv[1][0][1])[
     : namespace.topmost
 ]
 for i, x in enumerate(topwords, 1):
-    anagrams = [ws[0] for ws in x[1]]
+    anagrams = [f"{ws[0]}" for ws in sorted(x[1], reverse=True, key=itemgetter(1))]
     print(f"{i:2}: {' '.join(anagrams)}")
 
-print()
-
+print("\n\nBest Start Words, weighted by position\n")
 for letter in AtoZ:
-    topwords = sorted(alpha_words[letter], reverse=True, key=itemgetter(1))[
-        : namespace.top_per_letter
-    ]
+    topwords = rev_sort_by_count(alpha_words[letter])[: namespace.top_per_letter]
     print(
         f"{letter}: {' '.join(ws[0] for ws in topwords if ws[1] >= namespace.threshold_score)}"
     )
+
+
+def ngrams(n: int):
+    ngram_counts = defaultdict(int)
+    for w in WORDS:
+        for i in range(namespace.len - n + 1):
+            ngram_counts[w[i : i + n]] += 1
+    ngram_counts = rev_sort_by_count(ngram_counts.items())
+    prefixes = {c: [] for c in AtoZ}
+    suffixes = {c: [] for c in AtoZ}
+    for nc in ngram_counts:
+        prefixes[nc[0][0]].append(nc)
+        suffixes[nc[0][-1]].append(nc)
+    for c in AtoZ:
+        prefixes[c] = rev_sort_by_count(prefixes[c])
+        suffixes[c] = rev_sort_by_count(suffixes[c])
+    return ngram_counts, prefixes, suffixes
+
+
+print("\n2-ngrams")
+ngrams2, prefixes, suffixes = ngrams(2)
+for i in range(1, 10 + 1):
+    print(f"{i:2}: {sum(1 if nc[1] == i else 0 for nc in ngrams2)}, ", end="")
+print("\n")
+
+for i, nc in enumerate(nc for nc in ngrams2 if nc[1] >= 100):
+    print(f"{nc[0]}: {nc[1]:3}  ", end="")
+    if i % 8 == 7:
+        print()
+print("\n")
+
+for c in AtoZ:
+    print(f"{c}:\t{' '.join([nc[0] for nc in prefixes[c] if nc[1] >= 50])}")
+    print(f"\t{' '.join([nc[0] for nc in suffixes[c] if nc[1] >= 50])}")

@@ -33,10 +33,19 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Result<Vec<String>> {
             for i in 0..LEN {
                 let w: u8 = word.as_bytes()[i];
                 let r: u8 = result.as_bytes()[i];
+                if !(b'A'..=b'Z').contains(&w) {
+                    return Err(anyhow!("{:?} should be uppercase", word));
+                }
                 if (b'A'..=b'Z').contains(&r) {
+                    if r != w {
+                        return Err(anyhow!("Mismatch at position {} between {:?} and {:?}", i, word, result));
+                    }
                     valid.insert(w);
                     mask[i] = w;
                 } else if (b'a'..=b'z').contains(&r) {
+                    if r - b'a' != w - b'A' {
+                        return Err(anyhow!("Mismatch at position {} between {:?} and {:?}", i, word, result));
+                    }
                     valid.insert(w);
                     wrong_spot[i].insert(w);
                 } else if r == b'.' {

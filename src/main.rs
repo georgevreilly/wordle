@@ -18,11 +18,26 @@ struct Args {
 const WORD_FILE: &str = "wordle.txt";
 const LEN: usize = 5;
 
-fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Result<Vec<String>> {
-    let mut valid: HashSet<u8> = HashSet::new();
-    let mut invalid: HashSet<u8> = HashSet::new();
-    let mut mask: [u8; LEN] = [b'\0'; LEN];
-    let mut wrong_spot: Vec<HashSet<u8>> = (0..LEN).map(|_| HashSet::new()).collect();
+struct ParsedGuesses {
+    valid: HashSet<u8>,
+    invalid: HashSet<u8>,
+    mask: [u8; LEN],
+    wrong_spot: Vec<HashSet<u8>>,
+}
+
+impl ParsedGuesses {
+    fn new() -> Self {
+        Self {
+            valid: HashSet::new(),
+            invalid: HashSet::new(),
+            mask: [b'\0'; LEN],
+            wrong_spot: (0..LEN).map(|_| HashSet::new()).collect(),
+        }
+    }
+}
+
+fn parse_guesses(guesses: &Vec<String>) -> Result<ParsedGuesses> {
+    let mut pg = ParsedGuesses::new();
     for guess in guesses {
         if let Some((word, result)) = guess.split_once('=') {
             if word.len() != LEN {
@@ -38,45 +53,60 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Result<Vec<String>> {
                 }
                 if (b'A'..=b'Z').contains(&r) {
                     if r != w {
-                        return Err(anyhow!("Mismatch at position {} between {:?} and {:?}", i, word, result));
+                        return Err(anyhow!(
+                            "Mismatch at position {} between {:?} and {:?}",
+                            i,
+                            word,
+                            result
+                        ));
                     }
-                    valid.insert(w);
-                    mask[i] = w;
+                    pg.valid.insert(w);
+                    pg.mask[i] = w;
                 } else if (b'a'..=b'z').contains(&r) {
                     if r - b'a' != w - b'A' {
-                        return Err(anyhow!("Mismatch at position {} between {:?} and {:?}", i, word, result));
+                        return Err(anyhow!(
+                            "Mismatch at position {} between {:?} and {:?}",
+                            i,
+                            word,
+                            result
+                        ));
                     }
-                    valid.insert(w);
-                    wrong_spot[i].insert(w);
+                    pg.valid.insert(w);
+                    pg.wrong_spot[i].insert(w);
                 } else if r == b'.' {
-                    invalid.insert(w);
+                    pg.invalid.insert(w);
                 } else {
                     return Err(anyhow!("Invalid result char: {:?}", r));
                 }
             }
         }
     }
-    info!("valid: {:?}", valid);
-    info!("invalid: {:?}", invalid);
-    info!("mask: {:?}", mask);
-    info!("wrong_spot: {:?}", wrong_spot);
+    Ok(pg)
+}
+
+fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Result<Vec<String>> {
+    let pg = parse_guesses(guesses)?;
+    info!("valid: {:?}", pg.valid);
+    info!("invalid: {:?}", pg.invalid);
+    info!("mask: {:?}", pg.mask);
+    info!("wrong_spot: {:?}", pg.wrong_spot);
     let mut choices: Vec<String> = Vec::new();
     for w in words {
         let letters: HashSet<u8> = w.bytes().collect();
         trace!("word={}, letters={:?}", w, letters);
-        if letters.intersection(&valid).count() != valid.len() {
+        if letters.intersection(&pg.valid).count() != pg.valid.len() {
             trace!("!Valid: {}", w);
-        } else if !letters.is_disjoint(&invalid) {
+        } else if !letters.is_disjoint(&pg.invalid) {
             trace!("Invalid: {}", w);
         } else {
             let mut ok = true;
             for i in 0..LEN {
                 let c: u8 = w.as_bytes()[i];
-                if mask[i] != b'\0' && c != mask[i] {
+                if pg.mask[i] != b'\0' && c != pg.mask[i] {
                     trace!("!Mask: {}", w);
                     ok = false;
                     break;
-                } else if wrong_spot[i].contains(&c) {
+                } else if pg.wrong_spot[i].contains(&c) {
                     trace!("WrongSpot: {}", w);
                     ok = false;
                     break;

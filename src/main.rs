@@ -19,23 +19,23 @@ const WORD_FILE: &str = "wordle.txt";
 const LEN: usize = 5;
 
 fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
-    let mut valid: HashSet<char> = HashSet::new();
-    let mut invalid: HashSet<char> = HashSet::new();
-    let mut mask: [char; LEN] = ['\0'; LEN];
-    let mut wrong_spot: Vec<HashSet<char>> = (0..LEN).map(|_| HashSet::new()).collect();
+    let mut valid: HashSet<u8> = HashSet::new();
+    let mut invalid: HashSet<u8> = HashSet::new();
+    let mut mask: [u8; LEN] = [b'\0'; LEN];
+    let mut wrong_spot: Vec<HashSet<u8>> = (0..LEN).map(|_| HashSet::new()).collect();
     for guess in guesses {
         // TODO: better validation
         if let Some((word, result)) = guess.split_once("=") {
             for i in 0..LEN {
-                let w: char = word.as_bytes()[i].into();
-                let r: char = result.as_bytes()[i].into();
-                if 'A' <= r && r <= 'Z' {
+                let w: u8 = word.as_bytes()[i];
+                let r: u8 = result.as_bytes()[i];
+                if b'A' <= r && r <= b'Z' {
                     valid.insert(w);
                     mask[i] = w;
-                } else if 'a' <= r && r <= 'z' {
+                } else if b'a' <= r && r <= b'z' {
                     valid.insert(w);
                     wrong_spot[i].insert(w);
-                } else if r == '.' {
+                } else if r == b'.' {
                     invalid.insert(w);
                 }
             }
@@ -47,7 +47,7 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
     info!("wrong_spot: {:?}", wrong_spot);
     let mut choices: Vec<String> = Vec::new();
     for w in words {
-        let letters: HashSet<char> = w.chars().collect();
+        let letters: HashSet<u8> = w.bytes().collect();
         trace!("word={}, letters={:?}", w, letters);
         if letters.intersection(&valid).count() != valid.len() {
             trace!("!Valid: {}", w);
@@ -56,8 +56,8 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
         } else {
             let mut ok = true;
             for i in 0..LEN {
-                let c: char = w.as_bytes()[i].into();
-                if mask[i] != '\0' && c != mask[i] {
+                let c: u8 = w.as_bytes()[i];
+                if mask[i] != b'\0' && c != mask[i] {
                     trace!("!Mask: {}", w);
                     ok = false;
                     break;

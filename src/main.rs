@@ -26,17 +26,17 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Result<Vec<String>> {
     for guess in guesses {
         if let Some((word, result)) = guess.split_once('=') {
             if word.len() != LEN {
-                return Err(anyhow!("{:?} is not {} characters long", word, LEN))
+                return Err(anyhow!("{:?} is not {} characters long", word, LEN));
             } else if result.len() != LEN {
-                return Err(anyhow!("{:?} is not {} characters long", result, LEN))
+                return Err(anyhow!("{:?} is not {} characters long", result, LEN));
             }
             for i in 0..LEN {
                 let w: u8 = word.as_bytes()[i];
                 let r: u8 = result.as_bytes()[i];
-                if b'A' <= r && r <= b'Z' {
+                if (b'A'..=b'Z').contains(&r) {
                     valid.insert(w);
                     mask[i] = w;
-                } else if b'a' <= r && r <= b'z' {
+                } else if (b'a'..=b'z').contains(&r) {
                     valid.insert(w);
                     wrong_spot[i].insert(w);
                 } else if r == b'.' {

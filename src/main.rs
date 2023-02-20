@@ -1,8 +1,8 @@
+use anyhow::{anyhow, Result};
 use clap::Parser;
 use log::{debug, info, trace};
 use std::collections::HashSet;
 use std::fs;
-use std::io;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -18,14 +18,18 @@ struct Args {
 const WORD_FILE: &str = "wordle.txt";
 const LEN: usize = 5;
 
-fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
+fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Result<Vec<String>> {
     let mut valid: HashSet<u8> = HashSet::new();
     let mut invalid: HashSet<u8> = HashSet::new();
     let mut mask: [u8; LEN] = [b'\0'; LEN];
     let mut wrong_spot: Vec<HashSet<u8>> = (0..LEN).map(|_| HashSet::new()).collect();
     for guess in guesses {
-        // TODO: better validation
-        if let Some((word, result)) = guess.split_once("=") {
+        if let Some((word, result)) = guess.split_once('=') {
+            if word.len() != LEN {
+                return Err(anyhow!("{:?} is not {} characters long", word, LEN))
+            } else if result.len() != LEN {
+                return Err(anyhow!("{:?} is not {} characters long", result, LEN))
+            }
             for i in 0..LEN {
                 let w: u8 = word.as_bytes()[i];
                 let r: u8 = result.as_bytes()[i];
@@ -37,6 +41,8 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
                     wrong_spot[i].insert(w);
                 } else if r == b'.' {
                     invalid.insert(w);
+                } else {
+                    return Err(anyhow!("Invalid result char: {:?}", r));
                 }
             }
         }
@@ -73,12 +79,11 @@ fn solve(words: &Vec<String>, guesses: &Vec<String>) -> Vec<String> {
             }
         }
     }
-    choices
+    Ok(choices)
 }
 
-fn main() -> io::Result<()> {
+fn main() -> Result<()> {
     let args = Args::parse();
-    println!("{:?}", args.verbose);
     env_logger::Builder::new()
         .filter_level(args.verbose.log_level_filter())
         .init();
@@ -87,7 +92,7 @@ fn main() -> io::Result<()> {
         .filter(|w| w.len() == LEN)
         .map(|w| w.to_uppercase())
         .collect::<Vec<String>>();
-    let choices = solve(&words, &args.guesses);
+    let choices = solve(&words, &args.guesses)?;
     println!("{}", choices.join("\n"));
     Ok(())
 }

@@ -16,8 +16,11 @@ parser.add_argument(
     help="Seven letters. Center (mandatory) letter first."
 )
 namespace = parser.parse_args()
-if len(namespace.letters) != 7 or not all("A" <= c <= "Z" for c in namespace.letters):
-    raise ValueError(f"Invalid letters for Spelling Bee: {namespace.letters!r}")
+
+center = namespace.letters[0]
+others = {c for c in namespace.letters[1:]}
+if len({c for c in namespace.letters}) != 7 or not all("A" <= c <= "Z" for c in namespace.letters):
+    raise ValueError(f"Need 7 distinct uppercase letters for Spelling Bee: {namespace.letters!r}")
 
 
 def debug(s):
@@ -34,10 +37,7 @@ with open(namespace.word_file) as f:
     WORDS = [w.upper() for w in f.read().splitlines()]
 
 
-center = namespace.letters[0]
-others = {c for c in namespace.letters[1:]}
-
-bingos = []
+pangrams = []
 for w in WORDS:
     if len(w) < namespace.min:
         continue
@@ -47,7 +47,7 @@ for w in WORDS:
     if chars - others != {center}:
         continue
     if len(chars) == 7:
-        bingos.append(w)
+        pangrams.append(w)
     print(w)
 
-print("\nBingos: {}".format("\n".join(bingos)))
+print("\nPangrams:\n\t{}".format("\n\t".join(pangrams)))

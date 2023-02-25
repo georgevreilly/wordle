@@ -7,8 +7,10 @@ parser.set_defaults(
     # word_file="/usr/share/dict/words",
     word_file="wordle.txt",
     len=5,
+    verbose=0,
 )
-parser.add_argument("--verbose", "-v", action="store_true", help="Show all the steps")
+parser.add_argument(
+    "--verbose", "-v", action="count", help="Show all the steps")
 parser.add_argument(
     "guess",
     nargs="+",
@@ -53,6 +55,11 @@ def debug(s):
         print(s)
 
 
+def trace(s):
+    if namespace.verbose >= 2:
+        print(s)
+
+
 with open(namespace.word_file) as f:
     WORDS = [w.upper() for w in f.read().splitlines() if len(w) == namespace.len]
 
@@ -65,6 +72,7 @@ invalid = set()  # Gray
 valid = set()  # Green or Yellow
 mask = [None] * namespace.len  # Exact match for position (Green)
 wrong_spot = [set() for _ in range(namespace.len)]  # Wrong spot (Yellow)
+
 for guess in namespace.guess:
     word, result = guess.split("=")
     assert len(word) == namespace.len
@@ -78,7 +86,8 @@ for guess in namespace.guess:
             valid.add(w)
             wrong_spot[i].add(w)
         elif r == ".":
-            invalid.add(w)
+            if w not in valid:
+                invalid.add(w)
         else:
             raise ValueError(f"Unexpected {r} for {w}")
 
@@ -91,13 +100,13 @@ choices = []
 for w in WORDS:
     letters = {c for c in w}
     if letters & valid != valid:
-        debug(f"!Valid: {w}")
+        trace(f"!Valid: {w}")
     elif letters & invalid:
-        debug(f"Invalid: {w}")
+        trace(f"Invalid: {w}")
     elif any(m is not None and c != m for c, m in zip(w, mask)):
-        debug(f"!Mask: {w}")
+        trace(f"!Mask: {w}")
     elif any(c in ws for c, ws in zip(w, wrong_spot)):
-        debug(f"WrongSpot: {w}")
+        trace(f"WrongSpot: {w}")
     else:
         choices.append(w)
         debug(f"Got: {w}")

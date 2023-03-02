@@ -15,6 +15,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * `HEARS=...rs SCRUB=S.RU.` *includes* `SYRUP`
 * `CRATE=.r..E WORSE=WORSE`
 * `MARES=.a... FLACK=.la.k LAIKA=l..KA` *includes* `POLKA`
+* `FARES=...es SKITE=s...E MOUSE=MO.SE` yields `MOOSE`
 
 The command line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green).
@@ -32,4 +33,7 @@ The strings in `wordle.txt` were extracted from `wordle.blahblah.js`.
 You can also use `/usr/share/dict/words`.
 
 In addition, various statistics are computed in `startwords.py`,
-which really should be converted to an Jupyter notebook with graphs.
+which really should be converted to a Jupyter notebook with graphs.
+
+For Spelling Bee, use `bee.py` with `words_alpha.txt`,
+which came from https://github.com/dwyl/english-words.

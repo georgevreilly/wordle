@@ -17,6 +17,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * `MARES=.a... FLACK=.la.k LAIKA=l..KA` *includes* `POLKA`
 * `FARES=...es SKITE=s...E MOUSE=MO.SE` yields `MOOSE`
 * `BALES=ba.e. KEBAB=.eba. REBAR=.eba. ABATE=AB..E` *includes* `ABOVE`
+* `MATES=.at.s STARK=Sta.. SPLAT=S..AT` *includes* `SQUAT`
 
 The command line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green).

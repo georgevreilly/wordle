@@ -22,6 +22,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * `LEAKS=..... MIGHT=.i..t BLITZ=..it. OPTIC=o.tIC TONIC=TO.IC` *includes* `TOXIC`
 * `MULCH=..... TEARS=..... WINDY=.IN.Y` *includes* `PINKY`
 * `ADIEU=...e. TROPE=.ro.E FORCE=.OR.E WORSE=.ORSE` *includes* `HORSE`
+* `CRAMP=.ra.. GUILT=g..l. LARGE=large` yields `REGAL`
 
 The command line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green).

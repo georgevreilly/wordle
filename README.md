@@ -30,6 +30,11 @@ Given a series of Wordle guesses, find the words that can fit.
 * 632: `SLANG=.LA.. GRADE=..A.E` *includes* `BLAME`
 * 633: `GRAPE=.r... CLIMB=.l... WOUND=..u.. HULKS=.Ul.s` yields `SURLY`
 * 634: `CLOUT=..... GRAPE=...pe WINED=w..E. SHEEP=S.EEP` yields `SWEEP`
+* 635: `CRAMP=Cr... FIRST=.Ir.. CIDER=CIDER`
+* 636: `GROUT=..... CHASE=..A.e PEAKY=.EA.Y BEADY=.EA.Y LEAFY=lEA.Y` *includes* `MEALY`
+* 637: `PILOT=....T CHART=cha.t` *includes* `YACHT`
+* 638: `STRIP=..r.. GRAND=.R..d DROVE=dRo.e ORDER=oRde.` yields `CREDO`
+* 639: `PRINT=..... CLASH=.L... GLOBE=GLO.E` yields `GLOVE`
 
 The command line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green).

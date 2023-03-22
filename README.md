@@ -35,6 +35,8 @@ Given a series of Wordle guesses, find the words that can fit.
 * 637: `PILOT=....T CHART=cha.t` *includes* `YACHT`
 * 638: `STRIP=..r.. GRAND=.R..d DROVE=dRo.e ORDER=oRde.` yields `CREDO`
 * 639: `PRINT=..... CLASH=.L... GLOBE=GLO.E` yields `GLOVE`
+* 640: `GRIPE=g.... CLOUT=..out` *includes* `TOUGH`
+* 641: `BRING=..... PLATE=...te SHOUT=...uT` *includes* `DUVET`
 
 The command line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green).

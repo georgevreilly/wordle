@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# shellcheck disable=SC2016
+IFS=' ' read -r -a guesses < <(grep "$1" README.md | sed 's/[^`]*`\([^`]*\)`.*/\1/')
+./wordle.py "${guesses[@]}"

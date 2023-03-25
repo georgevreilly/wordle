@@ -39,6 +39,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 641: `BRING=..... PLATE=...te SHOUT=...uT` *includes* `DUVET`
 * 642: `WRING=..i.. PLATE=..At.` yields `STAID`
 * 643: `FRAIL=.R... CRUDE=.Ru.. SHOUT=..OUT` *includes* `GROUT`
+* 644: `BRAIN=.r... CLOVE=..ove` *includes* `VOTER`
 
 The command line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green).

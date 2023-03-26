@@ -4,4 +4,5 @@
 IFS=' ' read -r -a guesses < <(grep "$1" README.md | sed 's/[^`]*`\([^`]*\)`.*/\1/')
 
 IFS=$'\n' read -d '' -r -a guesses < <(grep "$1" README.md | grep -o ".....=....." && printf '\0')
+echo "${#guesses[@]}: ${guesses[@]}"
 ./wordle.py "${guesses[@]}"

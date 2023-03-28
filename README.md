@@ -41,6 +41,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 643: `FRAIL=.R... CRUDE=.Ru.. SHOUT=..OUT` *includes* `GROUT`
 * 644: `BRAIN=.r... CLOVE=..ove` *includes* `VOTER`
 * 645: `CRONE=...nE PLAIT=...It` yields `UNTIE`
+* 646: `SLANG=..ANg` *includes* `GUANO`
 
 The command line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green).

@@ -46,6 +46,8 @@ Given a series of Wordle guesses, find the words that can fit.
 * 648: `CIVET=...ET EGRET=e..ET SLEET=s.eET` *includes* `BESET`
 * 649: `GRIEF=.R.e. CHEST=..E.. BREAK=BREA. BREAM=BREA.` yields `BREAD`
 * 650: `SLANG=..... GROUT=.r... CHIRP=...R. MERRY=.e.RY` yields `EVERY`
+* 651: `CHART=char. REACH=r.aCH` *includes* `MARCH`
+* 652: `WHILE=..... CRAMP=c.... DONUT=.o..t SCOTS=ScOt.` yields `STOCK`
 
 The command line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green).

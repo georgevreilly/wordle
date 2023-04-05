@@ -49,6 +49,8 @@ Given a series of Wordle guesses, find the words that can fit.
 * 651: `CHART=char. REACH=r.aCH` *includes* `MARCH`
 * 652: `WHILE=..... CRAMP=c.... DONUT=.o..t SCOTS=ScOt.` yields `STOCK`
 * 653: `FRIED=Fr... CLUMP=.L...` *includes* `FLORA`
+* 654: `STRAP=.tra. UNITE=..it. TRAIL=traI.` yields `RATIO`
+* 655: `FRAUD=..A.. WHALE=.hA.. STAPH=S.A.H` yields `SMASH`
 
 The command line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green).

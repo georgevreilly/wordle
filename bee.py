@@ -33,9 +33,12 @@ def trace(s):
         print(s)
 
 
+def print_list(label: str, l: list[str]) -> None:
+    print("\n{}:\n\t{}".format(label, "\n\t".join(l)))
+
+
 with open(namespace.word_file) as f:
     WORDS = [w.upper() for w in f.read().splitlines()]
-
 
 pangrams = []
 buzzes = []
@@ -56,9 +59,9 @@ previous = [buzzes[0]]
 
 for buzz in buzzes[1:]:
     if buzz[:2] != previous[0][:2]:
-        print("\n{}\n\t{}".format(previous[0][:2], "\n\t".join(previous)))
+        print_list(previous[0][:2], previous)
         previous = []
     previous.append(buzz)
 
-print("\n{}\n\t{}".format(previous[0][:2], "\n\t".join(previous)))
-print("\nPangrams:\n\t{}".format("\n\t".join(sorted(pangrams))))
+print_list(previous[0][:2], previous)
+print_list("Pangrams", sorted(pangrams))

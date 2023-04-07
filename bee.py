@@ -38,6 +38,7 @@ with open(namespace.word_file) as f:
 
 
 pangrams = []
+buzzes = []
 for w in WORDS:
     if len(w) < namespace.min:
         continue
@@ -48,6 +49,16 @@ for w in WORDS:
         continue
     if len(chars) == 7:
         pangrams.append(w)
-    print(w)
+    buzzes.append(w)
 
-print("\nPangrams:\n\t{}".format("\n\t".join(pangrams)))
+buzzes.sort()
+previous = [buzzes[0]]
+
+for buzz in buzzes[1:]:
+    if buzz[:2] != previous[0][:2]:
+        print("\n{}\n\t{}".format(previous[0][:2], "\n\t".join(previous)))
+        previous = []
+    previous.append(buzz)
+
+print("\n{}\n\t{}".format(previous[0][:2], "\n\t".join(previous)))
+print("\nPangrams:\n\t{}".format("\n\t".join(sorted(pangrams))))

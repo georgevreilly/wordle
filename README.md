@@ -53,6 +53,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 655: `FRAUD=..A.. WHALE=.hA.. STAPH=S.A.H` yields `SMASH`
 * 656: `CLASP=.lA.. LEANT=LEA..` *includes* `LEAFY`
 * 657: `SPLIT=s.l.. BRACE=...c. CLOGS=clo.S LOCKS=LOC.S` *includes* `LOCUS`
+* 658: `MOURN=..... SCAPE=....E GLIDE=gl.dE` yields `LEDGE`
 
 The command line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green).

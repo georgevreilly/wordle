@@ -2,35 +2,31 @@
 
 import argparse
 
+DICT_FILE = "/usr/share/dict/words"
+ALPHA_FILE = "words_alpha.txt"  # github.com/dwyl/english-words
+
 parser = argparse.ArgumentParser(description="Spelling Bee Finder")
 parser.set_defaults(
-    # word_file="/usr/share/dict/words",
-    word_file="words_alpha.txt",  # github.com/dwyl/english-words
-    min=4,
-    verbose=0,
+    word_file=ALPHA_FILE,
 )
-parser.add_argument(
-    "--verbose", "-v", action="count", help="Show all the steps")
 parser.add_argument(
     "letters",
-    help="Seven letters. Center (mandatory) letter first."
+    help="Seven uppercase letters. Center (mandatory) letter first."
 )
+parser.add_argument(
+    "--dict", "-d",
+    action="store_const", const=DICT_FILE, dest="word_file",
+    help="Use %(const)s")
+parser.add_argument(
+    "--alpha", "-a",
+    action="store_const", const=ALPHA_FILE, dest="word_file",
+    help="Use %(const)s")
 namespace = parser.parse_args()
 
 center = namespace.letters[0]
 others = {c for c in namespace.letters[1:]}
 if len({c for c in namespace.letters}) != 7 or not all("A" <= c <= "Z" for c in namespace.letters):
     raise ValueError(f"Need 7 distinct uppercase letters for Spelling Bee: {namespace.letters!r}")
-
-
-def debug(s):
-    if namespace.verbose:
-        print(s)
-
-
-def trace(s):
-    if namespace.verbose >= 2:
-        print(s)
 
 
 def print_list(label: str, l: list[str]) -> None:
@@ -43,7 +39,7 @@ with open(namespace.word_file) as f:
 pangrams = []
 buzzes = []
 for w in WORDS:
-    if len(w) < namespace.min:
+    if len(w) < 4:
         continue
     chars = {c.upper() for c in w}
     if center not in chars:

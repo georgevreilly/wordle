@@ -56,11 +56,12 @@ Given a series of Wordle guesses, find the words that can fit.
 * 658: `MOURN=..... SCAPE=....E GLIDE=gl.dE` yields `LEDGE`
 * 659: `ANGRY=aN... ENACT=.NA..` *includes* `SNAFU`
 * 660: `GLARE=...re STINK=...n. NERVE=ner.. BONER=..nER` *includes* `UNDER`
+* 661: `GLARE=.lA.. STALK=..AL.` yields `QUALM`
 
-The command line arguments are a series of `GUESS=RESULT` pairs.
-* A capital letter in `RESULT` means an exact match at that position (Green).
-* A lowercase letter means the letter is in the wrong position (Yellow).
-* A dot means the letter is not present (Gray).
+The command-line arguments are a series of `GUESS=RESULT` pairs.
+* A capital letter in `RESULT` means an exact match at that position (Green 🟩).
+* A lowercase letter means the letter is in the wrong position (Yellow 🟨).
+* A dot means the letter is not present (Black/Gray ⬛).
 
 For `TRACK=.RAc.`,
 the `R` and `A` are in the correct positions (i.e., green),

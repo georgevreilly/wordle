@@ -3,6 +3,7 @@
 import argparse
 
 from dataclasses import dataclass
+from typing import Optional
 
 
 def parse_args() -> argparse.Namespace:
@@ -43,16 +44,17 @@ def read_vocabulary(word_file: str, word_len: int) -> list[str]:
 class ParsedGuesses:
     invalid: set[str]
     valid: set[str]  # Green or Yellow
-    # mask: list[str | None]  # Exact match for position (Green)
-    mask: list[str]  # Exact match for position (Green)
+    # Exact match for position (Green)
+    mask: list[Optional[str]]
+    # mask: list[str]  # Exact match for position (Green)
     wrong_spot: list[set[str]]  # Wrong spot (Yellow)
 
     @classmethod
     def parse(cls, guesses: list[str], word_len: int) -> 'ParsedGuesses':
-        invalid = set()  # Gray
-        valid = set()  # Green or Yellow
-        mask = [None] * word_len  # Exact match for position (Green)
-        wrong_spot = [set() for _ in range(word_len)]  # Wrong spot (Yellow)
+        invalid: set[str] = set()
+        valid: set[str] = set()
+        mask: list[Optional[str]] = [None] * word_len
+        wrong_spot: list[set[str]] = [set() for _ in range(word_len)]
 
         for guess in guesses:
             word, result = guess.split("=")
@@ -97,6 +99,7 @@ def main() -> int:
     parsed_guesses = ParsedGuesses.parse(namespace.guesses, namespace.len)
     choices = parsed_guesses.guess(vocabulary)
     print("\n".join(choices))
+    return 0
 
 
 if __name__ == "__main__":

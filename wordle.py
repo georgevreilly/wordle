@@ -42,17 +42,15 @@ def read_vocabulary(word_file: str, word_len: int) -> list[str]:
 
 @dataclass
 class ParsedGuesses:
-    invalid: set[str]
-    valid: set[str]  # Green or Yellow
-    # Exact match for position (Green)
-    mask: list[Optional[str]]
-    # mask: list[str]  # Exact match for position (Green)
+    valid: set[str]             # Green or Yellow
+    invalid: set[str]           # Black
+    mask: list[Optional[str]]   # Exact match for position (Green)
     wrong_spot: list[set[str]]  # Wrong spot (Yellow)
 
     @classmethod
     def parse(cls, guesses: list[str], word_len: int) -> 'ParsedGuesses':
-        invalid: set[str] = set()
         valid: set[str] = set()
+        invalid: set[str] = set()
         mask: list[Optional[str]] = [None] * word_len
         wrong_spot: list[set[str]] = [set() for _ in range(word_len)]
 
@@ -73,7 +71,7 @@ class ParsedGuesses:
                         invalid.add(w)
                 else:
                     raise ValueError(f"Unexpected {r} for {w}")
-        return cls(invalid, valid, mask, wrong_spot)
+        return cls(valid, invalid, mask, wrong_spot)
 
     def guess(self, vocabulary: list[str]) -> list[str]:
         choices = []

@@ -61,8 +61,8 @@ Given a series of Wordle guesses, find the words that can fit.
 
 The command-line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green 🟩).
-* A lowercase letter means the letter is in the wrong position (Yellow 🟨).
-* A dot means the letter is not present (Black/Gray ⬛).
+* A lowercase letter means the guessed letter is in the wrong position (Yellow 🟨).
+* A dot means the guessed letter is not present anywhere in the word (Black/Gray ⬛/⬜).
 
 For `TRACK=.RAc.`,
 the `R` and `A` are in the correct positions (i.e., green),

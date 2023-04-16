@@ -61,6 +61,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 662: `WENCH=...c. BLIMP=..... GROUT=.r..T` yields `CARAT`
 * 663: `PRATE=...te CHILD=.HI..` yields `THIEF`
 * 664: `GRIMY=g...Y BUNCH=..n.. TANGY=.angY` yields `AGONY`
+* 665: `CRIME=....e FLUNG=.l... STEAK=.tE..` *includes* `DWELT`
 
 The command-line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green 🟩).

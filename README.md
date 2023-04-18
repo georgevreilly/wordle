@@ -6,20 +6,20 @@ Given a series of Wordle guesses, find the words that can fit.
 * `RAISE=r...e CLOUT=.L... NYMPH=..... ELVER=EL.ER` *includes* `ELDER`
 * `GRAIL=.RA.. TRACK=.RAc. CRAMP=CRA.. CRABS=CRA.. CRAZY=CRAZ.` *includes* `CRAZE`
 * `ARISE=.r.se ROUTE=R.u.e RULES=Ru.eS` *includes* `REBUS`
-* `CHAIR=Cha.. CLASH=C.a.h CATCH=CA.ch` *includes* `CACHE`
-* `SATIN=s..i. ROUGH=.o...` *includes* `KIOSK`
-* `AROSE=a..se LANES=.a.es WAGES=wa.es` *includes* `SWEAT`
-* `HARES=.A.e. CABLE=.A..E MANGE=.A.gE GAFFE=gA..E` yields `VAGUE`
-* `HARES=.ar.. GUILT=..... CROAK=.Roa. BRAVO=bRa.o` yields `ARBOR`
-* `HARES=..... BUILT=..i.t TIMID=tI... PINTO=.I.T. WITTY=.I.TY` *includes* `FIFTY`
-* `HEARS=...rs SCRUB=S.RU.` *includes* `SYRUP`
-* `CRATE=.r..E WORSE=WORSE`
-* `MARES=.a... FLACK=.la.k LAIKA=l..KA` *includes* `POLKA`
-* `FARES=...es SKITE=s...E MOUSE=MO.SE` yields `MOOSE`
-* `BALES=ba.e. KEBAB=.eba. REBAR=.eba. ABATE=AB..E` *includes* `ABOVE`
-* `MATES=.at.s STARK=Sta.. SPLAT=S..AT` *includes* `SQUAT`
-* `FARCE=..r.e GUILT=....t TERNS=TerN.` yields `TREND`
-* `LEAKS=..... MIGHT=.i..t BLITZ=..it. OPTIC=o.tIC TONIC=TO.IC` *includes* `TOXIC`
+* 608: `CHAIR=Cha.. CLASH=C.a.h CATCH=CA.ch` *includes* `CACHE`
+* 610: `SATIN=s..i. ROUGH=.o...` *includes* `KIOSK`
+* 611: `AROSE=a..se LANES=.a.es WAGES=wa.es` *includes* `SWEAT`
+* 614: `HARES=.A.e. CABLE=.A..E MANGE=.A.gE GAFFE=gA..E` yields `VAGUE`
+* 615: `HARES=.ar.. GUILT=..... CROAK=.Roa. BRAVO=bRa.o` yields `ARBOR`
+* 616: `HARES=..... BUILT=..i.t TIMID=tI... PINTO=.I.T. WITTY=.I.TY` *includes* `FIFTY`
+* 617: `HEARS=...rs SCRUB=S.RU.` *includes* `SYRUP`
+* 618: `CRATE=.r..E WORSE=WORSE`
+* 619: `MARES=.a... FLACK=.la.k LAIKA=l..KA` *includes* `POLKA`
+* 620: `FARES=...es SKITE=s...E MOUSE=MO.SE` yields `MOOSE`
+* 621: `BALES=ba.e. KEBAB=.eba. REBAR=.eba. ABATE=AB..E` *includes* `ABOVE`
+* 622: `MATES=.at.s STARK=Sta.. SPLAT=S..AT` *includes* `SQUAT`
+* 623: `FARCE=..r.e GUILT=....t TERNS=TerN.` yields `TREND`
+* 624: `LEAKS=..... MIGHT=.i..t BLITZ=..it. OPTIC=o.tIC TONIC=TO.IC` *includes* `TOXIC`
 * 625: `MULCH=..... TEARS=..... WINDY=.IN.Y` *includes* `PINKY`
 * 626: `ADIEU=...e. TROPE=.ro.E FORCE=.OR.E WORSE=.ORSE` *includes* `HORSE`
 * 627: `CRAMP=.ra.. GUILT=g..l. LARGE=large` yields `REGAL`
@@ -58,11 +58,11 @@ Given a series of Wordle guesses, find the words that can fit.
 * 660: `GLARE=...re STINK=...n. NERVE=ner.. BONER=..nER` *includes* `UNDER`
 * 661: `GLARE=.lA.. STALK=..AL.` yields `QUALM`
 * 662: `SURLY=..R.. CORED=.OR..` *includes* `BORAX`
-* 662: `WENCH=...c. BLIMP=..... GROUT=.r..T` yields `CARAT`
-* 663: `PRATE=...te CHILD=.HI..` yields `THIEF`
-* 664: `GRIMY=g...Y BUNCH=..n.. TANGY=.angY` yields `AGONY`
-* 665: `CRIME=....e FLUNG=.l... STEAK=.tE..` *includes* `DWELT`
-* 667: `STINK=..I.. BLING CRIMP OXIDE` yields `WHIFF`
+* 663: `WENCH=...c. BLIMP=..... GROUT=.r..T` yields `CARAT`
+* 664: `PRATE=...te CHILD=.HI..` yields `THIEF`
+* 665: `GRIMY=g...Y BUNCH=..n.. TANGY=.angY` yields `AGONY`
+* 666: `CRIME=....e FLUNG=.l... STEAK=.tE..` yields `DWELT`
+* 667: `STINK=..I.. BLING=..I.. CRIMP=..I.. OXIDE=..I..` *includes* `WHIFF`
 
 The command-line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green 🟩).

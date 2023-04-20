@@ -65,6 +65,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 667: `STINK=..I.. BLING=..I.. CRIMP=..I.. OXIDE=..I..` *includes* `WHIFF`
 * 668: `REDUX=..du. CLIMB=..... TOUGH=.OU.h` yields `HOUND`
 * 669: `DEATH=...th SHIRT=.H..t` *includes* `THUMP`
+* 670: `GLEAM=.Lea. BLADE=.LA.E SLATE=.LATE` *includes* `PLATE`
 
 The command-line arguments are a series of `GUESS=RESULT` pairs.
 * A capital letter in `RESULT` means an exact match at that position (Green 🟩).

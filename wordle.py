@@ -2,8 +2,12 @@
 
 import argparse
 
+from collections import defaultdict
 from dataclasses import dataclass
 from typing import Optional
+
+
+WORDLE_LEN = 5
 
 
 def parse_args() -> argparse.Namespace:
@@ -11,7 +15,7 @@ def parse_args() -> argparse.Namespace:
     parser.set_defaults(
         # word_file="/usr/share/dict/words",
         word_file="wordle.txt",
-        len=5,
+        len=WORDLE_LEN,
         verbose=0,
     )
     parser.add_argument(
@@ -48,7 +52,35 @@ class ParsedGuesses:
     wrong_spot: list[set[str]]  # Wrong spot (Yellow)
 
     @classmethod
-    def parse(cls, guesses: list[str], word_len: int) -> 'ParsedGuesses':
+    def score(cls, actual: str, guess: str, word_len: int = WORDLE_LEN) -> str:
+        assert len(actual) == word_len
+        assert len(guess) == word_len
+        result = ["?" for _ in range(word_len)]
+        remaining: dict[str, int] = defaultdict(int)
+
+        for i, (a, g) in enumerate(zip(actual, guess)):
+            assert "A" <= a <= "Z", "ACTUAL should be uppercase"
+            assert "A" <= g <= "Z", "GUESS should be uppercase"
+            if a == g:
+                # Green
+                result[i] = a
+            else:
+                remaining[a] += 1
+
+        for i, g in enumerate(guess):
+            if result[i] == "?":
+                if remaining.get(g, 0) > 0:
+                    # Yellow
+                    remaining[g] -= 1
+                    result[i] = g.lower()
+                else:
+                    # Black
+                    result[i] = "."
+
+        return "".join(result)
+
+    @classmethod
+    def parse(cls, guesses: list[str], word_len: int = WORDLE_LEN) -> 'ParsedGuesses':
         valid: set[str] = set()
         invalid: set[str] = set()
         mask: list[Optional[str]] = [None] * word_len

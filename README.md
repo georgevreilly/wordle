@@ -32,7 +32,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 634: `CLOUT=..... GRAPE=...pe WINED=w..E. SHEEP=S.EEP` yields `SWEEP`
 * 635: `CRAMP=Cr... FIRST=.Ir.. CIDER=CIDER`
 * 636: `GROUT=..... CHASE=..A.e PEAKY=.EA.Y BEADY=.EA.Y LEAFY=lEA.Y` *includes* `MEALY`
-* 637: `PILOT=....T CHART=cha.t` *includes* `YACHT`
+* 637: `PILOT=....T CHART=cha.T` *includes* `YACHT`
 * 638: `STRIP=..r.. GRAND=.R..d DROVE=dRo.e ORDER=oRde.` yields `CREDO`
 * 639: `PRINT=..... CLASH=.L... GLOBE=GLO.E` yields `GLOVE`
 * 640: `GRIPE=g.... CLOUT=..out` *includes* `TOUGH`

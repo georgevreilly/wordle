@@ -3,8 +3,8 @@
 Given a series of Wordle guesses, find the words that can fit.
 
 * `ADIEU=a.i.. CLOTH=c....` *includes* `MAGIC`
-* `RAISE=r...e CLOUT=.L... NYMPH=..... ELVER=EL.ER` *includes* `ELDER`
-* `GRAIL=.RA.. TRACK=.RAc. CRAMP=CRA.. CRABS=CRA.. CRAZY=CRAZ.` *includes* `CRAZE`
+* `RAISE=r...e CLOUT=.L... NYMPH=..... ELVER=EL.ER` yields `ELDER`
+* `GRAIL=.RA.. TRACK=.RAc. CRAMP=CRA.. CRABS=CRA.. CRAZY=CRAZ.` yields `CRAZE`
 * `ARISE=.r.se ROUTE=R.u.e RULES=Ru.eS` *includes* `REBUS`
 * 608: `CHAIR=Cha.. CLASH=C.a.h CATCH=CA.ch` *includes* `CACHE`
 * 610: `SATIN=s..i. ROUGH=.o...` *includes* `KIOSK`

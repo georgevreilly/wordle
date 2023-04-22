@@ -9,6 +9,7 @@ from dataclasses import dataclass
 from typing import Optional
 
 
+WORD_FILE = "wordle.txt"
 WORDLE_LEN = 5
 
 
@@ -16,7 +17,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Wordle Finder")
     parser.set_defaults(
         # word_file="/usr/share/dict/words",
-        word_file="wordle.txt",
+        word_file=WORD_FILE,
         len=WORDLE_LEN,
         verbose=0,
     )
@@ -41,7 +42,7 @@ def trace(s):
 #   if namespace.verbose >= 2: print(s)
 
 
-def read_vocabulary(word_file: str, word_len: int) -> list[str]:
+def read_vocabulary(word_file: str = WORD_FILE, word_len: int = WORDLE_LEN) -> list[str]:
     with open(word_file) as f:
         return [w.upper() for w in f.read().splitlines() if len(w) == word_len]
 

@@ -23,7 +23,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--verbose", "-v", action="count", help="Show all the steps")
     parser.add_argument(
-        "guesses",
+        "guess_scores",
         nargs="+",
         metavar="GUESS=score",
         help="Examples: 'ARISE=.r.se' 'ROUTE=R.u.e' 'RULES=Ru.eS'",
@@ -57,42 +57,43 @@ class ParsedGuesses:
     def score(cls, actual: str, guess: str, word_len: int = WORDLE_LEN) -> str:
         assert len(actual) == word_len
         assert len(guess) == word_len
-        result = ["?" for _ in range(word_len)]
+        parts = []
         remaining: dict[str, int] = defaultdict(int)
 
         for i, (a, g) in enumerate(zip(actual, guess)):
             assert "A" <= a <= "Z", "ACTUAL should be uppercase"
             assert "A" <= g <= "Z", "GUESS should be uppercase"
             if a == g:
-                # Green
-                result[i] = a
+                # Green: exact match at position `i` => uppercase
+                parts.append(a)
             else:
                 remaining[a] += 1
+                parts.append("?")
 
         for i, g in enumerate(guess):
-            if result[i] == "?":
+            if parts[i] == "?":
                 if remaining.get(g, 0) > 0:
-                    # Yellow
+                    # Yellow: letter present elsewhere => lowercase
                     remaining[g] -= 1
-                    result[i] = g.lower()
+                    parts[i] = g.lower()
                 else:
-                    # Black
-                    result[i] = "."
+                    # Black: letter not present at all
+                    parts[i] = "."
 
-        return "".join(result)
+        return "".join(parts)
 
     @classmethod
-    def parse(cls, guesses: list[str], word_len: int = WORDLE_LEN) -> 'ParsedGuesses':
+    def parse(cls, guess_scores: list[str], word_len: int = WORDLE_LEN) -> 'ParsedGuesses':
         valid: set[str] = set()
         invalid: set[str] = set()
         mask: list[Optional[str]] = [None] * word_len
         wrong_spot: list[set[str]] = [set() for _ in range(word_len)]
 
-        for guess in guesses:
-            word, result = guess.split("=")
-            assert len(word) == word_len
-            assert len(result) == word_len
-            for i, (w, r) in enumerate(zip(word, result)):
+        for gs in guess_scores:
+            guess, score = gs.split("=")
+            assert len(guess) == word_len
+            assert len(score) == word_len
+            for i, (w, r) in enumerate(zip(guess, score)):
                 assert "A" <= w <= "Z", "WORD should be uppercase"
                 if "A" <= r <= "Z":
                     valid.add(w)
@@ -130,15 +131,15 @@ class ParsedGuesses:
             debug(f"Got: {word}")
             return True
 
-    def guess(self, vocabulary: list[str]) -> list[str]:
+    def find_eligible(self, vocabulary: list[str]) -> list[str]:
         return [w for w in vocabulary if self.is_eligible(w)]
 
 
 def main() -> int:
     namespace = parse_args()
     vocabulary = read_vocabulary(namespace.word_file, namespace.len)
-    parsed_guesses = ParsedGuesses.parse(namespace.guesses, namespace.len)
-    choices = parsed_guesses.guess(vocabulary)
+    parsed_guesses = ParsedGuesses.parse(namespace.guess_scores, namespace.len)
+    choices = parsed_guesses.find_eligible(vocabulary)
     print("\n".join(choices))
     return 0
 

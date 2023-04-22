@@ -7,7 +7,7 @@ import re
 from wordle import ParsedGuesses
 
 
-GAME_RE = re.compile(r"""^\*.+`(?P<guess_results>[^`]+)`[^`]+`(?P<actual>[A-Z]+)`""")
+GAME_RE = re.compile(r"""^\*.+`(?P<guess_scores>[^`]+)`[^`]+`(?P<actual>[A-Z]+)`""")
 
 failures = []
 with open("README.md") as f:
@@ -16,13 +16,13 @@ with open("README.md") as f:
             m = GAME_RE.match(line.strip())
             assert m is not None
             actual = m.group("actual")
-            guess_results = m.group("guess_results").split()
-            print(f"{actual=}: {guess_results=}")
-            for gr in guess_results:
-                guess, result = gr.split("=")
-                score = ParsedGuesses.score(actual, guess)
-                print(f"\t{guess=} {result=} {score=} {'Correct' if result==score else 'Wrong'}")
-                if result != score:
-                    failures.append((actual, guess, result, score))
+            guess_scores = m.group("guess_scores").split()
+            print(f"{actual=}: {guess_scores=}")
+            for gs in guess_scores:
+                guess, score = gs.split("=")
+                computed = ParsedGuesses.score(actual, guess)
+                print(f"\t{guess=} {score=} {computed=} {'Correct' if computed==score else 'Wrong'}")
+                if computed != score:
+                    failures.append((actual, guess, score, computed))
 
 print(f"{failures=}")

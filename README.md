@@ -75,9 +75,9 @@ The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A dot means the guessed letter is not present anywhere in the word (Black/Gray ⬛/⬜).
 
 For `TRACK=.RAc.`,
-the `R` and `A` are in the correct positions (i.e., green),
-the `c` is in the wrong position (yellow),
-and there is no `T` or `K` (black).
+the `R` and `A` are in the correct positions (i.e., green 🟩),
+the `c` is in the wrong position (yellow 🟨),
+and there is no `T` or `K` (gray ⬛/⬜).
 
 Implementations are in Python (`wordle.py`) and Rust (`src/main.rs`).
 

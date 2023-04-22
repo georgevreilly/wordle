@@ -4,11 +4,13 @@ import argparse
 from collections import defaultdict
 from operator import itemgetter
 
+WORDLE_LEN = 5
+
 parser = argparse.ArgumentParser(description="Wordle Start Words")
 parser.set_defaults(
     # word_file="/usr/share/dict/words",
     word_file="wordle.txt",
-    len=5,
+    len=WORDLE_LEN,
     topmost=50,
     top_per_letter=20,
     threshold_score=0.30,
@@ -41,7 +43,7 @@ frequencies = {
 
 for i, (l, p) in enumerate(frequencies.items()):
     print(f"{l}: {p:.4f}  ", end="")
-    if i % 6 == 5:
+    if i % 6 == WORDLE_LEN:
         print()
 print("\n")
 

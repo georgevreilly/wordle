@@ -69,15 +69,15 @@ Given a series of Wordle guesses, find the words that can fit.
 * 671: `BLAST=..a.. ARCED=a.... MANGY=.A..y YAHOO=yA...` yields `KAYAK`
 * 672: `WHILE=....E GRAVE=.R..E TROPE=.RO.E` *includes* `BROKE`
 
-The command-line arguments are a series of `GUESS=RESULT` pairs.
-* A capital letter in `RESULT` means an exact match at that position (Green 🟩).
+The command-line arguments are a series of `GUESS=SCORE` pairs.
+* A capital letter in `SCORE` means an exact match at that position (Green 🟩).
 * A lowercase letter means the guessed letter is in the wrong position (Yellow 🟨).
 * A dot means the guessed letter is not present anywhere in the word (Black/Gray ⬛/⬜).
 
 For `TRACK=.RAc.`,
 the `R` and `A` are in the correct positions (i.e., green),
 the `c` is in the wrong position (yellow),
-and there is no `T` or `K` (gray).
+and there is no `T` or `K` (black).
 
 Implementations are in Python (`wordle.py`) and Rust (`src/main.rs`).
 

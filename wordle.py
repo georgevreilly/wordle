@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+"""Wordle Finder"""
+
 import argparse
 
 from collections import defaultdict
@@ -23,7 +25,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "guesses",
         nargs="+",
-        metavar="WORD=guess",
+        metavar="GUESS=score",
         help="Examples: 'ARISE=.r.se' 'ROUTE=R.u.e' 'RULES=Ru.eS'",
     )
     return parser.parse_args()

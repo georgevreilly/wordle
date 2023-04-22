@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 
+"""Generate statistics about Wordle Start Words"""
+
 import argparse
 from collections import defaultdict
 from operator import itemgetter
+from typing import Iterable
 
 WORDLE_LEN = 5
 
@@ -20,7 +23,7 @@ namespace = parser.parse_args()
 AtoZ = [chr(c) for c in range(ord("A"), ord("Z") + 1)]
 
 
-def rev_sort_by_count(pairs: list[tuple[str, int]]):
+def rev_sort_by_count(pairs: Iterable[tuple[str, int]]) -> list[tuple[str, int]]:
     return sorted(pairs, reverse=True, key=itemgetter(1))
 
 
@@ -59,12 +62,12 @@ for letter, positions in pos_pop.items():
             )
         ]
     )
-    positions = " ".join(f"{p:4}" for p in positions)
-    print(f"{letter}: {100.0 * frequencies[letter]:5.2f} {order} - {positions}")
+    positions2 = " ".join(f"{p:4}" for p in positions)
+    print(f"{letter}: {100.0 * frequencies[letter]:5.2f} {order} - {positions2}")
 print()
 
 start_words = defaultdict(list)
-alpha_words = {c: [] for c in AtoZ}
+alpha_words: dict[str, list[tuple[str, int]]] = {c: [] for c in AtoZ}
 
 for w in WORDS:
     letters = {c for c in w}
@@ -87,20 +90,20 @@ for i, x in enumerate(topwords, 1):
 
 print("\n\nBest Start Words, weighted by position\n")
 for letter in AtoZ:
-    topwords = rev_sort_by_count(alpha_words[letter])[: namespace.top_per_letter]
+    topwords2 = rev_sort_by_count(alpha_words[letter])[: namespace.top_per_letter]
     print(
-        f"{letter}: {' '.join(ws[0] for ws in topwords if ws[1] >= namespace.threshold_score)}"
+        f"{letter}: {' '.join(ws[0] for ws in topwords2 if ws[1] >= namespace.threshold_score)}"
     )
 
 
 def ngrams(n: int):
-    ngram_counts = defaultdict(int)
+    counts: dict[str, int] = defaultdict(int)
     for w in WORDS:
         for i in range(namespace.len - n + 1):
-            ngram_counts[w[i : i + n]] += 1
-    ngram_counts = rev_sort_by_count(ngram_counts.items())
-    prefixes = {c: [] for c in AtoZ}
-    suffixes = {c: [] for c in AtoZ}
+            counts[w[i : i + n]] += 1
+    ngram_counts = rev_sort_by_count(counts.items())
+    prefixes: dict[str, list[tuple[str, int]]] = {c: [] for c in AtoZ}
+    suffixes: dict[str, list[tuple[str, int]]] = {c: [] for c in AtoZ}
     for nc in ngram_counts:
         prefixes[nc[0][0]].append(nc)
         suffixes[nc[0][-1]].append(nc)

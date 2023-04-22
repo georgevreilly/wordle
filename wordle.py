@@ -73,22 +73,31 @@ class ParsedGuesses:
                     raise ValueError(f"Unexpected {r} for {w}")
         return cls(valid, invalid, mask, wrong_spot)
 
+    def is_eligible(self, word: str) -> bool:
+        letters = {c for c in word}
+        if letters & self.valid != self.valid:
+            # Did not have the full set of green+yellow letters known to be valid
+            trace(f"!Valid: {word}")
+            return False
+        elif letters & self.invalid:
+            # Invalid (black) letters present
+            trace(f"Invalid: {word}")
+            return False
+        elif any(m is not None and c != m for c, m in zip(word, self.mask)):
+            # Couldn't find all the green letters 
+            trace(f"!Mask: {word}")
+            return False
+        elif any(c in ws for c, ws in zip(word, self.wrong_spot)):
+            # Found some yellow letters: valid letters in wrong position
+            trace(f"WrongSpot: {word}")
+            return False
+        else:
+            # Potentially valid
+            debug(f"Got: {word}")
+            return True
+
     def guess(self, vocabulary: list[str]) -> list[str]:
-        choices = []
-        for w in vocabulary:
-            letters = {c for c in w}
-            if letters & self.valid != self.valid:
-                trace(f"!Valid: {w}")
-            elif letters & self.invalid:
-                trace(f"Invalid: {w}")
-            elif any(m is not None and c != m for c, m in zip(w, self.mask)):
-                trace(f"!Mask: {w}")
-            elif any(c in ws for c, ws in zip(w, self.wrong_spot)):
-                trace(f"WrongSpot: {w}")
-            else:
-                choices.append(w)
-                debug(f"Got: {w}")
-        return choices
+        return [w for w in vocabulary if self.is_eligible(w)]
 
 
 def main() -> int:

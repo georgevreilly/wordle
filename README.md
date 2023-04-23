@@ -68,6 +68,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 670: `GLEAM=.Lea. BLADE=.LA.E SLATE=.LATE` *includes* `PLATE`
 * 671: `BLAST=..a.. ARCED=a.... MANGY=.A..y YAHOO=yA...` yields `KAYAK`
 * 672: `WHILE=....E GRAVE=.R..E TROPE=.RO.E` *includes* `BROKE`
+* 673: `THREW=..... CLUMP=..u.P` *includes* `UNZIP`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

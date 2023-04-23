@@ -7,14 +7,14 @@ import re
 from wordle import ParsedGuesses, read_vocabulary
 
 
-GAME_RE = re.compile(r"""^\*.+`(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<actual>[A-Z]+)`""")
+GAME_RE = re.compile(r"""^\*[^`]+`(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<actual>[A-Z]+)`""")
 
 vocabulary = read_vocabulary()
 failures = []
 with open("README.md") as f:
-    for line in f.readlines():
+    for line in f.read().splitlines():
         if line.startswith("* ") and line.count("`") == 4:
-            m = GAME_RE.match(line.strip())
+            m = GAME_RE.match(line)
             assert m is not None
             actual = m.group("actual")
             verb = m.group("verb")
@@ -23,7 +23,7 @@ with open("README.md") as f:
             for gs in guess_scores:
                 guess, score = gs.split("=")
                 computed = ParsedGuesses.score(actual, guess)
-                print(f"\t{guess=} {score=} {computed=} {'Correct' if computed==score else 'Wrong'}")
+                print(f"\t{guess=} {score=} {computed=} {'Correct' if computed==score else 'Wrong!'}")
                 if computed != score:
                     failures.append((actual, guess, score, computed))
 
@@ -34,5 +34,8 @@ with open("README.md") as f:
                 assert len(eligible) >= 1, f"yields: {eligible}"
             elif "includes" in verb:
                 assert len(eligible) > 1, f"includes: {eligible}"
+            else:
+                raise ValueError(f"Unknown {verb}")
 
-print(f"{failures=}")
+if failures:
+    print(f"{failures=}")

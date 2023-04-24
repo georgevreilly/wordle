@@ -48,7 +48,7 @@ def read_vocabulary(word_file: str = WORD_FILE, word_len: int = WORDLE_LEN) -> l
 
 
 @dataclass
-class ParsedGuesses:
+class WordleGuesses:
     valid: set[str]             # Green or Yellow
     invalid: set[str]           # Black
     mask: list[Optional[str]]   # Exact match for position (Green)
@@ -84,7 +84,7 @@ class ParsedGuesses:
         return "".join(parts)
 
     @classmethod
-    def parse(cls, guess_scores: list[str], word_len: int = WORDLE_LEN) -> 'ParsedGuesses':
+    def parse(cls, guess_scores: list[str], word_len: int = WORDLE_LEN) -> 'WordleGuesses':
         valid: set[str] = set()
         invalid: set[str] = set()
         mask: list[Optional[str]] = [None] * word_len
@@ -139,7 +139,7 @@ class ParsedGuesses:
 def main() -> int:
     namespace = parse_args()
     vocabulary = read_vocabulary(namespace.word_file, namespace.len)
-    parsed_guesses = ParsedGuesses.parse(namespace.guess_scores, namespace.len)
+    parsed_guesses = WordleGuesses.parse(namespace.guess_scores, namespace.len)
     choices = parsed_guesses.find_eligible(vocabulary)
     print("\n".join(choices))
     return 0

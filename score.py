@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-"""Validate ParsedGuesses.score against all results in README.md"""
+"""Validate WordleGuesses.score against all results in README.md"""
 
 import re
 
-from wordle import ParsedGuesses, read_vocabulary
+from wordle import WordleGuesses, read_vocabulary
 
 
 GAME_RE = re.compile(r"""^\*[^`]+`(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<actual>[A-Z]+)`""")
@@ -22,12 +22,12 @@ with open("README.md") as f:
             print(f"{actual=}: {guess_scores=}")
             for gs in guess_scores:
                 guess, score = gs.split("=")
-                computed = ParsedGuesses.score(actual, guess)
+                computed = WordleGuesses.score(actual, guess)
                 print(f"\t{guess=} {score=} {computed=} {'Correct' if computed==score else 'Wrong!'}")
                 if computed != score:
                     failures.append((actual, guess, score, computed))
 
-            eligible = ParsedGuesses.parse(guess_scores).find_eligible(vocabulary)
+            eligible = WordleGuesses.parse(guess_scores).find_eligible(vocabulary)
             assert actual in eligible
             if "yields" in verb:
                 # I previously decided that any other possibilities would never be used

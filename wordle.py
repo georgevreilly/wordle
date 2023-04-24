@@ -94,19 +94,22 @@ class WordleGuesses:
             guess, score = gs.split("=")
             assert len(guess) == word_len
             assert len(score) == word_len
-            for i, (w, r) in enumerate(zip(guess, score)):
-                assert "A" <= w <= "Z", "WORD should be uppercase"
-                if "A" <= r <= "Z":
-                    valid.add(w)
-                    mask[i] = w
-                elif "a" <= r <= "z":
-                    valid.add(w)
-                    wrong_spot[i].add(w)
-                elif r == ".":
-                    if w not in valid:
-                        invalid.add(w)
+            for i, (g, s) in enumerate(zip(guess, score)):
+                assert "A" <= g <= "Z", "GUESS should be uppercase"
+                if "A" <= s <= "Z":
+                    # Green: letter is correct at this position
+                    valid.add(g)
+                    mask[i] = g
+                elif "a" <= s <= "z":
+                    # Yellow: letter is elsewhere in the word
+                    valid.add(g)
+                    wrong_spot[i].add(g)
+                elif s == ".":
+                    # Black: letter is not in the word
+                    if g not in valid:
+                        invalid.add(g)
                 else:
-                    raise ValueError(f"Unexpected {r} for {w}")
+                    raise ValueError(f"Unexpected {s} for {g}")
         return cls(valid, invalid, mask, wrong_spot)
 
     def is_eligible(self, word: str) -> bool:

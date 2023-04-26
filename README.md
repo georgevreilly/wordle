@@ -71,6 +71,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 673: `THREW=..... CLUMP=..u.P` *includes* `UNZIP`
 * 674: `SPITE=..iT. MINTY=.I.T. FIFTH=.I.T. BRAVO=....O` yields `DITTO`
 * 675: `LIVER=...ER CHUMP=..... STANK=....k POKER=.OKER` yields `JOKER`
+* 676: `SLIME=...me BRAND=.r... HOMER=.omer` yields `METRO`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

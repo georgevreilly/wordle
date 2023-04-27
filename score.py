@@ -19,11 +19,12 @@ with open("README.md") as f:
             actual = m.group("actual")
             verb = m.group("verb")
             guess_scores = m.group("guess_scores").split()
-            print(f"{actual=}: {guess_scores=}")
+            print(f"{actual}: {' '.join(guess_scores)}")
             for gs in guess_scores:
                 guess, score = gs.split("=")
                 computed = WordleGuesses.score(actual, guess)
-                print(f"\t{guess=} {score=} {computed=} {'Correct' if computed==score else 'Wrong!'}")
+                verdict = "✅ Correct" if computed==score else "❌ Wrong!"
+                print(f"\t{guess=} {score=} {computed=}  {verdict}")
                 if computed != score:
                     failures.append((actual, guess, score, computed))
 

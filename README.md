@@ -74,6 +74,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 676: `SLIME=...me BRAND=.r... HOMER=.omer` yields `METRO`
 * 677: `VAGUE=..G.. BIGOT=.iGo. YOGIC=.OGIC` yields `LOGIC`
 * 678: `FLICK=..iC. WINCE=.I.C. BIRCH=.IRC.` yields `CIRCA`
+* 679: `VAPID=.a..d STRAP=..rA. RADAR=..DAR` yields `CEDAR`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

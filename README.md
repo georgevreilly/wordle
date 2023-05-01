@@ -76,6 +76,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 678: `FLICK=..iC. WINCE=.I.C. BIRCH=.IRC.` yields `CIRCA`
 * 679: `VAPID=.a..d STRAP=..rA. RADAR=..DAR` yields `CEDAR`
 * 680: `BAGEL=.a..l CLAMP=.LA.p PLANK=PLA.. PLAIT=PLA.. PLAYA=PLA.A` yields `PLAZA`
+* 681: `CIDER=...er GROVE=gr..E BARGE=.ArGE` yields `RANGE`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

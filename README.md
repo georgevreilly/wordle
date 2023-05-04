@@ -79,6 +79,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 681: `CIDER=...er GROVE=gr..E BARGE=.ArGE` yields `RANGE`
 * 682: `WHOSE=...s. CRAMP=..... NIFTY=....Y` *includes* `SULKY`
 * 683: `WORLD=.OR.d` *includes* `HORDE`
+* 684: `PRIME=p.... FLASH=..... JUMPY=.U.PY` *includes* `GUPPY`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

@@ -82,6 +82,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 684: `PRIME=p.... FLASH=..... JUMPY=.U.PY` *includes* `GUPPY`
 * 685: `SPACE=....e GRIND=..... ETHYL=e...l JELLO=.EL.o` yields `BELOW`
 * 686: `JUDGE=...ge BLIMP=..... AGENT=Agen.` yields `ANGER`
+* 687: `FRAIL=....L HOTEL=ho..L` yields `GHOUL`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

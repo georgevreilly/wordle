@@ -84,6 +84,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 686: `JUDGE=...ge BLIMP=..... AGENT=Agen.` yields `ANGER`
 * 687: `FRAIL=....L HOTEL=ho..L` yields `GHOUL`
 * 688: `EIGHT=..g.. BROAD=..oa. MANGO=.a.go` yields `AGLOW`
+* 689: `MOREL=.O... GOADS=.Oa.. TOPAZ=.O.a.` yields `COCOA`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

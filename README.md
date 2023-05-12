@@ -87,6 +87,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 689: `MOREL=.O... GOADS=.Oa.. TOPAZ=.O.a.` yields `COCOA`
 * 690: `MAGIC=...IC STOIC=.T.IC` yields `ETHIC`
 * 691: `PRONE=.RO.. GROWL=.RO.. AROMA=.ROm.` yields `BROOM`
+* 692: `CRAFT=c.A.. PLACE=..AC. WHACK=..ACK QUACK=..ACK` *includes* `SNACK`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).
@@ -97,6 +98,10 @@ For `TRACK=.RAc.`,
 the `R` and `A` are in the correct positions (i.e., green 🟩),
 the `c` is in the wrong position (yellow 🟨),
 and there is no `T` or `K` (gray ⬛/⬜).
+
+In the results above, `yields` means that there is only **one** plausible result,
+even if the tool returns several results,
+while `includes` indicates that there are several plausible results.
 
 Implementations are in Python (`wordle.py`) and Rust (`src/main.rs`).
 

@@ -94,22 +94,29 @@ The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A lowercase letter means the guessed letter is in the wrong position (Yellow 🟨).
 * A dot means the guessed letter is not present anywhere in the word (Black/Gray ⬛/⬜).
 
-For `TRACK=.RAc.`,
+Example: For `TRACK=.RAc.`,
 the `R` and `A` are in the correct positions (i.e., green 🟩),
 the `c` is in the wrong position (yellow 🟨),
 and there is no `T` or `K` (gray ⬛/⬜).
 
-In the results above, `yields` means that there is only **one** plausible result,
+In the results above,
+`yields` means that there is only **one** plausible result in my opinion,
 even if the tool returns several results,
-while `includes` indicates that there are several plausible results.
+while `includes` means that there are several plausible results.
 
-Implementations are in Python (`wordle.py`) and Rust (`src/main.rs`).
+Implementations are in Python (`wordle.py`, full) and Rust (`src/main.rs`, partial).
 
 The strings in `wordle.txt` were extracted from `wordle.blahblah.js`.
 You can also use `/usr/share/dict/words`.
+
+The `checkguess` script invokes `wordle.py` on a guess recorded in this `README.md`:
+e.g., `./checkguess ACRID`.
+
+`score.py` validates all of the GUESS=SCORE pairs in `README.md`.
 
 In addition, various statistics are computed in `startwords.py`,
 which really should be converted to a Jupyter notebook with graphs.
 
 For Spelling Bee, use `bee.py` with `words_alpha.txt`,
-which came from https://github.com/dwyl/english-words.
+which came from https://github.com/dwyl/english-words,
+or `/usr/share/dict/words`, which has fewer obscure words.

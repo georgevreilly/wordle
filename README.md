@@ -88,6 +88,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 690: `MAGIC=...IC STOIC=.T.IC` yields `ETHIC`
 * 691: `PRONE=.RO.. GROWL=.RO.. AROMA=.ROm.` yields `BROOM`
 * 692: `CRAFT=c.A.. PLACE=..AC. WHACK=..ACK QUACK=..ACK` *includes* `SNACK`
+* 693: `FALSE=.a... GRUNT=.r... CHIMP=c.i..` *includes* `ACRID`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

@@ -109,16 +109,20 @@ In the results above,
 `yields` means that there is only **one** plausible result in my opinion,
 even if the tool returns several results,
 while `includes` means that there are several plausible results.
+A plausible result is not too obscure, is not a plural,
+and if a verb, is in the present tense singular form.
 
-Implementations are in Python (`wordle.py`, full) and Rust (`src/main.rs`, partial).
+Implementations are in Python (`wordle.py`, full)
+and Rust (`src/main.rs`, partial).
 
-The strings in `wordle.txt` were extracted from `wordle.blahblah.js`.
+The strings in `wordle.txt` were extracted from `wordle.blahblah.js`
+on the [Wordle website](https://www.nytimes.com/games/wordle/index.html).
 You can also use `/usr/share/dict/words`.
 
 The `checkguess` script invokes `wordle.py` on a guess recorded in this `README.md`:
-e.g., `./checkguess ACRID`.
+e.g., `./checkguess ACRID` or `./checkguess 697`.
 
-`score.py` validates all of the GUESS=SCORE pairs in `README.md`.
+The `score.py` script validates all of the GUESS=SCORE pairs in `README.md`.
 
 In addition, various statistics are computed in `startwords.py`,
 which really should be converted to a Jupyter notebook with graphs.

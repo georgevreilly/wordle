@@ -3,13 +3,14 @@
 """Wordle Finder"""
 
 import argparse
+import os
 
 from collections import defaultdict
 from dataclasses import dataclass
 from typing import Optional
 
 
-WORD_FILE = "wordle.txt"
+WORD_FILE = os.path.join(os.path.dirname(__file__), "wordle.txt")
 WORDLE_LEN = 5
 
 

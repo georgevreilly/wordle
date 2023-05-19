@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 
 import argparse
+import os
 
 DICT_FILE = "/usr/share/dict/words"
-ALPHA_FILE = "words_alpha.txt"  # github.com/dwyl/english-words
+ALPHA_FILE = os.path.join(os.path.dirname(__file__), "words_alpha.txt")  # github.com/dwyl/english-words
 
 parser = argparse.ArgumentParser(description="Spelling Bee Finder")
 parser.set_defaults(

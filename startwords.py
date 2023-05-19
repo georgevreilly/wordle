@@ -3,16 +3,19 @@
 """Generate statistics about Wordle Start Words"""
 
 import argparse
+import os
+
 from collections import defaultdict
 from operator import itemgetter
 from typing import Iterable
 
 WORDLE_LEN = 5
+WORD_FILE = os.path.join(os.path.dirname(__file__), "wordle.txt")
 
 parser = argparse.ArgumentParser(description="Wordle Start Words")
 parser.set_defaults(
     # word_file="/usr/share/dict/words",
-    word_file="wordle.txt",
+    word_file=WORD_FILE,
     len=WORDLE_LEN,
     topmost=50,
     top_per_letter=20,

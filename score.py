@@ -2,16 +2,18 @@
 
 """Validate WordleGuesses.score against all results in README.md"""
 
+import os
 import re
 
 from wordle import WordleGuesses, read_vocabulary
 
 
 GAME_RE = re.compile(r"""^\*[^`]+`(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<actual>[A-Z]+)`""")
+README = os.path.join(os.path.dirname(__file__), "README.md")
 
 vocabulary = read_vocabulary()
 failures = []
-with open("README.md") as f:
+with open(README) as f:
     for line in f.read().splitlines():
         if line.startswith("* ") and line.count("`") == 4:
             m = GAME_RE.match(line)

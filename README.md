@@ -94,6 +94,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 696: `SCOPE=....E TRADE=t.a.E LATHE=LAT.E LATKE=LAT.E` yields `LATTE`
 * 697: `POKER=P.k..` *includes* `PLANK`
 * 698: `OTHER=o.h.r ROUGH=ro..h HOARY=ho.R.` *includes* `SHORN`
+* 699: `CHAIR=...ir RIVET=ri.E. FRIED=fRIE.` *includes* `GRIEF`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

@@ -96,6 +96,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 698: `OTHER=o.h.r ROUGH=ro..h HOARY=ho.R.` *includes* `SHORN`
 * 699: `CHAIR=...ir RIVET=ri.E. FRIED=fRIE.` *includes* `GRIEF`
 * 700: `COAST=..AS. FLASH=FLAS.` yields `FLASK`
+* 701: `ANGEL=a.... GRASP=.RAS. CRASH=.RASH TRASH=.RASH` yields `BRASH`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

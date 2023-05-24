@@ -99,6 +99,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 701: `ANGEL=a.... GRASP=.RAS. CRASH=.RASH TRASH=.RASH` yields `BRASH`
 * 702: `GLINT=gli.. LOGIC=logi.` yields `IGLOO`
 * 703: `SINCE=...ce CEDAR=Ce..r CRUEL=Cr.el` yields `CLERK`
+* 704: `BEING=.e... DRONE=.r..e PAVER=...ER QUEER=.u.ER ULCER=U..ER USHER=U..ER` yields `UTTER`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

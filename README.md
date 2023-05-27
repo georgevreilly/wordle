@@ -102,6 +102,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 704: `BEING=.e... DRONE=.r..e PAVER=...ER QUEER=.u.ER ULCER=U..ER USHER=U..ER` yields `UTTER`
 * 705: `TRICK=..... PLANE=.la.e` *includes* `BAGEL`
 * 706: `ROUND=...N. FLANK=...N. WHINE=w.INE` *includes* `SWINE`
+* 707: `BUNCH=..n.. NAVEL=nA.E.` *includes* `RAMEN`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

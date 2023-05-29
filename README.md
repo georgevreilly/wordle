@@ -103,6 +103,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 705: `TRICK=..... PLANE=.la.e` *includes* `BAGEL`
 * 706: `ROUND=...N. FLANK=...N. WHINE=w.INE` *includes* `SWINE`
 * 707: `BUNCH=..n.. NAVEL=nA.E.` *includes* `RAMEN`
+* 708: `CLOUT=..... BRISK=..Isk SKIFF=SKI..` yields `SKIMP`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

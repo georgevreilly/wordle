@@ -106,6 +106,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 708: `CLOUT=..... BRISK=..Isk SKIFF=SKI..` yields `SKIMP`
 * 709: `DRONE=..o.E LOUSE=.OUSE` *includes* `MOUSE`
 * 710: `REBUS=.e... FLAME=.l..e WHELP=..El. LIENS=l.En.` yields `KNEEL`
+* 711: `DRAKE=..a.E CABLE=.a.LE ANGLE=A.gLE` yields `AGILE`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

@@ -110,6 +110,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 712: `BRAIN=..a.. WATCH=.A... FALSE=.A... GAUDY=.A..Y JAMMY=JA..Y` yields `JAZZY`
 * 713: `MODEL=m.d.. DUMPY=dUM..` yields `HUMID`
 * 714: `CHASE=..a.. BADLY=.A..Y PARTY=.A..Y NAVVY=NA..Y` yields `NANNY`
+* 715: `BROAD=B..a. BASIC=Bas.. BLASE=B.ASe` yields `BEAST`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

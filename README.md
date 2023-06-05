@@ -111,6 +111,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 713: `MODEL=m.d.. DUMPY=dUM..` yields `HUMID`
 * 714: `CHASE=..a.. BADLY=.A..Y PARTY=.A..Y NAVVY=NA..Y` yields `NANNY`
 * 715: `BROAD=B..a. BASIC=Bas.. BLASE=B.ASe` yields `BEAST`
+* 716: `WIELD=.ie.. CRIME=..i.e INSET=iN.e.` yields `ENNUI`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

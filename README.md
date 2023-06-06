@@ -2,10 +2,10 @@
 
 Given a series of Wordle guesses, find the words that can fit.
 
-* `ADIEU=a.i.. CLOTH=c....` *includes* `MAGIC`
-* `RAISE=r...e CLOUT=.L... NYMPH=..... ELVER=EL.ER` yields `ELDER`
-* `GRAIL=.RA.. TRACK=.RAc. CRAMP=CRA.. CRABS=CRA.. CRAZY=CRAZ.` yields `CRAZE`
-* `ARISE=.r.se ROUTE=R.u.e RULES=Ru.eS` *includes* `REBUS`
+* 186: `GRAIL=.RA.. TRACK=.RAc. CRAMP=CRA.. CRABS=CRA.. CRAZY=CRAZ.` yields `CRAZE`
+* 196: `ARISE=.r.se ROUTE=R.u.e RULES=Ru.eS` *includes* `REBUS`
+* 233: `RAISE=r...e CLOUT=.L... NYMPH=..... ELVER=EL.ER` yields `ELDER`
+* 607: `ADIEU=a.i.. CLOTH=c....` *includes* `MAGIC`
 * 608: `CHAIR=Cha.. CLASH=C.a.h CATCH=CA.ch` *includes* `CACHE`
 * 610: `SATIN=s..i. ROUGH=.o...` *includes* `KIOSK`
 * 611: `AROSE=a..se LANES=.a.es WAGES=wa.es` *includes* `SWEAT`
@@ -141,6 +141,9 @@ The `checkguess` script invokes `wordle.py` on a guess recorded in this `README.
 e.g., `./checkguess ACRID` or `./checkguess 697`.
 
 The `score.py` script validates all of the GUESS=SCORE pairs in `README.md`.
+
+Previous Wordle answers can be found at
+[WordFinder](https://wordfinder.yourdictionary.com/wordle/answers/).
 
 In addition, various statistics are computed in `startwords.py`,
 which really should be converted to a Jupyter notebook with graphs.

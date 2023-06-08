@@ -114,6 +114,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 716: `WIELD=.ie.. CRIME=..i.e INSET=iN.e.` yields `ENNUI`
 * 717: `PRIDE=..... BLANK=..... MULCH=.u.c.` *includes* `SCOUT`
 * 718: `ZEBRA=.e.ra CLEAR=..eaR GAMER=.A.ER` *includes* `HATER`
+* 719: `JUDGE=.u... SHOUT=...u. UNZIP=u....` *includes* `CRUMB`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

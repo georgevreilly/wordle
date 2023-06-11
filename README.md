@@ -117,6 +117,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 719: `JUDGE=.u... SHOUT=...u. UNZIP=u....` *includes* `CRUMB`
 * 720: `MOVIE=..... CHAMP=..a.. SUGAR=s..a. NASTY=.As..` yields `BALSA`
 * 721: `FRUIT=...I. MANIC=.anI. ANVIL=An.I.` yields `AGAIN`
+* 722: `DOUBT=d.u.. FRAUD=.rAuD` yields `GUARD`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

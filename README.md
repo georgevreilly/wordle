@@ -119,6 +119,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 721: `FRUIT=...I. MANIC=.anI. ANVIL=An.I.` yields `AGAIN`
 * 722: `DOUBT=d.u.. FRAUD=.rAuD` yields `GUARD`
 * 723: `BLOAT=..O.. GROVE=gRO..` *includes* `WRONG`
+* 724: `SOLID=..l.. GLEAM=.L... BLUNT=.LUN. FLUNK=.LUNK CLUNK=.LUNK` yields `PLUNK`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

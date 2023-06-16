@@ -122,6 +122,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 724: `SOLID=..l.. GLEAM=.L... BLUNT=.LUN. FLUNK=.LUNK CLUNK=.LUNK` yields `PLUNK`
 * 725: `WHOLE=....E PRIDE=.RI.E WRITE=.RI.E GRIME=.RIME` yields `CRIME`
 * 726: `BICEP=b..e. GLOBE=...BE` yields `MAYBE`
+* 727: `LABOR=.a..r RAMEN=ra... WRATH=.rat. SPRAT=SpRAt` yields `STRAP`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

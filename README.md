@@ -127,6 +127,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 729: `MODEL=....l CLASP=.l.s. SULKY=S.l.Y` yields `SHYLY`
 * 730: `PARSE=.A... CABIN=.A... WALTZ=.A..z GAUZY=.A.z.` yields `KAZOO`
 * 731: `LAUGH=..... FROND=FRO..` *includes* `FROST`
+* 732: `REALM=reA.. SCARE=.cArE TRACE=.RAcE CRAVE=CRA.E` *includes* `CRANE`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

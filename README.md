@@ -131,6 +131,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 733: `TRIBE=T...E THOSE=T..sE` yields `TASTE`
 * 734: `TEMPO=te..o OTHER=ot.E.` yields `COVET`
 * 735: `ACTOR=a...r GRAVE=GRA.. GRAIN=GRA.n` yields `GRAND`
+* 736: `RISKY=R.... RAVEN=R..E. ROWER=RO.E.` yields `RODEO`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

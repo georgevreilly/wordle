@@ -133,6 +133,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 735: `ACTOR=a...r GRAVE=GRA.. GRAIN=GRA.n` yields `GRAND`
 * 736: `RISKY=R.... RAVEN=R..E. ROWER=RO.E.` yields `RODEO`
 * 737: `PRIDE=....e STEAL=stE..` *includes* `GUEST`
+* 738: `FLANK=..a..` *includes* `ABOUT`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

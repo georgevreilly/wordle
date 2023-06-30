@@ -136,6 +136,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 738: `FLANK=..a..` *includes* `ABOUT`
 * 739: `MIRTH=..rt. TROPE=TR... TRACK=TRAC.` yields `TRACT`
 * 740: `SMOKE=....e FETID=.e.id` *includes* `DINER`
+* 741: `BEACH=..a.. AGLOW=a...W` *includes* `STRAW`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

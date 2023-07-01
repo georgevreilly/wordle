@@ -2,43 +2,68 @@
 
 """Validate WordleGuesses.score against all results in README.md"""
 
+import argparse
 import os
 import re
 
 from wordle import WordleGuesses, read_vocabulary
 
-
-GAME_RE = re.compile(r"""^\*[^`]+`(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<actual>[A-Z]+)`""")
+GAME_RE = re.compile(
+    r"""^\* (?P<game>[0-9]+): `(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<actual>[A-Z]+)`""")
 README = os.path.join(os.path.dirname(__file__), "README.md")
 
-vocabulary = read_vocabulary()
-failures = []
-with open(README) as f:
-    for line in f.read().splitlines():
-        if line.startswith("* ") and line.count("`") == 4:
-            m = GAME_RE.match(line)
-            assert m is not None
-            actual = m.group("actual")
-            verb = m.group("verb")
-            guess_scores = m.group("guess_scores").split()
-            print(f"{actual}: {' '.join(guess_scores)}")
-            for gs in guess_scores:
-                guess, score = gs.split("=")
-                computed = WordleGuesses.score(actual, guess)
-                verdict = "✅ Correct" if computed==score else "❌ Wrong!"
-                print(f"\t{guess=} {score=} {computed=}  {verdict}")
-                if computed != score:
-                    failures.append((actual, guess, score, computed))
 
-            eligible = WordleGuesses.parse(guess_scores).find_eligible(vocabulary)
-            assert actual in eligible
-            if "yields" in verb:
-                # I previously decided that any other possibilities would never be used
-                assert len(eligible) >= 1, f"yields: {eligible}"
-            elif "includes" in verb:
-                assert len(eligible) > 1, f"includes: {eligible}"
-            else:
-                raise ValueError(f"Unknown {verb}")
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Score Validator")
+    parser.set_defaults(
+        game=0,
+    )
+    parser.add_argument(
+        "--game", "-g", type=int, help="Game to start with; e.g., 723")
+    return parser.parse_args()
 
-if failures:
-    print(f"{failures=}")
+
+def check_scores(first_game: int) -> list:
+    vocabulary = read_vocabulary()
+    failures = []
+    with open(README) as f:
+        for line in f.read().splitlines():
+            if line.startswith("* ") and line.count("`") == 4:
+                m = GAME_RE.match(line)
+                assert m is not None
+                game = int(m.group("game"))
+                actual = m.group("actual")
+                verb = m.group("verb")
+                guess_scores = m.group("guess_scores").split()
+                if first_game <= game:
+                    print(f"{game}: {actual}: {' '.join(guess_scores)}")
+                    for gs in guess_scores:
+                        guess, score = gs.split("=")
+                        computed = WordleGuesses.score(actual, guess)
+                        verdict = "✅ Correct" if computed==score else "❌ Wrong!"
+                        print(f"\t{guess=} {score=} {computed=}  {verdict}")
+                        if computed != score:
+                            failures.append((actual, guess, score, computed))
+
+                    eligible = WordleGuesses.parse(guess_scores).find_eligible(vocabulary)
+                    assert actual in eligible
+                    if "yields" in verb:
+                        # I previously decided that any other possibilities would never be used
+                        assert len(eligible) >= 1, f"yields: {eligible}"
+                    elif "includes" in verb:
+                        assert len(eligible) > 1, f"includes: {eligible}"
+                    else:
+                        raise ValueError(f"Unknown {verb}")
+    return failures
+
+
+def main() -> int:
+    namespace = parse_args()
+    failures = check_scores(namespace.game)
+    if failures:
+        print(f"{failures=}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

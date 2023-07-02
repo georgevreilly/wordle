@@ -138,6 +138,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 740: `SMOKE=....e FETID=.e.id` *includes* `DINER`
 * 741: `BEACH=..a.. AGLOW=a...W` *includes* `STRAW`
 * 742: `DWARF=..... GLOBE=.L.be BLESS=BLE.. BLECH=BLE..` yields `BLEEP`
+* 743: `MOVIE=MO... MOODY=MO..Y` *includes* `MOSSY`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

@@ -142,6 +142,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 744: `NOISE=.O..e GOLEM=.OlE.` *includes* `HOTEL`
 * 745: `SUGAR=...ar RAMEN=ra.e. HEART=.eArt TRADE=tRA.E` *includes* `IRATE`
 * 746: `FORTH=.o... CLOWN=..o.n PIANO=...no DEMON=.EmOn` yields `VENOM`
+* 747: `WAGER=W.... WOUND=W..nd` yields `WINDY`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

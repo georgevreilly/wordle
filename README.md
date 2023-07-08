@@ -144,6 +144,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 746: `FORTH=.o... CLOWN=..o.n PIANO=...no DEMON=.EmOn` yields `VENOM`
 * 747: `WAGER=W.... WOUND=W..nd` yields `WINDY`
 * 748: `DEPTH=D..t. DIVOT=D..oT` *includes* `DONUT`
+* 749: `WEIRD=we.r. SCREW=.crEw` yields `COWER`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

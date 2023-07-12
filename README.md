@@ -147,6 +147,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 749: `WEIRD=we.r. SCREW=.crEw` yields `COWER`
 * 750: `STEAM=.te.. TEPID=te... CHUTE=...te VOTER=..TER` yields `ENTER`
 * 751: `TOWEL=.O..l LOBBY=lO..Y HOLLY=.OLLY` *includes* `FOLLY`
+* 752: `TRAIN=tra.. CHART=.hart WRATH=.raTH` yields `EARTH`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

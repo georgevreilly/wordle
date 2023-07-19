@@ -155,6 +155,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 757: `FRESH=..... CLOUT=..o.t TOADY=TOa..` yields `TOPAZ`
 * 758: `GRAPH=.R.p. PROUD=pRO.d` yields `DROOP`
 * 759: `CHEAP=..e.. GROVE=.r..e REBUT=re... FLIER=FL.ER` yields `FLYER`
+* 760: `NOVEL=nO... MONTH=.ONt. DONUT=.ON.t` yields `TONIC`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

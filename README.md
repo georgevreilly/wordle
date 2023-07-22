@@ -13,7 +13,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 615: `HARES=.ar.. GUILT=..... CROAK=.Roa. BRAVO=bRa.o` yields `ARBOR`
 * 616: `HARES=..... BUILT=..i.t TIMID=tI... PINTO=.I.T. WITTY=.I.TY` *includes* `FIFTY`
 * 617: `HEARS=...rs SCRUB=S.RU.` *includes* `SYRUP`
-* 618: `CRATE=.r..E WORSE=WORSE`
+* 618: `CRATE=.r..E` *includes* `WORSE`
 * 619: `MARES=.a... FLACK=.la.k LAIKA=l..KA` *includes* `POLKA`
 * 620: `FARES=...es SKITE=s...E MOUSE=MO.SE` yields `MOOSE`
 * 621: `BALES=ba.e. KEBAB=.eba. REBAR=.eba. ABATE=AB..E` *includes* `ABOVE`
@@ -30,7 +30,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 632: `SLANG=.LA.. GRADE=..A.E` *includes* `BLAME`
 * 633: `GRAPE=.r... CLIMB=.l... WOUND=..u.. HULKS=.Ul.s` yields `SURLY`
 * 634: `CLOUT=..... GRAPE=...pe WINED=w..E. SHEEP=S.EEP` yields `SWEEP`
-* 635: `CRAMP=Cr... FIRST=.Ir.. CIDER=CIDER`
+* 635: `CRAMP=Cr... FIRST=.Ir..` yields `CIDER`
 * 636: `GROUT=..... CHASE=..A.e PEAKY=.EA.Y BEADY=.EA.Y LEAFY=lEA.Y` *includes* `MEALY`
 * 637: `PILOT=....T CHART=cha.T` *includes* `YACHT`
 * 638: `STRIP=..r.. GRAND=.R..d DROVE=dRo.e ORDER=oRde.` yields `CREDO`

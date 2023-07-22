@@ -158,6 +158,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 760: `NOVEL=nO... MONTH=.ONt. DONUT=.ON.t` yields `TONIC`
 * 761: `MUSIC=..... GLADE=.LA.. PLANT=.LAN. BLANK=.LANK` yields `FLANK`
 * 762: `LOWER=l...r FRAIL=.r..l BLURT=Blur.` yields `BURLY`
+* 763: `FORCE=For.E` yields `FROZE`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).
@@ -174,7 +175,8 @@ In the results above,
 even if the tool returns several results,
 while `includes` means that there are several plausible results.
 A plausible result is not too obscure, is not a plural,
-and if a verb, is in the present tense singular form.
+and if a verb, is usually in the present tense singular form
+or an irregular past tense.
 
 Implementations are in Python (`wordle.py`, full)
 and Rust (`src/main.rs`, partial).

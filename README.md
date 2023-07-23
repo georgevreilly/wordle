@@ -159,6 +159,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 761: `MUSIC=..... GLADE=.LA.. PLANT=.LAN. BLANK=.LANK` yields `FLANK`
 * 762: `LOWER=l...r FRAIL=.r..l BLURT=Blur.` yields `BURLY`
 * 763: `FORCE=For.E` yields `FROZE`
+* 764: `YOUNG=..... BRAVE=..A.E SHADE=.HA.E CHAFE=.HA.E` yields `WHALE`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

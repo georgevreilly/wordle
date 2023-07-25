@@ -161,6 +161,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 763: `FORCE=For.E` yields `FROZE`
 * 764: `YOUNG=..... BRAVE=..A.E SHADE=.HA.E CHAFE=.HA.E` yields `WHALE`
 * 765: `NAKED=..... GROUP=..o.. COILS=.O...` yields `HOBBY`
+* 766: `RIFLE=...le LEMON=le... CLEAT=.lE..` *includes* `WHEEL`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

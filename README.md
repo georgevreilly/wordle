@@ -163,6 +163,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * 765: `NAKED=..... GROUP=..o.. COILS=.O...` yields `HOBBY`
 * 766: `RIFLE=...le LEMON=le... CLEAT=.lE..` *includes* `WHEEL`
 * 767: `SWORD=...R. CHART=.hART` yields `HEART`
+* 768: `SHARP=s.... CLOSE=c.os. FOCUS=.oc.s` yields `DISCO`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).

@@ -1,8 +1,8 @@
 #!/bin/bash
 DIR="$( dirname -- "${BASH_SOURCE[0]}"; )"
 # shellcheck disable=SC2016
-IFS=' ' read -r -a guess_scores < <(grep "$1" $DIR/README.md | sed 's/[^`]*`\([^`]*\)`.*/\1/')
+IFS=' ' read -r -a guess_scores < <(grep "$1" $DIR/games.md | sed 's/[^`]*`\([^`]*\)`.*/\1/')
 
-IFS=$'\n' read -d '' -r -a guess_scores < <(grep "$1" $DIR/README.md | grep -o ".....=....." && printf '\0')
+IFS=$'\n' read -d '' -r -a guess_scores < <(grep "$1" $DIR/games.md | grep -o ".....=....." && printf '\0')
 echo "${#guess_scores[@]}: ${guess_scores[@]}"
 $DIR/wordle.py "${guess_scores[@]}"

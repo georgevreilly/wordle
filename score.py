@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Validate WordleGuesses.score against all results in README.md"""
+"""Validate WordleGuesses.score against all results in games.md"""
 
 import argparse
 import os
@@ -10,7 +10,7 @@ from wordle import WordleGuesses, read_vocabulary
 
 GAME_RE = re.compile(
     r"""^\* (?P<game>[0-9]+): `(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<actual>[A-Z]+)`""")
-README = os.path.join(os.path.dirname(__file__), "README.md")
+GAMES = os.path.join(os.path.dirname(__file__), "games.md")
 
 
 def parse_args() -> argparse.Namespace:
@@ -26,7 +26,7 @@ def parse_args() -> argparse.Namespace:
 def check_scores(first_game: int) -> list:
     vocabulary = read_vocabulary()
     failures = []
-    with open(README) as f:
+    with open(GAMES) as f:
         for line in f.read().splitlines():
             if line.startswith("* ") and line.count("`") == 4:
                 m = GAME_RE.match(line)

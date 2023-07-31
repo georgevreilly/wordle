@@ -173,3 +173,4 @@ or an irregular past tense.
 * 769: `AVOID=..o.. TOUCH=to..h OTHER=oTHe.` yields `ETHOS`
 * 770: `STRIP=..R.. CORNY=C.R.Y CURVY=CUR.Y` *includes* `CURLY`
 * 771: `ROUSE=....E WHILE=.h..E CACHE=.A.HE` yields `BATHE`
+* 772: `GROAN=..... WHILE=...LE BELLE=...LE TUPLE=t..LE STELE=ST.LE` yields `STYLE`

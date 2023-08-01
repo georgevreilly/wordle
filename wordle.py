@@ -12,6 +12,7 @@ from typing import Optional
 
 WORD_FILE = os.path.join(os.path.dirname(__file__), "wordle.txt")
 WORDLE_LEN = 5
+VERBOSITY = 0
 
 
 def parse_args() -> argparse.Namespace:
@@ -30,17 +31,20 @@ def parse_args() -> argparse.Namespace:
         metavar="GUESS=score",
         help="Examples: 'ARISE=.r.se' 'ROUTE=R.u.e' 'RULES=Ru.eS'",
     )
-    return parser.parse_args()
+    namespace = parser.parse_args()
+    global VERBOSITY
+    VERBOSITY = namespace.verbose
+    return namespace
 
 
 def debug(s):
-    pass
-#   if namespace.verbose != 0: print(s)
+    if VERBOSITY != 0:
+        print(s)
 
 
 def trace(s):
-    pass
-#   if namespace.verbose >= 2: print(s)
+    if VERBOSITY >= 2:
+        print(s)
 
 
 def read_vocabulary(word_file: str = WORD_FILE, word_len: int = WORDLE_LEN) -> list[str]:
@@ -111,7 +115,10 @@ class WordleGuesses:
                         invalid.add(g)
                 else:
                     raise ValueError(f"Unexpected {s} for {g}")
-        return cls(valid, invalid, mask, wrong_spot)
+
+        parsed_guesses = cls(valid, invalid, mask, wrong_spot)
+        debug(parsed_guesses)
+        return parsed_guesses
 
     def is_eligible(self, word: str) -> bool:
         letters = {c for c in word}

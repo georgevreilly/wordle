@@ -33,27 +33,31 @@ def check_scores(first_game: int) -> list:
                 assert m is not None
                 game = int(m.group("game"))
                 actual = m.group("actual")
-                verb = m.group("verb")
+                verb = m.group("verb").strip().strip('*')
                 guess_scores = m.group("guess_scores").split()
-                if first_game <= game:
-                    print(f"{game}: {actual}: {' '.join(guess_scores)}")
-                    for gs in guess_scores:
-                        guess, score = gs.split("=")
-                        computed = WordleGuesses.score(actual, guess)
-                        verdict = "✅ Correct" if computed==score else "❌ Wrong!"
-                        print(f"\t{guess=} {score=} {computed=}  {verdict}")
-                        if computed != score:
-                            failures.append((actual, guess, score, computed))
+                if first_game > game:
+                    continue
 
-                    eligible = WordleGuesses.parse(guess_scores).find_eligible(vocabulary)
-                    assert actual in eligible
-                    if "yields" in verb:
-                        # I previously decided that any other possibilities would never be used
-                        assert len(eligible) >= 1, f"yields: {eligible}"
-                    elif "includes" in verb:
-                        assert len(eligible) > 1, f"includes: {eligible}"
-                    else:
-                        raise ValueError(f"Unknown {verb}")
+                print(f"{game}: {actual}: {' '.join(guess_scores)}")
+                for gs in guess_scores:
+                    guess, score = gs.split("=")
+                    computed = WordleGuesses.score(actual, guess)
+                    verdict = "✅ Correct" if computed == score else "❌ Wrong!"
+                    print(f"\t{guess=} {score=} {computed=}  {verdict}")
+                    if computed != score:
+                        failures.append((actual, guess, score, computed))
+
+                eligible = WordleGuesses.parse(guess_scores).find_eligible(vocabulary)
+                choices = " ".join(f"«{e}»" if e == actual else e for e in eligible)
+                print(f"\t{verb}: {choices}")
+                assert actual in eligible
+                if "yields" == verb:
+                    # I previously decided that any other possibilities would never be used
+                    assert len(eligible) >= 1, f"yields: {eligible}"
+                elif "includes" == verb:
+                    assert len(eligible) > 1, f"includes: {eligible}"
+                else:
+                    raise ValueError(f"Unknown {verb}")
     return failures
 
 

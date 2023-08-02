@@ -175,3 +175,4 @@ or an irregular past tense.
 * 771: `ROUSE=....E WHILE=.h..E CACHE=.A.HE` yields `BATHE`
 * 772: `GROAN=..... WHILE=...LE BELLE=...LE TUPLE=t..LE STELE=ST.LE` yields `STYLE`
 * 773: `PLANK=...n. TENOR=TEN.. TENET=TEN.t` *includes* `TENTH`
+* 774: `GHOST=g...T EGRET=eg.ET` yields `BEGET`

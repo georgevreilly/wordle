@@ -115,9 +115,9 @@ class WordleGuesses:
 
     @classmethod
     def parse(cls, guess_scores: list[str], word_len: int = WORDLE_LEN) -> 'WordleGuesses':
+        mask: list[Optional[str]] = [None] * word_len
         valid: set[str] = set()
         invalid: list[set[str]] = [set() for _ in range(word_len)]
-        mask: list[Optional[str]] = [None] * word_len
         wrong_spot: list[set[str]] = [set() for _ in range(word_len)]
 
         for gs in guess_scores:
@@ -128,8 +128,8 @@ class WordleGuesses:
                 assert "A" <= g <= "Z", "GUESS should be uppercase"
                 if "A" <= s <= "Z":
                     # Green: letter is correct at this position
-                    valid.add(g)
                     mask[i] = g
+                    valid.add(g)
                     invalid[i] = set()
                 elif "a" <= s <= "z":
                     # Yellow: letter is elsewhere in the word

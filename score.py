@@ -53,9 +53,9 @@ def check_scores(first_game: int) -> list:
                 assert actual in eligible
                 if "yields" == verb:
                     # I previously decided that any other possibilities would never be used
-                    assert len(eligible) >= 1, f"yields: {eligible}"
+                    assert len(eligible) >= 1, f"{game} yields: {eligible}"
                 elif "includes" == verb:
-                    assert len(eligible) > 1, f"includes: {eligible}"
+                    assert len(eligible) > 1, f"{game} includes: {eligible}"
                 else:
                     raise ValueError(f"Unknown {verb}")
     return failures

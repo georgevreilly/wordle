@@ -17,7 +17,7 @@ or an irregular past tense.
 * 611: `AROSE=a..se LANES=.a.es WAGES=wa.es` *includes* `SWEAT`
 * 614: `HARES=.A.e. CABLE=.A..E MANGE=.A.gE GAFFE=gA..E` yields `VAGUE`
 * 615: `HARES=.ar.. GUILT=..... CROAK=.Roa. BRAVO=bRa.o` yields `ARBOR`
-* 616: `HARES=..... BUILT=..i.t TIMID=tI... PINTO=.I.T. WITTY=.I.TY` *includes* `FIFTY`
+* 616: `HARES=..... BUILT=..i.t TIMID=tI... PINTO=.I.T. WITTY=.I.TY` yields `FIFTY`
 * 617: `HEARS=...rs SCRUB=S.RU.` *includes* `SYRUP`
 * 618: `CRATE=.r..E` *includes* `WORSE`
 * 619: `MARES=.a... FLACK=.la.k LAIKA=l..KA` *includes* `POLKA`
@@ -61,7 +61,7 @@ or an irregular past tense.
 * 657: `SPLIT=s.l.. BRACE=...c. CLOGS=clo.S LOCKS=LOC.S` *includes* `LOCUS`
 * 658: `MOURN=..... SCAPE=....E GLIDE=gl.dE` yields `LEDGE`
 * 659: `ANGRY=aN... ENACT=.NA..` *includes* `SNAFU`
-* 660: `GLARE=...re STINK=...n. NERVE=ner.. BONER=..nER` *includes* `UNDER`
+* 660: `GLARE=...re STINK=...n. NERVE=ner.. BONER=..nER` yields `UNDER`
 * 661: `GLARE=.lA.. STALK=..AL.` yields `QUALM`
 * 662: `SURLY=..R.. CORED=.OR..` *includes* `BORAX`
 * 663: `WENCH=...c. BLIMP=..... GROUT=.r..T` yields `CARAT`

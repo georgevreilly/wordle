@@ -63,9 +63,9 @@ def read_vocabulary(word_file: str = WORD_FILE, word_len: int = WORDLE_LEN) -> l
 
 @dataclass
 class WordleGuesses:
-    valid: set[str]             # Green or Yellow
-    invalid: set[str]           # Black
     mask: list[Optional[str]]   # Exact match for position (Green)
+    valid: set[str]             # Green or Yellow
+    invalid: list[set[str]]     # Black
     wrong_spot: list[set[str]]  # Wrong spot (Yellow)
 
     @classmethod
@@ -100,7 +100,7 @@ class WordleGuesses:
     @classmethod
     def parse(cls, guess_scores: list[str], word_len: int = WORDLE_LEN) -> 'WordleGuesses':
         valid: set[str] = set()
-        invalid: set[str] = set()
+        invalid: list[set[str]] = [set() for _ in range(word_len)]
         mask: list[Optional[str]] = [None] * word_len
         wrong_spot: list[set[str]] = [set() for _ in range(word_len)]
 
@@ -114,18 +114,22 @@ class WordleGuesses:
                     # Green: letter is correct at this position
                     valid.add(g)
                     mask[i] = g
+                    invalid[i] = set()
                 elif "a" <= s <= "z":
                     # Yellow: letter is elsewhere in the word
                     valid.add(g)
                     wrong_spot[i].add(g)
-                elif s == ".":
-                    # Black: letter is not in the word
-                    if g not in valid:
-                        invalid.add(g)
-                else:
+                elif s != ".":
                     raise ValueError(f"Unexpected {s} for {g}")
 
-        parsed_guesses = cls(valid, invalid, mask, wrong_spot)
+            for i, (g, s) in enumerate(zip(guess, score)):
+                if s == ".":
+                    # Black: letter is not in the word
+                    for j in range(word_len):
+                        if mask[j] is None:
+                            invalid[j].add(g)
+
+        parsed_guesses = cls(mask, valid, invalid, wrong_spot)
         debug(parsed_guesses)
         return parsed_guesses
 
@@ -135,8 +139,8 @@ class WordleGuesses:
             # Did not have the full set of green+yellow letters known to be valid
             trace(f"!Valid: {word}")
             return False
-        elif letters & self.invalid:
-            # Invalid (black) letters present
+        elif any(c in inv for c, inv in zip(word, self.invalid)):
+            # Invalid (black) letters present at specific positions
             trace(f"Invalid: {word}")
             return False
         elif any(m is not None and c != m for c, m in zip(word, self.mask)):

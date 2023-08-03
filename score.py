@@ -47,7 +47,9 @@ def check_scores(first_game: int) -> list:
                     if computed != score:
                         failures.append((actual, guess, score, computed))
 
-                eligible = WordleGuesses.parse(guess_scores).find_eligible(vocabulary)
+                parsed_guesses = WordleGuesses.parse(guess_scores)
+                print(f"\t{parsed_guesses}")
+                eligible = parsed_guesses.find_eligible(vocabulary)
                 choices = " ".join(f"«{e}»" if e == actual else e for e in eligible)
                 print(f"\t{verb}: {choices}")
                 assert actual in eligible

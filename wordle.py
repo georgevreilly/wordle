@@ -4,13 +4,14 @@
 
 import argparse
 import os
+import string
 
 from collections import defaultdict
 from dataclasses import dataclass
 from typing import Optional
 
 
-WORD_FILE = os.path.join(os.path.dirname(__file__), "wordle.txt")
+WORD_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), "wordle.txt"))
 WORDLE_LEN = 5
 VERBOSITY = 0
 
@@ -25,6 +26,8 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--verbose", "-v", action="count", help="Show all the steps")
+    parser.add_argument(
+        "--word-file", "-w", help="Word file. Default: %(default)s")
     parser.add_argument(
         "guess_scores",
         nargs="+",
@@ -49,7 +52,13 @@ def trace(s):
 
 def read_vocabulary(word_file: str = WORD_FILE, word_len: int = WORDLE_LEN) -> list[str]:
     with open(word_file) as f:
-        return [w.upper() for w in f.read().splitlines() if len(w) == word_len]
+        words = []
+        for w in f.read().splitlines():
+            w = w.upper().strip()
+            if len(w) == word_len:
+                assert all(c in string.ascii_uppercase for c in w)
+                words.append(w)
+        return words
 
 
 @dataclass

@@ -61,12 +61,28 @@ def read_vocabulary(word_file: str = WORD_FILE, word_len: int = WORDLE_LEN) -> l
         return words
 
 
+def letter_set(s: set[str]) -> str:
+    return "".join(sorted(s))
+
+
+def letter_sets(ls: list[set[str]]) -> str:
+    return "[" + ",".join(letter_set(e) or "-" for e in ls) + "]"
+
+
 @dataclass
 class WordleGuesses:
     mask: list[Optional[str]]   # Exact match for position (Green)
     valid: set[str]             # Green or Yellow
     invalid: list[set[str]]     # Black
     wrong_spot: list[set[str]]  # Wrong spot (Yellow)
+
+    def __repr__(self) -> str:
+        return ("WordleGuesses("
+                f"mask={''.join(m or '-' for m in self.mask)}, "
+                f"valid={letter_set(self.valid)}, "
+                f"invalid={letter_sets(self.invalid)}, "
+                f"wrong_spot={letter_sets(self.wrong_spot)}"
+                ")")
 
     @classmethod
     def score(cls, actual: str, guess: str, word_len: int = WORDLE_LEN) -> str:

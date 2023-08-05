@@ -177,3 +177,4 @@ or an irregular past tense.
 * 773: `PLANK=...n. TENOR=TEN.. TENET=TEN.t` *includes* `TENTH`
 * 774: `GHOST=g...T EGRET=eg.ET` yields `BEGET`
 * 775: `RISKY=r...Y CRAZY=.ra.Y WEARY=..arY MARRY=.AR.Y` *includes* `PARTY`
+* 776: `PRANG=.rA.. BLARE=..AR.` *includes* `CHART`

@@ -122,8 +122,8 @@ class WordleGuesses:
 
         for gs in guess_scores:
             guess, score = gs.split("=")
-            assert len(guess) == word_len
-            assert len(score) == word_len
+            assert len(guess) == word_len, f"{guess=}, {len(guess)}"
+            assert len(score) == word_len, f"{score=}, {len(score)}"
             for i, (g, s) in enumerate(zip(guess, score)):
                 assert "A" <= g <= "Z", "GUESS should be uppercase"
                 if "A" <= s <= "Z":

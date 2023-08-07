@@ -17,19 +17,23 @@ and there is no `T` or `K` (gray ⬛/⬜).
 Implementations are in Python (`wordle.py`, full)
 and Rust (`src/main.rs`, partial).
 
-The strings in `wordle.txt` were extracted from `wordle.blahblah.js`
+The strings in [`wordle.txt`](./wordle.txt) were extracted from `wordle.blahblah.js`
 on the [Wordle website](https://www.nytimes.com/games/wordle/index.html).
 You can also use `/usr/share/dict/words`.
 
-The `checkguess` script invokes `wordle.py` on a guess recorded in `games.md`:
+My previous games and scores can be found in [`games.md`](./games.md).
+
+The [`checkguess`](./checkguess) script invokes `wordle.py`
+on a guess recorded in `games.md`:
 e.g., `./checkguess ACRID` or `./checkguess 697`.
 
-The `score.py` script validates all of the GUESS=SCORE pairs in `games.md`.
+The [`score.py`](./score.py) script validates
+all of the `GUESS=SCORE` pairs in `games.md`.
 
 Previous Wordle answers can be found at
 [WordFinder](https://wordfinder.yourdictionary.com/wordle/answers/).
 
-In addition, various statistics are computed in `startwords.py`,
+In addition, various statistics are computed in [`startwords.py`](./startwords.py),
 which really should be converted to a Jupyter notebook with graphs.
 
 For Spelling Bee, use `bee.py` with `words_alpha.txt`,

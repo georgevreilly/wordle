@@ -181,3 +181,4 @@ or an irregular past tense.
 * 777: `DEMON=de.on HONED=.oned` yields `ANODE`
 * 778: `CLOUT=.lo.. HOLEY=.OL.y` yields `POLYP`
 * 779: `FEIGN=..... PROUD=.RO.. WROTH=.RO.. AROMA=.RO..` *includes* `BROOK`
+* 780: `WROTE=..... BLIND=Bl... BALMY=B.L.Y` *includes* `BULLY`

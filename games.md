@@ -184,3 +184,4 @@ or an irregular past tense.
 * 780: `WROTE=..... BLIND=Bl... BALMY=B.L.Y` *includes* `BULLY`
 * 781: `FERAL=.er.l LITER=L..ER LONER=LO.ER LOWER=LO.ER` *includes* `LOVER`
 * 782: `LODGE=....e WIPER=..Pe. TEPEE=teP.. EXPAT=E.P.t` yields `EMPTY`
+* 783: `PATIO=....O GECKO=.E..O MEZZO=.E..O` *includes* `HELLO`

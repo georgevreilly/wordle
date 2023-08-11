@@ -183,3 +183,4 @@ or an irregular past tense.
 * 779: `FEIGN=..... PROUD=.RO.. WROTH=.RO.. AROMA=.RO..` *includes* `BROOK`
 * 780: `WROTE=..... BLIND=Bl... BALMY=B.L.Y` *includes* `BULLY`
 * 781: `FERAL=.er.l LITER=L..ER LONER=LO.ER LOWER=LO.ER` *includes* `LOVER`
+* 782: `LODGE=....e WIPER=..Pe. TEPEE=teP.. EXPAT=E.P.t` yields `EMPTY`

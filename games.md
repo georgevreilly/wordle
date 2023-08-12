@@ -185,3 +185,4 @@ or an irregular past tense.
 * 781: `FERAL=.er.l LITER=L..ER LONER=LO.ER LOWER=LO.ER` *includes* `LOVER`
 * 782: `LODGE=....e WIPER=..Pe. TEPEE=teP.. EXPAT=E.P.t` yields `EMPTY`
 * 783: `PATIO=....O GECKO=.E..O MEZZO=.E..O` *includes* `HELLO`
+* 784: `MORAL=..... TWINE=..I.. CHICK=..ICK` *includes* `QUICK`

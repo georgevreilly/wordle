@@ -186,3 +186,4 @@ or an irregular past tense.
 * 782: `LODGE=....e WIPER=..Pe. TEPEE=teP.. EXPAT=E.P.t` yields `EMPTY`
 * 783: `PATIO=....O GECKO=.E..O MEZZO=.E..O` *includes* `HELLO`
 * 784: `MORAL=..... TWINE=..I.. CHICK=..ICK` *includes* `QUICK`
+* 785: `VOTER=..t.r TRAIL=tRA.. GRANT=.RA.t` yields `WRATH`

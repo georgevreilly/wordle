@@ -187,3 +187,4 @@ or an irregular past tense.
 * 783: `PATIO=....O GECKO=.E..O MEZZO=.E..O` *includes* `HELLO`
 * 784: `MORAL=..... TWINE=..I.. CHICK=..ICK` *includes* `QUICK`
 * 785: `VOTER=..t.r TRAIL=tRA.. GRANT=.RA.t` yields `WRATH`
+* 786: `LOWER=..... STANK=S.Ank SNACK=SNA.k` yields `SNAKY`

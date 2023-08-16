@@ -189,3 +189,4 @@ or an irregular past tense.
 * 785: `VOTER=..t.r TRAIL=tRA.. GRANT=.RA.t` yields `WRATH`
 * 786: `LOWER=..... STANK=S.Ank SNACK=SNA.k` yields `SNAKY`
 * 787: `VOUCH=..... GRIPE=..i.e DENIM=deni. WIDEN=.iDEn` yields `INDEX`
+* 788: `ENJOY=..... CLIMB=c...B` yields `SCRUB`

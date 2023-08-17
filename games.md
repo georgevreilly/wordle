@@ -190,3 +190,4 @@ or an irregular past tense.
 * 786: `LOWER=..... STANK=S.Ank SNACK=SNA.k` yields `SNAKY`
 * 787: `VOUCH=..... GRIPE=..i.e DENIM=deni. WIDEN=.iDEn` yields `INDEX`
 * 788: `ENJOY=..... CLIMB=c...B` yields `SCRUB`
+* 789: `SUPER=s.... CLASH=..aS. ANGST=A..S. ABYSS=A..SS` yields `AMISS`

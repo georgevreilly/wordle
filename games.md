@@ -192,3 +192,4 @@ or an irregular past tense.
 * 788: `ENJOY=..... CLIMB=c...B` yields `SCRUB`
 * 789: `SUPER=s.... CLASH=..aS. ANGST=A..S. ABYSS=A..SS` yields `AMISS`
 * 790: `CROWD=c.... SCALE=.cA.e ENACT=E.ACT` yields `EXACT`
+* 791: `WOMAN=..ma. MARCH=MA... MAPLE=MA... MAFIA=MA..A` yields `MAGMA`

@@ -194,3 +194,4 @@ or an irregular past tense.
 * 790: `CROWD=c.... SCALE=.cA.e ENACT=E.ACT` yields `EXACT`
 * 791: `WOMAN=..ma. MARCH=MA... MAPLE=MA... MAFIA=MA..A` yields `MAGMA`
 * 792: `SCENT=s.E.T WREST=..EST` *includes* `QUEST`
+* 793: `CATER=ca.e. FECAL=.Eca. PEACH=.EACH` yields `BEACH`

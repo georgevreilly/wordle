@@ -198,3 +198,4 @@ or an irregular past tense.
 * 794: `SHOWN=S.... STINK=S.I.. SPIRE=SPI.E` yields `SPICE`
 * 795: `USAGE=....E GRIPE=.r..E CHORE=...rE REBBE=rE..E` includes `VERVE`
 * 796: `MASON=...o. OTHER=o...r ROCKY=rO..Y WORRY=WOR.Y` yields `WORDY`
+* 797: `JUDGE=....e CHEST=c.E.. WRECK=..Ec.` yields `OCEAN`

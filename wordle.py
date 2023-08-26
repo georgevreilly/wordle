@@ -117,6 +117,18 @@ class WordleGuesses:
         return "".join(parts)
 
     @classmethod
+    def emojis(cls, score: str, use_black: bool = True) -> str:
+        result = []
+        for s in score:
+            if "A" <= s <= "Z":
+                result.append("🟩")
+            elif "a" <= s <= "z":
+                result.append("🟨")
+            elif s == ".":
+                result.append("⬛" if use_black else "⬜")
+        return "".join(result)
+
+    @classmethod
     def parse(cls, guess_scores: list[str], word_len: int = WORDLE_LEN) -> 'WordleGuesses':
         mask: list[Optional[str]] = [None] * word_len
         valid: set[str] = set()

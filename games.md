@@ -199,3 +199,4 @@ or an irregular past tense.
 * 795: `USAGE=....E GRIPE=.r..E CHORE=...rE REBBE=rE..E` includes `VERVE`
 * 796: `MASON=...o. OTHER=o...r ROCKY=rO..Y WORRY=WOR.Y` yields `WORDY`
 * 797: `JUDGE=....e CHEST=c.E.. WRECK=..Ec.` yields `OCEAN`
+* 798: `CHAFE=CH... CHIRP=CHir.` yields `CHOIR`

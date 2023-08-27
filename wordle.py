@@ -63,7 +63,7 @@ class WordleGuesses:
             assert "A" <= a <= "Z", "ACTUAL should be uppercase"
             assert "A" <= g <= "Z", "GUESS should be uppercase"
             if a == g:
-                # Green: exact match at position `i` => uppercase
+                # Green: correct: exact match at position `i` => uppercase
                 parts.append(a)
             else:
                 remaining[a] += 1
@@ -76,7 +76,7 @@ class WordleGuesses:
                     remaining[g] -= 1
                     parts[i] = g.lower()
                 else:
-                    # Black: letter not present at all
+                    # Black: letter completely absent
                     parts[i] = "."
 
         return "".join(parts)
@@ -122,7 +122,7 @@ class WordleGuesses:
                     valid.add(g)
                     invalid[i] = set()
                 elif "a" <= s <= "z":
-                    # Yellow: letter is elsewhere in the word
+                    # Yellow: letter is present elsewhere in the word
                     valid.add(g)
                     wrong_spot[i].add(g)
                 elif s != ".":
@@ -130,8 +130,10 @@ class WordleGuesses:
 
             for i, (g, s) in enumerate(zip(guess, score)):
                 if s == ".":
-                    # Black: letter is not in the word
+                    # Black: letter absent from the word
                     for j in range(word_len):
+                        # If we don't have a correct letter for this other position,
+                        # treat `g` as invalid. This handles repeated letters.
                         if mask[j] is None:
                             invalid[j].add(g)
 
@@ -150,7 +152,7 @@ class WordleGuesses:
             trace(f"Invalid: {word}")
             return False
         elif any(m is not None and c != m for c, m in zip(word, self.mask)):
-            # Couldn't find all the green letters 
+            # Couldn't find all the green/correct letters
             trace(f"!Mask: {word}")
             return False
         elif any(c in ws for c, ws in zip(word, self.wrong_spot)):

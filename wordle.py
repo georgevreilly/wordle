@@ -95,14 +95,12 @@ class WordleGuesses:
 
     @classmethod
     def emojis(cls, score: str, use_black: bool = True) -> str:
-        result = []
-        for cs in cls.cell_states(score):
-            if cs == CellState.CORRECT:
-                result.append("🟩")
-            elif cs == CellState.PRESENT:
-                result.append("🟨")
-            elif cs == CellState.ABSENT:
-                result.append("⬛" if use_black else "⬜")
+        state_to_emoji = {
+            CellState.CORRECT: "🟩",
+            CellState.PRESENT: "🟨",
+            CellState.ABSENT: "⬛" if use_black else "⬜",
+        }
+        result = [state_to_emoji[cs] for cs in cls.cell_states(score)]
         return "".join(result)
 
     @classmethod

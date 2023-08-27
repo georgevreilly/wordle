@@ -4,7 +4,8 @@ import string
 
 
 DICT_FILE = "/usr/share/dict/words"
-WORD_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), "wordle.txt"))
+CURR_DIR = os.path.abspath(os.path.dirname(__file__))
+WORD_FILE = os.path.join(CURR_DIR, "wordle.txt")
 WORDLE_LEN = 5
 _VERBOSITY = 0
 

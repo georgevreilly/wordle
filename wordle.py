@@ -3,11 +3,11 @@
 """Wordle Finder"""
 
 import argparse
-import os
 import string
 
 from collections import defaultdict
 from dataclasses import dataclass
+from enum import Enum
 from typing import Optional
 
 from common import debug, make_argparser, read_vocabulary, set_verbosity, trace, WORDLE_LEN
@@ -28,12 +28,18 @@ def letter_sets(ls: list[set[str]]) -> str:
     return "[" + ",".join(letter_set(e) or "-" for e in ls) + "]"
 
 
+class CellState(Enum):
+    CORRECT = 1  # Green
+    PRESENT = 2  # Yellow
+    ABSENT  = 3  # Black
+
+
 @dataclass
 class WordleGuesses:
-    mask: list[Optional[str]]   # Exact match for position (Green)
-    valid: set[str]             # Green or Yellow
-    invalid: list[set[str]]     # Black
-    wrong_spot: list[set[str]]  # Wrong spot (Yellow)
+    mask: list[Optional[str]]   # Exact match for position (Green/Correct)
+    valid: set[str]             # Green/Correct or Yellow/Present
+    invalid: list[set[str]]     # Black/Absent
+    wrong_spot: list[set[str]]  # Wrong spot (Yellow/Present)
 
     def __str__(self) -> str:
         unused = set(string.ascii_uppercase) - self.valid - set.union(*self.invalid)
@@ -76,17 +82,26 @@ class WordleGuesses:
         return "".join(parts)
 
     @classmethod
-    def emojis(cls, score: str, use_black: bool = True) -> str:
+    def cell_states(cls, score: str) -> list[CellState]:
         result = []
         for s in score:
             if "A" <= s <= "Z":
-                # correct
-                result.append("🟩")
+                result.append(CellState.CORRECT)
             elif "a" <= s <= "z":
-                # present
-                result.append("🟨")
+                result.append(CellState.PRESENT)
             elif s == ".":
-                # absent
+                result.append(CellState.ABSENT)
+        return result
+
+    @classmethod
+    def emojis(cls, score: str, use_black: bool = True) -> str:
+        result = []
+        for cs in cls.cell_states(score):
+            if cs == CellState.CORRECT:
+                result.append("🟩")
+            elif cs == CellState.PRESENT:
+                result.append("🟨")
+            elif cs == CellState.ABSENT:
                 result.append("⬛" if use_black else "⬜")
         return "".join(result)
 

@@ -10,55 +10,14 @@ from collections import defaultdict
 from dataclasses import dataclass
 from typing import Optional
 
-
-WORD_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), "wordle.txt"))
-WORDLE_LEN = 5
-VERBOSITY = 0
+from common import debug, make_argparser, read_vocabulary, set_verbosity, trace, WORDLE_LEN
 
 
-def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Wordle Finder")
-    parser.set_defaults(
-        # word_file="/usr/share/dict/words",
-        word_file=WORD_FILE,
-        len=WORDLE_LEN,
-        verbose=0,
-    )
-    parser.add_argument(
-        "--verbose", "-v", action="count", help="Show all the steps")
-    parser.add_argument(
-        "--word-file", "-w", help="Word file. Default: %(default)s")
-    parser.add_argument(
-        "guess_scores",
-        nargs="+",
-        metavar="GUESS=score",
-        help="Examples: 'ARISE=.r.se' 'ROUTE=R.u.e' 'RULES=Ru.eS'",
-    )
+def parse_args(description: str) -> argparse.Namespace:
+    parser = make_argparser(description)
     namespace = parser.parse_args()
-    global VERBOSITY
-    VERBOSITY = namespace.verbose
+    set_verbosity(namespace)
     return namespace
-
-
-def debug(s):
-    if VERBOSITY != 0:
-        print(s)
-
-
-def trace(s):
-    if VERBOSITY >= 2:
-        print(s)
-
-
-def read_vocabulary(word_file: str = WORD_FILE, word_len: int = WORDLE_LEN) -> list[str]:
-    with open(word_file) as f:
-        words = []
-        for w in f.read().splitlines():
-            w = w.upper().strip()
-            if len(w) == word_len:
-                assert all(c in string.ascii_uppercase for c in w)
-                words.append(w)
-        return words
 
 
 def letter_set(s: set[str]) -> str:
@@ -121,10 +80,13 @@ class WordleGuesses:
         result = []
         for s in score:
             if "A" <= s <= "Z":
+                # correct
                 result.append("🟩")
             elif "a" <= s <= "z":
+                # present
                 result.append("🟨")
             elif s == ".":
+                # absent
                 result.append("⬛" if use_black else "⬜")
         return "".join(result)
 
@@ -192,7 +154,7 @@ class WordleGuesses:
 
 
 def main() -> int:
-    namespace = parse_args()
+    namespace = parse_args(description="Wordle Finder")
     vocabulary = read_vocabulary(namespace.word_file, namespace.len)
     parsed_guesses = WordleGuesses.parse(namespace.guess_scores, namespace.len)
     choices = parsed_guesses.find_eligible(vocabulary)

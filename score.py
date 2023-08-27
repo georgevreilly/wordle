@@ -44,7 +44,7 @@ def check_scores(first_game: int) -> list:
                     computed = WordleGuesses.score(actual, guess)
                     emojis = WordleGuesses.emojis(score)
                     verdict = "✅ Correct" if computed == score else "❌ Wrong!"
-                    print(f"\t{guess=} {score=} {computed=} {emojis}  {verdict}")
+                    print(f"\t{guess=} {score=} {computed=} ‹{emojis}›  {verdict}")
                     if computed != score:
                         failures.append((actual, guess, score, computed))
 

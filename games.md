@@ -200,3 +200,4 @@ or an irregular past tense.
 * 796: `MASON=...o. OTHER=o...r ROCKY=rO..Y WORRY=WOR.Y` yields `WORDY`
 * 797: `JUDGE=....e CHEST=c.E.. WRECK=..Ec.` yields `OCEAN`
 * 798: `CHAFE=CH... CHIRP=CHir.` yields `CHOIR`
+* 799: `REALM=.EA.. TEACH=.EAC.` yields `PEACE`

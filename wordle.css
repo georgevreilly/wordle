@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@700&display=swap');
+
+table.wordle {
+    font-family: 'Libre Franklin', 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    border-spacing: 6px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table tr td {
+    color: white;
+    background-color: white;
+    height: 62px;
+    width: 62px;
+    text-align: center;
+}
+
+table tr td.correct {
+    background-color: #6aaa64;
+}
+
+table tr td.present {
+    background-color: #c9b458;
+}
+
+table tr td.absent {
+    background-color: #838184;
+}

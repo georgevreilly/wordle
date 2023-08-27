@@ -15,3 +15,5 @@ Cargo.lock
 
 # Python
 __pycache__/
+
+*.html

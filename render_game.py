@@ -46,9 +46,16 @@ def render_html(guess_scores: list[str], style_file: str) -> str:
 """
 
 
+def render_emojis(guess_scores: list[str], game: str) -> str:
+    header = f"Wordle {game} {len(guess_scores)}/6\n\n" if game else ""
+    rows = [WordleGuesses.emojis(gs.split("=")[-1]) for gs in guess_scores]
+    return header + "\n".join(rows)
+
+
 def main() -> int:
     namespace = parse_args(description="Render Wordle Game as HTML")
-    print(render_html(namespace.guess_scores, namespace.style_file))
+    # print(render_html(namespace.guess_scores, namespace.style_file))
+    print(render_emojis(namespace.guess_scores, "775"))
     return 0
 
 

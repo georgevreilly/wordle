@@ -201,3 +201,4 @@ or an irregular past tense.
 * 797: `JUDGE=....e CHEST=c.E.. WRECK=..Ec.` yields `OCEAN`
 * 798: `CHAFE=CH... CHIRP=CHir.` yields `CHOIR`
 * 799: `REALM=.EA.. TEACH=.EAC.` yields `PEACE`
+* 800: `SABER=...er REFIT=re.it TRITE=.RITE` yields `WRITE`

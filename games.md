@@ -202,3 +202,4 @@ or an irregular past tense.
 * 798: `CHAFE=CH... CHIRP=CHir.` yields `CHOIR`
 * 799: `REALM=.EA.. TEACH=.EAC.` yields `PEACE`
 * 800: `SABER=...er REFIT=re.it TRITE=.RITE` yields `WRITE`
+* 801: `SLAVE=..a.e AGENT=a.e.. MAKER=.A.ER` *includes* `CAPER`

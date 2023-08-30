@@ -203,3 +203,4 @@ or an irregular past tense.
 * 799: `REALM=.EA.. TEACH=.EAC.` yields `PEACE`
 * 800: `SABER=...er REFIT=re.it TRITE=.RITE` yields `WRITE`
 * 801: `SLAVE=..a.e AGENT=a.e.. MAKER=.A.ER` *includes* `CAPER`
+* 802: `FARCE=.a... ANGLO=A...O` *includes* `AUDIO`

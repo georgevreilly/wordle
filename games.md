@@ -204,3 +204,4 @@ or an irregular past tense.
 * 800: `SABER=...er REFIT=re.it TRITE=.RITE` yields `WRITE`
 * 801: `SLAVE=..a.e AGENT=a.e.. MAKER=.A.ER` *includes* `CAPER`
 * 802: `FARCE=.a... ANGLO=A...O` *includes* `AUDIO`
+* 803: `MANIC=...i. SIDLE=.id.E DRIVE=dRI.E PRIDE=.RIDE` yields `BRIDE`

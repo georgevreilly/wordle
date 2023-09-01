@@ -205,3 +205,4 @@ or an irregular past tense.
 * 801: `SLAVE=..a.e AGENT=a.e.. MAKER=.A.ER` *includes* `CAPER`
 * 802: `FARCE=.a... ANGLO=A...O` *includes* `AUDIO`
 * 803: `MANIC=...i. SIDLE=.id.E DRIVE=dRI.E PRIDE=.RIDE` yields `BRIDE`
+* 804: `HOTEL=...e. GRADE=..A.E AWAKE=..A.E INANE=..A.E SUAVE=S.A.E` *includes* `SPACE`

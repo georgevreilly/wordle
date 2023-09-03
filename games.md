@@ -207,3 +207,4 @@ or an irregular past tense.
 * 803: `MANIC=...i. SIDLE=.id.E DRIVE=dRI.E PRIDE=.RIDE` yields `BRIDE`
 * 804: `HOTEL=...e. GRADE=..A.E AWAKE=..A.E INANE=..A.E SUAVE=S.A.E` *includes* `SPACE`
 * 805: `ROGUE=.o... PIVOT=.i.O. ANION=.NION` yields `ONION`
+* 806: `VODKA=....a CABLE=.a... GRANT=..A.T SHAFT=..A.T` yields `AWAIT`

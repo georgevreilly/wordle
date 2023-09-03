@@ -41,13 +41,14 @@ class WordleGuesses:
 
     def __str__(self) -> str:
         unused = set(string.ascii_uppercase) - self.valid - set.union(*self.invalid)
+        guess_scores = ", ".join(f"{gs}|{gs.emojis()}" for gs in self.guess_scores)
         parts = ", ".join([
             f"mask={''.join(m or '-' for m in self.mask)}",
             f"valid={letter_set(self.valid)}",
             f"invalid={letter_sets(self.invalid)}",
             f"wrong_spot={letter_sets(self.wrong_spot)}",
             f"unused={letter_set(unused)}",
-            f"guess_scores=[{', '.join(f'{gs}:{gs.emojis()}' for gs in self.guess_scores)}]"
+            f"guess_scores=[{guess_scores}]",
         ])
         return (f"WordleGuesses({parts})")
 

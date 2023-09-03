@@ -10,7 +10,10 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import Optional
 
-from common import debug, make_argparser, read_vocabulary, set_verbosity, trace, WORDLE_LEN
+from common import (
+    debug, make_argparser, read_vocabulary, set_verbosity, trace, WORDLE_LEN,
+    TileState, GuessScore,
+)
 
 
 def parse_args(description: str) -> argparse.Namespace:
@@ -28,18 +31,13 @@ def letter_sets(ls: list[set[str]]) -> str:
     return "[" + ",".join(letter_set(e) or "-" for e in ls) + "]"
 
 
-class CellState(Enum):
-    CORRECT = 1  # Green
-    PRESENT = 2  # Yellow
-    ABSENT  = 3  # Black
-
-
 @dataclass
 class WordleGuesses:
     mask: list[Optional[str]]   # Exact match for position (Green/Correct)
     valid: set[str]             # Green/Correct or Yellow/Present
     invalid: list[set[str]]     # Black/Absent
     wrong_spot: list[set[str]]  # Wrong spot (Yellow/Present)
+    guess_scores: list[GuessScore]
 
     def __str__(self) -> str:
         unused = set(string.ascii_uppercase) - self.valid - set.union(*self.invalid)
@@ -49,13 +47,14 @@ class WordleGuesses:
             f"invalid={letter_sets(self.invalid)}",
             f"wrong_spot={letter_sets(self.wrong_spot)}",
             f"unused={letter_set(unused)}",
+            f"guess_scores=[{', '.join(f'{gs}:{gs.emojis()}' for gs in self.guess_scores)}]"
         ])
         return (f"WordleGuesses({parts})")
 
     @classmethod
-    def score(cls, actual: str, guess: str, word_len: int = WORDLE_LEN) -> str:
-        assert len(actual) == word_len
-        assert len(guess) == word_len
+    def score(cls, actual: str, guess: str) -> str:
+        assert len(actual) == WORDLE_LEN
+        assert len(guess) == WORDLE_LEN
         parts = []
         remaining: dict[str, int] = defaultdict(int)
 
@@ -82,62 +81,33 @@ class WordleGuesses:
         return "".join(parts)
 
     @classmethod
-    def cell_states(cls, score: str) -> list[CellState]:
-        result = []
-        for s in score:
-            if "A" <= s <= "Z":
-                result.append(CellState.CORRECT)
-            elif "a" <= s <= "z":
-                result.append(CellState.PRESENT)
-            elif s == ".":
-                result.append(CellState.ABSENT)
-        return result
-
-    @classmethod
-    def emojis(cls, score: str, use_black: bool = True) -> str:
-        state_to_emoji = {
-            CellState.CORRECT: "🟩",
-            CellState.PRESENT: "🟨",
-            CellState.ABSENT: "⬛" if use_black else "⬜",
-        }
-        result = [state_to_emoji[cs] for cs in cls.cell_states(score)]
-        return "".join(result)
-
-    @classmethod
-    def parse(cls, guess_scores: list[str], word_len: int = WORDLE_LEN) -> 'WordleGuesses':
-        mask: list[Optional[str]] = [None] * word_len
+    def parse(cls, guess_scores: list[GuessScore]) -> 'WordleGuesses':
+        mask: list[Optional[str]] = [None] * WORDLE_LEN
         valid: set[str] = set()
-        invalid: list[set[str]] = [set() for _ in range(word_len)]
-        wrong_spot: list[set[str]] = [set() for _ in range(word_len)]
+        invalid: list[set[str]] = [set() for _ in range(WORDLE_LEN)]
+        wrong_spot: list[set[str]] = [set() for _ in range(WORDLE_LEN)]
 
         for gs in guess_scores:
-            guess, score = gs.split("=")
-            assert len(guess) == word_len, f"{guess=}, {len(guess)}"
-            assert len(score) == word_len, f"{score=}, {len(score)}"
-            for i, (g, s) in enumerate(zip(guess, score)):
-                assert "A" <= g <= "Z", "GUESS should be uppercase"
-                if "A" <= s <= "Z":
-                    # Green: letter is correct at this position
-                    mask[i] = g
-                    valid.add(g)
+            # First pass for correct and present
+            for i in range(WORDLE_LEN):
+                if gs.tiles[i] is TileState.CORRECT:
+                    mask[i] = gs.guess[i]
+                    valid.add(gs.guess[i])
                     invalid[i] = set()
-                elif "a" <= s <= "z":
-                    # Yellow: letter is present elsewhere in the word
-                    valid.add(g)
-                    wrong_spot[i].add(g)
-                elif s != ".":
-                    raise ValueError(f"Unexpected {s} for {g}")
+                elif gs.tiles[i] is TileState.PRESENT:
+                    valid.add(gs.guess[i])
+                    wrong_spot[i].add(gs.guess[i])
 
-            for i, (g, s) in enumerate(zip(guess, score)):
-                if s == ".":
-                    # Black: letter absent from the word
-                    for j in range(word_len):
+            # Second pass for absent letters
+            for i in range(WORDLE_LEN):
+                if gs.tiles[i] is TileState.ABSENT:
+                    for j in range(WORDLE_LEN):
                         # If we don't have a correct letter for this other position,
                         # treat `g` as invalid. This handles repeated letters.
                         if mask[j] is None:
-                            invalid[j].add(g)
+                            invalid[j].add(gs.guess[i])
 
-        parsed_guesses = cls(mask, valid, invalid, wrong_spot)
+        parsed_guesses = cls(mask, valid, invalid, wrong_spot, guess_scores)
         debug(parsed_guesses)
         return parsed_guesses
 
@@ -170,8 +140,9 @@ class WordleGuesses:
 
 def main() -> int:
     namespace = parse_args(description="Wordle Finder")
-    vocabulary = read_vocabulary(namespace.word_file, namespace.len)
-    parsed_guesses = WordleGuesses.parse(namespace.guess_scores, namespace.len)
+    guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
+    vocabulary = namespace.words or read_vocabulary(namespace.word_file)
+    parsed_guesses = WordleGuesses.parse(guess_scores)
     choices = parsed_guesses.find_eligible(vocabulary)
     print("\n".join(choices))
     return 0

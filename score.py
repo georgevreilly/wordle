@@ -6,7 +6,7 @@ import argparse
 import os
 import re
 
-from wordle import WordleGuesses, read_vocabulary
+from wordle import GuessScore, WordleGuesses, read_vocabulary
 
 GAME_RE = re.compile(
     r"""^\* (?P<game>[0-9]+): `(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<actual>[A-Z]+)`""")
@@ -34,19 +34,17 @@ def check_scores(first_game: int) -> list:
                 game = int(m.group("game"))
                 actual = m.group("actual")
                 verb = m.group("verb").strip().strip('*')
-                guess_scores = m.group("guess_scores").split()
+                guess_scores = [GuessScore.make(gs) for gs in m.group("guess_scores").split()]
                 if first_game > game:
                     continue
 
-                print(f"{game}: {actual}: {' '.join(guess_scores)}")
+                print(f"{game}: {actual}: {' '.join(str(gs) for gs in guess_scores)}")
                 for gs in guess_scores:
-                    guess, score = gs.split("=")
-                    computed = WordleGuesses.score(actual, guess)
-                    emojis = WordleGuesses.emojis(score)
-                    verdict = "✅ Correct" if computed == score else "❌ Wrong!"
-                    print(f"\t{guess=} {score=} {computed=} ‹{emojis}›  {verdict}")
-                    if computed != score:
-                        failures.append((actual, guess, score, computed))
+                    computed = WordleGuesses.score(actual, gs.guess)
+                    verdict = "✅ Correct" if computed == gs.score else "❌ Wrong!"
+                    print(f"\t{gs.guess=} {gs.score=} {computed=} ‹{gs.emojis()}›  {verdict}")
+                    if computed != gs.score:
+                        failures.append((actual, gs.guess, gs.score, computed))
 
                 parsed_guesses = WordleGuesses.parse(guess_scores)
                 print(f"\t{parsed_guesses}")

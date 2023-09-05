@@ -209,3 +209,4 @@ or an irregular past tense.
 * 805: `ROGUE=.o... PIVOT=.i.O. ANION=.NION` yields `ONION`
 * 806: `VODKA=....a CABLE=.a... GRANT=..A.T SHAFT=..A.T` yields `AWAIT`
 * 807: `LABOR=..... STINK=..i.. PITCH=.I... DIVER=dI...` yields `GIDDY`
+* 808: `CLAIM=c..i. TRICE=.riC.` yields `BIRCH`

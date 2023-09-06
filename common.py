@@ -1,15 +1,18 @@
 import argparse
 import os
+import re
 import string
 
 from collections import namedtuple
 from dataclasses import dataclass
 from enum import Enum
+from typing import ClassVar
 
 
 DICT_FILE = "/usr/share/dict/words"
 CURR_DIR = os.path.abspath(os.path.dirname(__file__))
 WORD_FILE = os.path.join(CURR_DIR, "wordle.txt")
+GAMES_FILE = os.path.join(os.path.dirname(__file__), "games.md")
 WORDLE_LEN = 5
 _VERBOSITY = 0
 
@@ -64,9 +67,35 @@ class GuessScore:
 
     def __str__(self):
         return f"{self.guess}={self.score}"
-    
+
     def emojis(self, separator=""):
         return separator.join(t.emoji for t in self.tiles)
+
+
+@dataclass
+class GameResult:
+    game_id: int
+    answer: str
+    verb: str
+    guess_scores: list[GuessScore]
+
+    GAME_RE: ClassVar[re.Pattern] = re.compile(
+        r"""^\* (?P<game>[0-9]+): `(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<answer>[A-Z]+)`""")
+
+    @classmethod
+    def parse_game_results(cls, filename: str) -> 'list[GameResult]':
+        results: list[GameResult] = []
+        with open(filename) as f:
+            for line in f.read().splitlines():
+                if line.startswith("* ") and line.count("`") == 4:
+                    m = cls.GAME_RE.match(line)
+                    game_id = int(m.group("game"))
+                    answer = m.group("answer")
+                    verb = m.group("verb").strip().strip('*')
+                    assert verb in {"yields", "includes"}
+                    guess_scores = [GuessScore.make(gs) for gs in m.group("guess_scores").split()]
+                    results.append(GameResult(game_id, answer, verb, guess_scores))
+        return results
 
 
 def make_argparser(description: str, word_file = WORD_FILE) -> argparse.ArgumentParser:

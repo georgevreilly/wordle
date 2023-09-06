@@ -6,11 +6,8 @@ import argparse
 import os
 import re
 
-from wordle import GuessScore, WordleGuesses, read_vocabulary
-
-GAME_RE = re.compile(
-    r"""^\* (?P<game>[0-9]+): `(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<answer>[A-Z]+)`""")
-GAMES = os.path.join(os.path.dirname(__file__), "games.md")
+from common import GuessScore, GameResult, read_vocabulary, GAMES_FILE
+from wordle import WordleGuesses
 
 
 def parse_args() -> argparse.Namespace:
@@ -26,39 +23,32 @@ def parse_args() -> argparse.Namespace:
 def check_scores(first_game: int) -> list:
     vocabulary = read_vocabulary()
     failures = []
-    with open(GAMES) as f:
-        for line in f.read().splitlines():
-            if line.startswith("* ") and line.count("`") == 4:
-                m = GAME_RE.match(line)
-                assert m is not None
-                game = int(m.group("game"))
-                answer = m.group("answer")
-                verb = m.group("verb").strip().strip('*')
-                guess_scores = [GuessScore.make(gs) for gs in m.group("guess_scores").split()]
-                if first_game > game:
-                    continue
+    game_results = GameResult.parse_game_results(GAMES_FILE)
+    for gr in game_results:
+        if first_game > gr.game_id:
+            continue
 
-                print(f"{game}: {answer}: {' '.join(str(gs) for gs in guess_scores)}")
-                for gs in guess_scores:
-                    computed = WordleGuesses.score(answer, gs.guess)
-                    verdict = "✅ Correct" if computed == gs.score else "❌ Wrong!"
-                    print(f"\tguess={gs.guess} score={gs.score} {computed=} ‹{gs.emojis()}›  {verdict}")
-                    if computed != gs.score:
-                        failures.append((answer, gs.guess, gs.score, computed))
+        print(f"{gr.game_id}: {gr.answer}: {' '.join(str(gs) for gs in gr.guess_scores)}")
+        for gs in gr.guess_scores:
+            computed = WordleGuesses.score(gr.answer, gs.guess)
+            verdict = "✅ Correct" if computed == gs.score else "❌ Wrong!"
+            print(f"\tguess={gs.guess} score={gs.score} {computed=} ‹{gs.emojis()}›  {verdict}")
+            if computed != gs.score:
+                failures.append((gr.answer, gs.guess, gs.score, computed))
 
-                parsed_guesses = WordleGuesses.parse(guess_scores)
-                print(f"\t{parsed_guesses}")
-                eligible = parsed_guesses.find_eligible(vocabulary)
-                choices = " ".join(f"«{e}»" if e == answer else e for e in eligible)
-                print(f"\t{verb}: {choices}")
-                assert answer in eligible
-                if "yields" == verb:
-                    # I previously decided that any other possibilities would never be used
-                    assert len(eligible) >= 1, f"{game} yields: {eligible}"
-                elif "includes" == verb:
-                    assert len(eligible) > 1, f"{game} includes: {eligible}"
-                else:
-                    raise ValueError(f"Unknown {verb}")
+        parsed_guesses = WordleGuesses.parse(gr.guess_scores)
+        print(f"\t{parsed_guesses}")
+        eligible = parsed_guesses.find_eligible(vocabulary)
+        choices = " ".join(f"«{e}»" if e == gr.answer else e for e in eligible)
+        print(f"\t{gr.verb}: {choices}")
+        assert gr.answer in eligible
+        if "yields" == gr.verb:
+            # I previously decided that any other possibilities would never be used
+            assert len(eligible) >= 1, f"{gr.game_id} yields: {eligible}"
+        elif "includes" == gr.verb:
+            assert len(eligible) > 1, f"{gr.game_id} includes: {eligible}"
+        else:
+            raise ValueError(f"Unknown {gr.verb}")
     return failures
 
 

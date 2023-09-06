@@ -9,7 +9,7 @@ import re
 from wordle import GuessScore, WordleGuesses, read_vocabulary
 
 GAME_RE = re.compile(
-    r"""^\* (?P<game>[0-9]+): `(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<actual>[A-Z]+)`""")
+    r"""^\* (?P<game>[0-9]+): `(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<answer>[A-Z]+)`""")
 GAMES = os.path.join(os.path.dirname(__file__), "games.md")
 
 
@@ -32,26 +32,26 @@ def check_scores(first_game: int) -> list:
                 m = GAME_RE.match(line)
                 assert m is not None
                 game = int(m.group("game"))
-                actual = m.group("actual")
+                answer = m.group("answer")
                 verb = m.group("verb").strip().strip('*')
                 guess_scores = [GuessScore.make(gs) for gs in m.group("guess_scores").split()]
                 if first_game > game:
                     continue
 
-                print(f"{game}: {actual}: {' '.join(str(gs) for gs in guess_scores)}")
+                print(f"{game}: {answer}: {' '.join(str(gs) for gs in guess_scores)}")
                 for gs in guess_scores:
-                    computed = WordleGuesses.score(actual, gs.guess)
+                    computed = WordleGuesses.score(answer, gs.guess)
                     verdict = "✅ Correct" if computed == gs.score else "❌ Wrong!"
-                    print(f"\t{gs.guess=} {gs.score=} {computed=} ‹{gs.emojis()}›  {verdict}")
+                    print(f"\tguess={gs.guess} score={gs.score} {computed=} ‹{gs.emojis()}›  {verdict}")
                     if computed != gs.score:
-                        failures.append((actual, gs.guess, gs.score, computed))
+                        failures.append((answer, gs.guess, gs.score, computed))
 
                 parsed_guesses = WordleGuesses.parse(guess_scores)
                 print(f"\t{parsed_guesses}")
                 eligible = parsed_guesses.find_eligible(vocabulary)
-                choices = " ".join(f"«{e}»" if e == actual else e for e in eligible)
+                choices = " ".join(f"«{e}»" if e == answer else e for e in eligible)
                 print(f"\t{verb}: {choices}")
-                assert actual in eligible
+                assert answer in eligible
                 if "yields" == verb:
                     # I previously decided that any other possibilities would never be used
                     assert len(eligible) >= 1, f"{game} yields: {eligible}"

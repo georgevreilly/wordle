@@ -40,7 +40,8 @@ class WordleGuesses:
     guess_scores: list[GuessScore]
 
     def __str__(self) -> str:
-        unused = set(string.ascii_uppercase) - self.valid - set.union(*self.invalid)
+        all_absent: set[str] = set.union(*self.invalid)
+        unused = set(string.ascii_uppercase) - self.valid - all_absent
         guess_scores = ", ".join(f"{gs}|{gs.emojis()}" for gs in self.guess_scores)
         parts = ", ".join([
             f"mask={''.join(m or '-' for m in self.mask)}",

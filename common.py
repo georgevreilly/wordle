@@ -89,6 +89,7 @@ class GameResult:
             for line in f.read().splitlines():
                 if line.startswith("* ") and line.count("`") == 4:
                     m = cls.GAME_RE.match(line)
+                    assert m is not None
                     game_id = int(m.group("game"))
                     answer = m.group("answer")
                     verb = m.group("verb").strip().strip('*')

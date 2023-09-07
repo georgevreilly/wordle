@@ -211,3 +211,4 @@ or an irregular past tense.
 * 807: `LABOR=..... STINK=..i.. PITCH=.I... DIVER=dI...` yields `GIDDY`
 * 808: `CLAIM=c..i. TRICE=.riC.` yields `BIRCH`
 * 809: `REMIT=..... GHOUL=Gh...` yields `GNASH`
+* 810: `MOURN=..... GLADE=.l.de` *includes* `DWELL`

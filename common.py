@@ -6,7 +6,7 @@ import string
 from collections import namedtuple
 from dataclasses import dataclass
 from enum import Enum
-from typing import ClassVar
+from typing import ClassVar, Optional
 
 
 DICT_FILE = "/usr/share/dict/words"
@@ -18,7 +18,7 @@ _VERBOSITY = 0
 
 
 class WordleError(Exception):
-    """Base exception"""
+    """Base exception class"""
 
 
 class TileState(namedtuple("TileState", "value emoji color css_color"), Enum):
@@ -148,3 +148,15 @@ def read_vocabulary(word_file: str = WORD_FILE) -> list[str]:
                 assert all(c in string.ascii_uppercase for c in w)
                 words.append(w)
         return words
+
+
+def dash_mask(mask: list[Optional[str]]):
+    return "".join(m or "-" for m in mask)
+
+
+def letter_set(s: set[str]) -> str:
+    return "".join(sorted(s))
+
+
+def letter_sets(ls: list[set[str]]) -> str:
+    return "[" + ",".join(letter_set(e) or "-" for e in ls) + "]"

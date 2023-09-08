@@ -7,12 +7,11 @@ import string
 
 from collections import defaultdict
 from dataclasses import dataclass
-from enum import Enum
 from typing import Optional
 
 from common import (
     debug, make_argparser, read_vocabulary, set_verbosity, trace, WORDLE_LEN,
-    TileState, GuessScore,
+    TileState, GuessScore, dash_mask, letter_set, letter_sets,
 )
 
 
@@ -21,14 +20,6 @@ def parse_args(description: str) -> argparse.Namespace:
     namespace = parser.parse_args()
     set_verbosity(namespace)
     return namespace
-
-
-def letter_set(s: set[str]) -> str:
-    return "".join(sorted(s))
-
-
-def letter_sets(ls: list[set[str]]) -> str:
-    return "[" + ",".join(letter_set(e) or "-" for e in ls) + "]"
 
 
 @dataclass
@@ -44,7 +35,7 @@ class WordleGuesses:
         unused = set(string.ascii_uppercase) - self.valid - all_absent
         guess_scores = ", ".join(f"{gs}|{gs.emojis()}" for gs in self.guess_scores)
         parts = ", ".join([
-            f"mask={''.join(m or '-' for m in self.mask)}",
+            f"mask={dash_mask(self.mask)}",
             f"valid={letter_set(self.valid)}",
             f"invalid={letter_sets(self.invalid)}",
             f"wrong_spot={letter_sets(self.wrong_spot)}",
@@ -114,22 +105,27 @@ class WordleGuesses:
         return parsed_guesses
 
     def is_eligible(self, word: str) -> bool:
-        letters = {c for c in word}
-        if letters & self.valid != self.valid:
+        if missing := self.valid - ({c for c in word} & self.valid):
             # Did not have the full set of green+yellow letters known to be valid
-            trace(f"!Valid: {word}")
+            trace(f"!Valid: {word} needs {letter_set(missing)}")
             return False
-        elif any(c in inv for c, inv in zip(word, self.invalid)):
+
+        invalid = [(c if c in inv else None) for c, inv in zip(word, self.invalid)]
+        if any(invalid):
             # Invalid (black) letters present at specific positions
-            trace(f"Invalid: {word}")
+            trace(f"Invalid: {word} has {dash_mask(invalid)}")
             return False
-        elif any(m is not None and c != m for c, m in zip(word, self.mask)):
+
+        mask = [(m if c != m else None) for c, m in zip(word, self.mask)]
+        if any(mask):
             # Couldn't find all the green/correct letters
-            trace(f"!Mask: {word}")
+            trace(f"!Mask: {word} needs {dash_mask(mask)}")
             return False
-        elif any(c in ws for c, ws in zip(word, self.wrong_spot)):
+
+        wrong = [(c if c in ws else None) for c, ws in zip(word, self.wrong_spot)]
+        if any(wrong):
             # Found some yellow letters: valid letters in wrong position
-            trace(f"WrongSpot: {word}")
+            trace(f"WrongSpot: {word} has {dash_mask(wrong)}")
             return False
         else:
             # Potentially valid

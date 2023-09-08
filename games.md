@@ -212,3 +212,4 @@ or an irregular past tense.
 * 808: `CLAIM=c..i. TRICE=.riC.` yields `BIRCH`
 * 809: `REMIT=..... GHOUL=Gh...` yields `GNASH`
 * 810: `MOURN=..... GLADE=.l.de` *includes* `DWELL`
+* 811: `THIEF=...e. BLADE=....E GROVE=.ro.E MORSE=.OrSE` yields `ROUSE`

@@ -30,12 +30,13 @@ def parse_args(description: str) -> argparse.Namespace:
 
 
 def render_html_table(guess_scores: list[GuessScore]) -> str:
+    def css_class(gs: GuessScore, i: int) -> str:
+        return ('"' + gs.tiles[i].name.lower() + '" ')[:9]
+
     rows = []
     for gs in guess_scores:
-        row = []
-        for i in range(WORDLE_LEN):
-            css_class = ('"' + gs.tiles[i].name.lower() + '" ')[:9]
-            row.append(f"<td class={css_class}>{gs.guess[i]}</td>") 
+        row = [f"<td class={css_class(gs, i)}>{gs.guess[i]}</td>"
+               for i in range(WORDLE_LEN)]
         rows.append("<tr>" + " ".join(row) + "</tr>")
     return "<table class='wordle'>\n  " + "\n  ".join(rows) + "\n</table>"
 

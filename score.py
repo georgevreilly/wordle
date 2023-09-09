@@ -32,7 +32,8 @@ def check_scores(first_game: int) -> list:
             computed = WordleGuesses.score(gr.answer, gs.guess)
             verdict = "✅ Correct" if computed == gs.score else "❌ Wrong!"
             print(
-                f"\tguess={gs.guess} score={gs.score} {computed=} ‹{gs.emojis()}›  {verdict}"
+                f"\tguess={gs.guess} score={gs.score} {computed=} "
+                f"‹{gs.emojis()}›  {verdict}"
             )
             if computed != gs.score:
                 failures.append((gr.answer, gs.guess, gs.score, computed))

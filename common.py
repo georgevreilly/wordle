@@ -83,7 +83,12 @@ class GameResult:
     guess_scores: list[GuessScore]
 
     GAME_RE: ClassVar[re.Pattern] = re.compile(
-        r"""^\* (?P<game>[0-9]+): `(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<answer>[A-Z]+)`$"""
+        r"""^\*\s(?P<game>[0-9]+):\s
+            `(?P<guess_scores>[^`]+)`\s
+            \*?(?P<verb>[a-z]+)\*?\s
+            `(?P<answer>[A-Z]+)`$
+        """,
+        re.VERBOSE,
     )
 
     @classmethod
@@ -93,7 +98,7 @@ class GameResult:
             for line in f.read().splitlines():
                 if line.startswith("* ") and line.count("`") == 4:
                     m = cls.GAME_RE.match(line)
-                    assert m is not None
+                    assert m is not None, f"{line!r}"
                     game_id = int(m.group("game"))
                     answer = m.group("answer")
                     verb = m.group("verb").strip().strip("*")

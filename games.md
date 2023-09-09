@@ -213,3 +213,4 @@ or an irregular past tense.
 * 809: `REMIT=..... GHOUL=Gh...` yields `GNASH`
 * 810: `MOURN=..... GLADE=.l.de` *includes* `DWELL`
 * 811: `THIEF=...e. BLADE=....E GROVE=.ro.E MORSE=.OrSE` yields `ROUSE`
+* 812: `BASIC=....c CRIME=c.... FLOCK=.l.ck` yields `LUCKY`

@@ -3,6 +3,7 @@
 """Wordle Finder"""
 
 import argparse
+import logging
 import string
 
 from collections import defaultdict
@@ -10,7 +11,7 @@ from dataclasses import dataclass
 from typing import cast
 
 from common import (
-    debug, make_argparser, argparse_wordlist, read_vocabulary, set_verbosity, trace, WORDLE_LEN,
+    make_argparser, argparse_wordlist, read_vocabulary, set_verbosity, WORDLE_LEN,
     TileState, GuessScore, dash_mask, letter_set, letter_sets,
 )
 
@@ -103,7 +104,7 @@ class WordleGuesses:
                             invalid[j].add(g)
 
         parsed_guesses = cls(mask, valid, invalid, wrong_spot, guess_scores)
-        debug(parsed_guesses)
+        logging.info(parsed_guesses)
         return parsed_guesses
 
     def is_eligible(self, word: str) -> tuple[bool, list[str]]:
@@ -136,7 +137,7 @@ class WordleGuesses:
             if eligible:
                 results.append(w)
             else:
-                trace(f"{w}: {'; '.join(reasons)}")
+                logging.debug(f"{w}: {'; '.join(reasons)}")
         return results
 
 

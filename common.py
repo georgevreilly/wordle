@@ -1,4 +1,5 @@
 import argparse
+import logging
 import os
 import re
 import string
@@ -131,20 +132,11 @@ def argparse_wordlist(parser: argparse.ArgumentParser, word_file: str = WORD_FIL
 
 
 def set_verbosity(namespace: argparse.Namespace) -> argparse.Namespace:
-    # TODO: use logging
-    global _VERBOSITY
-    _VERBOSITY = namespace.verbose
+    level = (logging.DEBUG if namespace.verbose >= 2
+             else logging.INFO if namespace.verbose >= 1
+             else logging.WARNING)
+    logging.basicConfig(level=level, stream=sys.stdout, format="%(message)s")
     return namespace
-
-
-def debug(s):
-    if _VERBOSITY != 0:
-        print(s)
-
-
-def trace(s):
-    if _VERBOSITY >= 2:
-        print(s)
 
 
 def read_vocabulary(word_file: str = WORD_FILE) -> list[str]:

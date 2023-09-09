@@ -6,7 +6,7 @@ import argparse
 import os
 
 from common import (
-    make_argparser, set_verbosity, CURR_DIR, WORDLE_LEN, GuessScore,
+    make_argparser, set_verbosity, CURR_DIR, WORDLE_LEN, GuessScore, output_file,
 )
 
 
@@ -15,9 +15,17 @@ def parse_args(description: str) -> argparse.Namespace:
     parser.set_defaults(
         style_file=os.path.join(CURR_DIR, "wordle.css"),
     )
-    # TODO: add more arguments
+    parser.add_argument(
+        "--emoji", "-E", action="store_true", help="Render emojis")
+    parser.add_argument(
+        "--html", "-H", action="store_true", help="Render HTML")
+    parser.add_argument(
+        "--output", "-o", help="Output filename")
+    parser.add_argument(
+        "--game", "-g", dest="game_id", help="Number of game")
     namespace = parser.parse_args()
     set_verbosity(namespace)
+    namespace.guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
     return namespace
 
 
@@ -41,21 +49,24 @@ def render_html(guess_scores: list[GuessScore], style_file: str) -> str:
 <body>
 {render_html_table(guess_scores)}
 </body>
-</html>
+</html>\
 """
 
 
-def render_emojis(guess_scores: list[GuessScore], game: str) -> str:
-    header = f"Wordle {game} {len(guess_scores)}/6\n\n" if game else ""
+def render_emojis(guess_scores: list[GuessScore], game_id: str) -> str:
+    header = f"Wordle {game_id} {len(guess_scores)}/6\n\n" if game_id else ""
     rows = [gs.emojis(" ") for gs in guess_scores]
     return header + "\n".join(rows)
 
 
 def main() -> int:
-    namespace = parse_args(description="Render Wordle Game as HTML")
-    guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
-    # print(render_html(guess_scores, namespace.style_file))
-    print(render_emojis(guess_scores, "775"))
+    namespace = parse_args(description="Render Wordle Game as HTML or Emojis")
+    if namespace.html:
+        with output_file(namespace.output, ".html") as f:
+            print(render_html(namespace.guess_scores, namespace.style_file), file=f)
+    if namespace.emoji:
+        with output_file(namespace.output, ".txt") as f:
+            print(render_emojis(namespace.guess_scores, namespace.game_id), file=f)
     return 0
 
 

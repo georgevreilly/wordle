@@ -2,8 +2,10 @@ import argparse
 import os
 import re
 import string
+import sys
 
 from collections import namedtuple
+from contextlib import contextmanager
 from dataclasses import dataclass
 from enum import Enum
 from typing import ClassVar, Optional
@@ -80,7 +82,7 @@ class GameResult:
     guess_scores: list[GuessScore]
 
     GAME_RE: ClassVar[re.Pattern] = re.compile(
-        r"""^\* (?P<game>[0-9]+): `(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<answer>[A-Z]+)`""")
+        r"""^\* (?P<game>[0-9]+): `(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<answer>[A-Z]+)`$""")
 
     @classmethod
     def parse_game_results(cls, filename: str) -> 'list[GameResult]':
@@ -150,13 +152,26 @@ def read_vocabulary(word_file: str = WORD_FILE) -> list[str]:
         return words
 
 
-def dash_mask(mask: list[Optional[str]]):
-    return "".join(m or "-" for m in mask)
-
-
 def letter_set(s: set[str]) -> str:
     return "".join(sorted(s))
 
 
 def letter_sets(ls: list[set[str]]) -> str:
     return "[" + ",".join(letter_set(e) or "-" for e in ls) + "]"
+
+
+def dash_mask(mask: list[Optional[str]]):
+    return "".join(m or "-" for m in mask)
+
+
+@contextmanager
+def output_file(output: str | None, extension: str):
+    if not output or output == "-":
+        yield sys.stdout
+    else:
+        filename = os.path.splitext(output)[0] + extension
+        f = open(filename, "w")
+        try:
+            yield f
+        finally:
+            f.close()

@@ -112,7 +112,7 @@ def make_argparser(description: str, word_file = WORD_FILE) -> argparse.Argument
         "--word-file", "-f", metavar="FILENAME",
         help="Word file. Default: %(default)r")
     words_group.add_argument(
-        "--word", "-w", action="append", dest="words", metavar="WORD",
+        "--words", "-w", metavar="WORD", nargs="+",
         help="Word(s) to check")
     parser.add_argument(
         "--verbose", "-v", action="count", help="Show all the steps")

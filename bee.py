@@ -4,7 +4,8 @@ import argparse
 import os
 
 DICT_FILE = "/usr/share/dict/words"
-ALPHA_FILE = os.path.join(os.path.dirname(__file__), "words_alpha.txt")  # github.com/dwyl/english-words
+# From github.com/dwyl/english-words
+ALPHA_FILE = os.path.join(os.path.dirname(__file__), "words_alpha.txt")
 
 parser = argparse.ArgumentParser(description="Spelling Bee Finder")
 parser.set_defaults(
@@ -30,8 +31,8 @@ if len({c for c in namespace.letters}) != 7 or not all("A" <= c <= "Z" for c in 
     raise ValueError(f"Need 7 distinct uppercase letters for Spelling Bee: {namespace.letters!r}")
 
 
-def print_list(label: str, l: list[str]) -> None:
-    print("\n{}:\n\t{}".format(label, "\n\t".join(l)))
+def print_list(label: str, lst: list[str]) -> None:
+    print("\n{}:\n\t{}".format(label, "\n\t".join(lst)))
 
 
 with open(namespace.word_file) as f:

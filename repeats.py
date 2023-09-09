@@ -21,6 +21,7 @@ def count_letters(word: str) -> list[str]:
             counts[cnt] += ch
     return counts
 
+
 def repeats() -> None:
     word_list = read_word_list(WORD_FILE)
     multiletter_words: list[list[tuple]] = [[] for _ in range(WORDLE_LEN+1)]

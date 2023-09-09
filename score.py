@@ -3,10 +3,8 @@
 """Validate WordleGuesses.score against all results in games.md"""
 
 import argparse
-import os
-import re
 
-from common import GuessScore, GameResult, read_vocabulary, GAMES_FILE
+from common import GameResult, read_vocabulary, GAMES_FILE
 from wordle import WordleGuesses
 
 

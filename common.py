@@ -27,7 +27,7 @@ class WordleError(Exception):
 class TileState(namedtuple("TileState", "value emoji color css_color"), Enum):
     CORRECT = 1, "\U0001F7E9", "Green",  "#6aaa64"
     PRESENT = 2, "\U0001F7E8", "Yellow", "#c9b458"
-    ABSENT  = 3, "\U00002B1B", "Black",  "#838184"
+    ABSENT  = 3, "\U00002B1B", "Black",  "#838184"  # noqa: E221
 
 
 @dataclass

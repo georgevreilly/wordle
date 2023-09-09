@@ -101,19 +101,11 @@ class GameResult:
         return results
 
 
-def make_argparser(description: str, word_file = WORD_FILE) -> argparse.ArgumentParser:
+def make_argparser(description: str) -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description)
     parser.set_defaults(
-        word_file=word_file,
         verbose=0,
     )
-    words_group = parser.add_mutually_exclusive_group()
-    words_group.add_argument(
-        "--word-file", "-f", metavar="FILENAME",
-        help="Word file. Default: %(default)r")
-    words_group.add_argument(
-        "--words", "-w", metavar="WORD", nargs="+",
-        help="Word(s) to check")
     parser.add_argument(
         "--verbose", "-v", action="count", help="Show all the steps")
     parser.add_argument(
@@ -125,7 +117,21 @@ def make_argparser(description: str, word_file = WORD_FILE) -> argparse.Argument
     return parser
 
 
+def argparse_wordlist(parser: argparse.ArgumentParser, word_file: str = WORD_FILE) -> None:
+    parser.set_defaults(
+        word_file=word_file,
+    )
+    words_group = parser.add_mutually_exclusive_group()
+    words_group.add_argument(
+        "--word-file", "-f", metavar="FILENAME",
+        help="Word file. Default: %(default)r")
+    words_group.add_argument(
+        "--words", "-w", metavar="WORD", nargs="+",
+        help="Word(s) to check")
+
+
 def set_verbosity(namespace: argparse.Namespace) -> argparse.Namespace:
+    # TODO: use logging
     global _VERBOSITY
     _VERBOSITY = namespace.verbose
     return namespace

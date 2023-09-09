@@ -10,13 +10,14 @@ from dataclasses import dataclass
 from typing import cast
 
 from common import (
-    debug, make_argparser, read_vocabulary, set_verbosity, trace, WORDLE_LEN,
+    debug, make_argparser, argparse_wordlist, read_vocabulary, set_verbosity, trace, WORDLE_LEN,
     TileState, GuessScore, dash_mask, letter_set, letter_sets,
 )
 
 
 def parse_args(description: str) -> argparse.Namespace:
     parser = make_argparser(description)
+    argparse_wordlist(parser)
     namespace = parser.parse_args()
     set_verbosity(namespace)
     namespace.guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]

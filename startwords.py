@@ -44,8 +44,8 @@ for w in WORDS:
         pos_pop[c][i] += 1
 
 frequencies = {
-    letter: count / total_letters for letter, count
-    in rev_sort_by_count(letter_counts.items())
+    letter: count / total_letters
+    for letter, count in rev_sort_by_count(letter_counts.items())
 }
 
 for i, (l, p) in enumerate(frequencies.items()):
@@ -104,7 +104,7 @@ def ngrams(n: int):
     counts: dict[str, int] = defaultdict(int)
     for w in WORDS:
         for i in range(namespace.len - n + 1):
-            counts[w[i:i + n]] += 1
+            counts[w[i : i + n]] += 1
     ngram_counts = rev_sort_by_count(counts.items())
     prefixes: dict[str, list[tuple[str, int]]] = {c: [] for c in AtoZ}
     suffixes: dict[str, list[tuple[str, int]]] = {c: [] for c in AtoZ}

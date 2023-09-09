@@ -12,23 +12,34 @@ parser.set_defaults(
     word_file=ALPHA_FILE,
 )
 parser.add_argument(
-    "letters",
-    help="Seven uppercase letters. Center (mandatory) letter first."
+    "letters", help="Seven uppercase letters. Center (mandatory) letter first."
 )
 parser.add_argument(
-    "--dict", "-d",
-    action="store_const", const=DICT_FILE, dest="word_file",
-    help="Use %(const)s")
+    "--dict",
+    "-d",
+    action="store_const",
+    const=DICT_FILE,
+    dest="word_file",
+    help="Use %(const)s",
+)
 parser.add_argument(
-    "--alpha", "-a",
-    action="store_const", const=ALPHA_FILE, dest="word_file",
-    help="Use %(const)s")
+    "--alpha",
+    "-a",
+    action="store_const",
+    const=ALPHA_FILE,
+    dest="word_file",
+    help="Use %(const)s",
+)
 namespace = parser.parse_args()
 
 center = namespace.letters[0]
 others = {c for c in namespace.letters[1:]}
-if len({c for c in namespace.letters}) != 7 or not all("A" <= c <= "Z" for c in namespace.letters):
-    raise ValueError(f"Need 7 distinct uppercase letters for Spelling Bee: {namespace.letters!r}")
+if len({c for c in namespace.letters}) != 7 or not all(
+    "A" <= c <= "Z" for c in namespace.letters
+):
+    raise ValueError(
+        f"Need 7 distinct uppercase letters for Spelling Bee: {namespace.letters!r}"
+    )
 
 
 def print_list(label: str, lst: list[str]) -> None:

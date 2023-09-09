@@ -15,7 +15,7 @@ def read_word_list(word_file: str) -> list[str]:
 
 
 def count_letters(word: str) -> list[str]:
-    counts = ["" for _ in range(WORDLE_LEN+1)]
+    counts = ["" for _ in range(WORDLE_LEN + 1)]
     for ch in string.ascii_uppercase:
         if (cnt := word.count(ch)) > 0:
             counts[cnt] += ch
@@ -24,15 +24,15 @@ def count_letters(word: str) -> list[str]:
 
 def repeats() -> None:
     word_list = read_word_list(WORD_FILE)
-    multiletter_words: list[list[tuple]] = [[] for _ in range(WORDLE_LEN+1)]
+    multiletter_words: list[list[tuple]] = [[] for _ in range(WORDLE_LEN + 1)]
     for word in word_list:
         counts = count_letters(word)
-        for i in range(WORDLE_LEN, 2-1, -1):
+        for i in range(WORDLE_LEN, 2 - 1, -1):
             if counts[i]:
                 multiletter_words[i].append((word, counts))
                 break
 
-    for i in range(WORDLE_LEN, 3-1, -1):
+    for i in range(WORDLE_LEN, 3 - 1, -1):
         print(i)
         for word, counts in multiletter_words[i]:
             print(f"\t{word}: {counts}")

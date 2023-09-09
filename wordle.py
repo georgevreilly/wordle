@@ -11,8 +11,16 @@ from dataclasses import dataclass
 from typing import cast
 
 from common import (
-    make_argparser, argparse_wordlist, read_vocabulary, set_verbosity, WORDLE_LEN,
-    TileState, GuessScore, dash_mask, letter_set, letter_sets,
+    make_argparser,
+    argparse_wordlist,
+    read_vocabulary,
+    set_verbosity,
+    WORDLE_LEN,
+    TileState,
+    GuessScore,
+    dash_mask,
+    letter_set,
+    letter_sets,
 )
 
 
@@ -27,25 +35,30 @@ def parse_args(description: str) -> argparse.Namespace:
 
 @dataclass
 class WordleGuesses:
-    mask: list[str | None]      # Exact match for position (Green/Correct)
-    valid: set[str]             # Green/Correct or Yellow/Present
-    invalid: list[set[str]]     # Black/Absent
+    mask: list[str | None]  # Exact match for position (Green/Correct)
+    valid: set[str]  # Green/Correct or Yellow/Present
+    invalid: list[set[str]]  # Black/Absent
     wrong_spot: list[set[str]]  # Wrong spot (Yellow/Present)
     guess_scores: list[GuessScore]
 
     def __str__(self) -> str:
-        unused = (set(string.ascii_uppercase) - self.valid
-                  - cast(set[str], set.union(*self.invalid)))
+        unused = (
+            set(string.ascii_uppercase)
+            - self.valid
+            - cast(set[str], set.union(*self.invalid))
+        )
         guess_scores = ", ".join(f"{gs}|{gs.emojis()}" for gs in self.guess_scores)
-        parts = ", ".join([
-            f"mask={dash_mask(self.mask)}",
-            f"valid={letter_set(self.valid)}",
-            f"invalid={letter_sets(self.invalid)}",
-            f"wrong_spot={letter_sets(self.wrong_spot)}",
-            f"unused={letter_set(unused)}",
-            f"guess_scores=[{guess_scores}]",
-        ])
-        return (f"WordleGuesses({parts})")
+        parts = ", ".join(
+            [
+                f"mask={dash_mask(self.mask)}",
+                f"valid={letter_set(self.valid)}",
+                f"invalid={letter_sets(self.invalid)}",
+                f"wrong_spot={letter_sets(self.wrong_spot)}",
+                f"unused={letter_set(unused)}",
+                f"guess_scores=[{guess_scores}]",
+            ]
+        )
+        return f"WordleGuesses({parts})"
 
     @classmethod
     def score(cls, actual: str, guess: str) -> str:
@@ -77,7 +90,7 @@ class WordleGuesses:
         return "".join(parts)
 
     @classmethod
-    def parse(cls, guess_scores: list[GuessScore]) -> 'WordleGuesses':
+    def parse(cls, guess_scores: list[GuessScore]) -> "WordleGuesses":
         mask: list[str | None] = [None for _ in range(WORDLE_LEN)]
         valid: set[str] = set()
         invalid: list[set[str]] = [set() for _ in range(WORDLE_LEN)]

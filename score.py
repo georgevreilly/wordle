@@ -13,8 +13,7 @@ def parse_args() -> argparse.Namespace:
     parser.set_defaults(
         game=0,
     )
-    parser.add_argument(
-        "--game", "-g", type=int, help="Game to start with; e.g., 723")
+    parser.add_argument("--game", "-g", type=int, help="Game to start with; e.g., 723")
     return parser.parse_args()
 
 
@@ -26,11 +25,15 @@ def check_scores(first_game: int) -> list:
         if first_game > gr.game_id:
             continue
 
-        print(f"{gr.game_id}: {gr.answer}: {' '.join(str(gs) for gs in gr.guess_scores)}")
+        print(
+            f"{gr.game_id}: {gr.answer}: {' '.join(str(gs) for gs in gr.guess_scores)}"
+        )
         for gs in gr.guess_scores:
             computed = WordleGuesses.score(gr.answer, gs.guess)
             verdict = "✅ Correct" if computed == gs.score else "❌ Wrong!"
-            print(f"\tguess={gs.guess} score={gs.score} {computed=} ‹{gs.emojis()}›  {verdict}")
+            print(
+                f"\tguess={gs.guess} score={gs.score} {computed=} ‹{gs.emojis()}›  {verdict}"
+            )
             if computed != gs.score:
                 failures.append((gr.answer, gs.guess, gs.score, computed))
 

@@ -6,7 +6,12 @@ import argparse
 import os
 
 from common import (
-    make_argparser, set_verbosity, CURR_DIR, WORDLE_LEN, GuessScore, output_file,
+    make_argparser,
+    set_verbosity,
+    CURR_DIR,
+    WORDLE_LEN,
+    GuessScore,
+    output_file,
 )
 
 
@@ -15,14 +20,10 @@ def parse_args(description: str) -> argparse.Namespace:
     parser.set_defaults(
         style_file=os.path.join(CURR_DIR, "wordle.css"),
     )
-    parser.add_argument(
-        "--emoji", "-E", action="store_true", help="Render emojis")
-    parser.add_argument(
-        "--html", "-H", action="store_true", help="Render HTML")
-    parser.add_argument(
-        "--output", "-o", help="Output filename")
-    parser.add_argument(
-        "--game", "-g", dest="game_id", help="Number of game")
+    parser.add_argument("--emoji", "-E", action="store_true", help="Render emojis")
+    parser.add_argument("--html", "-H", action="store_true", help="Render HTML")
+    parser.add_argument("--output", "-o", help="Output filename")
+    parser.add_argument("--game", "-g", dest="game_id", help="Number of game")
     namespace = parser.parse_args()
     set_verbosity(namespace)
     namespace.guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
@@ -35,8 +36,10 @@ def render_html_table(guess_scores: list[GuessScore]) -> str:
 
     rows = []
     for gs in guess_scores:
-        row = [f"<td class={css_class(gs, i)}>{gs.guess[i]}</td>"
-               for i in range(WORDLE_LEN)]
+        row = [
+            f"<td class={css_class(gs, i)}>{gs.guess[i]}</td>"
+            for i in range(WORDLE_LEN)
+        ]
         rows.append("<tr>" + " ".join(row) + "</tr>")
     return "<table class='wordle'>\n  " + "\n  ".join(rows) + "\n</table>"
 

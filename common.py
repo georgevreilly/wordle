@@ -17,7 +17,6 @@ CURR_DIR = os.path.abspath(os.path.dirname(__file__))
 WORD_FILE = os.path.join(CURR_DIR, "wordle.txt")
 GAMES_FILE = os.path.join(os.path.dirname(__file__), "games.md")
 WORDLE_LEN = 5
-_VERBOSITY = 0
 
 
 class WordleError(Exception):
@@ -25,9 +24,9 @@ class WordleError(Exception):
 
 
 class TileState(namedtuple("TileState", "value emoji color css_color"), Enum):
-    CORRECT = 1, "\U0001F7E9", "Green",  "#6aaa64"
+    CORRECT = 1, "\U0001F7E9", "Green", "#6aaa64"
     PRESENT = 2, "\U0001F7E8", "Yellow", "#c9b458"
-    ABSENT  = 3, "\U00002B1B", "Black",  "#838184"  # noqa: E221
+    ABSENT = 3, "\U00002B1B", "Black", "#838184"
 
 
 @dataclass
@@ -37,7 +36,7 @@ class GuessScore:
     tiles: list[TileState]
 
     @classmethod
-    def make(cls, guess_score: str) -> 'GuessScore':
+    def make(cls, guess_score: str) -> "GuessScore":
         guess, score = guess_score.split("=")
         if len(guess) != WORDLE_LEN:
             raise WordleError(f"Guess {guess!r} is not {WORDLE_LEN} characters")
@@ -83,10 +82,11 @@ class GameResult:
     guess_scores: list[GuessScore]
 
     GAME_RE: ClassVar[re.Pattern] = re.compile(
-        r"""^\* (?P<game>[0-9]+): `(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<answer>[A-Z]+)`$""")
+        r"""^\* (?P<game>[0-9]+): `(?P<guess_scores>[^`]+)`(?P<verb>[^`]+)`(?P<answer>[A-Z]+)`$"""
+    )
 
     @classmethod
-    def parse_game_results(cls, filename: str) -> 'list[GameResult]':
+    def parse_game_results(cls, filename: str) -> "list[GameResult]":
         results: list[GameResult] = []
         with open(filename) as f:
             for line in f.read().splitlines():
@@ -95,9 +95,11 @@ class GameResult:
                     assert m is not None
                     game_id = int(m.group("game"))
                     answer = m.group("answer")
-                    verb = m.group("verb").strip().strip('*')
+                    verb = m.group("verb").strip().strip("*")
                     assert verb in {"yields", "includes"}
-                    guess_scores = [GuessScore.make(gs) for gs in m.group("guess_scores").split()]
+                    guess_scores = [
+                        GuessScore.make(gs) for gs in m.group("guess_scores").split()
+                    ]
                     results.append(GameResult(game_id, answer, verb, guess_scores))
         return results
 
@@ -107,8 +109,7 @@ def make_argparser(description: str) -> argparse.ArgumentParser:
     parser.set_defaults(
         verbose=0,
     )
-    parser.add_argument(
-        "--verbose", "-v", action="count", help="Show all the steps")
+    parser.add_argument("--verbose", "-v", action="count", help="Show all the steps")
     parser.add_argument(
         "guess_scores",
         nargs="+",
@@ -118,23 +119,29 @@ def make_argparser(description: str) -> argparse.ArgumentParser:
     return parser
 
 
-def argparse_wordlist(parser: argparse.ArgumentParser, word_file: str = WORD_FILE) -> None:
+def argparse_wordlist(
+    parser: argparse.ArgumentParser, word_file: str = WORD_FILE
+) -> None:
     parser.set_defaults(
         word_file=word_file,
     )
     words_group = parser.add_mutually_exclusive_group()
     words_group.add_argument(
-        "--word-file", "-f", metavar="FILENAME",
-        help="Word file. Default: %(default)r")
+        "--word-file", "-f", metavar="FILENAME", help="Word file. Default: %(default)r"
+    )
     words_group.add_argument(
-        "--words", "-w", metavar="WORD", nargs="+",
-        help="Word(s) to check")
+        "--words", "-w", metavar="WORD", nargs="+", help="Word(s) to check"
+    )
 
 
 def set_verbosity(namespace: argparse.Namespace) -> argparse.Namespace:
-    level = (logging.DEBUG if namespace.verbose >= 2
-             else logging.INFO if namespace.verbose >= 1
-             else logging.WARNING)
+    level = (
+        logging.DEBUG
+        if namespace.verbose >= 2
+        else logging.INFO
+        if namespace.verbose >= 1
+        else logging.WARNING
+    )
     logging.basicConfig(level=level, stream=sys.stdout, format="%(message)s")
     return namespace
 

@@ -19,6 +19,7 @@ def parse_args(description: str) -> argparse.Namespace:
     parser = make_argparser(description)
     namespace = parser.parse_args()
     set_verbosity(namespace)
+    namespace.guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
     return namespace
 
 
@@ -104,43 +105,44 @@ class WordleGuesses:
         debug(parsed_guesses)
         return parsed_guesses
 
-    def is_eligible(self, word: str) -> bool:
+    def is_eligible(self, word: str) -> tuple[bool, list[str]]:
+        reasons = []
         if missing := self.valid - ({c for c in word} & self.valid):
             # Did not have the full set of green+yellow letters known to be valid
-            trace(f"!Valid: {word} needs {letter_set(missing)}")
-            return False
+            reasons.append(f"!Valid: needs {letter_set(missing)}")
 
         invalid = [(c if c in inv else None) for c, inv in zip(word, self.invalid)]
         if any(invalid):
             # Invalid (black) letters present at specific positions
-            trace(f"Invalid: {word} has {dash_mask(invalid)}")
-            return False
+            reasons.append(f"Invalid: has {dash_mask(invalid)}")
 
         mask = [(m if c != m else None) for c, m in zip(word, self.mask)]
         if any(mask):
             # Couldn't find all the green/correct letters
-            trace(f"!Mask: {word} needs {dash_mask(mask)}")
-            return False
+            reasons.append(f"!Mask: needs {dash_mask(mask)}")
 
         wrong = [(c if c in ws else None) for c, ws in zip(word, self.wrong_spot)]
         if any(wrong):
             # Found some yellow letters: valid letters in wrong position
-            trace(f"WrongSpot: {word} has {dash_mask(wrong)}")
-            return False
-        else:
-            # Potentially valid
-            debug(f"Got: {word}")
-            return True
+            reasons.append(f"WrongSpot: has {dash_mask(wrong)}")
+
+        return len(reasons) == 0, reasons
 
     def find_eligible(self, vocabulary: list[str]) -> list[str]:
-        return [w for w in vocabulary if self.is_eligible(w)]
+        results = []
+        for w in vocabulary:
+            eligible, reasons = self.is_eligible(w)
+            if eligible:
+                results.append(w)
+            else:
+                trace(f"{w}: {'; '.join(reasons)}")
+        return results
 
 
 def main() -> int:
     namespace = parse_args(description="Wordle Finder")
-    guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
     vocabulary = namespace.words or read_vocabulary(namespace.word_file)
-    parsed_guesses = WordleGuesses.parse(guess_scores)
+    parsed_guesses = WordleGuesses.parse(namespace.guess_scores)
     choices = parsed_guesses.find_eligible(vocabulary)
     print("\n".join(choices))
     return 0

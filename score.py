@@ -4,7 +4,7 @@
 
 import argparse
 
-from common import GameResult, read_vocabulary, GAMES_FILE
+from common import GAMES_FILE, GameResult, read_vocabulary
 from wordle import WordleGuesses
 
 

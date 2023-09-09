@@ -11,16 +11,16 @@ from dataclasses import dataclass
 from typing import cast
 
 from common import (
-    make_argparser,
-    argparse_wordlist,
-    read_vocabulary,
-    set_verbosity,
     WORDLE_LEN,
-    TileState,
     GuessScore,
+    TileState,
+    argparse_wordlist,
     dash_mask,
     letter_set,
     letter_sets,
+    make_argparser,
+    read_vocabulary,
+    set_verbosity,
 )
 
 

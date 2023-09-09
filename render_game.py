@@ -6,12 +6,12 @@ import argparse
 import os
 
 from common import (
-    make_argparser,
-    set_verbosity,
     CURR_DIR,
     WORDLE_LEN,
     GuessScore,
+    make_argparser,
     output_file,
+    set_verbosity,
 )
 
 

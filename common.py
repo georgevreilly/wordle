@@ -9,8 +9,7 @@ from collections import namedtuple
 from contextlib import contextmanager
 from dataclasses import dataclass
 from enum import Enum
-from typing import ClassVar, Optional
-
+from typing import ClassVar
 
 DICT_FILE = "/usr/share/dict/words"
 CURR_DIR = os.path.abspath(os.path.dirname(__file__))
@@ -165,7 +164,7 @@ def letter_sets(ls: list[set[str]]) -> str:
     return "[" + ",".join(letter_set(e) or "-" for e in ls) + "]"
 
 
-def dash_mask(mask: list[Optional[str]]):
+def dash_mask(mask: list[str | None]):
     return "".join(m or "-" for m in mask)
 
 

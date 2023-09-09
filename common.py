@@ -83,10 +83,10 @@ class GameResult:
     guess_scores: list[GuessScore]
 
     GAME_RE: ClassVar[re.Pattern] = re.compile(
-        r"""^\*\s(?P<game>[0-9]+):\s
-            `(?P<guess_scores>[^`]+)`\s
-            \*?(?P<verb>[a-z]+)\*?\s
-            `(?P<answer>[A-Z]+)`$
+        r"""^\*\s(?P<game>[0-9]+):\s        # Number
+            `(?P<guess_scores>[^`]+)`\s     # GUESS=SCORE ...
+            \*?(?P<verb>[a-z]+)\*?\s        # "yields" or "includes"
+            `(?P<answer>[A-Z]+)`$           # WORD
         """,
         re.VERBOSE,
     )

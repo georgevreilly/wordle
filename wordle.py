@@ -7,7 +7,7 @@ import logging
 import string
 from collections import defaultdict
 from dataclasses import dataclass
-from typing import cast
+from typing import Any, cast
 
 from common import (
     WORDLE_LEN,
@@ -40,7 +40,7 @@ class WordleGuesses:
     wrong_spot: list[set[str]]  # Wrong spot (Yellow/Present)
     guess_scores: list[GuessScore]
 
-    def string_parts(self) -> dict[str, str]:
+    def string_parts(self) -> dict[str, Any]:
         unused = (
             set(string.ascii_uppercase)
             - self.valid
@@ -68,7 +68,7 @@ class WordleGuesses:
     def score(cls, actual: str, guess: str) -> str:
         assert len(actual) == WORDLE_LEN
         assert len(guess) == WORDLE_LEN
-        parts = []
+        parts: list[str] = []
         remaining: dict[str, int] = defaultdict(int)
 
         for i, (a, g) in enumerate(zip(actual, guess)):

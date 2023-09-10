@@ -39,7 +39,12 @@ def check_scores(first_game: int) -> list:
                 failures.append((gr.answer, gs.guess, gs.score, computed))
 
         parsed_guesses = WordleGuesses.parse(gr.guess_scores)
-        print(f"\t{parsed_guesses}")
+        parts = parsed_guesses.string_parts()
+        gs = parts.pop("guess_scores")
+        parts = ", ".join(
+            f"{k}={v}" for k, v in parts.items() if k not in {"guess_scores"}
+        )
+        print(f"\tWordleGuesses:\t{parts}\n\t\t\tguess_scores: {gs}")
         eligible = parsed_guesses.find_eligible(vocabulary)
         choices = " ".join(f"«{e}»" if e == gr.answer else e for e in eligible)
         print(f"\t{gr.verb}: {choices}")

@@ -41,24 +41,29 @@ class WordleGuesses:
     wrong_spot: list[set[str]]  # Wrong spot (Yellow/Present)
     guess_scores: list[GuessScore]
 
-    def __str__(self) -> str:
+    def string_parts(self) -> dict[str, str]:
         unused = (
             set(string.ascii_uppercase)
             - self.valid
             - cast(set[str], set.union(*self.invalid))
         )
         guess_scores = ", ".join(f"{gs}|{gs.emojis()}" for gs in self.guess_scores)
-        parts = ", ".join(
-            [
-                f"mask={dash_mask(self.mask)}",
-                f"valid={letter_set(self.valid)}",
-                f"invalid={letter_sets(self.invalid)}",
-                f"wrong_spot={letter_sets(self.wrong_spot)}",
-                f"unused={letter_set(unused)}",
-                f"guess_scores=[{guess_scores}]",
-            ]
+        return dict(
+            mask=dash_mask(self.mask),
+            valid=letter_set(self.valid),
+            invalid=letter_sets(self.invalid),
+            wrong_spot=letter_sets(self.wrong_spot),
+            unused=letter_set(unused),
+            guess_scores=[guess_scores],
         )
-        return f"WordleGuesses({parts})"
+
+    def __str__(self) -> str:
+        parts = ", ".join(
+            f"{k}={v}"
+            for k, v in self.string_parts().items()
+            if k not in {"guess_scores"}
+        )
+        return f"{self.__class__.__name__}({parts})"
 
     @classmethod
     def score(cls, actual: str, guess: str) -> str:

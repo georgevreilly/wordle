@@ -214,3 +214,4 @@ or an irregular past tense.
 * 810: `MOURN=..... GLADE=.l.de` *includes* `DWELL`
 * 811: `THIEF=...e. BLADE=....E GROVE=.ro.E MORSE=.OrSE` yields `ROUSE`
 * 812: `BASIC=....c CRIME=c.... FLOCK=.l.ck` yields `LUCKY`
+* 813: `SMOKE=..O.E WROTE=..OTE` yields `QUOTE`

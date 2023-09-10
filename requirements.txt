@@ -1,0 +1,6 @@
+# Development tools. Wordle only needs the Python standard library
+pytest
+flake8
+isort
+black
+ruff

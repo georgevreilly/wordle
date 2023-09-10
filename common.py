@@ -4,7 +4,6 @@ import os
 import re
 import string
 import sys
-
 from collections import namedtuple
 from contextlib import contextmanager
 from dataclasses import dataclass

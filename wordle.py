@@ -5,7 +5,6 @@
 import argparse
 import logging
 import string
-
 from collections import defaultdict
 from dataclasses import dataclass
 from typing import cast
@@ -125,38 +124,38 @@ class WordleGuesses:
         logging.info(parsed_guesses)
         return parsed_guesses
 
-    def is_eligible(self, word: str) -> tuple[bool, list[str]]:
-        reasons = []
+    def is_ineligible(self, word: str) -> dict[str, str]:
+        reasons = {}
         if missing := self.valid - ({c for c in word} & self.valid):
             # Did not have the full set of green+yellow letters known to be valid
-            reasons.append(f"!Valid: needs {letter_set(missing)}")
+            reasons["Valid"] = f"missing {letter_set(missing)}"
 
         invalid = [(c if c in inv else None) for c, inv in zip(word, self.invalid)]
         if any(invalid):
             # Invalid (black) letters present at specific positions
-            reasons.append(f"Invalid: has {dash_mask(invalid)}")
+            reasons["Invalid"] = f"has {dash_mask(invalid)}"
 
         mask = [(m if c != m else None) for c, m in zip(word, self.mask)]
         if any(mask):
             # Couldn't find all the green/correct letters
-            reasons.append(f"!Mask: needs {dash_mask(mask)}")
+            reasons["Mask"] = f"needs {dash_mask(mask)}"
 
         wrong = [(c if c in ws else None) for c, ws in zip(word, self.wrong_spot)]
         if any(wrong):
             # Found some yellow letters: valid letters in wrong position
-            reasons.append(f"WrongSpot: has {dash_mask(wrong)}")
+            reasons["WrongSpot"] = f"has {dash_mask(wrong)}"
 
-        return len(reasons) == 0, reasons
+        return reasons
 
     def find_eligible(self, vocabulary: list[str]) -> list[str]:
-        results = []
+        eligible_words = []
         for w in vocabulary:
-            eligible, reasons = self.is_eligible(w)
-            if eligible:
-                results.append(w)
+            reasons = "; ".join(f"{k}: {v}" for k, v in self.is_ineligible(w).items())
+            if reasons:
+                logging.debug(f"{w}: {reasons}.")
             else:
-                logging.debug(f"{w}: {'; '.join(reasons)}")
-        return results
+                eligible_words.append(w)
+        return eligible_words
 
 
 def main() -> int:

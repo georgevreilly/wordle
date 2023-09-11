@@ -135,6 +135,14 @@ def argparse_wordlist(
         "--word-file", "-f", metavar="FILENAME", help="Word file. Default: %(default)r"
     )
     words_group.add_argument(
+        "--dict-words",
+        "-d",
+        action="store_const",
+        const=DICT_FILE,
+        dest="word_file",
+        help=f"Use {DICT_FILE} as word file",
+    )
+    words_group.add_argument(
         "--words", "-w", metavar="WORD", nargs="+", help="Word(s) to check"
     )
 

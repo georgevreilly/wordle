@@ -3,6 +3,7 @@
 """Unix Pipes Generator"""
 
 import argparse
+import subprocess
 
 from common import (
     GuessScore,
@@ -23,8 +24,9 @@ def parse_args(description: str) -> argparse.Namespace:
 
 def pipes(guess_scores: list[GuessScore]) -> str:
     wg = WordleGuesses.parse(guess_scores)
-    mask = "grep ^" + "".join(m or "." for m in wg.mask) + "$"
+    mask = "grep '^" + "".join(m or "." for m in wg.mask) + "$'"
     valid = "awk '" + " && ".join(f"/{c}/" for c in sorted(wg.valid)) + "'"
+    # TODO: control flavor of invalid handling
     invalid = "grep -v '[" + "".join(sorted(set.union(*wg.invalid))) + "]'"
     wrong_spots = "".join(
         [f"[^{letter_set(ws)}]" if ws else "." for ws in wg.wrong_spot]
@@ -40,6 +42,7 @@ def main() -> int:
     namespace = parse_args(description="Render hardcoded Unix pipes for Wordle game")
     cmd_line = pipes(namespace.guess_scores)
     print(cmd_line)
+    print(subprocess.check_output(cmd_line, shell=True).decode())
     return 0
 
 

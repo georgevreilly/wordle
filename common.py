@@ -13,6 +13,7 @@ from typing import ClassVar
 DICT_FILE = "/usr/share/dict/words"
 CURR_DIR = os.path.abspath(os.path.dirname(__file__))
 WORD_FILE = os.path.join(CURR_DIR, "wordle.txt")
+ANSWERS_FILE = os.path.join(CURR_DIR, "answers.txt")
 GAMES_FILE = os.path.join(os.path.dirname(__file__), "games.md")
 WORDLE_LEN = 5
 
@@ -125,7 +126,9 @@ def make_argparser(description: str) -> argparse.ArgumentParser:
 
 
 def argparse_wordlist(
-    parser: argparse.ArgumentParser, word_file: str = WORD_FILE
+    parser: argparse.ArgumentParser,
+    word_file: str = WORD_FILE,
+    allow_individual_words=True,
 ) -> None:
     parser.set_defaults(
         word_file=word_file,
@@ -142,9 +145,10 @@ def argparse_wordlist(
         dest="word_file",
         help=f"Use {DICT_FILE} as word file",
     )
-    words_group.add_argument(
-        "--words", "-w", metavar="WORD", nargs="+", help="Word(s) to check"
-    )
+    if allow_individual_words:
+        words_group.add_argument(
+            "--words", "-w", metavar="WORD", nargs="+", help="Word(s) to check"
+        )
 
 
 def set_verbosity(namespace: argparse.Namespace) -> argparse.Namespace:

@@ -5,6 +5,7 @@ Given a series of Wordle guesses, find the words that can fit.
 * `GRAIL=.RA.. TRACK=.RAc. CRAMP=CRA.. CRABS=CRA.. CRAZY=CRAZ.` yields `CRAZE`
 
 The command-line arguments are a series of `GUESS=SCORE` pairs.
+
 * A capital letter in `SCORE` means an exact match at that position (Green 🟩).
 * A lowercase letter means the guessed letter is in the wrong position (Yellow 🟨).
 * A dot means the guessed letter is not present anywhere in the word (Black/Gray ⬛/⬜).
@@ -17,9 +18,12 @@ and there is no `T` or `K` (gray ⬛/⬜).
 Implementations are in Python (`wordle.py`, full)
 and Rust (`src/main.rs`, partial).
 
-The strings in [`wordle.txt`](./wordle.txt) were extracted from `wordle.blahblah.js`
+The words in [`wordle.txt`](./wordle.txt) were extracted from `wordle.blahblah.js`
 on the [Wordle website](https://www.nytimes.com/games/wordle/index.html).
-You can also use `/usr/share/dict/words`.
+These are the ~15,000 words that Wordle lets you enter for your guesses.
+The words in [`answers.txt`](./answers.txt) were extracted from
+[Word Unscrambler](https://www.wordunscrambler.net/word-list/wordle-word-list);
+supposedly these are the ~2,300 answers that Wordle uses.
 
 My previous games and scores can be found in [`games.md`](./games.md).
 
@@ -37,5 +41,5 @@ In addition, various statistics are computed in [`startwords.py`](./startwords.p
 which really should be converted to a Jupyter notebook with graphs.
 
 For Spelling Bee, use `bee.py` with `words_alpha.txt`,
-which came from https://github.com/dwyl/english-words,
+which came from <https://github.com/dwyl/english-words>,
 or `/usr/share/dict/words`, which has fewer obscure words.

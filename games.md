@@ -216,3 +216,4 @@ or an irregular past tense.
 * 812: `BASIC=....c CRIME=c.... FLOCK=.l.ck` yields `LUCKY`
 * 813: `SMOKE=..O.E WROTE=..OTE` yields `QUOTE`
 * 814: `FINAL=....l LOVER=lo.ER` yields `OLDER`
+* 815: `BACON=..... PRISE=..IS. WHIST=WHIS.` yields `WHISK`

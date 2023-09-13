@@ -69,7 +69,7 @@ def find_disjoint_words(anagrams: dict[str, list[str]]) -> list[list[str]]:
 
     results: list[list[str]] = []
 
-    for disjoint_words in helper(words=[], available=anagrams.keys()):
+    for disjoint_words in helper(words=[], available=list(anagrams.keys())):
         if len(disjoint_words) >= 4:
             letters = {c for w in disjoint_words for c in w}
             assert len(letters) == len(disjoint_words) * WORDLE_LEN

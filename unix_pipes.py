@@ -3,7 +3,6 @@
 """Unix Pipes Generator"""
 
 import argparse
-import logging
 import subprocess
 
 from common import (

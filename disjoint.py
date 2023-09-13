@@ -38,17 +38,20 @@ def eligible_anagrams(
 ) -> dict[str, list[str]]:
     anagrams: dict[str, list[str]] = defaultdict(list)
     for word in vocabulary:
-        letters = {c for c in word}
-        # Exclude words with repeated letters
-        if len(letters) == word_len:
+        # Include only words with distinct letters (no repeats)
+        if len(word_letters(word)) == word_len:
             anagrams[sort_key(word)].append(word)
     return anagrams
 
 
 def find_disjoint_words(anagrams: dict[str, list[str]]) -> list[list[str]]:
+    count = 0
     seen_permutations = set()
 
-    def helper(words: list[str], available: list[str]):
+    def search(words: list[str], available: list[str]):
+        nonlocal count
+        count += 1
+
         if not available:
             sorted_words = " ".join(sorted(words))
             if sorted_words not in seen_permutations:
@@ -57,25 +60,24 @@ def find_disjoint_words(anagrams: dict[str, list[str]]) -> list[list[str]]:
             return
 
         for candidate in available:
-            cand_letters = word_letters(candidate)
-            attempt = helper(
-                words=words + [candidate],
-                available=[
-                    av for av in available if not cand_letters & word_letters(av)
-                ],
-            )
-            if attempt:
+            letters = word_letters(candidate)
+            remaining = [av for av in available if not letters & word_letters(av)]
+            if attempt := search(words=words + [candidate], available=remaining):
                 yield from attempt
 
     results: list[list[str]] = []
 
-    for disjoint_words in helper(words=[], available=list(anagrams.keys())):
+    for disjoint_words in search(words=[], available=list(anagrams.keys())):
         if len(disjoint_words) >= 4:
             letters = {c for w in disjoint_words for c in w}
             assert len(letters) == len(disjoint_words) * WORDLE_LEN
             results.append(disjoint_words)
             print(" ".join([anagrams[w][0] for w in disjoint_words]))
+    print(f"{count} calls to search")
     return results
+
+
+# TODO: try using a bitset
 
 
 def main() -> int:

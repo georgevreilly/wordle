@@ -217,3 +217,4 @@ or an irregular past tense.
 * 813: `SMOKE=..O.E WROTE=..OTE` yields `QUOTE`
 * 814: `FINAL=....l LOVER=lo.ER` yields `OLDER`
 * 815: `BACON=..... PRISE=..IS. WHIST=WHIS.` yields `WHISK`
+* 816: `JANKY=.a... AWFUL=a...l PLACE=.Lace` *includes* `CLEAR`

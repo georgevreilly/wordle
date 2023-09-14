@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 
 import logging
-import os
 from collections import namedtuple
 from dataclasses import dataclass
 from enum import Enum
-from typing import Optional
 
 from common import (
     WORDLE_LEN,
@@ -14,11 +12,6 @@ from common import (
     read_vocabulary,
     set_verbosity,
 )
-
-DICT_FILE = "/usr/share/dict/words"
-CURR_DIR = os.path.abspath(os.path.dirname(__file__))
-WORD_FILE = os.path.join(CURR_DIR, "wordle.txt")
-GAMES_FILE = os.path.join(os.path.dirname(__file__), "games.md")
 
 
 def parse_args():
@@ -88,7 +81,7 @@ class GuessScore:
 
 @dataclass
 class WordleGuesses:
-    mask: list[Optional[str]]  # Exact match for position (Green/Correct)
+    mask: list[str | None]  # Exact match for position (Green/Correct)
     valid: set[str]  # Green/Correct or Yellow/Present
     invalid: set[str]  # Black/Absent
     wrong_spot: list[set[str]]  # Wrong spot (Yellow/Present)
@@ -96,7 +89,7 @@ class WordleGuesses:
 
     @classmethod
     def parse(cls, guess_scores: list[GuessScore]) -> "WordleGuesses":
-        mask: list[Optional[str]] = [None] * WORDLE_LEN
+        mask: list[str | None] = [None] * WORDLE_LEN
         valid: set[str] = set()
         invalid: set[str] = set()
         wrong_spot: list[set[str]] = [set() for _ in range(WORDLE_LEN)]

@@ -1,37 +1,21 @@
 #!/usr/bin/env python3
 
-import argparse
+import logging
 
-from dataclasses import dataclass
-
-from common import debug, trace, GuessScore, TileState, WORDLE_LEN
+from common import (
+    WORDLE_LEN,
+    argparse_wordlist,
+    make_argparser,
+    read_vocabulary,
+    set_verbosity,
+)
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Wordle Finder")
-    parser.set_defaults(
-        # word_file="/usr/share/dict/words",
-        word_file="wordle.txt",
-        verbose=0,
-    )
-    parser.add_argument(
-        "--verbose", "-v", action="count", help="Show all the steps")
-    parser.add_argument(
-        "guess_scores",
-        nargs="+",
-        metavar="GUESS=score",
-        help="Examples: 'ARISE=.r.se' 'ROUTE=R.u.e' 'RULES=Ru.eS'",
-    )
-    words_group = parser.add_mutually_exclusive_group()
-    words_group.add_argument(
-        "--word-file", "-f", metavar="FILENAME",
-        help="Word file. Default: %(default)r")
-    words_group.add_argument(
-        "--word", "-w", action="append", dest="words", metavar="WORD",
-        help="Word(s) to check")
+    parser = make_argparser("Wordle Finder")
+    argparse_wordlist(parser)
     namespace = parser.parse_args()
-    global _VERBOSITY
-    _VERBOSITY = namespace.verbose
+    set_verbosity(namespace)
     return namespace
 
 
@@ -40,59 +24,59 @@ def parse_guesses(guess_scores):
     valid = set()  # Green or Yellow
     mask = [None] * WORDLE_LEN  # Exact match for position (Green)
     wrong_spot = [set() for _ in range(WORDLE_LEN)]  # Wrong spot (Yellow)
-    for guess in guess_scores:
-        word, result = guess.split("=")
-        assert len(word) == WORDLE_LEN
-        assert len(result) == WORDLE_LEN
-        for i, (w, r) in enumerate(zip(word, result)):
-            assert "A" <= w <= "Z", "WORD should be uppercase"
-            if "A" <= r <= "Z":
-                valid.add(w)
-                mask[i] = w
-            elif "a" <= r <= "z":
-                valid.add(w)
-                wrong_spot[i].add(w)
-            elif r == ".":
-                if w not in valid:
-                    invalid.add(w)
+    for gs in guess_scores:
+        assert gs.count("=") == 1
+        guess, score = gs.split("=")
+        assert len(guess) == WORDLE_LEN
+        assert len(score) == WORDLE_LEN
+        for i, (g, s) in enumerate(zip(guess, score)):
+            assert "A" <= g <= "Z", "GUESS should be uppercase"
+            if "A" <= s <= "Z":
+                assert g == s
+                valid.add(g)
+                mask[i] = g
+            elif "a" <= s <= "z":
+                assert g == s.upper()
+                valid.add(g)
+                wrong_spot[i].add(g)
+            elif s == ".":
+                if g not in valid:
+                    invalid.add(g)
             else:
-                raise ValueError(f"Unexpected {r} for {w}")
+                raise ValueError(f"Unexpected {s} for {g}")
     return (invalid, valid, mask, wrong_spot)
 
 
 def is_eligible(word, invalid, valid, mask, wrong_spot):
     letters = {c for c in word}
     if letters & valid != valid:
-        trace(f"!Valid: {word}")
+        logging.debug(f"!Valid: {word}")
         return False
     elif letters & invalid:
-        trace(f"Invalid: {word}")
+        logging.debug(f"Invalid: {word}")
         return False
     elif any(m is not None and c != m for c, m in zip(word, mask)):
-        trace(f"!Mask: {word}")
+        logging.debug(f"!Mask: {word}")
         return False
     elif any(c in ws for c, ws in zip(word, wrong_spot)):
-        trace(f"WrongSpot: {word}")
+        logging.debug(f"WrongSpot: {word}")
         return False
     else:
-        trace(f"Got: {word}")
+        logging.debug(f"Got: {word}")
         return True
 
 
 def main():
     namespace = parse_args()
-    if namespace.words:
-        WORDS = namespace.words
-    else:
-        with open(namespace.word_file) as f:
-            WORDS = [w.upper().strip() for w in f
-                     if len(w.strip()) == WORDLE_LEN]
+    vocabulary = namespace.words or read_vocabulary(namespace.word_file)
     invalid, valid, mask, wrong_spot = parse_guesses(namespace.guess_scores)
     print(f"{invalid=}")
     print(f"{valid=}")
     print(f"{mask=}")
     print(f"{wrong_spot=}")
-    choices = [w for w in WORDS if is_eligible(w, invalid, valid, mask, wrong_spot)]
+    choices = [
+        w for w in vocabulary if is_eligible(w, invalid, valid, mask, wrong_spot)
+    ]
     print("\n".join(choices))
 
 

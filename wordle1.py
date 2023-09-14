@@ -20,10 +20,10 @@ def parse_args():
 
 
 def parse_guesses(guess_scores):
-    invalid = set()  # Black
-    valid = set()  # Green or Yellow
-    mask = [None] * WORDLE_LEN  # Exact match for position (Green)
-    wrong_spot = [set() for _ in range(WORDLE_LEN)]  # Wrong spot (Yellow)
+    invalid = set()  # Black/Absent
+    valid = set()  # Green/Correct or Yellow/Present
+    mask = [None] * WORDLE_LEN  # Exact match for pos (Green/Correct)
+    wrong_spot = [set() for _ in range(WORDLE_LEN)]  # Wrong spot (Yellow/Present)
     for gs in guess_scores:
         assert gs.count("=") == 1
         guess, score = gs.split("=")

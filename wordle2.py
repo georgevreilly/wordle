@@ -121,7 +121,7 @@ class WordleGuesses:
             logging.debug(f"!Valid: {word}")
             return False
         elif letters & self.invalid:
-            # Invalid (black) letters present at specific positions
+            # Invalid (black) letters are in the word
             logging.debug(f"Invalid: {word}")
             return False
         elif any(m is not None and c != m for c, m in zip(word, self.mask)):

@@ -218,3 +218,4 @@ or an irregular past tense.
 * 814: `FINAL=....l LOVER=lo.ER` yields `OLDER`
 * 815: `BACON=..... PRISE=..IS. WHIST=WHIS.` yields `WHISK`
 * 816: `JANKY=.a... AWFUL=a...l PLACE=.Lace` *includes* `CLEAR`
+* 817: `CLAIM=..a.. ANGER=an..r SONAR=.onar BARON=.ArON RADON=RA.ON` yields `RAYON`

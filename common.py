@@ -37,7 +37,7 @@ class GuessScore:
     @classmethod
     def make(cls, guess_score: str) -> "GuessScore":
         if guess_score.count("=") != 1:
-            raise WordleError(f"No '=' in {guess_score!r}")
+            raise WordleError(f"Expected one '=' in {guess_score!r}")
         guess, score = guess_score.split("=")
         if len(guess) != WORDLE_LEN:
             raise WordleError(f"Guess {guess!r} is not {WORDLE_LEN} characters")

@@ -219,3 +219,4 @@ or an irregular past tense.
 * 815: `BACON=..... PRISE=..IS. WHIST=WHIS.` yields `WHISK`
 * 816: `JANKY=.a... AWFUL=a...l PLACE=.Lace` *includes* `CLEAR`
 * 817: `CLAIM=..a.. ANGER=an..r SONAR=.onar BARON=.ArON RADON=RA.ON` yields `RAYON`
+* 818: `GUIDE=....e MOVER=...er REPLY=re... FRESH=.rE..` yields `EXERT`

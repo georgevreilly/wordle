@@ -11,7 +11,7 @@
   * other: WORDY WORRY.
   * `WORRY` was already guessed; 4:R should have excluded.
   * tiles: «WORDY»
-* `QUICK: MORAL=..... TWINE=..I.. CHICK=..ICK` doesn't find `QUICK`
+* `QUICK: MORAL=..... TWINE=..I.. CHICK=..ICK`
   * set: []
   * absent: []. Repeated C in CHICK
   * tiles/exclude: «QUICK» SPICK
@@ -27,7 +27,7 @@
   * Note that TENET=TEN.t should require mask=TENT- if we were smarter.
   * other: TENCH TENDS TENDU TENES TENGE TENSE «TENTH» TENTS TENTY TENUE.
   * TENSE TENES should be precluded by the 4:E in TENET.
-* `STYLE: `GROAN=..... WHILE=...LE BELLE=...LE TUPLE=t..LE STELE=ST.LE`
+* `STYLE: GROAN=..... WHILE=...LE BELLE=...LE TUPLE=t..LE STELE=ST.LE`
   * set: []
   * tiles: «STYLE»
   * other: STELE STYLE.
@@ -61,4 +61,3 @@
   * other: ENDER «UNDER».
   * The second E in NERVE should have eliminated ENDER.
   * tiles: «UNDER»
-

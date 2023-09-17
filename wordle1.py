@@ -40,8 +40,7 @@ def parse_guesses(guess_scores):
                 valid.add(g)
                 wrong_spot[i].add(g)
             elif s == ".":
-                if g not in valid:
-                    invalid.add(g)
+                invalid.add(g)
             else:
                 raise ValueError(f"Unexpected {s} for {g}")
     return (invalid, valid, mask, wrong_spot)
@@ -77,7 +76,7 @@ def main():
     choices = [
         w for w in vocabulary if is_eligible(w, invalid, valid, mask, wrong_spot)
     ]
-    print("\n".join(choices))
+    print("\n".join(choices or ["--None--"]))
 
 
 if __name__ == "__main__":

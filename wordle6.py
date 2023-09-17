@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
 import logging
+import string
 from collections import namedtuple
 from dataclasses import dataclass
 from enum import Enum
+from typing import cast
 
 from common import (
     WORDLE_LEN,
@@ -79,11 +81,23 @@ class GuessScore:
         return separator.join(t.emoji for t in self.tiles)
 
 
+def letter_set(s: set[str]) -> str:
+    return "".join(sorted(s))
+
+
+def letter_sets(ls: list[set[str]]) -> str:
+    return "[" + ",".join(letter_set(e) or "-" for e in ls) + "]"
+
+
+def dash_mask(mask: list[str | None]):
+    return "".join(m or "-" for m in mask)
+
+
 @dataclass
 class WordleGuesses:
     mask: list[str | None]  # Exact match for position (Green/Correct)
     valid: set[str]  # Green/Correct or Yellow/Present
-    invalid: set[str]  # Black/Absent
+    invalid: list[set[str]]  # Black/Absent
     wrong_spot: list[set[str]]  # Wrong spot (Yellow/Present)
     guess_scores: list[GuessScore]
 
@@ -91,19 +105,28 @@ class WordleGuesses:
     def parse(cls, guess_scores: list[GuessScore]) -> "WordleGuesses":
         mask: list[str | None] = [None] * WORDLE_LEN
         valid: set[str] = set()
-        invalid: set[str] = set()
+        invalid: list[set[str]] = [set() for _ in range(WORDLE_LEN)]
         wrong_spot: list[set[str]] = [set() for _ in range(WORDLE_LEN)]
 
         for gs in guess_scores:
-            for i in range(WORDLE_LEN):
-                if gs.tiles[i] is TileState.CORRECT:
-                    mask[i] = gs.guess[i]
-                    valid.add(gs.guess[i])
-                elif gs.tiles[i] is TileState.PRESENT:
-                    wrong_spot[i].add(gs.guess[i])
-                    valid.add(gs.guess[i])
-                elif gs.tiles[i] is TileState.ABSENT:
-                    invalid.add(gs.guess[i])
+            # First pass for correct and present
+            for i, (g, t) in enumerate(zip(gs.guess, gs.tiles)):
+                if t is TileState.CORRECT:
+                    mask[i] = g
+                    valid.add(g)
+                    invalid[i] = set()  # reset
+                elif t is TileState.PRESENT:
+                    valid.add(g)
+                    wrong_spot[i].add(g)
+
+            # Second pass for absent letters
+            for i, (g, t) in enumerate(zip(gs.guess, gs.tiles)):
+                if t is TileState.ABSENT:
+                    for j in range(WORDLE_LEN):
+                        # If we don't have a correct letter for this other position,
+                        # treat `g` as invalid. This handles repeated letters.
+                        if mask[j] is None:
+                            invalid[j].add(g)
 
         return cls(mask, valid, invalid, wrong_spot, guess_scores)
 
@@ -113,7 +136,7 @@ class WordleGuesses:
             # Did not have the full set of green+yellow letters known to be valid
             logging.debug(f"!Valid: {word}")
             return False
-        elif letters & self.invalid:
+        elif any(c in inv for c, inv in zip(word, self.invalid)):
             # Invalid (black) letters are in the word
             logging.debug(f"Invalid: {word}")
             return False
@@ -133,12 +156,29 @@ class WordleGuesses:
     def find_eligible(self, vocabulary: list[str]) -> list[str]:
         return [w for w in vocabulary if self.is_eligible(w)]
 
+    def __str__(self) -> str:
+        mask = dash_mask(self.mask)
+        valid = letter_set(self.valid)
+        invalid = letter_sets(self.invalid)
+        wrong_spot = letter_sets(self.wrong_spot)
+        unused = letter_set(
+            set(string.ascii_uppercase)
+            - self.valid
+            - cast(set[str], set.union(*self.invalid))
+        )
+        # _guess_scores = [", ".join(f"{gs}|{gs.emojis()}" for gs in self.guess_scores)]
+        return (
+            f"WordleGuesses({mask=}, {valid=}, {invalid=},\n"
+            f"    {wrong_spot=}, {unused=})"
+        )
+
 
 def main() -> int:
     namespace = parse_args()
     vocabulary = namespace.words or read_vocabulary(namespace.word_file)
     guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
     parsed_guesses = WordleGuesses.parse(guess_scores)
+    logging.info(parsed_guesses)
     choices = parsed_guesses.find_eligible(vocabulary)
     print("\n".join(choices or ["--None--"]))
     return 0

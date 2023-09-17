@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import logging
+import string
 from collections import namedtuple
 from dataclasses import dataclass
 from enum import Enum
@@ -79,6 +80,18 @@ class GuessScore:
         return separator.join(t.emoji for t in self.tiles)
 
 
+def letter_set(s: set[str]) -> str:
+    return "".join(sorted(s))
+
+
+def letter_sets(ls: list[set[str]]) -> str:
+    return "[" + ",".join(letter_set(e) or "-" for e in ls) + "]"
+
+
+def dash_mask(mask: list[str | None]):
+    return "".join(m or "-" for m in mask)
+
+
 @dataclass
 class WordleGuesses:
     mask: list[str | None]  # Exact match for position (Green/Correct)
@@ -103,7 +116,8 @@ class WordleGuesses:
                     wrong_spot[i].add(gs.guess[i])
                     valid.add(gs.guess[i])
                 elif gs.tiles[i] is TileState.ABSENT:
-                    invalid.add(gs.guess[i])
+                    if gs.guess[i] not in valid:
+                        invalid.add(gs.guess[i])
 
         return cls(mask, valid, invalid, wrong_spot, guess_scores)
 
@@ -133,12 +147,24 @@ class WordleGuesses:
     def find_eligible(self, vocabulary: list[str]) -> list[str]:
         return [w for w in vocabulary if self.is_eligible(w)]
 
+    def __str__(self) -> str:
+        mask = dash_mask(self.mask)
+        valid = letter_set(self.valid)
+        invalid = letter_set(self.invalid)
+        wrong_spot = letter_sets(self.wrong_spot)
+        unused = letter_set(set(string.ascii_uppercase) - self.valid - self.invalid)
+        return (
+            f"WordleGuesses({mask=}, {valid=}, {invalid=},\n"
+            f"    {wrong_spot=}, {unused=})"
+        )
+
 
 def main() -> int:
     namespace = parse_args()
     vocabulary = namespace.words or read_vocabulary(namespace.word_file)
     guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
     parsed_guesses = WordleGuesses.parse(guess_scores)
+    logging.info(parsed_guesses)
     choices = parsed_guesses.find_eligible(vocabulary)
     print("\n".join(choices or ["--None--"]))
     return 0

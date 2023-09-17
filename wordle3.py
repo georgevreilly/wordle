@@ -154,8 +154,8 @@ class WordleGuesses:
         unused = letter_set(set(string.ascii_uppercase) - self.valid - self.invalid)
         # _guess_scores = [", ".join(f"{gs}|{gs.emojis()}" for gs in self.guess_scores)]
         return (
-            f"WordleGuesses({mask=}, {valid=}, {invalid=}, "
-            f"{wrong_spot=}, {unused=})"
+            f"WordleGuesses({mask=}, {valid=}, {invalid=},\n"
+            f"    {wrong_spot=}, {unused=})"
         )
 
 
@@ -164,13 +164,14 @@ def main() -> int:
     vocabulary = namespace.words or read_vocabulary(namespace.word_file)
     guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
     parsed_guesses = WordleGuesses.parse(guess_scores)
-    print(parsed_guesses)
-    print(
-        "\tguess_scores=",
-        [", ".join(f"{gs}|{gs.emojis()}" for gs in guess_scores)],
-    )
+    logging.info(parsed_guesses)
+    if namespace.verbose:
+        print(
+            "\tguess_scores=",
+            [", ".join(f"{gs}|{gs.emojis()}" for gs in guess_scores)],
+        )
     choices = parsed_guesses.find_eligible(vocabulary)
-    print("\n".join(choices))
+    print("\n".join(choices or ["--None--"]))
     return 0
 
 

@@ -168,7 +168,8 @@ class WordleGuesses:
         )
         # _guess_scores = [", ".join(f"{gs}|{gs.emojis()}" for gs in self.guess_scores)]
         return (
-            f"WordleGuesses({mask=}, {valid=}, {invalid=},\n"
+            f"WordleGuesses({mask=}, {valid=},\n"
+            f"    {invalid=},\n"
             f"    {wrong_spot=}, {unused=})"
         )
 

@@ -113,6 +113,10 @@ class WordleGuessesLegacy:
         )
 
 
+def choices(answer: str, eligible: list[str]) -> str:
+    return " ".join(f"«{e}»" if e == answer else e for e in eligible)
+
+
 def check_scores(first_game: int) -> list:
     vocabulary = read_vocabulary()
     failures = []
@@ -142,8 +146,7 @@ def check_scores(first_game: int) -> list:
         pattern = re.compile("".join(m or "." for m in parsed_guesses.mask))
         word_list = [w for w in vocabulary if pattern.fullmatch(w)]
         eligible = parsed_guesses.find_eligible(word_list)
-        choices = " ".join(f"«{e}»" if e == gr.answer else e for e in eligible)
-        print(f"\t{gr.verb}: {choices}")
+        print(f"\t{gr.verb}: {choices(gr.answer, eligible)}")
         assert gr.answer in eligible
         if "yields" == gr.verb:
             # I previously decided that any other possibilities would never be used
@@ -156,7 +159,10 @@ def check_scores(first_game: int) -> list:
             wg2 = WordleGuessesLegacy.parse(gr.guess_scores, invalid_kind)
             eligible2 = wg2.find_eligible(vocabulary)
             if eligible != eligible2:
-                print(">>", (invalid_kind + ":    ")[:8], wg2, eligible2)
+                print(
+                    f">> {invalid_kind + ':':<8} {wg2} "
+                    f"-> {choices(gr.answer, eligible2) or []}"
+                )
     return failures
 
 

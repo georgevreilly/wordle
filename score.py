@@ -34,39 +34,6 @@ def parse_args() -> argparse.Namespace:
         dest="first_game",
         help="Game to start with; e.g., 723",
     )
-    invalid_group = parser.add_mutually_exclusive_group()
-    invalid_group.add_argument(
-        "--invalid-set",
-        "-S",
-        dest="invalid",
-        const="set",
-        action="store_const",
-        help="Original: combined set of invalid letters",
-    )
-    invalid_group.add_argument(
-        "--exclude-valid",
-        "-X",
-        dest="invalid",
-        const="exclude",
-        action="store_const",
-        help="Invalid, excluding valid after loop",
-    )
-    invalid_group.add_argument(
-        "--absent-valid",
-        "-A",
-        dest="invalid",
-        const="absent",
-        action="store_const",
-        help="Invalid, excluding valid in loop",
-    )
-    invalid_group.add_argument(
-        "--invalid-tiles",
-        "-T",
-        dest="invalid",
-        const="tiles",
-        action="store_const",
-        help="Per-tile invalid set",
-    )
     return parser.parse_args()
 
 

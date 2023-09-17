@@ -167,7 +167,7 @@ def main() -> int:
     print(parsed_guesses)
     print(
         "\tguess_scores=",
-        [", ".join(f"{gs}|{gs.emojis()}" for gs in parsed_guesses.guess_scores)],
+        [", ".join(f"{gs}|{gs.emojis()}" for gs in guess_scores)],
     )
     choices = parsed_guesses.find_eligible(vocabulary)
     print("\n".join(choices))

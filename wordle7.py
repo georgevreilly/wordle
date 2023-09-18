@@ -2,7 +2,7 @@
 
 import logging
 import string
-from collections import namedtuple
+from collections import defaultdict, namedtuple
 from dataclasses import dataclass
 from enum import Enum
 from typing import cast
@@ -128,12 +128,20 @@ class WordleGuesses:
                         if mask[j] is None:
                             invalid[j].add(g)
 
-        return cls(mask, valid, invalid, wrong_spot, guess_scores)
+        wg = cls(mask, valid, invalid, wrong_spot, guess_scores)
+        wg.optimize()
+        return wg
 
     def optimize(self):
         # GRANT=g.an. ANGLE=ANGle
         # TODO: handle repeated
         # PLANK=...n. TENOR=TEN.. TENET=TEN.t
+        for gs in self.guess_scores:
+            counts = defaultdict(int)
+            for i in range(WORDLE_LEN):
+                if gs.tiles[i] is not TileState.ABSENT:
+                    counts[gs.guess[i]] += 1
+            print(f"{gs}: {counts}")
         correct = {c for c in self.mask if c is not None}
         present = self.valid - correct
         mask2 = [None] * WORDLE_LEN

@@ -222,3 +222,4 @@ or an irregular past tense.
 * 818: `GUIDE=....e MOVER=...er REPLY=re... FRESH=.rE..` yields `EXERT`
 * 819: `GRANT=g.an. ANGLE=ANGle` yields `ANGEL`
 * 820: `SCALP=sc... CRUSH=c.us.` *includes* `MUSIC`
+* 821: `BASIC=.a... ANGER=an..r` *includes* `FRANK`

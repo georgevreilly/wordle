@@ -36,21 +36,17 @@ def parse_args(description: str) -> argparse.Namespace:
 class WordleGuesses:
     mask: list[str | None]  # Exact match for position (Green/Correct)
     valid: set[str]  # Green/Correct or Yellow/Present
-    invalid: list[set[str]]  # Black/Absent
+    invalid: set[str]  # Black/Absent
     wrong_spot: list[set[str]]  # Wrong spot (Yellow/Present)
     guess_scores: list[GuessScore]
 
     def string_parts(self) -> dict[str, Any]:
-        unused = (
-            set(string.ascii_uppercase)
-            - self.valid
-            - cast(set[str], set.union(*self.invalid))
-        )
+        unused = letter_set(set(string.ascii_uppercase) - self.valid - self.invalid)
         guess_scores = ", ".join(f"{gs}|{gs.emojis()}" for gs in self.guess_scores)
         return dict(
             mask=dash_mask(self.mask),
             valid=letter_set(self.valid),
-            invalid=letter_sets(self.invalid),
+            invalid=letter_set(self.invalid),
             wrong_spot=letter_sets(self.wrong_spot),
             unused=letter_set(unused),
             guess_scores=[guess_scores],
@@ -97,28 +93,19 @@ class WordleGuesses:
     def parse(cls, guess_scores: list[GuessScore]) -> "WordleGuesses":
         mask: list[str | None] = [None for _ in range(WORDLE_LEN)]
         valid: set[str] = set()
-        invalid: list[set[str]] = [set() for _ in range(WORDLE_LEN)]
+        invalid: set[str] = set()
         wrong_spot: list[set[str]] = [set() for _ in range(WORDLE_LEN)]
 
         for gs in guess_scores:
-            # First pass for correct and present
-            for i, (g, t) in enumerate(zip(gs.guess, gs.tiles)):
+            for i, (t, g) in enumerate(zip(gs.tiles, gs.guess)):
                 if t is TileState.CORRECT:
                     mask[i] = g
                     valid.add(g)
-                    invalid[i] = set()
                 elif t is TileState.PRESENT:
-                    valid.add(g)
                     wrong_spot[i].add(g)
-
-            # Second pass for absent letters
-            for i, (g, t) in enumerate(zip(gs.guess, gs.tiles)):
-                if t is TileState.ABSENT:
-                    for j in range(WORDLE_LEN):
-                        # If we don't have a correct letter for this other position,
-                        # treat `g` as invalid. This handles repeated letters.
-                        if mask[j] is None:
-                            invalid[j].add(g)
+                    valid.add(g)
+                elif t is TileState.ABSENT:
+                    invalid.add(g)
 
         parsed_guesses = cls(mask, valid, invalid, wrong_spot, guess_scores)
         logging.info(parsed_guesses)
@@ -130,7 +117,10 @@ class WordleGuesses:
             # Did not have the full set of green+yellow letters known to be valid
             reasons["Valid"] = f"missing {letter_set(missing)}"
 
-        invalid = [(c if c in inv else None) for c, inv in zip(word, self.invalid)]
+        invalid = [
+            (c if m is None and c in self.invalid else None)
+            for c, m in zip(word, self.mask)
+        ]
         if any(invalid):
             # Invalid (black) letters present at specific positions
             reasons["Invalid"] = f"has {dash_mask(invalid)}"

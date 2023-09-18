@@ -155,6 +155,8 @@ def check_scores(first_game: int) -> list:
             assert len(eligible) > 1, f"{gr.game_id} includes: {eligible}"
         else:
             raise ValueError(f"Unknown {gr.verb}")
+        if len({c for c in gr.answer}) < WORDLE_LEN:
+            print(f"\tRepeat: {gr.answer}")
         if parsed_guesses.mask.count(None) == 2:
             print("\tKnow3")
         if mask2 := parsed_guesses.optimize():

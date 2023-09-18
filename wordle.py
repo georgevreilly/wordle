@@ -232,7 +232,6 @@ class WordleGuesses:
         # TREND: FARCE=..r.e GUILT=....t TERNS=TerN. => 3:E
         # ROUSE: THIEF=...e. BLADE=....E GROVE=.ro.E MORSE=.OrSE => 1:R
         # WRATH: VOTER=..t.r TRAIL=tRA.. GRANT=.RA.t => 4:T
-        # BEGET: GHOST=g...T EGRET=eg.ET => 3:G
         # WHEEL: RIFLE=...le LEMON=le... CLEAT=.lE. => 5:L
         # TONIC: NOVEL=nO... MONTH=.ONt. DONUT=.ON.t => 1:T
         # CRONE: AFTER=...er REPLY=re... CHORE=C.OrE => 2:R
@@ -243,6 +242,9 @@ class WordleGuesses:
 
         # TODO: handle repeated
         # TENTH: PLANK=...n. TENOR=TEN.. TENET=TEN.t => 4:T
+        # BEGET: GHOST=g...T EGRET=eg.ET             => 3:G => 2:E
+        # BESET: CIVET=...ET EGRET=e..ET SLEET=s.eET => 2:E => 3:S
+        # CACHE: CHAIR=Cha.. CLASH=C.a.h CATCH=CA.ch -- nope
         for gs in self.guess_scores:
             counts = defaultdict(int)
             for i in range(WORDLE_LEN):

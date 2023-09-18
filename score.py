@@ -167,7 +167,8 @@ def check_scores(first_game: int) -> list:
                     if (inv2 := parsed_guesses.invalid[j]) != set():
                         if inv1 != inv2:
                             print(
-                                f"\tINV: {letter_sets(parsed_guesses.invalid)}, {inv1=}, {i=}; {inv2=}, {j=}"
+                                f"\tINV: {letter_sets(parsed_guesses.invalid)}, "
+                                f"{inv1=}, {i=}; {inv2=}, {j=}"
                             )
                             break
         for invalid_kind in ("set", "absent", "exclude"):

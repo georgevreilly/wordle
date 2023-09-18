@@ -1,6 +1,8 @@
 #!/bin/bash
 
-for i in {3..6}; do
+#VARIANTS=(3 4 5 6)
+VARIANTS=(6 8)
+for i in "${VARIANTS[@]}"; do
     echo wordle${i};
     ./wordle${i}.py "$@"
 done

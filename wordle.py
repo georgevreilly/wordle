@@ -7,7 +7,7 @@ import logging
 import string
 from collections import defaultdict
 from dataclasses import dataclass
-from typing import Any, cast
+from typing import Any
 
 from common import (
     WORDLE_LEN,
@@ -48,7 +48,7 @@ class WordleGuesses:
             valid=letter_set(self.valid),
             invalid=letter_set(self.invalid),
             wrong_spot=letter_sets(self.wrong_spot),
-            unused=letter_set(unused),
+            unused=unused,
             guess_scores=[guess_scores],
         )
 

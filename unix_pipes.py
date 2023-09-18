@@ -60,17 +60,17 @@ def make_invalid(wg: WordleGuesses, invalid_kind: str) -> str | None:
     if invalid_kind == "tiles":
         return (
             "grep '^"
-            + "".join([f"[^{letter_set(i)}]" if i else "." for i in wg.invalid])
+            + "".join(["." if m else f"[^{letter_set(wg.invalid)}]" for m in wg.mask])
             + "$'"
         )
     else:
         # Reproduce the older behaviors of invalid
         if invalid_kind == "set":
             # a simple combined set
-            combined = set.union(*wg.invalid)
+            combined = wg.invalid
         elif invalid_kind == "exclude":
             # exclude valid from the combined set
-            combined = set.union(*wg.invalid) - wg.valid
+            combined = wg.invalid - wg.valid
         else:
             raise WordleError(f"Invalid kind: {invalid_kind}")
         return "grep -v '[" + letter_set(combined) + "]'"

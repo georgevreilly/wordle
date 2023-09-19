@@ -228,48 +228,39 @@ class WordleGuesses:
         return mask2
 
     def optimize(self):
-        # ANGEL: GRANT=g.an. ANGLE=ANGle => 4:E 5:L
-        # TREND: FARCE=..r.e GUILT=....t TERNS=TerN. => 3:E
-        # ROUSE: THIEF=...e. BLADE=....E GROVE=.ro.E MORSE=.OrSE => 1:R
-        # WRATH: VOTER=..t.r TRAIL=tRA.. GRANT=.RA.t => 4:T
-        # WHEEL: RIFLE=...le LEMON=le... CLEAT=.lE. => 5:L
-        # TONIC: NOVEL=nO... MONTH=.ONt. DONUT=.ON.t => 1:T
-        # CRONE: AFTER=...er REPLY=re... CHORE=C.OrE => 2:R
-        # EXERT: GUIDE=....e MOVER=...er REPLY=re... FRESH=.rE.. => 4:R
-        # STRAP: LABOR=.a..r RAMEN=ra... WRATH=.rat. SPRAT=SpRAt => 2:T 5:P
-        # SWINE: ROUND=...N. FLANK=...N. WHINE=w.INE => 2:W
-        # DROOP: GRAPH=.R.p. PROUD=pRO.d => 5:P
-
-        # TODO: handle repeated
-        # TENTH: PLANK=...n. TENOR=TEN.. TENET=TEN.t => 4:T
-        # BEGET: GHOST=g...T EGRET=eg.ET             => 3:G => 2:E
-        # BESET: CIVET=...ET EGRET=e..ET SLEET=s.eET => 2:E => 3:S
-        # CACHE: CHAIR=Cha.. CLASH=C.a.h CATCH=CA.ch -- nope
+        valid = Counter()
         for gs in self.guess_scores:
-            counts = defaultdict(int)
-            for i in range(WORDLE_LEN):
-                if gs.tiles[i] is not TileState.ABSENT:
-                    counts[gs.guess[i]] += 1
-            logging.debug(f"{gs}: {counts}")
-        correct = {c for c in self.mask if c is not None}
-        present = self.valid - correct
+            valid |= Counter(
+                g for g, t in zip(gs.guess, gs.tiles) if t is not TileState.ABSENT
+            )
+        # valid is a multiset of all the correct and present letters in all guesses
+        correct = Counter(c for c in self.mask if c is not None)
+        present = valid - correct
+        logging.debug(f"{valid=} {correct=} {present=}")
+
         mask2 = [None] * WORDLE_LEN
-        movable = {}
-        for c in present:
-            movable[c] = [
-                i
-                for i in range(WORDLE_LEN)
-                if self.mask[i] is None and c not in self.wrong_spot[i]
-            ]
-            assert len(movable[c]) >= 1, f"{c}: {movable[c]}"
-            logging.debug(f"{c}: {movable[c]}")
-        for c, possible in movable.items():
-            if len(possible) == 1:
-                i = possible[0]
-                assert mask2[i] is None and self.mask[i] is None
-                mask2[i] = c
+        while present:
+            for c in present:
+                positions = [
+                    i
+                    for i in range(WORDLE_LEN)
+                    if not (self.mask[i] or mask2[i]) and c not in self.wrong_spot[i]
+                ]
+                # Is there only one position where `c` can be placed?
+                if len(positions) == 1:
+                    i = positions[0]
+                    assert mask2[i] is None and self.mask[i] is None
+                    mask2[i] = c
+                    present -= Counter(c)
+                    logging.debug(f"{i+1} -> {c}")
+                    break
+            else:
+                # We reach this for-else only if no one-element `positions` was found;
+                # break out of outer loop.
+                present = None
+
         logging.info(f"{present=}, {mask2=}")
-        return mask2 if any(mask2) else None
+        return mask2
 
 
 def main() -> int:

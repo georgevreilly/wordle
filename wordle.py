@@ -266,7 +266,7 @@ class WordleGuesses:
                 # We must abandon the outer loop, even though `present` is not empty.
                 break
 
-        logging.info(f"{present=}, {mask2=}")
+        logging.debug(f"{present=} {mask2=}")
         return mask2
 
 

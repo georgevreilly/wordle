@@ -155,30 +155,20 @@ def check_scores(first_game: int) -> list:
             assert len(eligible) > 1, f"{gr.game_id} includes: {eligible}"
         else:
             raise ValueError(f"Unknown {gr.verb}")
-        if len({c for c in gr.answer}) < WORDLE_LEN:
-            print(f"\tRepeat: {gr.answer}")
-        if parsed_guesses.mask.count(None) == 2:
-            print("\tKnow3")
-        if mask2 := parsed_guesses.optimize():
-            print(f"\tmask2={dash_mask(mask2)}")
-        for i in range(WORDLE_LEN):
-            if (inv1 := parsed_guesses.invalid[i]) != set():
-                for j in range(WORDLE_LEN):
-                    if (inv2 := parsed_guesses.invalid[j]) != set():
-                        if inv1 != inv2:
-                            print(
-                                f"\tINV: {letter_sets(parsed_guesses.invalid)}, "
-                                f"{inv1=}, {i=}; {inv2=}, {j=}"
-                            )
-                            break
-        for invalid_kind in ("set", "absent", "exclude"):
-            wg2 = WordleGuessesLegacy.parse(gr.guess_scores, invalid_kind)
-            eligible2 = wg2.find_eligible(vocabulary)
-            if eligible != eligible2:
-                print(
-                    f">> {invalid_kind + ':':<8} {wg2} "
-                    f"-> {choices(gr.answer, eligible2) or []}"
-                )
+        # if len({c for c in gr.answer}) < WORDLE_LEN:
+        #     print(f"\tRepeat: {gr.answer}")
+        # if parsed_guesses.mask.count(None) == 2:
+        #     print("\tKnow3")
+        # if mask2 := parsed_guesses.optimize():
+        #     print(f"\tmask2={dash_mask(mask2)}")
+        # for invalid_kind in ("set", "absent", "exclude"):
+        #     wg2 = WordleGuessesLegacy.parse(gr.guess_scores, invalid_kind)
+        #     eligible2 = wg2.find_eligible(vocabulary)
+        #     if eligible != eligible2:
+        #         print(
+        #             f">> {invalid_kind + ':':<8} {wg2} "
+        #             f"-> {choices(gr.answer, eligible2) or []}"
+        #         )
     return failures
 
 

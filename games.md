@@ -223,3 +223,4 @@ or an irregular past tense.
 * 819: `GRANT=g.an. ANGLE=ANGle` yields `ANGEL`
 * 820: `SCALP=sc... CRUSH=c.us.` *includes* `MUSIC`
 * 821: `BASIC=.a... ANGER=an..r` *includes* `FRANK`
+* 822: `LARGE=l...E NOBLE=.o.lE OLIVE=oL..E SLOPE=sLO.E` yields `CLOSE`

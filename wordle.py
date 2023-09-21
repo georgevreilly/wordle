@@ -227,48 +227,6 @@ class WordleGuesses:
         )
         return mask2
 
-    def optimize(self):
-        # Compute `valid`, a multi-set of the correct and present letters in all guesses
-        valid = Counter()
-        for gs in self.guess_scores:
-            valid |= Counter(
-                g for g, t in zip(gs.guess, gs.tiles) if t is not TileState.ABSENT
-            )
-        correct = Counter(c for c in self.mask if c is not None)
-        # Compute `present`, a multi-set of the valid letters
-        # whose correct position is not yet known
-        present = valid - correct
-        logging.debug(f"{valid=} {correct=} {present=}")
-
-        mask2 = [None] * WORDLE_LEN
-
-        def available(c, i):
-            "Can `c` be placed in slot `i` of `mask2`?"
-            return (
-                self.mask[i] is None
-                and mask2[i] is None
-                and c not in self.wrong_spot[i]
-            )
-
-        while present:
-            for c in present:
-                positions = [i for i in range(WORDLE_LEN) if available(c, i)]
-                # Is there only one position where `c` can be placed?
-                if len(positions) == 1:
-                    i = positions[0]
-                    mask2[i] = c
-                    present -= Counter(c)
-                    logging.debug(f"{i+1} -> {c}")
-                    break
-            else:
-                # We reach this for-else only if there was no `break` in the for-loop;
-                # i.e., no one-element `positions` was found in `present`.
-                # We must abandon the outer loop, even though `present` is not empty.
-                break
-
-        logging.debug(f"{present=} {mask2=}")
-        return mask2
-
 
 def main() -> int:
     namespace = parse_args(description="Wordle Finder")

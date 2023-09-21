@@ -5,7 +5,7 @@
 import argparse
 import logging
 import string
-from collections import Counter, defaultdict
+from collections import Counter
 from dataclasses import dataclass
 from typing import Any
 
@@ -13,7 +13,6 @@ from common import (
     WORDLE_LEN,
     GuessScore,
     TileState,
-    WordleError,
     argparse_wordlist,
     dash_mask,
     letter_set,
@@ -85,23 +84,23 @@ class WordleGuesses:
         assert len(actual) == WORDLE_LEN
         assert len(guess) == WORDLE_LEN
         parts: list[str] = []
-        remaining: dict[str, int] = defaultdict(int)
+        remaining: Counter[str] = Counter()
 
-        for i, (a, g) in enumerate(zip(actual, guess)):
+        for a, g in zip(actual, guess):
             assert "A" <= a <= "Z", "ACTUAL should be uppercase"
             assert "A" <= g <= "Z", "GUESS should be uppercase"
             if a == g:
-                # Green: correct: exact match at position `i` => uppercase
+                # Green: correct: exact match at this position => uppercase
                 parts.append(a)
             else:
-                remaining[a] += 1
+                remaining += Counter(a)
                 parts.append("?")
 
         for i, g in enumerate(guess):
             if parts[i] == "?":
                 if remaining.get(g, 0) > 0:
                     # Yellow: letter present elsewhere => lowercase
-                    remaining[g] -= 1
+                    remaining -= Counter(g)
                     parts[i] = g.lower()
                 else:
                     # Black: letter completely absent

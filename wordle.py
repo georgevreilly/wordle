@@ -5,7 +5,7 @@
 import argparse
 import logging
 import string
-from collections import defaultdict
+from collections import Counter, defaultdict
 from dataclasses import dataclass
 from typing import Any
 
@@ -60,6 +60,8 @@ class WordleGuesses:
         )
         return f"{self.__class__.__name__}({parts})"
 
+    __repr__ = __str__
+
     @classmethod
     def score(cls, actual: str, guess: str) -> str:
         assert len(actual) == WORDLE_LEN
@@ -109,6 +111,7 @@ class WordleGuesses:
 
         parsed_guesses = cls(mask, valid, invalid, wrong_spot, guess_scores)
         logging.info(parsed_guesses)
+        parsed_guesses.optimize()
         return parsed_guesses
 
     def is_ineligible(self, word: str) -> dict[str, str]:
@@ -146,6 +149,51 @@ class WordleGuesses:
             else:
                 eligible_words.append(w)
         return eligible_words
+
+    def optimize(self) -> list[str | None]:
+        """Use PRESENT tiles to improve `mask`."""
+        mask1 = self.mask
+        mask2 = [None] * WORDLE_LEN
+        # Compute `valid`, a multi-set of the correct and present letters in all guesses
+        valid = Counter()
+        for gs in self.guess_scores:
+            valid |= Counter(
+                g for g, t in zip(gs.guess, gs.tiles) if t is not TileState.ABSENT
+            )
+        correct = Counter(c for c in mask1 if c is not None)
+        # Compute `present`, a multi-set of the valid letters
+        # whose correct position is not yet known; i.e., PRESENT in any row.
+        present = valid - correct
+        logging.debug(f"{valid=} {correct=} {present=}")
+
+        def available(c, i):
+            "Can `c` be placed in slot `i` of `mask2`?"
+            return mask1[i] is None and mask2[i] is None and c not in self.wrong_spot[i]
+
+        while present:
+            for c in present:
+                positions = [i for i in range(WORDLE_LEN) if available(c, i)]
+                # Is there only one position where `c` can be placed?
+                if len(positions) == 1:
+                    i = positions[0]
+                    mask2[i] = c
+                    present -= Counter(c)
+                    logging.debug(f"{i+1} -> {c}")
+                    break
+            else:
+                # We reach this for-else only if there was no `break` in the for-loop;
+                # i.e., no one-element `positions` was found in `present`.
+                # We must abandon the outer loop, even though `present` is not empty.
+                break
+
+        logging.debug(f"{present=} {mask2=}")
+
+        self.mask = [m1 or m2 for m1, m2 in zip(mask1, mask2)]
+        logging.info(
+            f"\toptimize: {dash_mask(mask1)} | {dash_mask(mask2)}"
+            f" => {dash_mask(self.mask)}"
+        )
+        return mask2
 
 
 def main() -> int:

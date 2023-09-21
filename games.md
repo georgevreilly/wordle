@@ -49,7 +49,7 @@ or an irregular past tense.
 * 645: `CRONE=...nE PLAIT=...It` yields `UNTIE`
 * 646: `SLANG=..ANg` *includes* `GUANO`
 * 647: `BRAIN=.r... CLOVE=..... SPURT=..uR. FURRY=.URRY` yields `HURRY`
-* 648: `CIVET=...ET EGRET=e..ET SLEET=s.eET` *includes* `BESET`
+* 648: `CIVET=...ET EGRET=e..ET SLEET=s.eET` yields `BESET`
 * 649: `GRIEF=.R.e. CHEST=..E.. BREAK=BREA. BREAM=BREA.` yields `BREAD`
 * 650: `SLANG=..... GROUT=.r... CHIRP=...R. MERRY=.e.RY` yields `EVERY`
 * 651: `CHART=char. REACH=r.aCH` *includes* `MARCH`

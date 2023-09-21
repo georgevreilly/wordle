@@ -224,3 +224,4 @@ or an irregular past tense.
 * 820: `SCALP=sc... CRUSH=c.us.` *includes* `MUSIC`
 * 821: `BASIC=.a... ANGER=an..r` *includes* `FRANK`
 * 822: `LARGE=l...E NOBLE=.o.lE OLIVE=oL..E SLOPE=sLO.E` yields `CLOSE`
+* 823: `PANIC=.an.. ANODE=aN..E KNAVE=.NA.E` *includes* `SNARE`

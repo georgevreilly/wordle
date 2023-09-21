@@ -26,6 +26,12 @@ from common import (
 def parse_args(description: str) -> argparse.Namespace:
     parser = make_argparser(description)
     argparse_wordlist(parser)
+    parser.add_argument(
+        "--explain",
+        "-x",
+        action="store_true",
+        help="Explain why words were rejected",
+    )
     namespace = parser.parse_args()
     set_verbosity(namespace)
     namespace.guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
@@ -114,6 +120,31 @@ class WordleGuesses:
         parsed_guesses.optimize()
         return parsed_guesses
 
+    def is_eligible(self, word: str) -> bool:
+        if {c for c in word} & self.valid != self.valid:
+            # Did not have the full set of green+yellow letters known to be valid
+            logging.debug("!Valid: %s", word)
+            return False
+        elif any(m is None and c in self.invalid for c, m in zip(word, self.mask)):
+            # Invalid (black) letters are in the word
+            logging.debug("Invalid: %s", word)
+            return False
+        elif any(m is not None and c != m for c, m in zip(word, self.mask)):
+            # Couldn't find all the green/correct letters
+            logging.debug("!Mask: %s", word)
+            return False
+        elif any(c in ws for c, ws in zip(word, self.wrong_spot)):
+            # Found some yellow letters: valid letters in wrong position
+            logging.debug("WrongSpot: %s", word)
+            return False
+        else:
+            # Potentially valid
+            logging.info(f"Got: {word}")
+            return True
+
+    def find_eligible(self, vocabulary: list[str]) -> list[str]:
+        return [w for w in vocabulary if self.is_eligible(w)]
+
     def is_ineligible(self, word: str) -> dict[str, str]:
         reasons = {}
         if missing := self.valid - ({c for c in word} & self.valid):
@@ -140,15 +171,15 @@ class WordleGuesses:
 
         return reasons
 
-    def find_eligible(self, vocabulary: list[str]) -> list[str]:
-        eligible_words = []
+    def find_explanations(self, vocabulary: list[str]) -> list[tuple[str, str | None]]:
+        explanations = []
         for w in vocabulary:
-            reasons = "; ".join(f"{k}: {v}" for k, v in self.is_ineligible(w).items())
+            reasons = self.is_ineligible(w)
+            why = None
             if reasons:
-                logging.debug(f"{w}: {reasons}.")
-            else:
-                eligible_words.append(w)
-        return eligible_words
+                why = "; ".join(f"{k}: {v}" for k, v in self.is_ineligible(w).items())
+            explanations.append((w, why))
+        return explanations
 
     def optimize(self) -> list[str | None]:
         """Use PRESENT tiles to improve `mask`."""
@@ -200,8 +231,14 @@ def main() -> int:
     namespace = parse_args(description="Wordle Finder")
     vocabulary = namespace.words or read_vocabulary(namespace.word_file)
     parsed_guesses = WordleGuesses.parse(namespace.guess_scores)
-    choices = parsed_guesses.find_eligible(vocabulary)
-    print("\n".join(choices))
+    if namespace.explain:
+        explanations = parsed_guesses.find_explanations(vocabulary)
+        for word, why in explanations:
+            why = "❌ " + why if why else "✅ Correct"
+            print(f"{word}\t{why}")
+    else:
+        choices = parsed_guesses.find_eligible(vocabulary)
+        print("\n".join(choices))
     return 0
 
 

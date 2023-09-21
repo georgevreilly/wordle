@@ -243,7 +243,7 @@ def main() -> int:
             print(f"{word}\t{why}")
     else:
         choices = wg.find_eligible(vocabulary)
-        print("\n".join(choices))
+        print("\n".join(choices or ["--None--"]))
     return 0
 
 

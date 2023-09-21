@@ -30,11 +30,22 @@ def parse_args(description: str) -> argparse.Namespace:
     parser.add_argument(
         "--explain",
         "-x",
-        action="store_true",
-        help="Explain why words were rejected",
+        type=int,
+        default=0,
+        const=100,
+        nargs="?",
+        metavar="NUM-WORDS",
+        help="Explain why words were rejected. Limit: %(const)s",
     )
     namespace = parser.parse_args()
     set_verbosity(namespace)
+    namespace.vocabulary = namespace.words or read_vocabulary(namespace.word_file)
+    if 0 < namespace.explain < len(namespace.vocabulary):
+        parser.error(
+            f"Vocabulary too large ({len(namespace.vocabulary)} words): "
+            "use --words or specify "
+            f"a higher limit with --explain (currently {namespace.explain})"
+        )
     namespace.guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
     return namespace
 
@@ -230,19 +241,15 @@ class WordleGuesses:
 
 def main() -> int:
     namespace = parse_args(description="Wordle Finder")
-    vocabulary = namespace.words or read_vocabulary(namespace.word_file)
     wg = WordleGuesses.parse(namespace.guess_scores)
     if namespace.explain:
-        if len(vocabulary) > 100:
-            raise WordleError("Vocabulary too large: use --words")
-        print(wg)
         print("\tguess_scores:", wg.string_parts()["guess_scores"])
-        explanations = wg.find_explanations(vocabulary)
+        explanations = wg.find_explanations(namespace.vocabulary)
         for word, why in explanations:
             why = "❌ " + why if why else "✅ eligible"
             print(f"{word}\t{why}")
     else:
-        choices = wg.find_eligible(vocabulary)
+        choices = wg.find_eligible(namespace.vocabulary)
         print("\n".join(choices or ["--None--"]))
     return 0
 

@@ -13,6 +13,7 @@ from common import (
     WORDLE_LEN,
     GuessScore,
     TileState,
+    WordleError,
     argparse_wordlist,
     dash_mask,
     letter_set,
@@ -183,10 +184,10 @@ class WordleGuesses:
 
     def optimize(self) -> list[str | None]:
         """Use PRESENT tiles to improve `mask`."""
-        mask1 = self.mask
-        mask2 = [None] * WORDLE_LEN
+        mask1: list[str | None] = self.mask
+        mask2: list[str | None] = [None] * WORDLE_LEN
         # Compute `valid`, a multi-set of the correct and present letters in all guesses
-        valid = Counter()
+        valid: Counter[str] = Counter()
         for gs in self.guess_scores:
             valid |= Counter(
                 g for g, t in zip(gs.guess, gs.tiles) if t is not TileState.ABSENT
@@ -230,14 +231,18 @@ class WordleGuesses:
 def main() -> int:
     namespace = parse_args(description="Wordle Finder")
     vocabulary = namespace.words or read_vocabulary(namespace.word_file)
-    parsed_guesses = WordleGuesses.parse(namespace.guess_scores)
+    wg = WordleGuesses.parse(namespace.guess_scores)
     if namespace.explain:
-        explanations = parsed_guesses.find_explanations(vocabulary)
+        if len(vocabulary) > 100:
+            raise WordleError("Vocabulary too large: use --words")
+        print(wg)
+        print("\tguess_scores:", wg.string_parts()["guess_scores"])
+        explanations = wg.find_explanations(vocabulary)
         for word, why in explanations:
-            why = "❌ " + why if why else "✅ Correct"
+            why = "❌ " + why if why else "✅ eligible"
             print(f"{word}\t{why}")
     else:
-        choices = parsed_guesses.find_eligible(vocabulary)
+        choices = wg.find_eligible(vocabulary)
         print("\n".join(choices))
     return 0
 

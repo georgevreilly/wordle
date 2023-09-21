@@ -146,6 +146,16 @@ def argparse_wordlist(
         dest="word_file",
         help=f"Use {DICT_FILE} as word file",
     )
+    # Make the ~2,000 answers available,
+    # but remove temptation by not documenting this option.
+    words_group.add_argument(
+        "--answers",
+        "-A",
+        action="store_const",
+        const=ANSWERS_FILE,
+        dest="word_file",
+        help=argparse.SUPPRESS,
+    )
     if allow_individual_words:
         words_group.add_argument(
             "--words", "-w", metavar="WORD", nargs="+", help="Word(s) to check"

@@ -3,6 +3,7 @@
 """Validate WordleGuesses.score against all results in games.md"""
 
 import argparse
+import re
 
 from common import GAMES_FILE, GameResult, read_vocabulary
 from wordle import WordleGuesses
@@ -43,7 +44,9 @@ def check_scores(first_game: int) -> list:
         gs2 = parts.pop("guess_scores")
         pieces = ", ".join(f"{k}={v}" for k, v in parts.items())
         print(f"\tWordleGuesses:\t{pieces}\n\t\t\tguess_scores: {gs2}")
-        eligible = parsed_guesses.find_eligible(vocabulary)
+        pattern = re.compile("".join(m or "." for m in parsed_guesses.mask))
+        word_list = [w for w in vocabulary if pattern.fullmatch(w)]
+        eligible = parsed_guesses.find_eligible(word_list)
         choices = " ".join(f"«{e}»" if e == gr.answer else e for e in eligible)
         print(f"\t{gr.verb}: {choices}")
         assert gr.answer in eligible

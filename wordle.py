@@ -150,7 +150,7 @@ class WordleGuesses:
             return False
         else:
             # Potentially valid
-            logging.info(f"Got: {word}")
+            logging.info("Got: %s", word)
             return True
 
     def find_eligible(self, vocabulary: list[str]) -> list[str]:

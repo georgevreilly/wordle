@@ -133,15 +133,16 @@ class WordleGuesses:
         return wg
 
     def optimize(self):
-        # GRANT=g.an. ANGLE=ANGle
+        # GRANT=g.an. ANGLE=ANGle => 4:E 5:L
+        # FARCE=..r.e GUILT=....t TERNS=TerN. => 3:E
         # TODO: handle repeated
-        # PLANK=...n. TENOR=TEN.. TENET=TEN.t
+        # PLANK=...n. TENOR=TEN.. TENET=TEN.t => 4:T
         for gs in self.guess_scores:
             counts = defaultdict(int)
             for i in range(WORDLE_LEN):
                 if gs.tiles[i] is not TileState.ABSENT:
                     counts[gs.guess[i]] += 1
-            print(f"{gs}: {counts}")
+            logging.debug(f"{gs}: {counts}")
         correct = {c for c in self.mask if c is not None}
         present = self.valid - correct
         mask2 = [None] * WORDLE_LEN
@@ -153,35 +154,36 @@ class WordleGuesses:
                 if self.mask[i] is None and c not in self.wrong_spot[i]
             ]
             assert len(movable[c]) >= 1, f"{c}: {movable[c]}"
-            print(f"{c}: {movable[c]}")
+            logging.debug(f"{c}: {movable[c]}")
         for c, possible in movable.items():
             if len(possible) == 1:
                 i = possible[0]
                 assert mask2[i] is None and self.mask[i] is None
                 mask2[i] = c
-        print(f"{present=}, {mask2=}")
+        logging.info(f"{present=}, {mask2=}")
+        return mask2 if any(mask2) else None
 
     def is_eligible(self, word: str) -> bool:
         letters = {c for c in word}
         if letters & self.valid != self.valid:
             # Did not have the full set of green+yellow letters known to be valid
-            logging.debug(f"!Valid: {word}")
+            logging.debug("!Valid: %s", word)
             return False
         elif any(c in inv for c, inv in zip(word, self.invalid)):
             # Invalid (black) letters are in the word
-            logging.debug(f"Invalid: {word}")
+            logging.debug("Invalid: %s", word)
             return False
         elif any(m is not None and c != m for c, m in zip(word, self.mask)):
             # Couldn't find all the green/correct letters
-            logging.debug(f"!Mask: {word}")
+            logging.debug("!Mask: %s", word)
             return False
         elif any(c in ws for c, ws in zip(word, self.wrong_spot)):
             # Found some yellow letters: valid letters in wrong position
-            logging.debug(f"WrongSpot: {word}")
+            logging.debug("WrongSpot: %s", word)
             return False
         else:
             # Potentially valid
-            logging.info(f"Got: {word}")
+            logging.info("Got: %s", word)
             return True
 
     def find_eligible(self, vocabulary: list[str]) -> list[str]:

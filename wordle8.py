@@ -123,23 +123,23 @@ class WordleGuesses:
     def is_eligible(self, word: str) -> bool:
         if {c for c in word} & self.valid != self.valid:
             # Did not have the full set of green+yellow letters known to be valid
-            logging.debug(f"!Valid: {word}")
+            logging.debug("!Valid: %s", word)
             return False
         elif any(m is None and c in self.invalid for c, m in zip(word, self.mask)):
             # Invalid (black) letters are in the word
-            logging.debug(f"Invalid: {word}")
+            logging.debug("Invalid: %s", word)
             return False
         elif any(m is not None and c != m for c, m in zip(word, self.mask)):
             # Couldn't find all the green/correct letters
-            logging.debug(f"!Mask: {word}")
+            logging.debug("!Mask: %s", word)
             return False
         elif any(c in ws for c, ws in zip(word, self.wrong_spot)):
             # Found some yellow letters: valid letters in wrong position
-            logging.debug(f"WrongSpot: {word}")
+            logging.debug("WrongSpot: %s", word)
             return False
         else:
             # Potentially valid
-            logging.info(f"Got: {word}")
+            logging.info("Got: %s", word)
             return True
 
     def find_eligible(self, vocabulary: list[str]) -> list[str]:

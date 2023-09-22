@@ -49,19 +49,19 @@ def parse_guesses(guess_scores):
 def is_eligible(word, invalid, valid, mask, wrong_spot):
     letters = {c for c in word}
     if letters & valid != valid:
-        logging.debug(f"!Valid: {word}")
+        logging.debug("!Valid: %s", word)
         return False
     elif letters & invalid:
-        logging.debug(f"Invalid: {word}")
+        logging.debug("Invalid: %s", word)
         return False
     elif any(m is not None and c != m for c, m in zip(word, mask)):
-        logging.debug(f"!Mask: {word}")
+        logging.debug("!Mask: %s", word)
         return False
     elif any(c in ws for c, ws in zip(word, wrong_spot)):
-        logging.debug(f"WrongSpot: {word}")
+        logging.debug("WrongSpot: %s", word)
         return False
     else:
-        logging.debug(f"Got: {word}")
+        logging.debug("Got: %s", word)
         return True
 
 

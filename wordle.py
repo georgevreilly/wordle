@@ -5,7 +5,7 @@
 import argparse
 import logging
 import string
-from collections import Counter, defaultdict
+from collections import Counter
 from dataclasses import dataclass
 from typing import Any
 
@@ -13,7 +13,6 @@ from common import (
     WORDLE_LEN,
     GuessScore,
     TileState,
-    WordleError,
     argparse_wordlist,
     dash_mask,
     letter_set,
@@ -30,11 +29,22 @@ def parse_args(description: str) -> argparse.Namespace:
     parser.add_argument(
         "--explain",
         "-x",
-        action="store_true",
-        help="Explain why words were rejected",
+        type=int,
+        default=0,
+        const=100,
+        nargs="?",
+        metavar="NUM-WORDS",
+        help="Explain why words were rejected. Limit: %(const)s",
     )
     namespace = parser.parse_args()
     set_verbosity(namespace)
+    namespace.vocabulary = namespace.words or read_vocabulary(namespace.word_file)
+    if 0 < namespace.explain < len(namespace.vocabulary):
+        parser.error(
+            f"Vocabulary too large ({len(namespace.vocabulary)} words): "
+            "use --words or specify "
+            f"a higher limit with --explain (currently {namespace.explain})"
+        )
     namespace.guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
     return namespace
 
@@ -74,23 +84,23 @@ class WordleGuesses:
         assert len(actual) == WORDLE_LEN
         assert len(guess) == WORDLE_LEN
         parts: list[str] = []
-        remaining: dict[str, int] = defaultdict(int)
+        remaining: Counter[str] = Counter()
 
-        for i, (a, g) in enumerate(zip(actual, guess)):
+        for a, g in zip(actual, guess):
             assert "A" <= a <= "Z", "ACTUAL should be uppercase"
             assert "A" <= g <= "Z", "GUESS should be uppercase"
             if a == g:
-                # Green: correct: exact match at position `i` => uppercase
+                # Green: correct: exact match at this position => uppercase
                 parts.append(a)
             else:
-                remaining[a] += 1
+                remaining += Counter(a)
                 parts.append("?")
 
         for i, g in enumerate(guess):
             if parts[i] == "?":
                 if remaining.get(g, 0) > 0:
                     # Yellow: letter present elsewhere => lowercase
-                    remaining[g] -= 1
+                    remaining -= Counter(g)
                     parts[i] = g.lower()
                 else:
                     # Black: letter completely absent
@@ -230,19 +240,15 @@ class WordleGuesses:
 
 def main() -> int:
     namespace = parse_args(description="Wordle Finder")
-    vocabulary = namespace.words or read_vocabulary(namespace.word_file)
     wg = WordleGuesses.parse(namespace.guess_scores)
     if namespace.explain:
-        if len(vocabulary) > 100:
-            raise WordleError("Vocabulary too large: use --words")
-        print(wg)
         print("\tguess_scores:", wg.string_parts()["guess_scores"])
-        explanations = wg.find_explanations(vocabulary)
+        explanations = wg.find_explanations(namespace.vocabulary)
         for word, why in explanations:
             why = "❌ " + why if why else "✅ eligible"
             print(f"{word}\t{why}")
     else:
-        choices = wg.find_eligible(vocabulary)
+        choices = wg.find_eligible(namespace.vocabulary)
         print("\n".join(choices or ["--None--"]))
     return 0
 

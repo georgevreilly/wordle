@@ -226,3 +226,4 @@ or an irregular past tense.
 * 822: `LARGE=l...E NOBLE=.o.lE OLIVE=oL..E SLOPE=sLO.E` yields `CLOSE`
 * 823: `PANIC=.an.. ANODE=aN..E KNAVE=.NA.E` *includes* `SNARE`
 * 824: `BLADE=....E GRIPE=....E SHOVE=S.O.E` *includes* `STONE`
+* 825: `FRAME=.R... CROWD=.R... BRISK=BR.S.` yields `BRUSH`

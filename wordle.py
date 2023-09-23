@@ -129,6 +129,8 @@ class WordleGuesses:
             for i, (g, t) in enumerate(zip(gs.guess, gs.tiles)):
                 if t is TileState.ABSENT:
                     if g in valid:
+                        # There are more instances of `g` in `gs.guess`
+                        # than in the answer
                         wrong_spot[i].add(g)
                     else:
                         invalid.add(g)
@@ -143,13 +145,13 @@ class WordleGuesses:
             # Did not have the full set of green+yellow letters known to be valid
             logging.debug("!Valid: %s", word)
             return False
-        elif any(m is None and c in self.invalid for c, m in zip(word, self.mask)):
-            # Invalid (black) letters are in the word
-            logging.debug("Invalid: %s", word)
-            return False
         elif any(m is not None and c != m for c, m in zip(word, self.mask)):
             # Couldn't find all the green/correct letters
             logging.debug("!Mask: %s", word)
+            return False
+        elif any(m is None and c in self.invalid for c, m in zip(word, self.mask)):
+            # Invalid (black) letters present at specific positions
+            logging.debug("Invalid: %s", word)
             return False
         elif any(c in ws for c, ws in zip(word, self.wrong_spot)):
             # Found some yellow letters: valid letters in wrong position
@@ -169,6 +171,11 @@ class WordleGuesses:
             # Did not have the full set of green+yellow letters known to be valid
             reasons["Valid"] = f"missing {letter_set(missing)}"
 
+        mask = [(m if c != m else None) for c, m in zip(word, self.mask)]
+        if any(mask):
+            # Couldn't find all the green/correct letters
+            reasons["Mask"] = f"needs {dash_mask(mask)}"
+
         invalid = [
             (c if m is None and c in self.invalid else None)
             for c, m in zip(word, self.mask)
@@ -176,11 +183,6 @@ class WordleGuesses:
         if any(invalid):
             # Invalid (black) letters present at specific positions
             reasons["Invalid"] = f"has {dash_mask(invalid)}"
-
-        mask = [(m if c != m else None) for c, m in zip(word, self.mask)]
-        if any(mask):
-            # Couldn't find all the green/correct letters
-            reasons["Mask"] = f"needs {dash_mask(mask)}"
 
         wrong = [(c if c in ws else None) for c, ws in zip(word, self.wrong_spot)]
         if any(wrong):
@@ -249,10 +251,11 @@ def main() -> int:
     namespace = parse_args(description="Wordle Finder")
     wg = WordleGuesses.parse(namespace.guess_scores)
     if namespace.explain:
+        print(wg)
         print("\tguess_scores:", wg.string_parts()["guess_scores"])
         explanations = wg.find_explanations(namespace.vocabulary)
         for word, why in explanations:
-            why = "❌ " + why if why else "✅ eligible"
+            why = "❌ " + why if why else "✅ Eligible"
             print(f"{word}\t{why}")
     else:
         choices = wg.find_eligible(namespace.vocabulary)

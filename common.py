@@ -69,7 +69,7 @@ class GuessScore:
         else:
             raise WordleError(f"Invalid score: {score_tile}")
 
-    def __str__(self):
+    def __repr__(self):
         return f"{self.guess}={self.score}"
 
     def emojis(self, separator=""):

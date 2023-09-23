@@ -69,15 +69,13 @@ class WordleGuesses:
             guess_scores=[guess_scores],
         )
 
-    def __str__(self) -> str:
+    def __repr__(self) -> str:
         parts = ", ".join(
             f"{k}={v}"
             for k, v in self.string_parts().items()
             if k not in {"guess_scores"}
         )
         return f"{self.__class__.__name__}({parts})"
-
-    __repr__ = __str__
 
     @classmethod
     def score(cls, actual: str, guess: str) -> str:

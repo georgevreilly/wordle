@@ -95,15 +95,15 @@ class WordleGuesses:
         wrong_spot: list[set[str]] = [set() for _ in range(WORDLE_LEN)]
 
         for gs in guess_scores:
-            for i in range(WORDLE_LEN):
-                if gs.tiles[i] is TileState.CORRECT:
-                    mask[i] = gs.guess[i]
-                    valid.add(gs.guess[i])
-                elif gs.tiles[i] is TileState.PRESENT:
-                    wrong_spot[i].add(gs.guess[i])
-                    valid.add(gs.guess[i])
-                elif gs.tiles[i] is TileState.ABSENT:
-                    invalid.add(gs.guess[i])
+            for i, (t, g) in enumerate(zip(gs.tiles, gs.guess)):
+                if t is TileState.CORRECT:
+                    mask[i] = g
+                    valid.add(g)
+                elif t is TileState.PRESENT:
+                    wrong_spot[i].add(g)
+                    valid.add(g)
+                elif t is TileState.ABSENT:
+                    invalid.add(g)
 
         return cls(mask, valid, invalid, wrong_spot, guess_scores)
 

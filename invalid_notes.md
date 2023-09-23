@@ -61,3 +61,7 @@
   * other: ENDER «UNDER».
   * The second E in NERVE should have eliminated ENDER.
   * tiles: «UNDER»
+  * Note: if `BONER=..nER` is omitted, finds --None--
+* `ABOVE: BALES=ba.e. KEBAB=.eba. ABATE=AB..E`
+  * tiles: «ABOVE»
+  * Note: if `ABATE=AB..E` is omitted, finds --None--

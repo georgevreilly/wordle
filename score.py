@@ -137,6 +137,20 @@ def check_scores(first_game: int) -> list:
             )
             if computed != gs.score:
                 failures.append((gr.answer, gs.guess, gs.score, computed))
+            for c in set(gr.answer):
+                if gs.guess.count(c) > 1:
+                    correct = present = absent = 0
+                    for i in range(WORDLE_LEN):
+                        if gs.guess[i] == c:
+                            if gs.tiles[i] is TileState.CORRECT:
+                                correct += 1
+                            elif gs.tiles[i] is TileState.PRESENT:
+                                present += 1
+                            elif gs.tiles[i] is TileState.ABSENT:
+                                absent += 1
+                    if correct == 0 and (present or absent):
+                        # print(f"\t\tRepeat: {gs.guess}, {c}")
+                        pass
 
         parsed_guesses = WordleGuesses.parse(gr.guess_scores)
         parts = parsed_guesses.string_parts()
@@ -155,6 +169,7 @@ def check_scores(first_game: int) -> list:
             assert len(eligible) > 1, f"{gr.game_id} includes: {eligible}"
         else:
             raise ValueError(f"Unknown {gr.verb}")
+
         # if len({c for c in gr.answer}) < WORDLE_LEN:
         #     print(f"\tRepeat: {gr.answer}")
         # if parsed_guesses.mask.count(None) == 2:

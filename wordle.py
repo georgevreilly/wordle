@@ -139,7 +139,8 @@ class WordleGuesses:
         return parsed_guesses
 
     def is_eligible(self, word: str) -> bool:
-        if {c for c in word} & self.valid != self.valid:
+        letters = {c for c in word}
+        if letters & self.valid != self.valid:
             # Did not have the full set of green+yellow letters known to be valid
             logging.debug("!Valid: %s", word)
             return False
@@ -147,8 +148,8 @@ class WordleGuesses:
             # Couldn't find all the green/correct letters
             logging.debug("!Mask: %s", word)
             return False
-        elif any(m is None and c in self.invalid for c, m in zip(word, self.mask)):
-            # Invalid (black) letters present at specific positions
+        elif letters & self.invalid:
+            # Invalid (black) letters present
             logging.debug("Invalid: %s", word)
             return False
         elif any(c in ws for c, ws in zip(word, self.wrong_spot)):
@@ -165,7 +166,8 @@ class WordleGuesses:
 
     def is_ineligible(self, word: str) -> dict[str, str]:
         reasons = {}
-        if missing := self.valid - ({c for c in word} & self.valid):
+        letters = {c for c in word}
+        if missing := self.valid - (letters & self.valid):
             # Did not have the full set of green+yellow letters known to be valid
             reasons["Valid"] = f"missing {letter_set(missing)}"
 
@@ -174,10 +176,7 @@ class WordleGuesses:
             # Couldn't find all the green/correct letters
             reasons["Mask"] = f"needs {dash_mask(mask)}"
 
-        invalid = [
-            (c if m is None and c in self.invalid else None)
-            for c, m in zip(word, self.mask)
-        ]
+        invalid = [(c if c in self.invalid else None) for c in word]
         if any(invalid):
             # Invalid (black) letters present at specific positions
             reasons["Invalid"] = f"has {dash_mask(invalid)}"

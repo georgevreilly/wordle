@@ -73,7 +73,7 @@ class GuessScore:
         else:
             raise WordleError(f"Invalid score: {score_tile}")
 
-    def __str__(self):
+    def __repr__(self):
         return f"{self.guess}={self.score}"
 
     def emojis(self, separator=""):
@@ -146,7 +146,7 @@ class WordleGuesses:
     def find_eligible(self, vocabulary: list[str]) -> list[str]:
         return [w for w in vocabulary if self.is_eligible(w)]
 
-    def __str__(self) -> str:
+    def __repr__(self) -> str:
         mask = dash_mask(self.mask)
         valid = letter_set(self.valid)
         invalid = letter_set(self.invalid)

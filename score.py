@@ -170,6 +170,22 @@ def check_scores(first_game: int) -> list:
         else:
             raise ValueError(f"Unknown {gr.verb}")
 
+        if False:
+            explanations = parsed_guesses.find_explanations(word_list)
+            assert any(word == gr.answer and why is None for word, why in explanations)
+
+        if False:
+            for i in range(len(gr.guess_scores)):
+                wg2 = WordleGuesses.parse(gr.guess_scores[i:])
+                eligible = wg2.find_eligible(word_list)
+                # print(f"\t\t{i}: {wg2.guess_scores}")
+                assert gr.answer in eligible, wg2.guess_scores
+
+                wg3 = WordleGuesses.parse(gr.guess_scores[:-i])
+                eligible = wg3.find_eligible(word_list)
+                # print(f"\t\t{i}: {wg3.guess_scores}")
+                assert gr.answer in eligible, wg3.guess_scores
+
         # if len({c for c in gr.answer}) < WORDLE_LEN:
         #     print(f"\tRepeat: {gr.answer}")
         # if parsed_guesses.mask.count(None) == 2:

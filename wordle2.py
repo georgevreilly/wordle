@@ -72,7 +72,7 @@ class GuessScore:
         else:
             raise WordleError(f"Invalid score: {score_tile}")
 
-    def __str__(self):
+    def __repr__(self):
         return f"{self.guess}={self.score}"
 
     def emojis(self, separator=""):
@@ -95,6 +95,7 @@ class WordleGuesses:
         wrong_spot: list[set[str]] = [set() for _ in range(WORDLE_LEN)]
 
         for gs in guess_scores:
+            # First pass for correct and present
             for i, (t, g) in enumerate(zip(gs.tiles, gs.guess)):
                 if t is TileState.CORRECT:
                     mask[i] = g
@@ -102,8 +103,16 @@ class WordleGuesses:
                 elif t is TileState.PRESENT:
                     wrong_spot[i].add(g)
                     valid.add(g)
-                elif t is TileState.ABSENT:
-                    invalid.add(g)
+
+            # Second pass for absent letters
+            for i, (g, t) in enumerate(zip(gs.guess, gs.tiles)):
+                if t is TileState.ABSENT:
+                    if g in valid:
+                        # There are more instances of `g` in `gs.guess`
+                        # than in the answer
+                        wrong_spot[i].add(g)
+                    else:
+                        invalid.add(g)
 
         return cls(mask, valid, invalid, wrong_spot, guess_scores)
 
@@ -113,13 +122,13 @@ class WordleGuesses:
             # Did not have the full set of green+yellow letters known to be valid
             logging.debug("!Valid: %s", word)
             return False
-        elif letters & self.invalid:
-            # Invalid (black) letters are in the word
-            logging.debug("Invalid: %s", word)
-            return False
         elif any(m is not None and c != m for c, m in zip(word, self.mask)):
             # Couldn't find all the green/correct letters
             logging.debug("!Mask: %s", word)
+            return False
+        elif letters & self.invalid:
+            # Invalid (black) letters are in the word
+            logging.debug("Invalid: %s", word)
             return False
         elif any(c in ws for c, ws in zip(word, self.wrong_spot)):
             # Found some yellow letters: valid letters in wrong position

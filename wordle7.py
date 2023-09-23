@@ -169,13 +169,13 @@ class WordleGuesses:
             # Did not have the full set of green+yellow letters known to be valid
             logging.debug("!Valid: %s", word)
             return False
-        elif any(c in inv for c, inv in zip(word, self.invalid)):
-            # Invalid (black) letters are in the word
-            logging.debug("Invalid: %s", word)
-            return False
         elif any(m is not None and c != m for c, m in zip(word, self.mask)):
             # Couldn't find all the green/correct letters
             logging.debug("!Mask: %s", word)
+            return False
+        elif any(c in inv for c, inv in zip(word, self.invalid)):
+            # Invalid (black) letters are in the word
+            logging.debug("Invalid: %s", word)
             return False
         elif any(c in ws for c, ws in zip(word, self.wrong_spot)):
             # Found some yellow letters: valid letters in wrong position

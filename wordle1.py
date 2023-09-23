@@ -51,11 +51,11 @@ def is_eligible(word, invalid, valid, mask, wrong_spot):
     if letters & valid != valid:
         logging.debug("!Valid: %s", word)
         return False
-    elif letters & invalid:
-        logging.debug("Invalid: %s", word)
-        return False
     elif any(m is not None and c != m for c, m in zip(word, mask)):
         logging.debug("!Mask: %s", word)
+        return False
+    elif letters & invalid:
+        logging.debug("Invalid: %s", word)
         return False
     elif any(c in ws for c, ws in zip(word, wrong_spot)):
         logging.debug("WrongSpot: %s", word)

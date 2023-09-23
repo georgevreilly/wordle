@@ -118,7 +118,7 @@ class WordleGuesses:
                     valid.add(g)
 
             # Second pass for absent letters
-            for i, (g, t) in enumerate(zip(gs.guess, gs.tiles)):
+            for i, (t, g) in enumerate(zip(gs.tiles, gs.guess)):
                 if t is TileState.ABSENT:
                     if g in valid:
                         # There are more instances of `g` in `gs.guess`

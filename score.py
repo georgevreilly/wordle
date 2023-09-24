@@ -10,6 +10,7 @@ from dataclasses import dataclass
 
 from common import (
     GAMES_FILE,
+    WORD_FILE,
     WORDLE_LEN,
     GameResult,
     GuessScore,
@@ -19,6 +20,7 @@ from common import (
     letter_sets,
     read_vocabulary,
 )
+from unix_pipes import pipes, run_pipe
 from wordle import WordleGuesses
 
 
@@ -185,6 +187,11 @@ def check_scores(first_game: int) -> list:
                 eligible = wg3.find_eligible(word_list)
                 # print(f"\t\t{i}: {wg3.guess_scores}")
                 assert gr.answer in eligible, wg3.guess_scores
+
+        if False:
+            cmd_line = pipes(parsed_guesses, WORD_FILE)
+            eligible = run_pipe(cmd_line).split("\n")
+            assert gr.answer in eligible, gr.guess_scores
 
         # if len({c for c in gr.answer}) < WORDLE_LEN:
         #     print(f"\tRepeat: {gr.answer}")

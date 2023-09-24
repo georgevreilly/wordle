@@ -108,7 +108,6 @@ class WordleGuesses:
         wrong_spot: list[set[str]] = [set() for _ in range(WORDLE_LEN)]
 
         for gs in guess_scores:
-            # First pass for correct and present
             for i, (t, g) in enumerate(zip(gs.tiles, gs.guess)):
                 if t is TileState.CORRECT:
                     mask[i] = g
@@ -116,15 +115,8 @@ class WordleGuesses:
                 elif t is TileState.PRESENT:
                     wrong_spot[i].add(g)
                     valid.add(g)
-
-            # Second pass for absent letters
-            for i, (t, g) in enumerate(zip(gs.tiles, gs.guess)):
-                if t is TileState.ABSENT:
-                    if g in valid:
-                        # There are more instances of `g` in `gs.guess`
-                        # than in the answer
-                        wrong_spot[i].add(g)
-                    else:
+                elif t is TileState.ABSENT:
+                    if g not in valid:
                         invalid.add(g)
 
         return cls(mask, valid, invalid, wrong_spot, guess_scores)

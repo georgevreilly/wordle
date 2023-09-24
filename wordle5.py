@@ -108,6 +108,7 @@ class WordleGuesses:
         wrong_spot: list[set[str]] = [set() for _ in range(WORDLE_LEN)]
 
         for gs in guess_scores:
+            # First pass for correct and present
             for i, (t, g) in enumerate(zip(gs.tiles, gs.guess)):
                 if t is TileState.CORRECT:
                     mask[i] = g
@@ -115,10 +116,17 @@ class WordleGuesses:
                 elif t is TileState.PRESENT:
                     wrong_spot[i].add(g)
                     valid.add(g)
-                elif t is TileState.ABSENT:
-                    invalid.add(g)
 
-        invalid -= valid
+            # Second pass for absent letters
+            for i, (t, g) in enumerate(zip(gs.tiles, gs.guess)):
+                if t is TileState.ABSENT:
+                    if g in valid:
+                        # There are more instances of `g` in `gs.guess`
+                        # than in the answer
+                        wrong_spot[i].add(g)
+                    else:
+                        invalid.add(g)
+
         return cls(mask, valid, invalid, wrong_spot, guess_scores)
 
     def is_eligible(self, word: str) -> bool:
@@ -153,7 +161,6 @@ class WordleGuesses:
         invalid = letter_set(self.invalid)
         wrong_spot = letter_sets(self.wrong_spot)
         unused = letter_set(set(string.ascii_uppercase) - self.valid - self.invalid)
-        # _guess_scores = [", ".join(f"{gs}|{gs.emojis()}" for gs in self.guess_scores)]
         return (
             f"WordleGuesses({mask=}, {valid=}, {invalid=},\n"
             f"    {wrong_spot=}, {unused=})"

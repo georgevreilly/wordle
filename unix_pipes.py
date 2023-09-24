@@ -7,7 +7,6 @@ import subprocess
 
 from common import (
     GuessScore,
-    WordleError,
     argparse_wordlist,
     letter_set,
     make_argparser,
@@ -19,32 +18,6 @@ from wordle import WordleGuesses
 def parse_args(description: str) -> argparse.Namespace:
     parser = make_argparser(description)
     argparse_wordlist(parser)
-    parser.set_defaults(
-        invalid="tiles",
-    )
-    parser.add_argument(
-        "--merge",
-        "-m",
-        action="store_true",
-        help="Merge CORRECT and INVALID (tiles) regexes",
-    )
-    invalid_group = parser.add_mutually_exclusive_group()
-    invalid_group.add_argument(
-        "--invalid-set",
-        "-S",
-        dest="invalid",
-        const="set",
-        action="store_const",
-        help="Original: combined set of invalid letters",
-    )
-    invalid_group.add_argument(
-        "--invalid-tiles",
-        "-T",
-        dest="invalid",
-        const="tiles",
-        action="store_const",
-        help="Per-tile invalid set",
-    )
     namespace = parser.parse_args()
     set_verbosity(namespace)
     namespace.guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
@@ -52,40 +25,14 @@ def parse_args(description: str) -> argparse.Namespace:
     return namespace
 
 
-def make_invalid(wg: WordleGuesses, invalid_kind: str) -> str | None:
-    if not any(wg.invalid):
-        return None
-    if invalid_kind == "tiles":
-        return (
-            "grep '^"
-            + "".join(["." if m else f"[^{letter_set(wg.invalid)}]" for m in wg.mask])
-            + "$'"
-        )
-    else:
-        # Reproduce the older behaviors of invalid
-        if invalid_kind == "set":
-            # a simple combined set
-            combined = wg.invalid
-        else:
-            raise WordleError(f"Invalid kind: {invalid_kind}")
-        return "grep -v '[" + letter_set(combined) + "]'"
-
-
-def parts(wg: WordleGuesses, invalid_kind: str, merge: bool) -> dict[str, str | None]:
+def parts(wg: WordleGuesses) -> dict[str, str | None]:
     mask = valid = invalid = wrong_spot = None
     if wg.valid:
         valid = "awk '" + " && ".join(f"/{c}/" for c in sorted(wg.valid)) + "'"
-    if merge:
-        assert invalid_kind == "tiles"
-        mask = (
-            "grep '^"
-            + "".join([m or f"[^{letter_set(wg.invalid)}]" for m in wg.mask])
-            + "$'"
-        )
-    else:
-        if any(wg.mask):
-            mask = "grep '^" + "".join(m or "." for m in wg.mask) + "$'"
-        invalid = make_invalid(wg, invalid_kind)
+    if any(wg.mask):
+        mask = "grep '^" + "".join(m or "." for m in wg.mask) + "$'"
+    if wg.invalid:
+        invalid = "grep -v '[" + letter_set(wg.invalid) + "]'"
     if any(wg.wrong_spot):
         wrong_spot = (
             "grep '^"
@@ -95,23 +42,22 @@ def parts(wg: WordleGuesses, invalid_kind: str, merge: bool) -> dict[str, str | 
     return dict(valid=valid, mask=mask, invalid=invalid, wrong_spot=wrong_spot)
 
 
-def pipes(wg: WordleGuesses, invalid_kind: str, word_file: str, merge: bool) -> str:
+def pipes(wg: WordleGuesses, word_file: str) -> str:
     return " |\n\t".join(
         [f"grep '^.....$' {word_file}", "tr 'a-z' 'A-Z'"]
-        + [v for v in parts(wg, invalid_kind, merge).values() if v is not None]
+        + [v for v in parts(wg).values() if v is not None]
     )
+
+
+def run_pipe(cmd_line: str) -> str:
+    return subprocess.run(cmd_line, stdout=subprocess.PIPE, shell=True).stdout.decode()
 
 
 def main() -> int:
     namespace = parse_args(description="Render hardcoded Unix pipes for Wordle game")
-    cmd_line = pipes(
-        namespace.wordle_guesses,
-        namespace.invalid,
-        namespace.word_file,
-        namespace.merge,
-    )
+    cmd_line = pipes(namespace.wordle_guesses, namespace.word_file)
     print(cmd_line)
-    print(subprocess.run(cmd_line, stdout=subprocess.PIPE, shell=True).stdout.decode())
+    print(run_pipe(cmd_line))
     return 0
 
 

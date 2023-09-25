@@ -6,7 +6,9 @@ import argparse
 import subprocess
 
 from common import (
+    WORDLE_LEN,
     GuessScore,
+    TileState,
     argparse_wordlist,
     letter_set,
     make_argparser,
@@ -32,7 +34,13 @@ def parts(wg: WordleGuesses) -> dict[str, str | None]:
     if any(wg.mask):
         mask = "grep '^" + "".join(m or "." for m in wg.mask) + "$'"
     if wg.invalid:
-        invalid = "grep -v '[" + letter_set(wg.invalid) + "]'"
+        ordered = []
+        for gs in wg.guess_scores:
+            for i in range(WORDLE_LEN):
+                if gs.tiles[i] is TileState.ABSENT:
+                    if gs.guess[i] not in ordered and gs.guess[i] in wg.invalid:
+                        ordered.append(gs.guess[i])
+        invalid = "grep -v '[" + "".join(ordered) + "]'"
     if any(wg.wrong_spot):
         wrong_spot = (
             "grep '^"

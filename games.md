@@ -228,3 +228,5 @@ or an irregular past tense.
 * 824: `BLADE=....E GRIPE=....E SHOVE=S.O.E` *includes* `STONE`
 * 825: `FRAME=.R... CROWD=.R... BRISK=BR.S.` yields `BRUSH`
 * 826: `MINOR=...Or ROBOT=r..O. SCROD=.cRO.` yields `CAROL`
+* 827: `POINT=..i.T REMIT=R..iT` yields `RIGHT`
+* 828: `COULD=cO... POACH=.O.c.` *includes* `ROCKY`

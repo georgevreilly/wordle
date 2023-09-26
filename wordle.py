@@ -188,7 +188,9 @@ class WordleGuesses:
 
         return reasons
 
-    def find_explanations(self, vocabulary: list[str]) -> list[tuple[str, str | None]]:
+    def find_explanations_pqereafd(
+        self, vocabulary: list[str]
+    ) -> list[tuple[str, str | None]]:
         explanations = []
         for w in vocabulary:
             reasons = self.is_ineligible(w)

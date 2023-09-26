@@ -230,3 +230,4 @@ or an irregular past tense.
 * 826: `MINOR=...Or ROBOT=r..O. SCROD=.cRO.` yields `CAROL`
 * 827: `POINT=..i.T REMIT=R..iT` yields `RIGHT`
 * 828: `COULD=cO... POACH=.O.c.` *includes* `ROCKY`
+* 829: `UNCLE=...l. BLOAT=.loA. MORAL=.O.AL` yields `LOYAL`

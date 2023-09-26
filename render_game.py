@@ -25,6 +25,8 @@ def parse_args(description: str) -> argparse.Namespace:
     parser.add_argument("--output", "-o", help="Output filename")
     parser.add_argument("--game", "-g", dest="game_id", help="Number of game")
     namespace = parser.parse_args()
+    if not any([namespace.emoji, namespace.html]):
+        parser.error("You must use --emoji and/or --html")
     set_verbosity(namespace)
     namespace.guess_scores = [GuessScore.make(gs) for gs in namespace.guess_scores]
     return namespace

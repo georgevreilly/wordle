@@ -9,7 +9,7 @@ table.wordle {
     margin-right: auto;
 }
 
-table tr td {
+table.wordle tr td {
     color: white;
     background-color: white;
     height: 62px;
@@ -17,14 +17,21 @@ table tr td {
     text-align: center;
 }
 
-table tr td.correct {
+table.wordle tr td.correct {
     background-color: #6aaa64;
 }
 
-table tr td.present {
+table.wordle tr td.present {
     background-color: #c9b458;
 }
 
-table tr td.absent {
+table.wordle tr td.absent {
     background-color: #838184;
+}
+
+table.wordle tr td.gs {
+    font-family: 'Source Code Pro', monospace;
+    color: black;
+    font-weight: 400;
+    padding-left: 1em;
 }

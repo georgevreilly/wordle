@@ -231,3 +231,4 @@ or an irregular past tense.
 * 827: `POINT=..i.T REMIT=R..iT` yields `RIGHT`
 * 828: `COULD=cO... POACH=.O.c.` *includes* `ROCKY`
 * 829: `UNCLE=...l. BLOAT=.loA. MORAL=.O.AL` yields `LOYAL`
+* 830: `EIGHT=ei... MOVIE=m..iE CRIME=..ImE` yields `SMILE`

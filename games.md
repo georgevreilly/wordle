@@ -233,3 +233,4 @@ or an irregular past tense.
 * 829: `UNCLE=...l. BLOAT=.loA. MORAL=.O.AL` yields `LOYAL`
 * 830: `EIGHT=ei... MOVIE=m..iE CRIME=..ImE` yields `SMILE`
 * 831: `BONUS=.O... HOTEL=hO... POACH=.OACH` *includes* `COACH`
+* 832: `REGAL=re.a. AFTER=A..er ARENA=Are.. ADORE=A..RE` *includes* `AZURE`

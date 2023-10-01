@@ -234,3 +234,4 @@ or an irregular past tense.
 * 830: `EIGHT=ei... MOVIE=m..iE CRIME=..ImE` yields `SMILE`
 * 831: `BONUS=.O... HOTEL=hO... POACH=.OACH` *includes* `COACH`
 * 832: `REGAL=re.a. AFTER=A..er ARENA=Are.. ADORE=A..RE` *includes* `AZURE`
+* 833: `NOISE=..... CRAMP=..a.. BALKY=.A..Y JAGGY=.A..Y DAFFY=DA..Y` yields `DADDY`

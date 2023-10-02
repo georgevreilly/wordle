@@ -18,6 +18,10 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+# These answers to actual games were not in "answers.txt"
+EXCEPTIONAL_ANSWERS = {"GUANO", "SNAFU", "BALSA", "KAZOO"}
+
+
 def check_scores(first_game: int) -> list:
     vocabulary = read_vocabulary(WORD_FILE)
     answers = set(read_vocabulary(ANSWERS_FILE))
@@ -54,12 +58,18 @@ def check_scores(first_game: int) -> list:
         choices = " ".join(f"«{e}»" if e == gr.answer else e for e in eligible)
         print(f"\t{gr.verb}: {choices}")
         assert gr.answer in eligible
+        plausible = {p for p in eligible if p in answers}
+        if gr.answer not in EXCEPTIONAL_ANSWERS:
+            assert gr.answer in answers, f"{gr.game_id}: {gr.answer} in known answers"
         if "yields" == gr.verb:
             # I previously decided that any other possibilities would never be used
             assert len(eligible) >= 1, f"{gr.game_id} yields: {eligible}"
-            assert gr.answer in answers, f"{gr.game_id}: {gr.answer} in known answers"
+            assert len(plausible) == 1, f"{gr.answer} == {plausible!r}"
         elif "includes" == gr.verb:
             assert len(eligible) > 1, f"{gr.game_id} includes: {eligible}"
+            assert (
+                len(plausible) > 1 or gr.answer in EXCEPTIONAL_ANSWERS
+            ), f"{gr.answer} in {plausible}"
         else:
             raise ValueError(f"Unknown {gr.verb}")
     return failures

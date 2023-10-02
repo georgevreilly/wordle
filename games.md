@@ -9,25 +9,25 @@ and if a verb, is usually in the present tense singular form
 or an irregular past tense.
 
 * 186: `GRAIL=.RA.. TRACK=.RAc. CRAMP=CRA.. CRABS=CRA.. CRAZY=CRAZ.` yields `CRAZE`
-* 196: `ARISE=.r.se ROUTE=R.u.e RULES=Ru.eS` *includes* `REBUS`
+* 196: `ARISE=.r.se ROUTE=R.u.e RULES=Ru.eS` yields `REBUS`
 * 233: `RAISE=r...e CLOUT=.L... NYMPH=..... ELVER=EL.ER` yields `ELDER`
 * 607: `ADIEU=a.i.. CLOTH=c....` *includes* `MAGIC`
-* 608: `CHAIR=Cha.. CLASH=C.a.h CATCH=CA.ch` *includes* `CACHE`
+* 608: `CHAIR=Cha.. CLASH=C.a.h CATCH=CA.ch` yields `CACHE`
 * 610: `SATIN=s..i. ROUGH=.o...` *includes* `KIOSK`
-* 611: `AROSE=a..se LANES=.a.es WAGES=wa.es` *includes* `SWEAT`
+* 611: `AROSE=a..se LANES=.a.es WAGES=wa.es` yields `SWEAT`
 * 614: `HARES=.A.e. CABLE=.A..E MANGE=.A.gE GAFFE=gA..E` yields `VAGUE`
 * 615: `HARES=.ar.. GUILT=..... CROAK=.Roa. BRAVO=bRa.o` yields `ARBOR`
 * 616: `HARES=..... BUILT=..i.t TIMID=tI... PINTO=.I.T. WITTY=.I.TY` yields `FIFTY`
 * 617: `HEARS=...rs SCRUB=S.RU.` *includes* `SYRUP`
 * 618: `CRATE=.r..E` *includes* `WORSE`
-* 619: `MARES=.a... FLACK=.la.k LAIKA=l..KA` *includes* `POLKA`
+* 619: `MARES=.a... FLACK=.la.k LAIKA=l..KA` yields `POLKA`
 * 620: `FARES=...es SKITE=s...E MOUSE=MO.SE` yields `MOOSE`
 * 621: `BALES=ba.e. KEBAB=.eba. REBAR=.eba. ABATE=AB..E` *includes* `ABOVE`
-* 622: `MATES=.at.s STARK=Sta.. SPLAT=S..AT` *includes* `SQUAT`
+* 622: `MATES=.at.s STARK=Sta.. SPLAT=S..AT` yields `SQUAT`
 * 623: `FARCE=..r.e GUILT=....t TERNS=TerN.` yields `TREND`
-* 624: `LEAKS=..... MIGHT=.i..t BLITZ=..it. OPTIC=o.tIC TONIC=TO.IC` *includes* `TOXIC`
+* 624: `LEAKS=..... MIGHT=.i..t BLITZ=..it. OPTIC=o.tIC TONIC=TO.IC` yields `TOXIC`
 * 625: `MULCH=..... TEARS=..... WINDY=.IN.Y` *includes* `PINKY`
-* 626: `ADIEU=...e. TROPE=.ro.E FORCE=.OR.E WORSE=.ORSE` *includes* `HORSE`
+* 626: `ADIEU=...e. TROPE=.ro.E FORCE=.OR.E WORSE=.ORSE` yields `HORSE`
 * 627: `CRAMP=.ra.. GUILT=g..l. LARGE=large` yields `REGAL`
 * 628: `ASIDE=....E CRAMP=.r... BLUNT=..... WHORE=WH.RE` yields `WHERE`
 * 629: `CRUSH=.r... GLOAM=.l... TILDE=..l.e REBEL=RE.EL` *includes* `REVEL`
@@ -37,12 +37,12 @@ or an irregular past tense.
 * 633: `GRAPE=.r... CLIMB=.l... WOUND=..u.. HULKS=.Ul.s` yields `SURLY`
 * 634: `CLOUT=..... GRAPE=...pe WINED=w..E. SHEEP=S.EEP` yields `SWEEP`
 * 635: `CRAMP=Cr... FIRST=.Ir..` yields `CIDER`
-* 636: `GROUT=..... CHASE=..A.e PEAKY=.EA.Y BEADY=.EA.Y LEAFY=lEA.Y` *includes* `MEALY`
-* 637: `PILOT=....T CHART=cha.T` *includes* `YACHT`
+* 636: `GROUT=..... CHASE=..A.e PEAKY=.EA.Y BEADY=.EA.Y LEAFY=lEA.Y` yields `MEALY`
+* 637: `PILOT=....T CHART=cha.T` yields `YACHT`
 * 638: `STRIP=..r.. GRAND=.R..d DROVE=dRo.e ORDER=oRde.` yields `CREDO`
 * 639: `PRINT=..... CLASH=.L... GLOBE=GLO.E` yields `GLOVE`
 * 640: `GRIPE=g.... CLOUT=..out` *includes* `TOUGH`
-* 641: `BRING=..... PLATE=...te SHOUT=...uT` *includes* `DUVET`
+* 641: `BRING=..... PLATE=...te SHOUT=...uT` yields `DUVET`
 * 642: `WRING=..i.. PLATE=..At.` yields `STAID`
 * 643: `FRAIL=.R... CRUDE=.Ru.. SHOUT=..OUT` *includes* `GROUT`
 * 644: `BRAIN=.r... CLOVE=..ove` *includes* `VOTER`
@@ -52,15 +52,15 @@ or an irregular past tense.
 * 648: `CIVET=...ET EGRET=e..ET SLEET=s.eET` yields `BESET`
 * 649: `GRIEF=.R.e. CHEST=..E.. BREAK=BREA. BREAM=BREA.` yields `BREAD`
 * 650: `SLANG=..... GROUT=.r... CHIRP=...R. MERRY=.e.RY` yields `EVERY`
-* 651: `CHART=char. REACH=r.aCH` *includes* `MARCH`
+* 651: `CHART=char. REACH=r.aCH` yields `MARCH`
 * 652: `WHILE=..... CRAMP=c.... DONUT=.o..t SCOTS=ScOt.` yields `STOCK`
 * 653: `FRIED=Fr... CLUMP=.L...` *includes* `FLORA`
 * 654: `STRAP=.tra. UNITE=..it. TRAIL=traI.` yields `RATIO`
 * 655: `FRAUD=..A.. WHALE=.hA.. STAPH=S.A.H` yields `SMASH`
 * 656: `CLASP=.lA.. LEANT=LEA..` *includes* `LEAFY`
-* 657: `SPLIT=s.l.. BRACE=...c. CLOGS=clo.S LOCKS=LOC.S` *includes* `LOCUS`
+* 657: `SPLIT=s.l.. BRACE=...c. CLOGS=clo.S LOCKS=LOC.S` yields `LOCUS`
 * 658: `MOURN=..... SCAPE=....E GLIDE=gl.dE` yields `LEDGE`
-* 659: `ANGRY=aN... ENACT=.NA..` *includes* `SNAFU`
+* 659: `ANGRY=aN... ENACT=.NA..` yields `SNAFU`
 * 660: `GLARE=...re STINK=...n. NERVE=ner.. BONER=..nER` yields `UNDER`
 * 661: `GLARE=.lA.. STALK=..AL.` yields `QUALM`
 * 662: `SURLY=..R.. CORED=.OR..` *includes* `BORAX`
@@ -68,13 +68,13 @@ or an irregular past tense.
 * 664: `PRATE=...te CHILD=.HI..` yields `THIEF`
 * 665: `GRIMY=g...Y BUNCH=..n.. TANGY=.angY` yields `AGONY`
 * 666: `CRIME=....e FLUNG=.l... STEAK=.tE..` yields `DWELT`
-* 667: `STINK=..I.. BLING=..I.. CRIMP=..I.. OXIDE=..I..` *includes* `WHIFF`
+* 667: `STINK=..I.. BLING=..I.. CRIMP=..I.. OXIDE=..I..` yields `WHIFF`
 * 668: `REDUX=..du. CLIMB=..... TOUGH=.OU.h` yields `HOUND`
 * 669: `DEATH=...th SHIRT=.H..t` *includes* `THUMP`
 * 670: `GLEAM=.Lea. BLADE=.LA.E SLATE=.LATE` *includes* `PLATE`
 * 671: `BLAST=..a.. ARCED=a.... MANGY=.A..y YAHOO=yA...` yields `KAYAK`
 * 672: `WHILE=....E GRAVE=.R..E TROPE=.RO.E` *includes* `BROKE`
-* 673: `THREW=..... CLUMP=..u.P` *includes* `UNZIP`
+* 673: `THREW=..... CLUMP=..u.P` yields `UNZIP`
 * 674: `SPITE=..iT. MINTY=.I.T. FIFTH=.I.T. BRAVO=....O` yields `DITTO`
 * 675: `LIVER=...ER CHUMP=..... STANK=....k POKER=.OKER` yields `JOKER`
 * 676: `SLIME=...me BRAND=.r... HOMER=.omer` yields `METRO`
@@ -84,8 +84,8 @@ or an irregular past tense.
 * 680: `BAGEL=.a..l CLAMP=.LA.p PLANK=PLA.. PLAIT=PLA.. PLAYA=PLA.A` yields `PLAZA`
 * 681: `CIDER=...er GROVE=gr..E BARGE=.ArGE` yields `RANGE`
 * 682: `WHOSE=...s. CRAMP=..... NIFTY=....Y` *includes* `SULKY`
-* 683: `WORLD=.OR.d` *includes* `HORDE`
-* 684: `PRIME=p.... FLASH=..... JUMPY=.U.PY` *includes* `GUPPY`
+* 683: `WORLD=.OR.d` yields `HORDE`
+* 684: `PRIME=p.... FLASH=..... JUMPY=.U.PY` yields `GUPPY`
 * 685: `SPACE=....e GRIND=..... ETHYL=e...l JELLO=.EL.o` yields `BELOW`
 * 686: `JUDGE=...ge BLIMP=..... AGENT=Agen.` yields `ANGER`
 * 687: `FRAIL=....L HOTEL=ho..L` yields `GHOUL`
@@ -95,7 +95,7 @@ or an irregular past tense.
 * 691: `PRONE=.RO.. GROWL=.RO.. AROMA=.ROm.` yields `BROOM`
 * 692: `CRAFT=c.A.. PLACE=..AC. WHACK=..ACK QUACK=..ACK` *includes* `SNACK`
 * 693: `FALSE=.a... GRUNT=.r... CHIMP=c.i..` *includes* `ACRID`
-* 694: `RINSE=r..s. SUGAR=S..ar SHARD=S.AR. SMART=S.AR. SCARY=SCAR.` *includes* `SCARF`
+* 694: `RINSE=r..s. SUGAR=S..ar SHARD=S.AR. SMART=S.AR. SCARY=SCAR.` yields `SCARF`
 * 695: `CAUSE=CA..E` *includes* `CANOE`
 * 696: `SCOPE=....E TRADE=t.a.E LATHE=LAT.E LATKE=LAT.E` yields `LATTE`
 * 697: `POKER=P.k..` *includes* `PLANK`
@@ -142,9 +142,9 @@ or an irregular past tense.
 * 738: `FLANK=..a..` *includes* `ABOUT`
 * 739: `MIRTH=..rt. TROPE=TR... TRACK=TRAC.` yields `TRACT`
 * 740: `SMOKE=....e FETID=.e.id` *includes* `DINER`
-* 741: `BEACH=..a.. AGLOW=a...W` *includes* `STRAW`
+* 741: `BEACH=..a.. AGLOW=a...W` yields `STRAW`
 * 742: `DWARF=..... GLOBE=.L.be BLESS=BLE.. BLECH=BLE..` yields `BLEEP`
-* 743: `MOVIE=MO... MOODY=MO..Y` *includes* `MOSSY`
+* 743: `MOVIE=MO... MOODY=MO..Y` yields `MOSSY`
 * 744: `NOISE=.O..e GOLEM=.OlE.` *includes* `HOTEL`
 * 745: `SUGAR=...ar RAMEN=ra.e. HEART=.eArt TRADE=tRA.E` *includes* `IRATE`
 * 746: `FORTH=.o... CLOWN=..o.n PIANO=...no DEMON=.EmOn` yields `VENOM`
@@ -155,26 +155,26 @@ or an irregular past tense.
 * 751: `TOWEL=.O..l LOBBY=lO..Y HOLLY=.OLLY` *includes* `FOLLY`
 * 752: `TRAIN=tra.. CHART=.hart WRATH=.raTH` yields `EARTH`
 * 753: `TRADE=.r... SCOUR=....r` *includes* `WHIRL`
-* 754: `COVER=...er REALM=rea.. WREAK=.rea. TAPER=.A.er FAIRE=.A.rE` *includes* `BARGE`
+* 754: `COVER=...er REALM=rea.. WREAK=.rea. TAPER=.A.er FAIRE=.A.rE` yields `BARGE`
 * 755: `GRIEF=..ief FIELD=FIE.D` yields `FIEND`
 * 756: `AFTER=...er REPLY=re... CHORE=C.OrE` yields `CRONE`
-* 757: `FRESH=..... CLOUT=..o.t TOADY=TOa..` yields `TOPAZ`
+* 757: `FRESH=..... CLOUT=..o.t TOADY=TOa..` *includes* `TOPAZ`
 * 758: `GRAPH=.R.p. PROUD=pRO.d` yields `DROOP`
 * 759: `CHEAP=..e.. GROVE=.r..e REBUT=re... FLIER=FL.ER` yields `FLYER`
-* 760: `NOVEL=nO... MONTH=.ONt. DONUT=.ON.t` yields `TONIC`
+* 760: `NOVEL=nO... MONTH=.ONt. DONUT=.ON.t` *includes* `TONIC`
 * 761: `MUSIC=..... GLADE=.LA.. PLANT=.LAN. BLANK=.LANK` yields `FLANK`
 * 762: `LOWER=l...r FRAIL=.r..l BLURT=Blur.` yields `BURLY`
 * 763: `FORCE=For.E` yields `FROZE`
 * 764: `YOUNG=..... BRAVE=..A.E SHADE=.HA.E CHAFE=.HA.E` yields `WHALE`
-* 765: `NAKED=..... GROUP=..o.. COILS=.O...` yields `HOBBY`
-* 766: `RIFLE=...le LEMON=le... CLEAT=.lE..` *includes* `WHEEL`
+* 765: `NAKED=..... GROUP=..o.. COILS=.O...` *includes* `HOBBY`
+* 766: `RIFLE=...le LEMON=le... CLEAT=.lE..` yields `WHEEL`
 * 767: `SWORD=...R. CHART=.hART` yields `HEART`
 * 768: `SHARP=s.... CLOSE=c.os. FOCUS=.oc.s` yields `DISCO`
 * 769: `AVOID=..o.. TOUCH=to..h OTHER=oTHe.` yields `ETHOS`
 * 770: `STRIP=..R.. CORNY=C.R.Y CURVY=CUR.Y` *includes* `CURLY`
 * 771: `ROUSE=....E WHILE=.h..E CACHE=.A.HE` yields `BATHE`
 * 772: `GROAN=..... WHILE=...LE BELLE=...LE TUPLE=t..LE STELE=ST.LE` yields `STYLE`
-* 773: `PLANK=...n. TENOR=TEN.. TENET=TEN.t` *includes* `TENTH`
+* 773: `PLANK=...n. TENOR=TEN.. TENET=TEN.t` yields `TENTH`
 * 774: `GHOST=g...T EGRET=eg.ET` yields `BEGET`
 * 775: `RISKY=r...Y CRAZY=.ra.Y WEARY=..arY MARRY=.AR.Y` *includes* `PARTY`
 * 776: `PRANG=.rA.. BLARE=..AR.` *includes* `CHART`
@@ -185,7 +185,7 @@ or an irregular past tense.
 * 781: `FERAL=.er.l LITER=L..ER LONER=LO.ER LOWER=LO.ER` *includes* `LOVER`
 * 782: `LODGE=....e WIPER=..Pe. TEPEE=teP.. EXPAT=E.P.t` yields `EMPTY`
 * 783: `PATIO=....O GECKO=.E..O MEZZO=.E..O` *includes* `HELLO`
-* 784: `MORAL=..... TWINE=..I.. CHICK=..ICK` *includes* `QUICK`
+* 784: `MORAL=..... TWINE=..I.. CHICK=..ICK` yields `QUICK`
 * 785: `VOTER=..t.r TRAIL=tRA.. GRANT=.RA.t` yields `WRATH`
 * 786: `LOWER=..... STANK=S.Ank SNACK=SNA.k` yields `SNAKY`
 * 787: `VOUCH=..... GRIPE=..i.e DENIM=deni. WIDEN=.iDEn` yields `INDEX`
@@ -203,9 +203,9 @@ or an irregular past tense.
 * 799: `REALM=.EA.. TEACH=.EAC.` yields `PEACE`
 * 800: `SABER=...er REFIT=re.it TRITE=.RITE` yields `WRITE`
 * 801: `SLAVE=..a.e AGENT=a.e.. MAKER=.A.ER` *includes* `CAPER`
-* 802: `FARCE=.a... ANGLO=A...O` *includes* `AUDIO`
+* 802: `FARCE=.a... ANGLO=A...O` yields `AUDIO`
 * 803: `MANIC=...i. SIDLE=.id.E DRIVE=dRI.E PRIDE=.RIDE` yields `BRIDE`
-* 804: `HOTEL=...e. GRADE=..A.E AWAKE=..A.E INANE=..A.E SUAVE=S.A.E` *includes* `SPACE`
+* 804: `HOTEL=...e. GRADE=..A.E AWAKE=..A.E INANE=..A.E SUAVE=S.A.E` yields `SPACE`
 * 805: `ROGUE=.o... PIVOT=.i.O. ANION=.NION` yields `ONION`
 * 806: `VODKA=....a CABLE=.a... GRANT=..A.T SHAFT=..A.T` yields `AWAIT`
 * 807: `LABOR=..... STINK=..i.. PITCH=.I... DIVER=dI...` yields `GIDDY`
@@ -224,7 +224,7 @@ or an irregular past tense.
 * 820: `SCALP=sc... CRUSH=c.us.` *includes* `MUSIC`
 * 821: `BASIC=.a... ANGER=an..r` *includes* `FRANK`
 * 822: `LARGE=l...E NOBLE=.o.lE OLIVE=oL..E SLOPE=sLO.E` yields `CLOSE`
-* 823: `PANIC=.an.. ANODE=aN..E KNAVE=.NA.E` *includes* `SNARE`
+* 823: `PANIC=.an.. ANODE=aN..E KNAVE=.NA.E` yields `SNARE`
 * 824: `BLADE=....E GRIPE=....E SHOVE=S.O.E` *includes* `STONE`
 * 825: `FRAME=.R... CROWD=.R... BRISK=BR.S.` yields `BRUSH`
 * 826: `MINOR=...Or ROBOT=r..O. SCROD=.cRO.` yields `CAROL`

@@ -121,7 +121,7 @@ or an irregular past tense.
 * 717: `PRIDE=..... BLANK=..... MULCH=.u.c.` *includes* `SCOUT`
 * 718: `ZEBRA=.e.ra CLEAR=..eaR GAMER=.A.ER` *includes* `HATER`
 * 719: `JUDGE=.u... SHOUT=...u. UNZIP=u....` *includes* `CRUMB`
-* 720: `MOVIE=..... CHAMP=..a.. SUGAR=s..a. NASTY=.As..` yields `BALSA`
+* 720: `MOVIE=..... CHAMP=..a.. SUGAR=s..a. NASTY=.As..` *includes* `BALSA`
 * 721: `FRUIT=...I. MANIC=.anI. ANVIL=An.I.` yields `AGAIN`
 * 722: `DOUBT=d.u.. FRAUD=.rAuD` yields `GUARD`
 * 723: `BLOAT=..O.. GROVE=gRO..` *includes* `WRONG`
@@ -131,7 +131,7 @@ or an irregular past tense.
 * 727: `LABOR=.a..r RAMEN=ra... WRATH=.rat. SPRAT=SpRAt` yields `STRAP`
 * 728: `DECAY=..ca. CAULK=cA... MANIC=.AN.c` yields `RANCH`
 * 729: `MODEL=....l CLASP=.l.s. SULKY=S.l.Y` yields `SHYLY`
-* 730: `PARSE=.A... CABIN=.A... WALTZ=.A..z GAUZY=.A.z.` yields `KAZOO`
+* 730: `PARSE=.A... CABIN=.A... WALTZ=.A..z GAUZY=.A.z.` *includes* `KAZOO`
 * 731: `LAUGH=..... FROND=FRO..` *includes* `FROST`
 * 732: `REALM=reA.. SCARE=.cArE TRACE=.RAcE CRAVE=CRA.E` *includes* `CRANE`
 * 733: `TRIBE=T...E THOSE=T..sE` yields `TASTE`
@@ -235,3 +235,4 @@ or an irregular past tense.
 * 831: `BONUS=.O... HOTEL=hO... POACH=.OACH` *includes* `COACH`
 * 832: `REGAL=re.a. AFTER=A..er ARENA=Are.. ADORE=A..RE` *includes* `AZURE`
 * 833: `NOISE=..... CRAMP=..a.. BALKY=.A..Y JAGGY=.A..Y DAFFY=DA..Y` yields `DADDY`
+* 834: `SIGHT=....T CLOUT=....T MEANT=.E..T` yields `BERET`

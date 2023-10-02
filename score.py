@@ -5,7 +5,7 @@
 import argparse
 import re
 
-from common import GAMES_FILE, GameResult, read_vocabulary
+from common import ANSWERS_FILE, GAMES_FILE, WORD_FILE, GameResult, read_vocabulary
 from wordle import WordleGuesses
 
 
@@ -19,7 +19,8 @@ def parse_args() -> argparse.Namespace:
 
 
 def check_scores(first_game: int) -> list:
-    vocabulary = read_vocabulary()
+    vocabulary = read_vocabulary(WORD_FILE)
+    answers = set(read_vocabulary(ANSWERS_FILE))
     failures = []
     game_results = GameResult.parse_game_results(GAMES_FILE)
     for gr in game_results:
@@ -56,6 +57,7 @@ def check_scores(first_game: int) -> list:
         if "yields" == gr.verb:
             # I previously decided that any other possibilities would never be used
             assert len(eligible) >= 1, f"{gr.game_id} yields: {eligible}"
+            assert gr.answer in answers, f"{gr.game_id}: {gr.answer} in known answers"
         elif "includes" == gr.verb:
             assert len(eligible) > 1, f"{gr.game_id} includes: {eligible}"
         else:

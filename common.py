@@ -175,13 +175,13 @@ def set_verbosity(namespace: argparse.Namespace) -> argparse.Namespace:
 
 
 def read_vocabulary(word_file: str = WORD_FILE) -> list[str]:
-    words = []
+    words = set()
     for w in fileinput.input(files=(word_file,)):
         w = w.upper().strip()
         if len(w) == WORDLE_LEN:
             assert all(c in string.ascii_uppercase for c in w)
-            words.append(w)
-    return words
+            words.add(w)
+    return sorted(words)
 
 
 def letter_set(s: set[str]) -> str:

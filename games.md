@@ -236,3 +236,4 @@ or an irregular past tense.
 * 832: `REGAL=re.a. AFTER=A..er ARENA=Are.. ADORE=A..RE` *includes* `AZURE`
 * 833: `NOISE=..... CRAMP=..a.. BALKY=.A..Y JAGGY=.A..Y DAFFY=DA..Y` yields `DADDY`
 * 834: `SIGHT=....T CLOUT=....T MEANT=.E..T` yields `BERET`
+* 835: `FRAME=.r.me REMIT=rEm.. SERUM=.ER.m` *includes* `MERRY`

@@ -56,11 +56,6 @@ def check_scores(first_game: int) -> list:
             word_list = vocabulary
         eligible = parsed_guesses.find_eligible(word_list)
         plausible = {p for p in eligible if p in answers}
-        choices = " ".join(
-            f"▶{e}◀" if e == gr.answer else f"«{e}»" if e in plausible else e
-            for e in eligible
-        )
-        print(f"\t{gr.verb}: {choices}")
         assert gr.answer in eligible
         if gr.answer not in EXCEPTIONAL_ANSWERS:
             assert gr.answer in answers, f"{gr.game_id}: {gr.answer} in known answers"
@@ -75,6 +70,9 @@ def check_scores(first_game: int) -> list:
             ), f"{gr.answer} in {plausible}"
         else:
             raise ValueError(f"Unknown {gr.verb}")
+        implausible = " ".join(sorted(r for r in eligible if r not in plausible))
+        others = " ".join(sorted(plausible - {gr.answer}))
+        print(f"\t{gr.verb}={gr.answer}, plausible=[{others}], implausible=[{implausible}]")
     return failures
 
 

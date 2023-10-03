@@ -5,3 +5,4 @@ isort
 black
 ruff
 mypy
+pyinstrument

@@ -237,3 +237,4 @@ or an irregular past tense.
 * 833: `NOISE=..... CRAMP=..a.. BALKY=.A..Y JAGGY=.A..Y DAFFY=DA..Y` yields `DADDY`
 * 834: `SIGHT=....T CLOUT=....T MEANT=.E..T` yields `BERET`
 * 835: `FRAME=.r.me REMIT=rEm.. SERUM=.ER.m` *includes* `MERRY`
+* 836: `STACK=..... DRIVE=..I.E` *includes* `WHILE`

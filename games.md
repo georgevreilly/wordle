@@ -239,3 +239,4 @@ or an irregular past tense.
 * 835: `FRAME=.r.me REMIT=rEm.. SERUM=.ER.m` *includes* `MERRY`
 * 836: `STACK=..... DRIVE=..I.E` *includes* `WHILE`
 * 837: `SWARM=S..R. SHORT=S..RT SKIRT=S..RT` yields `SPURT`
+* 838: `LOSER=..... WINCH=..NCH PUNCH=.UNCH` *includes* `BUNCH`

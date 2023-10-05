@@ -238,3 +238,4 @@ or an irregular past tense.
 * 834: `SIGHT=....T CLOUT=....T MEANT=.E..T` yields `BERET`
 * 835: `FRAME=.r.me REMIT=rEm.. SERUM=.ER.m` *includes* `MERRY`
 * 836: `STACK=..... DRIVE=..I.E` *includes* `WHILE`
+* 837: `SWARM=S..R. SHORT=S..RT SKIRT=S..RT` yields `SPURT`

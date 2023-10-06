@@ -114,14 +114,61 @@ def find_disjoint_words2(anagrams: dict[str, list[str]]) -> list[list[str]]:
     return results
 
 
-# TODO: try using a bitset
+def word_bitset(word: str) -> int:
+    bitset = 0
+    for c in word:
+        bitset |= 1 << (ord(c) - ord("@"))
+    return bitset
+
+
+def bitset_word(bitset: int) -> str:
+    word = [chr(c + ord("@")) for c in range(1, 26 + 1) if bitset & (1 << c)]
+    return "".join(word)
+
+
+def find_disjoint_words3(anagrams: dict[str, list[str]]) -> list[list[str]]:
+    count = 0
+    seen_permutations = set()
+    anagram_bitset = {word_bitset(k): k for k in anagrams.keys()}
+
+    def search(wordsets: list[int], available: list[tuple[int, str]]):
+        nonlocal count
+        count += 1
+
+        if not available:
+            key = tuple(sorted(wordsets))
+            if key not in seen_permutations:
+                seen_permutations.add(key)
+                yield wordsets
+            return
+
+        for cand_set, cand_word in available:
+            remaining = [av for av in available if not cand_set & av[0]]
+            if attempt := search(
+                wordsets=wordsets + [cand_set],
+                available=remaining,
+            ):
+                yield from attempt
+
+    results: list[list[str]] = []
+
+    for disjoint_words in search(wordsets=[], available=list(anagram_bitset.items())):
+        if len(disjoint_words) >= 4:
+            letters = {c for w in disjoint_words for c in bitset_word(w)}
+            assert (
+                len(letters) == len(disjoint_words) * WORDLE_LEN
+            ), f"{letters=}, {disjoint_words=}"
+            results.append(disjoint_words)
+            print(" ".join([anagrams[anagram_bitset[w]][0] for w in disjoint_words]))
+    print(f"{count} calls to search")
+    return results
 
 
 def main() -> int:
     namespace = parse_args(description="Disjoint start words")
     vocabulary = read_vocabulary(namespace.word_file)
     anagrams = eligible_anagrams(vocabulary)
-    find_disjoint_words2(anagrams)
+    find_disjoint_words3(anagrams)
     return 0
 
 

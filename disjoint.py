@@ -44,7 +44,7 @@ def eligible_anagrams(
     return anagrams
 
 
-def find_disjoint_words(anagrams: dict[str, list[str]]) -> list[list[str]]:
+def find_disjoint_words1(anagrams: dict[str, list[str]]) -> list[list[str]]:
     count = 0
     seen_permutations = set()
 
@@ -77,6 +77,43 @@ def find_disjoint_words(anagrams: dict[str, list[str]]) -> list[list[str]]:
     return results
 
 
+def word_frozen_letters(word: str) -> frozenset[str]:
+    return frozenset(c for c in word)
+
+
+def find_disjoint_words2(anagrams: dict[str, list[str]]) -> list[list[str]]:
+    count = 0
+    seen_permutations = set()
+    anagram_frozenset = {word_frozen_letters(k): k for k in anagrams.keys()}
+
+    def search(words: list[str], available: list[tuple[frozenset[str], str]]):
+        nonlocal count
+        count += 1
+
+        if not available:
+            sorted_words = " ".join(sorted(words))
+            if sorted_words not in seen_permutations:
+                seen_permutations.add(sorted_words)
+                yield words
+            return
+
+        for cand_set, cand_word in available:
+            remaining = [av for av in available if not cand_set & av[0]]
+            if attempt := search(words=words + [cand_word], available=remaining):
+                yield from attempt
+
+    results: list[list[str]] = []
+
+    for disjoint_words in search(words=[], available=list(anagram_frozenset.items())):
+        if len(disjoint_words) >= 4:
+            letters = {c for w in disjoint_words for c in w}
+            assert len(letters) == len(disjoint_words) * WORDLE_LEN
+            results.append(disjoint_words)
+            print(" ".join([anagrams[w][0] for w in disjoint_words]))
+    print(f"{count} calls to search")
+    return results
+
+
 # TODO: try using a bitset
 
 
@@ -84,7 +121,7 @@ def main() -> int:
     namespace = parse_args(description="Disjoint start words")
     vocabulary = read_vocabulary(namespace.word_file)
     anagrams = eligible_anagrams(vocabulary)
-    find_disjoint_words(anagrams)
+    find_disjoint_words2(anagrams)
     return 0
 
 

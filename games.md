@@ -240,3 +240,4 @@ or an irregular past tense.
 * 836: `STACK=..... DRIVE=..I.E` *includes* `WHILE`
 * 837: `SWARM=S..R. SHORT=S..RT SKIRT=S..RT` yields `SPURT`
 * 838: `LOSER=..... WINCH=..NCH PUNCH=.UNCH` *includes* `BUNCH`
+* 839: `HABIT=h..i. SHINE=.HI.E WHILE=.HI.E` *includes* `CHIME`

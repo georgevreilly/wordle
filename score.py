@@ -72,7 +72,10 @@ def check_scores(first_game: int) -> list:
             raise ValueError(f"Unknown {gr.verb}")
         implausible = " ".join(sorted(r for r in eligible if r not in plausible))
         others = " ".join(sorted(plausible - {gr.answer}))
-        print(f"\t{gr.verb}={gr.answer}, plausible=[{others}], implausible=[{implausible}]")
+        print(
+            f"\t{gr.verb}={gr.answer}, plausible=[{others}], "
+            f"implausible=[{implausible}]"
+        )
     return failures
 
 

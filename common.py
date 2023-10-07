@@ -207,3 +207,48 @@ def output_file(output: str | None, extension: str):
             yield f
         finally:
             f.close()
+
+
+SCRABBLE_POINTS = dict(
+    A=1,
+    B=3,
+    C=3,
+    D=2,
+    E=1,
+    F=4,
+    G=2,
+    H=4,
+    I=1,
+    J=8,
+    K=5,
+    L=1,
+    M=3,
+    N=1,
+    O=1,
+    P=3,
+    Q=10,
+    R=1,
+    S=1,
+    T=1,
+    U=1,
+    V=4,
+    W=4,
+    X=8,
+    Y=4,
+    Z=10,
+)
+
+
+def scrabble_score(word: str) -> int:
+    return sum(SCRABBLE_POINTS[c] for c in word)
+
+
+BASE_STRING = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+
+def to_base(number, base):
+    return (
+        "0"
+        if not number
+        else to_base(number // base, base).lstrip("0") + BASE_STRING[number % base]
+    )

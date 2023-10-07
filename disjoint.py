@@ -10,7 +10,9 @@ from common import (
     WORDLE_LEN,
     argparse_wordlist,
     read_vocabulary,
+    scrabble_score,
     set_verbosity,
+    to_base,
 )
 
 
@@ -159,7 +161,14 @@ def find_disjoint_words3(anagrams: dict[str, list[str]]) -> list[list[str]]:
                 len(letters) == len(disjoint_words) * WORDLE_LEN
             ), f"{letters=}, {disjoint_words=}"
             results.append(disjoint_words)
-            print(" ".join([anagrams[anagram_bitset[w]][0] for w in disjoint_words]))
+            words = [anagrams[anagram_bitset[w]][0] for w in disjoint_words]
+            scores = [scrabble_score(w) for w in words]
+            avg_score = sum(scores) // len(scores)
+            score = to_base(avg_score, 36) + "".join(to_base(s, 36) for s in scores)
+            print(
+                score,
+                " ".join([anagrams[anagram_bitset[w]][0] for w in disjoint_words]),
+            )
     print(f"{count} calls to search")
     return results
 

@@ -242,3 +242,4 @@ or an irregular past tense.
 * 838: `LOSER=..... WINCH=..NCH PUNCH=.UNCH` *includes* `BUNCH`
 * 839: `HABIT=h..i. SHINE=.HI.E WHILE=.HI.E` *includes* `CHIME`
 * 840: `WHITE=..i.. MANIC=.a.i. AIOLI=aIOL.` yields `VIOLA`
+* 841: `NOVEL=n..e. ENTER=en... WENCH=.eN.. MANGE=..NGE SINGE=.INGE` yields `BINGE`

@@ -244,3 +244,4 @@ or an irregular past tense.
 * 840: `WHITE=..i.. MANIC=.a.i. AIOLI=aIOL.` yields `VIOLA`
 * 841: `NOVEL=n..e. ENTER=en... WENCH=.eN.. MANGE=..NGE SINGE=.INGE` yields `BINGE`
 * 842: `CRAFT=.R..t BRUTE=.RUT.` yields `TRUTH`
+* 843: `SOUTH=S.... SLIME=Sli.. SILLY=Sil..` yields `SNAIL`

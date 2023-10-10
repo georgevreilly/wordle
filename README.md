@@ -1,5 +1,8 @@
 # Wordle Word Finder
 
+See [Exploring Wordle](https://www.georgevreilly.com/2023/09/26/ExploringWordle.html)
+for a lot of background.
+
 Given a series of Wordle guesses, find the words that can fit.
 
 * `GRAIL=.RA.. TRACK=.RAc. CRAMP=CRA.. CRABS=CRA.. CRAZY=CRAZ.` yields `CRAZE`

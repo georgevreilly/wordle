@@ -246,3 +246,4 @@ or an irregular past tense.
 * 842: `CRAFT=.R..t BRUTE=.RUT.` yields `TRUTH`
 * 843: `SOUTH=S.... SLIME=Sli.. SILLY=Sil..` yields `SNAIL`
 * 844: `STINK=S..NK` *includes* `SKUNK`
+* 845: `SHARE=....e ENDOW=eN... INTEL=.Ntel` yields `KNELT`

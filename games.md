@@ -247,3 +247,4 @@ or an irregular past tense.
 * 843: `SOUTH=S.... SLIME=Sli.. SILLY=Sil..` yields `SNAIL`
 * 844: `STINK=S..NK` *includes* `SKUNK`
 * 845: `SHARE=....e ENDOW=eN... INTEL=.Ntel` yields `KNELT`
+* 846: `AMBLE=...LE STOLE=...LE WHILE=...LE` *includes* `UNCLE`

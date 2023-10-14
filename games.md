@@ -248,3 +248,4 @@ or an irregular past tense.
 * 844: `STINK=S..NK` *includes* `SKUNK`
 * 845: `SHARE=....e ENDOW=eN... INTEL=.Ntel` yields `KNELT`
 * 846: `AMBLE=...LE STOLE=...LE WHILE=...LE` *includes* `UNCLE`
+* 847: `MAGIC=.ag.. GLADE=g.a.e` yields `AGENT`

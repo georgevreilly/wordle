@@ -249,3 +249,4 @@ or an irregular past tense.
 * 845: `SHARE=....e ENDOW=eN... INTEL=.Ntel` yields `KNELT`
 * 846: `AMBLE=...LE STOLE=...LE WHILE=...LE` *includes* `UNCLE`
 * 847: `MAGIC=.ag.. GLADE=g.a.e` yields `AGENT`
+* 848: `DEPTH=.E... MELON=.El.. LEVER=LE... LEGAL=LE.a.` *includes* `LEAKY`

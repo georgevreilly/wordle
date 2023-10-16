@@ -250,3 +250,4 @@ or an irregular past tense.
 * 846: `AMBLE=...LE STOLE=...LE WHILE=...LE` *includes* `UNCLE`
 * 847: `MAGIC=.ag.. GLADE=g.a.e` yields `AGENT`
 * 848: `DEPTH=.E... MELON=.El.. LEVER=LE... LEGAL=LE.a.` *includes* `LEAKY`
+* 849: `CURVE=..r.. DRINK=.R... TRASH=.RA.H` yields `GRAPH`

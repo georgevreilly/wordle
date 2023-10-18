@@ -252,3 +252,4 @@ or an irregular past tense.
 * 848: `DEPTH=.E... MELON=.El.. LEVER=LE... LEGAL=LE.a.` *includes* `LEAKY`
 * 849: `CURVE=..r.. DRINK=.R... TRASH=.RA.H` yields `GRAPH`
 * 850: `YIELD=...Ld` *includes* `ADULT`
+* 851: `CHAIN=c.... FLOCK=...C. TRUCE=.r.Ce` yields `MERCY`

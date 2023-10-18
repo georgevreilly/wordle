@@ -251,3 +251,4 @@ or an irregular past tense.
 * 847: `MAGIC=.ag.. GLADE=g.a.e` yields `AGENT`
 * 848: `DEPTH=.E... MELON=.El.. LEVER=LE... LEGAL=LE.a.` *includes* `LEAKY`
 * 849: `CURVE=..r.. DRINK=.R... TRASH=.RA.H` yields `GRAPH`
+* 850: `YIELD=...Ld` *includes* `ADULT`

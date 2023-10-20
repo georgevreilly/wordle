@@ -253,3 +253,4 @@ or an irregular past tense.
 * 849: `CURVE=..r.. DRINK=.R... TRASH=.RA.H` yields `GRAPH`
 * 850: `YIELD=...Ld` *includes* `ADULT`
 * 851: `CHAIN=c.... FLOCK=...C. TRUCE=.r.Ce` yields `MERCY`
+* 852: `GREAT=...AT BLOAT=.l.AT ECLAT=..LAT` yields `SPLAT`

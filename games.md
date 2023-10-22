@@ -256,3 +256,4 @@ or an irregular past tense.
 * 852: `GREAT=...AT BLOAT=.l.AT ECLAT=..LAT` yields `SPLAT`
 * 853: `SHAVE=..... GROUP=.roU. TORUS=.orU.` yields `OCCUR`
 * 854: `MAYOR=m...r GRIME=.rIm.` yields `SMIRK`
+* 855: `HORSE=....e DEMON=.e..N` *includes* `GIVEN`

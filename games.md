@@ -257,3 +257,4 @@ or an irregular past tense.
 * 853: `SHAVE=..... GROUP=.roU. TORUS=.orU.` yields `OCCUR`
 * 854: `MAYOR=m...r GRIME=.rIm.` yields `SMIRK`
 * 855: `HORSE=....e DEMON=.e..N` *includes* `GIVEN`
+* 856: `SOUTH=.o.t. DIVOT=...ot TROPE=T.oPe` yields `TEMPO`

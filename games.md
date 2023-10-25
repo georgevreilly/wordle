@@ -259,3 +259,4 @@ or an irregular past tense.
 * 855: `HORSE=....e DEMON=.e..N` *includes* `GIVEN`
 * 856: `SOUTH=.o.t. DIVOT=...ot TROPE=T.oPe` yields `TEMPO`
 * 857: `VOUCH=..Uc. ACUTE=acU.E` yields `CAUSE`
+* 858: `GRAND=.r... HOVER=...er REPLY=RE..Y` yields `RETRY`

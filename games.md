@@ -260,3 +260,4 @@ or an irregular past tense.
 * 856: `SOUTH=.o.t. DIVOT=...ot TROPE=T.oPe` yields `TEMPO`
 * 857: `VOUCH=..Uc. ACUTE=acU.E` yields `CAUSE`
 * 858: `GRAND=.r... HOVER=...er REPLY=RE..Y` yields `RETRY`
+* 859: `MOUSE=..u.E REVUE=...UE QUEUE=q..UE` yields `PIQUE`

@@ -2,6 +2,8 @@
 
 """Find words with repeated letters, such as ERROR, MAMMA, or ARRAY."""
 
+from __future__ import annotations
+
 import os
 import string
 

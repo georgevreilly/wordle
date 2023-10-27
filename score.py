@@ -2,6 +2,8 @@
 
 """Validate WordleGuesses.score against all results in games.md"""
 
+from __future__ import annotations
+
 import argparse
 import re
 

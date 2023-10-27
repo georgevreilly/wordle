@@ -1,12 +1,12 @@
 [tool.black]
-line-length = 99
+line-length = 88
 
 [tool.isort]
 profile = "black"
-line_length = 99
+line_length = 88
 
 [tool.pylint.format]
-max-line-length = "99"
+max-line-length = "88"
 
 [tool.ruff]
-line-length = 99
+line-length = 88

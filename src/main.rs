@@ -48,10 +48,10 @@ fn tile_state(score_tile: u8) -> Result<TileState> {
 fn parse_guess_score(guess_score: &str) -> Result<GuessScore> {
     if let Some((guess, score)) = guess_score.split_once('=') {
         if guess.len() != LEN {
-            return Err(anyhow!(format!("Guess {guess} is not {LEN} characters")));
+            return Err(anyhow!("Guess {:?} is not {} characters", guess, LEN));
         }
         if score.len() != LEN {
-            return Err(anyhow!(format!("Score {score} is not {LEN} characters")));
+            return Err(anyhow!("Score {:?} is not {} characters", score, LEN));
         }
         let mut tiles = [TileState::CORRECT; LEN];
         for i in 0..LEN {
@@ -69,7 +69,7 @@ fn parse_guess_score(guess_score: &str) -> Result<GuessScore> {
             if state == TileState::CORRECT {
                 if g != s {
                     return Err(anyhow!(
-                        "Mismatch at {}: {}!={}, {}!={}",
+                        "Mismatch at {}: {:?}!={:?}, {:?}!={:?}",
                         i + 1,
                         guess,
                         score,
@@ -80,7 +80,7 @@ fn parse_guess_score(guess_score: &str) -> Result<GuessScore> {
             } else if state == TileState::PRESENT {
                 if s - b'a' != g - b'A' {
                     return Err(anyhow!(
-                        "Mismatch at {}: {}!={}, {}!={}",
+                        "Mismatch at {}: {:?}!={:?}, {:?}!={:?}",
                         i + 1,
                         guess,
                         score,
@@ -136,9 +136,8 @@ fn parse_guesses(guess_scores: &Vec<GuessScore>) -> Result<ParsedGuesses> {
         }
         // Second pass for absent letters
         for i in 0..LEN {
-            let g: u8 = gs.guess.as_bytes()[i];
-            let t = gs.tiles[i];
-            if t == TileState::ABSENT {
+            if gs.tiles[i] == TileState::ABSENT {
+                let g: u8 = gs.guess.as_bytes()[i];
                 if pg.valid.contains(&g) {
                     pg.wrong_spot[i].insert(g);
                 } else {

@@ -41,7 +41,7 @@ fn tile_state(score_tile: u8) -> Result<TileState> {
     } else if score_tile == b'.' {
         Ok(TileState::ABSENT)
     } else {
-        Err(anyhow!("Invalid score {:?}", score_tile))
+        Err(anyhow!("Invalid score {:?}", score_tile as char))
     };
 }
 
@@ -58,16 +58,35 @@ fn parse_guess_score(guess_score: &str) -> Result<GuessScore> {
             let g: u8 = guess.as_bytes()[i];
             let s: u8 = score.as_bytes()[i];
             if !(b'A'..=b'Z').contains(&g) {
-                return Err(anyhow!("Guess {:?} should be uppercase", guess));
+                return Err(anyhow!(
+                    "Guess {:?} should be uppercase, {} at {}",
+                    guess,
+                    g as char,
+                    i + 1
+                ));
             }
             let state = tile_state(s)?;
             if state == TileState::CORRECT {
                 if g != s {
-                    return Err(anyhow!("Mismatch at {}: {}!={}", i + 1, guess, score));
+                    return Err(anyhow!(
+                        "Mismatch at {}: {}!={}, {}!={}",
+                        i + 1,
+                        guess,
+                        score,
+                        g as char,
+                        s as char
+                    ));
                 }
             } else if state == TileState::PRESENT {
                 if s - b'a' != g - b'A' {
-                    return Err(anyhow!("Mismatch at {}: {}!={}", i + 1, guess, score));
+                    return Err(anyhow!(
+                        "Mismatch at {}: {}!={}, {}!={}",
+                        i + 1,
+                        guess,
+                        score,
+                        g as char,
+                        s as char
+                    ));
                 }
             }
             tiles[i] = state
@@ -183,7 +202,7 @@ fn main() -> Result<()> {
         .into_iter()
         .map(|gs| parse_guess_score(&gs))
         .collect();
-    let guess_scores = guess_scores.unwrap();
+    let guess_scores = guess_scores?;
     // println!("guess_scores = {:?}", guess_scores);
     let choices = solve(&words, &guess_scores)?;
     println!(

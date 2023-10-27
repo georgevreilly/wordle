@@ -261,3 +261,4 @@ or an irregular past tense.
 * 857: `VOUCH=..Uc. ACUTE=acU.E` yields `CAUSE`
 * 858: `GRAND=.r... HOVER=...er REPLY=RE..Y` yields `RETRY`
 * 859: `MOUSE=..u.E REVUE=...UE QUEUE=q..UE` yields `PIQUE`
+* 860: `BUILD=b..L. CABLE=..BLE` yields `NOBLE`

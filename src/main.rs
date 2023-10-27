@@ -132,6 +132,13 @@ fn main() -> Result<()> {
         .map(|w| w.to_uppercase())
         .collect::<Vec<String>>();
     let choices = solve(&words, &args.guesses)?;
-    println!("{}", choices.join("\n"));
+    println!(
+        "{}",
+        if choices.is_empty() {
+            "[--None--]".to_owned()
+        } else {
+            choices.join("\n")
+        }
+    );
     Ok(())
 }

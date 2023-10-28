@@ -139,44 +139,45 @@ impl WordleGuesses {
         }
         Ok(pg)
     }
-}
 
-// fn is_eligible(word: &str, guess_scores: &Vec<GuessScore>) -> Result<Vec<String>> {
-fn solve(words: &Vec<String>, guess_scores: &Vec<GuessScore>) -> Result<Vec<String>> {
-    let pg = WordleGuesses::parse(guess_scores)?;
-    info!("valid: {:?}", pg.valid);
-    info!("invalid: {:?}", pg.invalid);
-    info!("mask: {:?}", pg.mask);
-    info!("wrong_spot: {:?}", pg.wrong_spot);
-    let mut choices: Vec<String> = Vec::new();
-    for w in words {
-        let letters: HashSet<u8> = w.bytes().collect();
-        trace!("word={}, letters={:?}", w, letters);
-        if letters.intersection(&pg.valid).count() != pg.valid.len() {
-            trace!("!Valid: {}", w);
-        } else if !letters.is_disjoint(&pg.invalid) {
-            trace!("Invalid: {}", w);
+    fn is_eligible(&self, word: &str) -> bool {
+        let letters: HashSet<u8> = word.bytes().collect();
+        trace!("word={}, letters={:?}", word, letters);
+        if letters.intersection(&self.valid).count() != self.valid.len() {
+            trace!("!Valid: {}", word);
+            return false;
+        } else if !letters.is_disjoint(&self.invalid) {
+            trace!("Invalid: {}", word);
+            return false;
         } else {
-            let mut ok = true;
             for i in 0..LEN {
-                let c: u8 = w.as_bytes()[i];
-                if pg.mask[i] != b'\0' && c != pg.mask[i] {
-                    trace!("!Mask: {}", w);
-                    ok = false;
-                    break;
-                } else if pg.wrong_spot[i].contains(&c) {
-                    trace!("WrongSpot: {}", w);
-                    ok = false;
-                    break;
+                let c: u8 = word.as_bytes()[i];
+                if self.mask[i] != b'\0' && c != self.mask[i] {
+                    trace!("!Mask: {}", word);
+                    return false;
+                } else if self.wrong_spot[i].contains(&c) {
+                    trace!("WrongSpot: {}", word);
+                    return false;
                 }
             }
-            if ok {
+        }
+        true
+    }
+
+    fn find_eligible(&self, words: &Vec<String>) -> Result<Vec<String>> {
+        info!("valid: {:?}", self.valid);
+        info!("invalid: {:?}", self.invalid);
+        info!("mask: {:?}", self.mask);
+        info!("wrong_spot: {:?}", self.wrong_spot);
+        let mut choices: Vec<String> = Vec::new();
+        for w in words {
+            if self.is_eligible(&w) {
                 debug!("Got: {}", w);
                 choices.push(w.to_owned());
             }
         }
+        Ok(choices)
     }
-    Ok(choices)
 }
 
 fn main() -> Result<()> {
@@ -195,8 +196,8 @@ fn main() -> Result<()> {
         .map(|gs| GuessScore::parse(&gs))
         .collect();
     let guess_scores = guess_scores?;
-    // println!("guess_scores = {:?}", guess_scores);
-    let choices = solve(&words, &guess_scores)?;
+    let wg = WordleGuesses::parse(&guess_scores)?;
+    let choices = wg.find_eligible(&words)?;
     println!(
         "{}",
         if choices.is_empty() {

@@ -169,8 +169,8 @@ impl WordleGuesses {
         info!("{:?}", self);
         words
             .iter()
-            .cloned()
             .filter(|w| self.is_eligible(w))
+            .cloned()
             .collect()
     }
 }
@@ -196,12 +196,11 @@ fn main() -> Result<()> {
         .filter(|w| w.len() == LEN)
         .map(|w| w.to_uppercase())
         .collect::<Vec<String>>();
-    let guess_scores: Result<Vec<GuessScore>> = args
+    let guess_scores = args
         .guesses
         .into_iter()
         .map(|gs| GuessScore::parse(&gs))
-        .collect();
-    let guess_scores = guess_scores?;
+        .collect::<Result<Vec<GuessScore>>>()?;
     let wg = WordleGuesses::parse(&guess_scores)?;
     let choices = wg.find_eligible(&words);
     println!(

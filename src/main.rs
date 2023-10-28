@@ -25,14 +25,6 @@ enum TileState {
     ABSENT,  // black
 }
 
-#[derive(Debug)]
-struct GuessScore {
-    guess: String,
-    #[allow(dead_code)]
-    score: String,
-    tiles: [TileState; LEN],
-}
-
 fn tile_state(score_tile: u8) -> Result<TileState> {
     return if (b'A'..=b'Z').contains(&score_tile) {
         Ok(TileState::CORRECT)
@@ -45,58 +37,68 @@ fn tile_state(score_tile: u8) -> Result<TileState> {
     };
 }
 
-fn parse_guess_score(guess_score: &str) -> Result<GuessScore> {
-    if let Some((guess, score)) = guess_score.split_once('=') {
-        if guess.len() != LEN {
-            return Err(anyhow!("Guess {:?} is not {} characters", guess, LEN));
-        }
-        if score.len() != LEN {
-            return Err(anyhow!("Score {:?} is not {} characters", score, LEN));
-        }
-        let mut tiles = [TileState::CORRECT; LEN];
-        for i in 0..LEN {
-            let g: u8 = guess.as_bytes()[i];
-            let s: u8 = score.as_bytes()[i];
-            if !(b'A'..=b'Z').contains(&g) {
-                return Err(anyhow!(
-                    "Guess {:?} should be uppercase, {:?} at {}",
-                    guess,
-                    g as char,
-                    i + 1
-                ));
+#[derive(Debug)]
+struct GuessScore {
+    guess: String,
+    #[allow(dead_code)]
+    score: String,
+    tiles: [TileState; LEN],
+}
+
+impl GuessScore {
+    fn parse(guess_score: &str) -> Result<Self> {
+        if let Some((guess, score)) = guess_score.split_once('=') {
+            if guess.len() != LEN {
+                return Err(anyhow!("Guess {:?} is not {} characters", guess, LEN));
             }
-            tiles[i] = tile_state(s)?;
-            if (tiles[i] == TileState::CORRECT && s != g)
-                || (tiles[i] == TileState::PRESENT && s - b'a' + b'A' != g)
-            {
-                return Err(anyhow!(
-                    "Mismatch at {}: {:?}!={:?}, {:?}!={:?}",
-                    i + 1,
-                    guess,
-                    score,
-                    g as char,
-                    s as char
-                ));
+            if score.len() != LEN {
+                return Err(anyhow!("Score {:?} is not {} characters", score, LEN));
             }
+            let mut tiles = [TileState::CORRECT; LEN];
+            for i in 0..LEN {
+                let g: u8 = guess.as_bytes()[i];
+                let s: u8 = score.as_bytes()[i];
+                if !(b'A'..=b'Z').contains(&g) {
+                    return Err(anyhow!(
+                        "Guess {:?} should be uppercase, {:?} at {}",
+                        guess,
+                        g as char,
+                        i + 1
+                    ));
+                }
+                tiles[i] = tile_state(s)?;
+                if (tiles[i] == TileState::CORRECT && s != g)
+                    || (tiles[i] == TileState::PRESENT && s - b'a' + b'A' != g)
+                {
+                    return Err(anyhow!(
+                        "Mismatch at {}: {:?}!={:?}, {:?}!={:?}",
+                        i + 1,
+                        guess,
+                        score,
+                        g as char,
+                        s as char
+                    ));
+                }
+            }
+            return Ok(Self {
+                guess: guess.to_owned(),
+                score: score.to_owned(),
+                tiles,
+            });
+        } else {
+            return Err(anyhow!(format!("Expected one '=' in '{guess_score}'")));
         }
-        return Ok(GuessScore {
-            guess: guess.to_owned(),
-            score: score.to_owned(),
-            tiles,
-        });
-    } else {
-        return Err(anyhow!(format!("Expected one '=' in '{guess_score}'")));
     }
 }
 
-struct ParsedGuesses {
+struct WordleGuesses {
     valid: HashSet<u8>,
     invalid: HashSet<u8>,
     mask: [u8; LEN],
     wrong_spot: Vec<HashSet<u8>>,
 }
 
-impl ParsedGuesses {
+impl WordleGuesses {
     fn new() -> Self {
         Self {
             valid: HashSet::new(),
@@ -105,40 +107,43 @@ impl ParsedGuesses {
             wrong_spot: (0..LEN).map(|_| HashSet::new()).collect(),
         }
     }
-}
 
-fn parse_guesses(guess_scores: &Vec<GuessScore>) -> Result<ParsedGuesses> {
-    let mut pg = ParsedGuesses::new();
-    for gs in guess_scores {
-        // First pass for correct and present
-        for i in 0..LEN {
-            let g: u8 = gs.guess.as_bytes()[i];
-            let t = gs.tiles[i];
-            if t == TileState::CORRECT {
-                pg.mask[i] = g;
-                pg.valid.insert(g);
-            } else if t == TileState::PRESENT {
-                pg.wrong_spot[i].insert(g);
-                pg.valid.insert(g);
-            }
-        }
-        // Second pass for absent letters
-        for i in 0..LEN {
-            if gs.tiles[i] == TileState::ABSENT {
+    fn parse(guess_scores: &Vec<GuessScore>) -> Result<Self> {
+        let mut pg = Self::new();
+        for gs in guess_scores {
+            // First pass for correct and present
+            for i in 0..LEN {
                 let g: u8 = gs.guess.as_bytes()[i];
-                if pg.valid.contains(&g) {
+                let t = gs.tiles[i];
+                if t == TileState::CORRECT {
+                    pg.mask[i] = g;
+                    pg.valid.insert(g);
+                } else if t == TileState::PRESENT {
                     pg.wrong_spot[i].insert(g);
-                } else {
-                    pg.invalid.insert(g);
+                    pg.valid.insert(g);
+                }
+            }
+            // Second pass for absent letters
+            for i in 0..LEN {
+                if gs.tiles[i] == TileState::ABSENT {
+                    let g: u8 = gs.guess.as_bytes()[i];
+                    if pg.valid.contains(&g) {
+                        // There are more instances of `g` in `gs.guess`
+                        // than in the answer
+                        pg.wrong_spot[i].insert(g);
+                    } else {
+                        pg.invalid.insert(g);
+                    }
                 }
             }
         }
+        Ok(pg)
     }
-    Ok(pg)
 }
 
+// fn is_eligible(word: &str, guess_scores: &Vec<GuessScore>) -> Result<Vec<String>> {
 fn solve(words: &Vec<String>, guess_scores: &Vec<GuessScore>) -> Result<Vec<String>> {
-    let pg = parse_guesses(guess_scores)?;
+    let pg = WordleGuesses::parse(guess_scores)?;
     info!("valid: {:?}", pg.valid);
     info!("invalid: {:?}", pg.invalid);
     info!("mask: {:?}", pg.mask);
@@ -187,7 +192,7 @@ fn main() -> Result<()> {
     let guess_scores: Result<Vec<GuessScore>> = args
         .guesses
         .into_iter()
-        .map(|gs| parse_guess_score(&gs))
+        .map(|gs| GuessScore::parse(&gs))
         .collect();
     let guess_scores = guess_scores?;
     // println!("guess_scores = {:?}", guess_scores);
@@ -195,7 +200,7 @@ fn main() -> Result<()> {
     println!(
         "{}",
         if choices.is_empty() {
-            "[--None--]".to_owned()
+            "--None--".to_owned()
         } else {
             choices.join("\n")
         }

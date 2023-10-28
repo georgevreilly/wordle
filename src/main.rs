@@ -199,11 +199,19 @@ fn dash_mask(mask: &[u8]) -> String {
 
 impl fmt::Debug for WordleGuesses {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        let unused: HashSet<u8> = HashSet::<u8>::from_iter(b'A'..=b'Z')
+            .difference(&self.valid)
+            .map(|c| *c)
+            .collect::<HashSet<u8>>()
+            .difference(&self.invalid)
+            .map(|c| *c)
+            .collect::<HashSet<u8>>();
         f.debug_struct("WordleGuesses")
             .field("mask", &dash_mask(&self.mask))
             .field("valid", &letter_set(&self.valid))
             .field("invalid", &letter_set(&self.invalid))
             .field("wrong_spot", &letter_sets(&self.wrong_spot))
+            .field("unused", &letter_set(&unused))
             .finish()
     }
 }

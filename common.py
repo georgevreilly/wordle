@@ -194,7 +194,7 @@ def letter_sets(ls: list[set[str]]) -> str:
     return "[" + ",".join(letter_set(e) or "-" for e in ls) + "]"
 
 
-def dash_mask(mask: list[str | None]):
+def dash_mask(mask: list[str | None]) -> str:
     return "".join(m or "-" for m in mask)
 
 

@@ -1,7 +1,8 @@
 use anyhow::{anyhow, Result};
 use clap::Parser;
-use log::{debug, info, trace};
+use log::{info, trace};
 use std::collections::HashSet;
+use std::fmt;
 use std::fs;
 
 #[derive(Parser, Debug)]
@@ -164,19 +165,24 @@ impl WordleGuesses {
         true
     }
 
-    fn find_eligible(&self, words: &Vec<String>) -> Result<Vec<String>> {
-        info!("valid: {:?}", self.valid);
-        info!("invalid: {:?}", self.invalid);
-        info!("mask: {:?}", self.mask);
-        info!("wrong_spot: {:?}", self.wrong_spot);
-        let mut choices: Vec<String> = Vec::new();
-        for w in words {
-            if self.is_eligible(&w) {
-                debug!("Got: {}", w);
-                choices.push(w.to_owned());
-            }
-        }
-        Ok(choices)
+    fn find_eligible(&self, words: &Vec<String>) -> Vec<String> {
+        info!("{:?}", self);
+        words
+            .iter()
+            .cloned()
+            .filter(|w| self.is_eligible(w))
+            .collect()
+    }
+}
+
+impl fmt::Debug for WordleGuesses {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.debug_struct("WordleGuesses")
+            .field("valid", &self.valid)
+            .field("invalid", &self.invalid)
+            .field("mask", &self.mask)
+            .field("wrong_spot", &self.wrong_spot)
+            .finish()
     }
 }
 
@@ -197,7 +203,7 @@ fn main() -> Result<()> {
         .collect();
     let guess_scores = guess_scores?;
     let wg = WordleGuesses::parse(&guess_scores)?;
-    let choices = wg.find_eligible(&words)?;
+    let choices = wg.find_eligible(&words);
     println!(
         "{}",
         if choices.is_empty() {

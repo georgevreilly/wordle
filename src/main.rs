@@ -175,13 +175,35 @@ impl WordleGuesses {
     }
 }
 
+fn letter_set(set: &HashSet<u8>) -> String {
+    let mut letters = set.iter().collect::<Vec<&u8>>();
+    letters.sort();
+    letters.iter().map(|c| **c as char).collect()
+}
+
+fn letter_sets(sets: &Vec<HashSet<u8>>) -> String {
+    format!(
+        "[{}]",
+        sets.iter()
+            .map(|set| letter_set(set))
+            .collect::<Vec<_>>()
+            .join(",")
+    )
+}
+
+fn dash_mask(mask: &[u8]) -> String {
+    mask.iter()
+        .map(|m| if *m != b'\0' { *m as char } else { '-' })
+        .collect()
+}
+
 impl fmt::Debug for WordleGuesses {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         f.debug_struct("WordleGuesses")
-            .field("valid", &self.valid)
-            .field("invalid", &self.invalid)
-            .field("mask", &self.mask)
-            .field("wrong_spot", &self.wrong_spot)
+            .field("mask", &dash_mask(&self.mask))
+            .field("valid", &letter_set(&self.valid))
+            .field("invalid", &letter_set(&self.invalid))
+            .field("wrong_spot", &letter_sets(&self.wrong_spot))
             .finish()
     }
 }

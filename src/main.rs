@@ -20,9 +20,9 @@ const LEN: usize = 5;
 
 #[derive(PartialEq, Copy, Clone, Debug)]
 enum TileState {
-    CORRECT,
-    PRESENT,
-    ABSENT,
+    CORRECT, // green
+    PRESENT, // yellow
+    ABSENT,  // black
 }
 
 #[derive(Debug)]
@@ -59,37 +59,25 @@ fn parse_guess_score(guess_score: &str) -> Result<GuessScore> {
             let s: u8 = score.as_bytes()[i];
             if !(b'A'..=b'Z').contains(&g) {
                 return Err(anyhow!(
-                    "Guess {:?} should be uppercase, {} at {}",
+                    "Guess {:?} should be uppercase, {:?} at {}",
                     guess,
                     g as char,
                     i + 1
                 ));
             }
-            let state = tile_state(s)?;
-            if state == TileState::CORRECT {
-                if g != s {
-                    return Err(anyhow!(
-                        "Mismatch at {}: {:?}!={:?}, {:?}!={:?}",
-                        i + 1,
-                        guess,
-                        score,
-                        g as char,
-                        s as char
-                    ));
-                }
-            } else if state == TileState::PRESENT {
-                if s - b'a' != g - b'A' {
-                    return Err(anyhow!(
-                        "Mismatch at {}: {:?}!={:?}, {:?}!={:?}",
-                        i + 1,
-                        guess,
-                        score,
-                        g as char,
-                        s as char
-                    ));
-                }
+            tiles[i] = tile_state(s)?;
+            if (tiles[i] == TileState::CORRECT && s != g)
+                || (tiles[i] == TileState::PRESENT && s - b'a' + b'A' != g)
+            {
+                return Err(anyhow!(
+                    "Mismatch at {}: {:?}!={:?}, {:?}!={:?}",
+                    i + 1,
+                    guess,
+                    score,
+                    g as char,
+                    s as char
+                ));
             }
-            tiles[i] = state
         }
         return Ok(GuessScore {
             guess: guess.to_owned(),

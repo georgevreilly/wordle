@@ -1,32 +1,18 @@
 use anyhow::{anyhow, Result};
-use clap::Parser;
 use log::{info, trace};
 use std::collections::HashSet;
 use std::fmt;
-use std::fs;
 
-#[derive(Parser, Debug)]
-#[command(author, version, about, long_about = None)]
-struct Args {
-    #[clap(flatten)]
-    verbose: clap_verbosity_flag::Verbosity,
-
-    #[arg(num_args(1..), required(true))]
-    guesses: Vec<String>,
-}
-
-// const WORD_FILE: &str = "/usr/share/dict/words";
-const WORD_FILE: &str = "wordle.txt";
-const LEN: usize = 5;
+pub const WORDLE_LEN: usize = 5;
 
 #[derive(PartialEq, Copy, Clone, Debug)]
-enum TileState {
+pub enum TileState {
     CORRECT, // green
     PRESENT, // yellow
     ABSENT,  // black
 }
 
-fn tile_state(score_tile: u8) -> Result<TileState> {
+pub fn tile_state(score_tile: u8) -> Result<TileState> {
     return if (b'A'..=b'Z').contains(&score_tile) {
         Ok(TileState::CORRECT)
     } else if (b'a'..=b'z').contains(&score_tile) {
@@ -39,24 +25,32 @@ fn tile_state(score_tile: u8) -> Result<TileState> {
 }
 
 #[derive(Debug)]
-struct GuessScore {
+pub struct GuessScore {
     guess: String,
     #[allow(dead_code)]
     score: String,
-    tiles: [TileState; LEN],
+    tiles: [TileState; WORDLE_LEN],
 }
 
 impl GuessScore {
-    fn parse(guess_score: &str) -> Result<Self> {
+    pub fn parse(guess_score: &str) -> Result<Self> {
         if let Some((guess, score)) = guess_score.split_once('=') {
-            if guess.len() != LEN {
-                return Err(anyhow!("Guess {:?} is not {} characters", guess, LEN));
+            if guess.len() != WORDLE_LEN {
+                return Err(anyhow!(
+                    "Guess {:?} is not {} characters",
+                    guess,
+                    WORDLE_LEN
+                ));
             }
-            if score.len() != LEN {
-                return Err(anyhow!("Score {:?} is not {} characters", score, LEN));
+            if score.len() != WORDLE_LEN {
+                return Err(anyhow!(
+                    "Score {:?} is not {} characters",
+                    score,
+                    WORDLE_LEN
+                ));
             }
-            let mut tiles = [TileState::CORRECT; LEN];
-            for i in 0..LEN {
+            let mut tiles = [TileState::CORRECT; WORDLE_LEN];
+            for i in 0..WORDLE_LEN {
                 let g: u8 = guess.as_bytes()[i];
                 let s: u8 = score.as_bytes()[i];
                 if !(b'A'..=b'Z').contains(&g) {
@@ -92,87 +86,11 @@ impl GuessScore {
     }
 }
 
-struct WordleGuesses {
+pub struct WordleGuesses {
     valid: HashSet<u8>,
     invalid: HashSet<u8>,
-    mask: [u8; LEN],
+    mask: [u8; WORDLE_LEN],
     wrong_spot: Vec<HashSet<u8>>,
-}
-
-impl WordleGuesses {
-    fn new() -> Self {
-        Self {
-            valid: HashSet::new(),
-            invalid: HashSet::new(),
-            mask: [b'\0'; LEN],
-            wrong_spot: (0..LEN).map(|_| HashSet::new()).collect(),
-        }
-    }
-
-    fn parse(guess_scores: &Vec<GuessScore>) -> Result<Self> {
-        let mut pg = Self::new();
-        for gs in guess_scores {
-            // First pass for correct and present
-            for i in 0..LEN {
-                let g: u8 = gs.guess.as_bytes()[i];
-                let t = gs.tiles[i];
-                if t == TileState::CORRECT {
-                    pg.mask[i] = g;
-                    pg.valid.insert(g);
-                } else if t == TileState::PRESENT {
-                    pg.wrong_spot[i].insert(g);
-                    pg.valid.insert(g);
-                }
-            }
-            // Second pass for absent letters
-            for i in 0..LEN {
-                if gs.tiles[i] == TileState::ABSENT {
-                    let g: u8 = gs.guess.as_bytes()[i];
-                    if pg.valid.contains(&g) {
-                        // There are more instances of `g` in `gs.guess`
-                        // than in the answer
-                        pg.wrong_spot[i].insert(g);
-                    } else {
-                        pg.invalid.insert(g);
-                    }
-                }
-            }
-        }
-        Ok(pg)
-    }
-
-    fn is_eligible(&self, word: &str) -> bool {
-        let letters: HashSet<u8> = word.bytes().collect();
-        trace!("word={}, letters={:?}", word, letters);
-        if letters.intersection(&self.valid).count() != self.valid.len() {
-            trace!("!Valid: {}", word);
-            return false;
-        } else if !letters.is_disjoint(&self.invalid) {
-            trace!("Invalid: {}", word);
-            return false;
-        } else {
-            for i in 0..LEN {
-                let c: u8 = word.as_bytes()[i];
-                if self.mask[i] != b'\0' && c != self.mask[i] {
-                    trace!("!Mask: {}", word);
-                    return false;
-                } else if self.wrong_spot[i].contains(&c) {
-                    trace!("WrongSpot: {}", word);
-                    return false;
-                }
-            }
-        }
-        true
-    }
-
-    fn find_eligible(&self, words: &Vec<String>) -> Vec<String> {
-        info!("{:?}", self);
-        words
-            .iter()
-            .filter(|w| self.is_eligible(w))
-            .cloned()
-            .collect()
-    }
 }
 
 fn letter_set(set: &HashSet<u8>) -> String {
@@ -216,30 +134,78 @@ impl fmt::Debug for WordleGuesses {
     }
 }
 
-fn main() -> Result<()> {
-    let args = Args::parse();
-    env_logger::Builder::new()
-        .filter_level(args.verbose.log_level_filter())
-        .init();
-    let words = fs::read_to_string(WORD_FILE)?
-        .lines()
-        .filter(|w| w.len() == LEN)
-        .map(|w| w.to_uppercase())
-        .collect::<Vec<String>>();
-    let guess_scores = args
-        .guesses
-        .into_iter()
-        .map(|gs| GuessScore::parse(&gs))
-        .collect::<Result<Vec<GuessScore>>>()?;
-    let wg = WordleGuesses::parse(&guess_scores)?;
-    let choices = wg.find_eligible(&words);
-    println!(
-        "{}",
-        if choices.is_empty() {
-            "--None--".to_owned()
-        } else {
-            choices.join("\n")
+impl WordleGuesses {
+    pub fn new() -> Self {
+        Self {
+            valid: HashSet::new(),
+            invalid: HashSet::new(),
+            mask: [b'\0'; WORDLE_LEN],
+            wrong_spot: (0..WORDLE_LEN).map(|_| HashSet::new()).collect(),
         }
-    );
-    Ok(())
+    }
+
+    pub fn parse(guess_scores: &Vec<GuessScore>) -> Result<Self> {
+        let mut pg = Self::new();
+        for gs in guess_scores {
+            // First pass for correct and present
+            for i in 0..WORDLE_LEN {
+                let g: u8 = gs.guess.as_bytes()[i];
+                let t = gs.tiles[i];
+                if t == TileState::CORRECT {
+                    pg.mask[i] = g;
+                    pg.valid.insert(g);
+                } else if t == TileState::PRESENT {
+                    pg.wrong_spot[i].insert(g);
+                    pg.valid.insert(g);
+                }
+            }
+            // Second pass for absent letters
+            for i in 0..WORDLE_LEN {
+                if gs.tiles[i] == TileState::ABSENT {
+                    let g: u8 = gs.guess.as_bytes()[i];
+                    if pg.valid.contains(&g) {
+                        // There are more instances of `g` in `gs.guess`
+                        // than in the answer
+                        pg.wrong_spot[i].insert(g);
+                    } else {
+                        pg.invalid.insert(g);
+                    }
+                }
+            }
+        }
+        Ok(pg)
+    }
+
+    pub fn is_eligible(&self, word: &str) -> bool {
+        let letters: HashSet<u8> = word.bytes().collect();
+        trace!("word={}, letters={:?}", word, letters);
+        if letters.intersection(&self.valid).count() != self.valid.len() {
+            trace!("!Valid: {}", word);
+            return false;
+        } else if !letters.is_disjoint(&self.invalid) {
+            trace!("Invalid: {}", word);
+            return false;
+        } else {
+            for i in 0..WORDLE_LEN {
+                let c: u8 = word.as_bytes()[i];
+                if self.mask[i] != b'\0' && c != self.mask[i] {
+                    trace!("!Mask: {}", word);
+                    return false;
+                } else if self.wrong_spot[i].contains(&c) {
+                    trace!("WrongSpot: {}", word);
+                    return false;
+                }
+            }
+        }
+        true
+    }
+
+    pub fn find_eligible(&self, words: &Vec<String>) -> Vec<String> {
+        info!("{:?}", self);
+        words
+            .iter()
+            .filter(|w| self.is_eligible(w))
+            .cloned()
+            .collect()
+    }
 }

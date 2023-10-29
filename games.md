@@ -263,3 +263,4 @@ or an irregular past tense.
 * 859: `MOUSE=..u.E REVUE=...UE QUEUE=q..UE` yields `PIQUE`
 * 860: `BUILD=b..L. CABLE=..BLE` yields `NOBLE`
 * 861: `BEING=...n. CANDY=.An.. WAGON=.A.ON SALON=sA.ON` yields `MASON`
+* 862: `SHARP=.H..p PHONE=PHON.` yields `PHONY`

@@ -254,17 +254,16 @@ impl fmt::Debug for GameResult {
 impl GameResult {
     pub fn parse_game_result(line: &str) -> Option<Self> {
         if let Some(caps) = GAME_RE.captures(line) {
-            let game_id = caps.name("game").unwrap().as_str().parse::<i32>().unwrap();
+            let game_id = caps.name("game")?.as_str().parse::<i32>().ok()?;
             let guess_scores = caps
-                .name("guess_scores")
-                .unwrap()
+                .name("guess_scores")?
                 .as_str()
                 .split(' ')
                 .map(|gs: &str| GuessScore::parse(gs))
                 .collect::<Result<Vec<GuessScore>>>()
                 .ok()?;
-            let verb = caps.name("verb").unwrap().as_str().to_owned();
-            let answer = caps.name("answer").unwrap().as_str().to_owned();
+            let verb = caps.name("verb")?.as_str().to_owned();
+            let answer = caps.name("answer")?.as_str().to_owned();
             Some(Self {
                 game_id,
                 answer,
@@ -276,12 +275,11 @@ impl GameResult {
         }
     }
 
-    pub fn parse_file(filename: &str) -> Vec<Self> {
-        fs::read_to_string(filename)
-            .unwrap()
+    pub fn parse_file(filename: &str) -> Result<Vec<Self>> {
+        Ok(fs::read_to_string(filename)?
             .lines()
             .filter_map(|line| Self::parse_game_result(line))
-            .collect::<Vec<Self>>()
+            .collect::<Vec<Self>>())
     }
 }
 
@@ -290,7 +288,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_pgr() {
+    fn test_parse_game_result() {
         let line =
             "* 186: `GRAIL=.RA.. TRACK=.RAc. CRAMP=CRA.. CRABS=CRA.. CRAZY=CRAZ.` yields `CRAZE`";
         let gr = GameResult::parse_game_result(line).unwrap();

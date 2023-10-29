@@ -17,7 +17,8 @@ fn main() -> Result<()> {
     env_logger::Builder::new()
         .filter_level(args.verbose.log_level_filter())
         .init();
-    let games_results = GameResult::parse_file(GAMES_RESULTS);
+    let games_results = GameResult::parse_file(GAMES_RESULTS)?;
+    println!("Got {} results", games_results.len());
     println!("{:?}", games_results[40]);
     Ok(())
 }

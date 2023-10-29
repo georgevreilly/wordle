@@ -33,6 +33,7 @@ pub struct GuessScore {
 }
 
 impl GuessScore {
+    /// Parse a GUESS=SCORE string into a GuessScore, validating it.
     pub fn parse(guess_score: &str) -> Result<Self> {
         if let Some((guess, score)) = guess_score.split_once('=') {
             if guess.len() != WORDLE_LEN {
@@ -77,7 +78,7 @@ impl GuessScore {
             }
             return Ok(Self {
                 guess: guess.to_owned(),
-                score: score.to_owned(),
+                score: score.to_owned(), // this is only occasionally used for debugging
                 tiles,
             });
         } else {
@@ -86,37 +87,40 @@ impl GuessScore {
     }
 }
 
-pub struct WordleGuesses {
-    valid: HashSet<u8>,
-    invalid: HashSet<u8>,
-    mask: [u8; WORDLE_LEN],
-    wrong_spot: Vec<HashSet<u8>>,
-}
-
-fn letter_set(set: &HashSet<u8>) -> String {
-    let mut letters = set.iter().collect::<Vec<&u8>>();
+/// Convert set of letters into sorted string
+pub fn letter_set(set: &HashSet<u8>) -> String {
+    let mut letters: Vec<char> = set.iter().map(|c| *c as char).collect();
     letters.sort();
-    letters.iter().map(|c| **c as char).collect()
+    letters.iter().collect()
 }
 
-fn letter_sets(sets: &Vec<HashSet<u8>>) -> String {
+pub fn letter_sets(sets: &Vec<HashSet<u8>>) -> String {
     format!(
         "[{}]",
         sets.iter()
             .map(|set| letter_set(set))
-            .collect::<Vec<_>>()
+            .collect::<Vec<String>>()
             .join(",")
     )
 }
 
-fn dash_mask(mask: &[u8]) -> String {
+pub fn dash_mask(mask: &[u8]) -> String {
     mask.iter()
         .map(|m| if *m != b'\0' { *m as char } else { '-' })
         .collect()
 }
 
+/// The state derived from several GuessScores
+pub struct WordleGuesses {
+    valid: HashSet<u8>,
+    invalid: HashSet<u8>,
+    mask: [u8; WORDLE_LEN],
+    wrong_spot: Vec<HashSet<u8>>, // WORDLE_LEN elements
+}
+
 impl fmt::Debug for WordleGuesses {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        // The remaining letters of the alphabet that are neither valid nor invalid
         let unused: HashSet<u8> = HashSet::<u8>::from_iter(b'A'..=b'Z')
             .difference(&self.valid)
             .map(|c| *c)
@@ -135,47 +139,49 @@ impl fmt::Debug for WordleGuesses {
 }
 
 impl WordleGuesses {
-    pub fn new() -> Self {
-        Self {
-            valid: HashSet::new(),
-            invalid: HashSet::new(),
-            mask: [b'\0'; WORDLE_LEN],
-            wrong_spot: (0..WORDLE_LEN).map(|_| HashSet::new()).collect(),
-        }
-    }
-
+    /// Parse several GuessScores into a WordleGuesses
     pub fn parse(guess_scores: &Vec<GuessScore>) -> Result<Self> {
-        let mut pg = Self::new();
+        let mut valid: HashSet<u8> = HashSet::new();
+        let mut invalid: HashSet<u8> = HashSet::new();
+        let mut mask: [u8; WORDLE_LEN] = [b'\0'; WORDLE_LEN];
+        let mut wrong_spot: Vec<HashSet<u8>> = (0..WORDLE_LEN).map(|_| HashSet::new()).collect();
+
         for gs in guess_scores {
             // First pass for correct and present
             for i in 0..WORDLE_LEN {
                 let g: u8 = gs.guess.as_bytes()[i];
                 let t = gs.tiles[i];
                 if t == TileState::CORRECT {
-                    pg.mask[i] = g;
-                    pg.valid.insert(g);
+                    mask[i] = g;
+                    valid.insert(g);
                 } else if t == TileState::PRESENT {
-                    pg.wrong_spot[i].insert(g);
-                    pg.valid.insert(g);
+                    wrong_spot[i].insert(g);
+                    valid.insert(g);
                 }
             }
             // Second pass for absent letters
             for i in 0..WORDLE_LEN {
                 if gs.tiles[i] == TileState::ABSENT {
                     let g: u8 = gs.guess.as_bytes()[i];
-                    if pg.valid.contains(&g) {
+                    if valid.contains(&g) {
                         // There are more instances of `g` in `gs.guess`
                         // than in the answer
-                        pg.wrong_spot[i].insert(g);
+                        wrong_spot[i].insert(g);
                     } else {
-                        pg.invalid.insert(g);
+                        invalid.insert(g);
                     }
                 }
             }
         }
-        Ok(pg)
+        Ok(Self {
+            valid,
+            invalid,
+            mask,
+            wrong_spot,
+        })
     }
 
+    /// Is `word` a candidate solution?
     pub fn is_eligible(&self, word: &str) -> bool {
         let letters: HashSet<u8> = word.bytes().collect();
         trace!("word={}, letters={:?}", word, letters);
@@ -200,6 +206,7 @@ impl WordleGuesses {
         true
     }
 
+    /// Find all the eligible `words`
     pub fn find_eligible(&self, words: &Vec<String>) -> Vec<String> {
         info!("{:?}", self);
         words

@@ -1,7 +1,10 @@
 use anyhow::{anyhow, Result};
+use lazy_static::lazy_static;
 use log::{info, trace};
+use regex::Regex;
 use std::collections::HashSet;
 use std::fmt;
+use std::fs;
 
 pub const WORDLE_LEN: usize = 5;
 
@@ -214,5 +217,87 @@ impl WordleGuesses {
             .filter(|w| self.is_eligible(w))
             .cloned()
             .collect()
+    }
+}
+
+lazy_static! {
+    static ref GAME_RE: Regex = Regex::new(
+        r"(?x)
+        ^\*\s
+        (?P<game>[0-9]+):\s             # Number
+        `(?P<guess_scores>[^`]+)`\s     # GUESS=SCORE ...
+        \*?(?P<verb>[a-z]+)\*?\s        # 'yields' or 'includes'
+        `(?P<answer>[A-Z]+)`$           # WORD
+        ",
+    )
+    .unwrap();
+}
+
+pub struct GameResult {
+    game_id: i32,
+    answer: String,
+    verb: String,
+    guess_scores: Vec<GuessScore>,
+}
+
+impl fmt::Debug for GameResult {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.debug_struct("GameResult")
+            .field("game_id", &self.game_id)
+            .field("answer", &self.answer)
+            .field("verb", &self.verb)
+            .field("guess_scores", &self.guess_scores)
+            .finish()
+    }
+}
+
+impl GameResult {
+    pub fn parse_game_result(line: &str) -> Option<Self> {
+        if let Some(caps) = GAME_RE.captures(line) {
+            let game_id = caps.name("game").unwrap().as_str().parse::<i32>().unwrap();
+            let guess_scores = caps
+                .name("guess_scores")
+                .unwrap()
+                .as_str()
+                .split(' ')
+                .map(|gs: &str| GuessScore::parse(gs))
+                .collect::<Result<Vec<GuessScore>>>()
+                .ok()?;
+            let verb = caps.name("verb").unwrap().as_str().to_owned();
+            let answer = caps.name("answer").unwrap().as_str().to_owned();
+            Some(Self {
+                game_id,
+                answer,
+                verb,
+                guess_scores,
+            })
+        } else {
+            None
+        }
+    }
+
+    pub fn parse_file(filename: &str) -> Vec<Self> {
+        fs::read_to_string(filename)
+            .unwrap()
+            .lines()
+            .filter_map(|line| Self::parse_game_result(line))
+            .collect::<Vec<Self>>()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_pgr() {
+        let line =
+            "* 186: `GRAIL=.RA.. TRACK=.RAc. CRAMP=CRA.. CRABS=CRA.. CRAZY=CRAZ.` yields `CRAZE`";
+        let gr = GameResult::parse_game_result(line).unwrap();
+        assert_eq!(186, gr.game_id);
+        assert_eq!("yields", gr.verb);
+        assert_eq!("CRAZE", gr.answer);
+        assert_eq!(".RAc.", gr.guess_scores[1].score);
+        assert_eq!(5, gr.guess_scores.len());
     }
 }

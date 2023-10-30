@@ -15,24 +15,60 @@ pub enum TileState {
     ABSENT,  // black
 }
 
-pub fn tile_state(score_tile: u8) -> Result<TileState> {
-    return if (b'A'..=b'Z').contains(&score_tile) {
-        Ok(TileState::CORRECT)
-    } else if (b'a'..=b'z').contains(&score_tile) {
-        Ok(TileState::PRESENT)
-    } else if score_tile == b'.' {
-        Ok(TileState::ABSENT)
-    } else {
-        Err(anyhow!("Invalid score {:?}", score_tile as char))
-    };
+impl TileState {
+    pub fn color(&self) -> String {
+        match *self {
+            Self::CORRECT => "Green".to_owned(),
+            Self::PRESENT => "Yellow".to_owned(),
+            Self::ABSENT => "Black".to_owned(),
+        }
+    }
+
+    pub fn css_color(&self) -> String {
+        match *self {
+            Self::CORRECT => "#6aaa64".to_owned(),
+            Self::PRESENT => "#c9b458".to_owned(),
+            Self::ABSENT => "#838184".to_owned(),
+        }
+    }
+
+    pub fn emoji(&self) -> String {
+        match *self {
+            Self::CORRECT => "\u{1F7E9}".to_owned(),
+            Self::PRESENT => "\u{1F7E8}".to_owned(),
+            Self::ABSENT => "\u{2B1B}".to_owned(),
+        }
+    }
+
+    pub fn make(score_tile: u8) -> Result<Self> {
+        return if (b'A'..=b'Z').contains(&score_tile) {
+            Ok(Self::CORRECT)
+        } else if (b'a'..=b'z').contains(&score_tile) {
+            Ok(Self::PRESENT)
+        } else if score_tile == b'.' {
+            Ok(Self::ABSENT)
+        } else {
+            Err(anyhow!("Invalid score {:?}", score_tile as char))
+        };
+    }
 }
 
-#[derive(Debug)]
 pub struct GuessScore {
     guess: String,
     #[allow(dead_code)]
     score: String,
     tiles: [TileState; WORDLE_LEN],
+}
+
+impl fmt::Debug for GuessScore {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        f.write_fmt(format_args!(
+            "GuessScore {{ {}={}|{} }}",
+            self.guess,
+            self.score,
+            self.emojis("")
+        ))
+    }
 }
 
 impl GuessScore {
@@ -65,7 +101,7 @@ impl GuessScore {
                         i + 1
                     ));
                 }
-                tiles[i] = tile_state(s)?;
+                tiles[i] = TileState::make(s)?;
                 if (tiles[i] == TileState::CORRECT && s != g)
                     || (tiles[i] == TileState::PRESENT && s - b'a' + b'A' != g)
                 {
@@ -87,6 +123,14 @@ impl GuessScore {
         } else {
             return Err(anyhow!(format!("Expected one '=' in '{guess_score}'")));
         }
+    }
+
+    pub fn emojis(&self, sep: &str) -> String {
+        self.tiles
+            .iter()
+            .map(|t| t.emoji())
+            .collect::<Vec<_>>()
+            .join(sep)
     }
 }
 

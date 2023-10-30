@@ -264,3 +264,4 @@ or an irregular past tense.
 * 860: `BUILD=b..L. CABLE=..BLE` yields `NOBLE`
 * 861: `BEING=...n. CANDY=.An.. WAGON=.A.ON SALON=sA.ON` yields `MASON`
 * 862: `SHARP=.H..p PHONE=PHON.` yields `PHONY`
+* 863: `RIFLE=ri.l. LYRIC=l.rI.` *includes* `GRAIL`

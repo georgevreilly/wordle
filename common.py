@@ -95,22 +95,28 @@ class GameResult:
     )
 
     @classmethod
-    def parse_game_results(cls, filename: str) -> "list[GameResult]":
-        results: list[GameResult] = []
+    def parse_game_result(cls, line: str) -> "GameResult" | None:
+        if line.startswith("* ") and line.count("`") == 4:
+            m = cls.GAME_RE.match(line)
+            assert m is not None, f"{line!r}"
+            game_id = int(m.group("game"))
+            answer = m.group("answer")
+            verb = m.group("verb").strip().strip("*")
+            assert verb in {"yields", "includes"}
+            guess_scores = [
+                GuessScore.make(gs) for gs in m.group("guess_scores").split()
+            ]
+            return GameResult(game_id, answer, verb, guess_scores)
+        return None
+
+    @classmethod
+    def parse_file(cls, filename: str) -> "list[GameResult]":
         with open(filename) as f:
-            for line in f.read().splitlines():
-                if line.startswith("* ") and line.count("`") == 4:
-                    m = cls.GAME_RE.match(line)
-                    assert m is not None, f"{line!r}"
-                    game_id = int(m.group("game"))
-                    answer = m.group("answer")
-                    verb = m.group("verb").strip().strip("*")
-                    assert verb in {"yields", "includes"}
-                    guess_scores = [
-                        GuessScore.make(gs) for gs in m.group("guess_scores").split()
-                    ]
-                    results.append(GameResult(game_id, answer, verb, guess_scores))
-        return results
+            return [
+                gr
+                for line in f.read().splitlines()
+                if (gr := cls.parse_game_result(line))
+            ]
 
 
 def make_argparser(description: str) -> argparse.ArgumentParser:

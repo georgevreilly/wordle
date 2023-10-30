@@ -28,7 +28,7 @@ def check_scores(first_game: int) -> list:
     vocabulary = read_vocabulary(WORD_FILE)
     answers = set(read_vocabulary(ANSWERS_FILE))
     failures = []
-    game_results = GameResult.parse_game_results(GAMES_FILE)
+    game_results = GameResult.parse_file(GAMES_FILE)
     for gr in game_results:
         if first_game > gr.game_id:
             continue

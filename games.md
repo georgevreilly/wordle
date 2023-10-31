@@ -265,3 +265,4 @@ or an irregular past tense.
 * 861: `BEING=...n. CANDY=.An.. WAGON=.A.ON SALON=sA.ON` yields `MASON`
 * 862: `SHARP=.H..p PHONE=PHON.` yields `PHONY`
 * 863: `RIFLE=ri.l. LYRIC=l.rI.` *includes* `GRAIL`
+* 864: `BEGAN=Be.A. BREAK=B.EAK` yields `BLEAK`

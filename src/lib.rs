@@ -2,7 +2,7 @@ use anyhow::{anyhow, Result};
 use lazy_static::lazy_static;
 use log::{info, trace};
 use regex::Regex;
-use std::collections::HashSet;
+use std::collections::{HashMap, HashSet};
 use std::fmt;
 use std::fs;
 
@@ -54,10 +54,10 @@ impl TileState {
 }
 
 pub struct GuessScore {
-    guess: String,
+    pub guess: String,
     #[allow(dead_code)]
-    score: String,
-    tiles: [TileState; WORDLE_LEN],
+    pub score: String,
+    pub tiles: [TileState; WORDLE_LEN],
 }
 
 impl fmt::Debug for GuessScore {
@@ -262,6 +262,72 @@ impl WordleGuesses {
             .cloned()
             .collect()
     }
+
+    pub fn score(actual: &str, guess: &str) -> Result<String> {
+        if actual.len() != WORDLE_LEN {
+            return Err(anyhow!(
+                "Actual {:?} is not {} characters",
+                actual,
+                WORDLE_LEN
+            ));
+        }
+        if guess.len() != WORDLE_LEN {
+            return Err(anyhow!(
+                "Guess {:?} is not {} characters",
+                guess,
+                WORDLE_LEN
+            ));
+        }
+        let mut parts: [u8; WORDLE_LEN] = [b'\0'; WORDLE_LEN];
+        let mut remaining = HashMap::new();
+        for i in 0..WORDLE_LEN {
+            let a: u8 = actual.as_bytes()[i];
+            let g: u8 = guess.as_bytes()[i];
+            if !(b'A'..=b'Z').contains(&a) {
+                return Err(anyhow!(
+                    "Actual {:?} should be uppercase, {:?} at {}",
+                    actual,
+                    a as char,
+                    i + 1
+                ));
+            }
+            if !(b'A'..=b'Z').contains(&g) {
+                return Err(anyhow!(
+                    "Guess {:?} should be uppercase, {:?} at {}",
+                    guess,
+                    g as char,
+                    i + 1
+                ));
+            }
+            if a == g {
+                // Green: correct: exact match at this position => uppercase
+                parts[i] = a;
+            } else {
+                *remaining.entry(a.clone()).or_insert(0) += 1;
+                parts[i] = b'\0';
+            }
+        }
+        for i in 0..WORDLE_LEN {
+            let g: u8 = guess.as_bytes()[i];
+            if parts[i] == b'\0' {
+                let mut rem = 0;
+                if let Some(n) = remaining.get(&g) {
+                    rem = *n;
+                }
+                if rem > 0 {
+                    // Yellow: letter present elsewhere => lowercase
+                    if let Some(r) = remaining.get_mut(&g) {
+                        *r = rem - 1
+                    }
+                    parts[i] = g - b'A' + b'a'; // lowercase g
+                } else {
+                    // Black: letter completely absent
+                    parts[i] = b'.'
+                }
+            }
+        }
+        Ok(parts.map(|m| m as char).iter().collect())
+    }
 }
 
 lazy_static! {
@@ -278,10 +344,10 @@ lazy_static! {
 }
 
 pub struct GameResult {
-    game_id: i32,
-    answer: String,
-    verb: String,
-    guess_scores: Vec<GuessScore>,
+    pub game_id: i32,
+    pub answer: String,
+    pub verb: String,
+    pub guess_scores: Vec<GuessScore>,
 }
 
 impl fmt::Debug for GameResult {

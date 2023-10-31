@@ -19,6 +19,25 @@ fn main() -> Result<()> {
         .init();
     let games_results = GameResult::parse_file(GAMES_RESULTS)?;
     println!("Got {} results", games_results.len());
-    println!("{:?}", games_results[40]);
+    for gr in &games_results {
+        println!("{}: {}: {:?}", gr.game_id, gr.answer, gr.guess_scores);
+
+        for gs in &gr.guess_scores {
+            let computed = WordleGuesses::score(&gr.answer, &gs.guess)?;
+            let verdict = if computed == gs.score {
+                "✅ Correct"
+            } else {
+                "❌ Wrong!"
+            };
+            println!(
+                "\tguess={} score={} computed={} ‹{}›  {}",
+                gs.guess,
+                gs.score,
+                computed,
+                gs.emojis(""),
+                verdict
+            )
+        }
+    }
     Ok(())
 }

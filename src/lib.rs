@@ -275,16 +275,17 @@ impl WordleGuesses {
             }
         }
         for i in 0..WORDLE_LEN {
-            let g: u8 = guess.as_bytes()[i];
             if parts[i] == b'\0' {
-                let mut rem = 0;
-                if let Some(n) = remaining.get(&g) {
-                    rem = *n;
-                }
-                if rem > 0 {
+                let g: u8 = guess.as_bytes()[i];
+                let count = if let Some(n) = remaining.get(&g) {
+                    *n
+                } else {
+                    0
+                };
+                if count > 0 {
                     // Yellow: letter present elsewhere => lowercase
                     if let Some(r) = remaining.get_mut(&g) {
-                        *r = rem - 1
+                        *r = count - 1
                     }
                     parts[i] = g - b'A' + b'a'; // lowercase g
                 } else {

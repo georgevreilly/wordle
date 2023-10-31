@@ -53,6 +53,21 @@ impl TileState {
     }
 }
 
+pub fn validate_length(s: &str) -> Result<()> {
+    if s.len() != WORDLE_LEN {
+        return Err(anyhow!("{:?} is not {} characters", s, WORDLE_LEN));
+    }
+    Ok(())
+}
+
+pub fn validate_guess(guess: &str) -> Result<()> {
+    validate_length(guess)?;
+    if guess.to_ascii_uppercase() != guess {
+        return Err(anyhow!("{:?} should be uppercase", guess));
+    }
+    Ok(())
+}
+
 pub struct GuessScore {
     pub guess: String,
     #[allow(dead_code)]
@@ -75,32 +90,12 @@ impl GuessScore {
     /// Parse a GUESS=SCORE string into a GuessScore, validating it.
     pub fn parse(guess_score: &str) -> Result<Self> {
         if let Some((guess, score)) = guess_score.split_once('=') {
-            if guess.len() != WORDLE_LEN {
-                return Err(anyhow!(
-                    "Guess {:?} is not {} characters",
-                    guess,
-                    WORDLE_LEN
-                ));
-            }
-            if score.len() != WORDLE_LEN {
-                return Err(anyhow!(
-                    "Score {:?} is not {} characters",
-                    score,
-                    WORDLE_LEN
-                ));
-            }
+            validate_guess(guess)?;
+            validate_length(score)?;
             let mut tiles = [TileState::CORRECT; WORDLE_LEN];
             for i in 0..WORDLE_LEN {
                 let g: u8 = guess.as_bytes()[i];
                 let s: u8 = score.as_bytes()[i];
-                if !(b'A'..=b'Z').contains(&g) {
-                    return Err(anyhow!(
-                        "Guess {:?} should be uppercase, {:?} at {}",
-                        guess,
-                        g as char,
-                        i + 1
-                    ));
-                }
                 tiles[i] = TileState::make(s)?;
                 if (tiles[i] == TileState::CORRECT && s != g)
                     || (tiles[i] == TileState::PRESENT && s - b'a' + b'A' != g)
@@ -264,41 +259,13 @@ impl WordleGuesses {
     }
 
     pub fn score(actual: &str, guess: &str) -> Result<String> {
-        if actual.len() != WORDLE_LEN {
-            return Err(anyhow!(
-                "Actual {:?} is not {} characters",
-                actual,
-                WORDLE_LEN
-            ));
-        }
-        if guess.len() != WORDLE_LEN {
-            return Err(anyhow!(
-                "Guess {:?} is not {} characters",
-                guess,
-                WORDLE_LEN
-            ));
-        }
+        validate_guess(actual)?;
+        validate_guess(guess)?;
         let mut parts: [u8; WORDLE_LEN] = [b'\0'; WORDLE_LEN];
         let mut remaining = HashMap::new();
         for i in 0..WORDLE_LEN {
             let a: u8 = actual.as_bytes()[i];
             let g: u8 = guess.as_bytes()[i];
-            if !(b'A'..=b'Z').contains(&a) {
-                return Err(anyhow!(
-                    "Actual {:?} should be uppercase, {:?} at {}",
-                    actual,
-                    a as char,
-                    i + 1
-                ));
-            }
-            if !(b'A'..=b'Z').contains(&g) {
-                return Err(anyhow!(
-                    "Guess {:?} should be uppercase, {:?} at {}",
-                    guess,
-                    g as char,
-                    i + 1
-                ));
-            }
             if a == g {
                 // Green: correct: exact match at this position => uppercase
                 parts[i] = a;

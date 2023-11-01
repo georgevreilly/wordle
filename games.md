@@ -266,3 +266,4 @@ or an irregular past tense.
 * 862: `SHARP=.H..p PHONE=PHON.` yields `PHONY`
 * 863: `RIFLE=ri.l. LYRIC=l.rI.` *includes* `GRAIL`
 * 864: `BEGAN=Be.A. BREAK=B.EAK` yields `BLEAK`
+* 865: `CRUEL=...e. SHAVE=s...E MOOSE=.O.SE` *includes* `NOISE`

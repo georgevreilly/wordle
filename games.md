@@ -269,3 +269,4 @@ or an irregular past tense.
 * 865: `CRUEL=...e. SHAVE=s...E MOOSE=.O.SE` *includes* `NOISE`
 * 866: `LOGIC=l..I. ANVIL=.N.IL` yields `UNTIL`
 * 867: `POWER=.o..R AMOUR=A.o.R ARBOR=AR.OR` yields `ARDOR`
+* 868: `ROCKY=..... BLAST=..a.. ADMIN=a.mIn` yields `MANIA`

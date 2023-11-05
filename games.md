@@ -270,3 +270,4 @@ or an irregular past tense.
 * 866: `LOGIC=l..I. ANVIL=.N.IL` yields `UNTIL`
 * 867: `POWER=.o..R AMOUR=A.o.R ARBOR=AR.OR` yields `ARDOR`
 * 868: `ROCKY=..... BLAST=..a.. ADMIN=a.mIn` yields `MANIA`
+* 869: `LATER=la.er REALM=reAl. GLARE=.LARE` *includes* `FLARE`

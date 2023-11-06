@@ -271,3 +271,4 @@ or an irregular past tense.
 * 867: `POWER=.o..R AMOUR=A.o.R ARBOR=AR.OR` yields `ARDOR`
 * 868: `ROCKY=..... BLAST=..a.. ADMIN=a.mIn` yields `MANIA`
 * 869: `LATER=la.er REALM=reAl. GLARE=.LARE` *includes* `FLARE`
+* 870: `DREAM=dRea. GRADE=.RADE` yields `TRADE`

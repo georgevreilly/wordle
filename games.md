@@ -272,3 +272,4 @@ or an irregular past tense.
 * 868: `ROCKY=..... BLAST=..a.. ADMIN=a.mIn` yields `MANIA`
 * 869: `LATER=la.er REALM=reAl. GLARE=.LARE` *includes* `FLARE`
 * 870: `DREAM=dRea. GRADE=.RADE` yields `TRADE`
+* 871: `FIELD=.I.l. LIGHT=LI..T` yields `LIMIT`

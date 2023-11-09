@@ -274,3 +274,4 @@ or an irregular past tense.
 * 870: `DREAM=dRea. GRADE=.RADE` yields `TRADE`
 * 871: `FIELD=.I.l. LIGHT=LI..T` yields `LIMIT`
 * 872: `SMOKE=..... GRIND=..in. CHAIN=..ain FINAL=.INa.` yields `NINJA`
+* 873: `YIELD=..el. LEMON=le... ELATE=.LA.E FLAKE=.LA.E PLACE=.LA.E` *includes* `GLAZE`

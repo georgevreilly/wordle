@@ -276,3 +276,4 @@ or an irregular past tense.
 * 872: `SMOKE=..... GRIND=..in. CHAIN=..ain FINAL=.INa.` yields `NINJA`
 * 873: `YIELD=..el. LEMON=le... ELATE=.LA.E FLAKE=.LA.E PLACE=.LA.E` *includes* `GLAZE`
 * 874: `THEIR=.he.. CACHE=.a.he HEAVY=hEA..` yields `LEASH`
+* 875: `PAINT=.a..t TAMER=ta..R ALTAR=A.T.R` yields `ACTOR`

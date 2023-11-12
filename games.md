@@ -277,3 +277,4 @@ or an irregular past tense.
 * 873: `YIELD=..el. LEMON=le... ELATE=.LA.E FLAKE=.LA.E PLACE=.LA.E` *includes* `GLAZE`
 * 874: `THEIR=.he.. CACHE=.a.he HEAVY=hEA..` yields `LEASH`
 * 875: `PAINT=.a..t TAMER=ta..R ALTAR=A.T.R` yields `ACTOR`
+* 876: `SPIKE=....e LEMON=.Em.n` yields `MEANT`

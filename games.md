@@ -278,3 +278,4 @@ or an irregular past tense.
 * 874: `THEIR=.he.. CACHE=.a.he HEAVY=hEA..` yields `LEASH`
 * 875: `PAINT=.a..t TAMER=ta..R ALTAR=A.T.R` yields `ACTOR`
 * 876: `SPIKE=....e LEMON=.Em.n` yields `MEANT`
+* 877: `PRIME=.R..e BREAD=.RE.. WRECK=.RE.. GREET=GREE.` yields `GREEN`

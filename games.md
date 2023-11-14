@@ -279,3 +279,4 @@ or an irregular past tense.
 * 875: `PAINT=.a..t TAMER=ta..R ALTAR=A.T.R` yields `ACTOR`
 * 876: `SPIKE=....e LEMON=.Em.n` yields `MEANT`
 * 877: `PRIME=.R..e BREAD=.RE.. WRECK=.RE.. GREET=GREE.` yields `GREEN`
+* 878: `EARLY=.A..Y SANDY=SA..Y SAVVY=SA..Y SAGGY=SA..Y SAUCY=SA..Y` *includes* `SASSY`

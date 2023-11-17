@@ -282,3 +282,4 @@ or an irregular past tense.
 * 878: `EARLY=.A..Y SANDY=SA..Y SAVVY=SA..Y SAGGY=SA..Y SAUCY=SA..Y` *includes* `SASSY`
 * 879: `GRAVE=g.... STING=Sti.g` yields `SIGHT`
 * 880: `FORTH=..rt. RIVET=r...T GRANT=.R..T CRUST=.RUST` yields `TRUST`
+* 881: `RIDGE=r.d.. DRUNK=dr... CHARD=..ard RADAR=rAd..` yields `TARDY`

@@ -284,3 +284,4 @@ or an irregular past tense.
 * 880: `FORTH=..rt. RIVET=r...T GRANT=.R..T CRUST=.RUST` yields `TRUST`
 * 881: `RIDGE=r.d.. DRUNK=dr... CHARD=..ard RADAR=rAd..` yields `TARDY`
 * 882: `LEARN=....n` *includes* `THINK`
+* 883: `PARTY=..... CHIME=....E GLOVE=....E` *includes* `QUEUE`

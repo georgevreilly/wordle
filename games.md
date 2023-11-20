@@ -285,3 +285,4 @@ or an irregular past tense.
 * 881: `RIDGE=r.d.. DRUNK=dr... CHARD=..ard RADAR=rAd..` yields `TARDY`
 * 882: `LEARN=....n` *includes* `THINK`
 * 883: `PARTY=..... CHIME=....E GLOVE=....E` *includes* `QUEUE`
+* 884: `AWOKE=a.... CLAIM=C.a.. CATCH=CA... CARRY=CA..Y CADDY=CA.DY` yields `CANDY`

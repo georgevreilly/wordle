@@ -287,3 +287,4 @@ or an irregular past tense.
 * 883: `PARTY=..... CHIME=....E GLOVE=....E` *includes* `QUEUE`
 * 884: `AWOKE=a.... CLAIM=C.a.. CATCH=CA... CARRY=CA..Y CADDY=CA.DY` yields `CANDY`
 * 885: `TRUCE=..... PLANK=P.AN.` yields `PIANO`
+* 886: `WOULD=...l. LEANT=le... FLYER=.l.E.` *includes* `PIXEL`

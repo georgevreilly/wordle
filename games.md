@@ -288,3 +288,4 @@ or an irregular past tense.
 * 884: `AWOKE=a.... CLAIM=C.a.. CATCH=CA... CARRY=CA..Y CADDY=CA.DY` yields `CANDY`
 * 885: `TRUCE=..... PLANK=P.AN.` yields `PIANO`
 * 886: `WOULD=...l. LEANT=le... FLYER=.l.E.` *includes* `PIXEL`
+* 887: `AMONG=...n. BUNCH=.Un.. LUPIN=.U..N` yields `QUEEN`

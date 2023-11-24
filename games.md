@@ -289,3 +289,4 @@ or an irregular past tense.
 * 885: `TRUCE=..... PLANK=P.AN.` yields `PIANO`
 * 886: `WOULD=...l. LEANT=le... FLYER=.l.E.` *includes* `PIXEL`
 * 887: `AMONG=...n. BUNCH=.Un.. LUPIN=.U..N` yields `QUEEN`
+* 888: `SMILE=..... GROAN=.ro.. ROBOT=r..Ot` *includes* `THROW`

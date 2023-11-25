@@ -290,3 +290,4 @@ or an irregular past tense.
 * 886: `WOULD=...l. LEANT=le... FLYER=.l.E.` *includes* `PIXEL`
 * 887: `AMONG=...n. BUNCH=.Un.. LUPIN=.U..N` yields `QUEEN`
 * 888: `SMILE=..... GROAN=.ro.. ROBOT=r..Ot` *includes* `THROW`
+* 889: `DELAY=de... TRADE=...DE EXUDE=..uDE` yields `GUIDE`

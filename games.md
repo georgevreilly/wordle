@@ -291,3 +291,6 @@ or an irregular past tense.
 * 887: `AMONG=...n. BUNCH=.Un.. LUPIN=.U..N` yields `QUEEN`
 * 888: `SMILE=..... GROAN=.ro.. ROBOT=r..Ot` *includes* `THROW`
 * 889: `DELAY=de... TRADE=...DE EXUDE=..uDE` yields `GUIDE`
+* 890: `BONUS=.O..s SOWER=SO...` *includes* `SOLID`
+* 891: `ANGEL=an... BRAWN=..awn` yields `TAWNY`
+* 892: `LUCKY=..c.. CRAVE=c...E TWICE=...cE SCONE=SCO.E` yields `SCOPE`

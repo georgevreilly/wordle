@@ -295,3 +295,4 @@ or an irregular past tense.
 * 891: `ANGEL=an... BRAWN=..awn` yields `TAWNY`
 * 892: `LUCKY=..c.. CRAVE=c...E TWICE=...cE SCONE=SCO.E` yields `SCOPE`
 * 893: `AVOID=...i. INEPT=i.... WHISK=.his. HISSY=hiSs.` yields `SUSHI`
+* 894: `CRIME=.ri.e WIDER=.i.er` *includes* `RESIN`

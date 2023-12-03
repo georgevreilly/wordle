@@ -298,3 +298,4 @@ or an irregular past tense.
 * 894: `CRIME=.ri.e WIDER=.i.er` *includes* `RESIN`
 * 895: `SHAVE=..a.e AGENT=a.ent` *includes* `TAKEN`
 * 896: `FRAUD=.r... RIVET=r..e. LOSER=...er BERRY=.E.R.` yields `GENRE`
+* 897: `OWNER=..... MATCH=.at.. PLAIT=p.A.T` yields `ADAPT`

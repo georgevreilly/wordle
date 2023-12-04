@@ -299,3 +299,4 @@ or an irregular past tense.
 * 895: `SHAVE=..a.e AGENT=a.ent` *includes* `TAKEN`
 * 896: `FRAUD=.r... RIVET=r..e. LOSER=...er BERRY=.E.R.` yields `GENRE`
 * 897: `OWNER=..... MATCH=.at.. PLAIT=p.A.T` yields `ADAPT`
+* 898: `TODAY=tO... POINT=.O..T MOULT=.O..T ROBOT=rO..T` yields `WORST`

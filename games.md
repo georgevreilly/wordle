@@ -301,3 +301,4 @@ or an irregular past tense.
 * 897: `OWNER=..... MATCH=.at.. PLAIT=p.A.T` yields `ADAPT`
 * 898: `TODAY=tO... POINT=.O..T MOULT=.O..T ROBOT=rO..T` yields `WORST`
 * 899: `STORY=..o.y` *includes* `YOUNG`
+* 900: `WRITE=W.... WOUND=WO.n.` yields `WOMAN`

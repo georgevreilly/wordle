@@ -302,3 +302,4 @@ or an irregular past tense.
 * 898: `TODAY=tO... POINT=.O..T MOULT=.O..T ROBOT=rO..T` yields `WORST`
 * 899: `STORY=..o.y` *includes* `YOUNG`
 * 900: `WRITE=W.... WOUND=WO.n.` yields `WOMAN`
+* 901: `FLAME=.L..e BLEND=.LE.. SLEET=SLEE. SLEEK=SLEE.` yields `SLEEP`

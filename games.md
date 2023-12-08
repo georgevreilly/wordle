@@ -303,3 +303,4 @@ or an irregular past tense.
 * 899: `STORY=..o.y` *includes* `YOUNG`
 * 900: `WRITE=W.... WOUND=WO.n.` yields `WOMAN`
 * 901: `FLAME=.L..e BLEND=.LE.. SLEET=SLEE. SLEEK=SLEE.` yields `SLEEP`
+* 902: `CLOSE=...s. STINK=S.... SUGAR=S..ar SWARM=S.AR. SHARD=SHAR.` yields `SHARP`

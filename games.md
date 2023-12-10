@@ -305,3 +305,4 @@ or an irregular past tense.
 * 901: `FLAME=.L..e BLEND=.LE.. SLEET=SLEE. SLEEK=SLEE.` yields `SLEEP`
 * 902: `CLOSE=...s. STINK=S.... SUGAR=S..ar SWARM=S.AR. SHARD=SHAR.` yields `SHARP`
 * 903: `GRIEF=..I.f FLINT=f.I.T` *includes* `SHIFT`
+* 904: `GLOVE=..... CRUMB=C.... CHINA=CHina` yields `CHAIN`

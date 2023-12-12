@@ -307,3 +307,4 @@ or an irregular past tense.
 * 903: `GRIEF=..I.f FLINT=f.I.T` *includes* `SHIFT`
 * 904: `GLOVE=..... CRUMB=C.... CHINA=CHina` yields `CHAIN`
 * 905: `SIGMA=s.... CLOSE=..oSE HORSE=HO.SE` yields `HOUSE`
+* 906: `STRAY=st... CHEST=.HESt` yields `THESE`

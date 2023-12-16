@@ -311,3 +311,4 @@ or an irregular past tense.
 * 907: `WAGER=...e. SHOVE=S...e SKEIN=S.E.n STENT=S.ENT` *includes* `SPENT`
 * 908: `SCOUT=..ou. WOUND=WOU.D` yields `WOULD`
 * 909: `JUDGE=..... BLOAT=..o.t NOTCH=.Otc. TOXIC=TO.IC` yields `TOPIC`
+* 910: `FLAKY=.L... GLIDE=GL..E GLOVE=GLO.E` yields `GLOBE`

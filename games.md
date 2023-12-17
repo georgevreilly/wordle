@@ -312,3 +312,4 @@ or an irregular past tense.
 * 908: `SCOUT=..ou. WOUND=WOU.D` yields `WOULD`
 * 909: `JUDGE=..... BLOAT=..o.t NOTCH=.Otc. TOXIC=TO.IC` yields `TOPIC`
 * 910: `FLAKY=.L... GLIDE=GL..E GLOVE=GLO.E` yields `GLOBE`
+* 911: `CABIN=cAb.N` yields `BACON`

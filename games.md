@@ -315,3 +315,4 @@ or an irregular past tense.
 * 911: `CABIN=cAb.N` yields `BACON`
 * 912: `STEAL=..... BRUNG=..uN.` yields `FUNNY`
 * 913: `CIGAR=...a. VAULT=.A.Lt TALLY=TA.L.` yields `TABLE`
+* 914: `JUDGE=..... BLOAT=.l.a. LARCH=la... PLAIN=.lA..` yields `SMALL`

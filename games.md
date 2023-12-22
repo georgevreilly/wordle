@@ -317,3 +317,4 @@ or an irregular past tense.
 * 913: `CIGAR=...a. VAULT=.A.Lt TALLY=TA.L.` yields `TABLE`
 * 914: `JUDGE=..... BLOAT=.l.a. LARCH=la... PLAIN=.lA..` yields `SMALL`
 * 915: `CROAK=..... GLINT=.lI.T QUILT=.UILT` yields `BUILT`
+* 916: `PRIME=..... CLOAK=c.o.. SONIC=.O..c BOTCH=.OtCH` yields `TOUCH`

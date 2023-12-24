@@ -319,3 +319,4 @@ or an irregular past tense.
 * 915: `CROAK=..... GLINT=.lI.T QUILT=.UILT` yields `BUILT`
 * 916: `PRIME=..... CLOAK=c.o.. SONIC=.O..c BOTCH=.OtCH` yields `TOUCH`
 * 917: `ACTOR=...o. BONUS=.o..s WHOSE=..OsE` *includes* `SLOPE`
+* 918: `METAL=.e.a. SHARE=..ArE CRAVE=cRA.E` *includes* `GRACE`

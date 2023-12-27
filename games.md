@@ -322,3 +322,4 @@ or an irregular past tense.
 * 918: `METAL=.e.a. SHARE=..ArE CRAVE=cRA.E` *includes* `GRACE`
 * 919: `TRASH=..... BLINK=....k MUCKY=...K.` yields `EVOKE`
 * 920: `RAPID=..p.. WHELP=.He.p` yields `PHONE`
+* 921: `AFTER=a.... CLAIM=..ai. DIVAN=Di.a.` yields `DAISY`

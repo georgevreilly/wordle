@@ -324,3 +324,4 @@ or an irregular past tense.
 * 920: `RAPID=..p.. WHELP=.He.p` yields `PHONE`
 * 921: `AFTER=a.... CLAIM=..ai. DIVAN=Di.a.` yields `DAISY`
 * 922: `SCRAP=..ra. RADIO=ra... ALTER=al.er` yields `LEARN`
+* 923: `TRAIN=...i. FLICK=.lIc.` *includes* `CHILD`

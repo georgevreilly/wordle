@@ -325,3 +325,4 @@ or an irregular past tense.
 * 921: `AFTER=a.... CLAIM=..ai. DIVAN=Di.a.` yields `DAISY`
 * 922: `SCRAP=..ra. RADIO=ra... ALTER=al.er` yields `LEARN`
 * 923: `TRAIN=...i. FLICK=.lIc.` *includes* `CHILD`
+* 924: `REIGN=re... ALTER=..tEr STREP=.tRE. THREW=THRE.` yields `THREE`

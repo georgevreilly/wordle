@@ -327,3 +327,4 @@ or an irregular past tense.
 * 923: `TRAIN=...i. FLICK=.lIc.` *includes* `CHILD`
 * 924: `REIGN=re... ALTER=..tEr STREP=.tRE. THREW=THRE.` yields `THREE`
 * 925: `HOTEL=..t.l GLINT=.l..t LUSTY=l.sTY` yields `SALTY`
+* 926: `TODAY=...A. FINAL=...AL PAPAL=...AL` *includes* `MURAL`

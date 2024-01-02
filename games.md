@@ -328,3 +328,4 @@ or an irregular past tense.
 * 924: `REIGN=re... ALTER=..tEr STREP=.tRE. THREW=THRE.` yields `THREE`
 * 925: `HOTEL=..t.l GLINT=.l..t LUSTY=l.sTY` yields `SALTY`
 * 926: `TODAY=...A. FINAL=...AL PAPAL=...AL` *includes* `MURAL`
+* 927: `PLANT=..aN. RAINY=.aIN.` *includes* `AGING`

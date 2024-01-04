@@ -330,3 +330,4 @@ or an irregular past tense.
 * 926: `TODAY=...A. FINAL=...AL PAPAL=...AL` *includes* `MURAL`
 * 927: `PLANT=..aN. RAINY=.aIN.` *includes* `AGING`
 * 928: `IMPLY=i..l. LITER=lit.r TRAIL=Tr.iL` yields `TWIRL`
+* 929: `INFER=.n... TANGY=tan.. PLANT=..ANT CHANT=c.ANT` yields `SCANT`

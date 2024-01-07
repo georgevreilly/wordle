@@ -333,3 +333,4 @@ or an irregular past tense.
 * 929: `INFER=.n... TANGY=tan.. PLANT=..ANT CHANT=c.ANT` yields `SCANT`
 * 930: `PENAL=.eN.l` *includes* `LUNGE`
 * 931: `THREW=...e. CLEAN=Clea.` yields `CABLE`
+* 932: `SHIFT=S...t STEAK=ST... STUNG=ST.N.` yields `STONY`

@@ -334,3 +334,4 @@ or an irregular past tense.
 * 930: `PENAL=.eN.l` *includes* `LUNGE`
 * 931: `THREW=...e. CLEAN=Clea.` yields `CABLE`
 * 932: `SHIFT=S...t STEAK=ST... STUNG=ST.N.` yields `STONY`
+* 933: `SATIN=.a.in ANIME=ani..` *includes* `FINAL`

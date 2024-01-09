@@ -335,3 +335,4 @@ or an irregular past tense.
 * 931: `THREW=...e. CLEAN=Clea.` yields `CABLE`
 * 932: `SHIFT=S...t STEAK=ST... STUNG=ST.N.` yields `STONY`
 * 933: `SATIN=.a.in ANIME=ani..` *includes* `FINAL`
+* 934: `STORY=...r. RAMEN=r..En` *includes* `LINER`

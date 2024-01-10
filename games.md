@@ -336,3 +336,4 @@ or an irregular past tense.
 * 932: `SHIFT=S...t STEAK=ST... STUNG=ST.N.` yields `STONY`
 * 933: `SATIN=.a.in ANIME=ani..` *includes* `FINAL`
 * 934: `STORY=...r. RAMEN=r..En` *includes* `LINER`
+* 935: `SPITE=...te TEACH=Te..h THEFT=THe..` yields `THREW`

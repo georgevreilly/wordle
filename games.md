@@ -337,3 +337,4 @@ or an irregular past tense.
 * 933: `SATIN=.a.in ANIME=ani..` *includes* `FINAL`
 * 934: `STORY=...r. RAMEN=r..En` *includes* `LINER`
 * 935: `SPITE=...te TEACH=Te..h THEFT=THe..` yields `THREW`
+* 936: `SNIPE=..I.e DEIGN=.eI.. EVICT=e.I.. FRIED=fRIE.` yields `BRIEF`

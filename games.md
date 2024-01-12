@@ -338,3 +338,4 @@ or an irregular past tense.
 * 934: `STORY=...r. RAMEN=r..En` *includes* `LINER`
 * 935: `SPITE=...te TEACH=Te..h THEFT=THe..` yields `THREW`
 * 936: `SNIPE=..I.e DEIGN=.eI.. EVICT=e.I.. FRIED=fRIE.` yields `BRIEF`
+* 937: `FOUND=.OU.. ROUGH=ROU..` *includes* `ROUTE`

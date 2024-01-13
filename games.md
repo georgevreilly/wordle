@@ -339,3 +339,4 @@ or an irregular past tense.
 * 935: `SPITE=...te TEACH=Te..h THEFT=THe..` yields `THREW`
 * 936: `SNIPE=..I.e DEIGN=.eI.. EVICT=e.I.. FRIED=fRIE.` yields `BRIEF`
 * 937: `FOUND=.OU.. ROUGH=ROU..` *includes* `ROUTE`
+* 938: `RAISE=ra..e CLEAR=..ear WEARY=.EAR.` *includes* `HEARD`

@@ -340,3 +340,4 @@ or an irregular past tense.
 * 936: `SNIPE=..I.e DEIGN=.eI.. EVICT=e.I.. FRIED=fRIE.` yields `BRIEF`
 * 937: `FOUND=.OU.. ROUGH=ROU..` *includes* `ROUTE`
 * 938: `RAISE=ra..e CLEAR=..ear WEARY=.EAR.` *includes* `HEARD`
+* 939: `BISON=.i.on TONIC=.Oni. GOING=.OING` yields `DOING`

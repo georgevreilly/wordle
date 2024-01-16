@@ -342,3 +342,4 @@ or an irregular past tense.
 * 938: `RAISE=ra..e CLEAR=..ear WEARY=.EAR.` *includes* `HEARD`
 * 939: `BISON=.i.on TONIC=.Oni. GOING=.OING` yields `DOING`
 * 940: `GROWN=....n PANIC=..N.c` *includes* `LUNCH`
+* 941: `SPENT=...N. BLINK=BL.N. BLAND=BL.ND` yields `BLOND`

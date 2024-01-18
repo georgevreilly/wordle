@@ -344,3 +344,4 @@ or an irregular past tense.
 * 940: `GROWN=....n PANIC=..N.c` *includes* `LUNCH`
 * 941: `SPENT=...N. BLINK=BL.N. BLAND=BL.ND` yields `BLOND`
 * 942: `BURST=.ur.T GROUT=.rouT` yields `COURT`
+* 943: `FAULT=...Lt TITLE=t..LE STYLE=ST.LE` yields `STOLE`

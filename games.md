@@ -345,3 +345,4 @@ or an irregular past tense.
 * 941: `SPENT=...N. BLINK=BL.N. BLAND=BL.ND` yields `BLOND`
 * 942: `BURST=.ur.T GROUT=.rouT` yields `COURT`
 * 943: `FAULT=...Lt TITLE=t..LE STYLE=ST.LE` yields `STOLE`
+* 944: `ATONE=.t.N. GLINT=g.INt` *includes* `THING`

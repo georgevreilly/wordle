@@ -346,3 +346,4 @@ or an irregular past tense.
 * 942: `BURST=.ur.T GROUT=.rouT` yields `COURT`
 * 943: `FAULT=...Lt TITLE=t..LE STYLE=ST.LE` yields `STOLE`
 * 944: `ATONE=.t.N. GLINT=g.INt` *includes* `THING`
+* 945: `POWER=...er REMIT=re... CRAVE=.ra.E BARGE=.ARGE` yields `LARGE`

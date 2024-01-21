@@ -347,3 +347,4 @@ or an irregular past tense.
 * 943: `FAULT=...Lt TITLE=t..LE STYLE=ST.LE` yields `STOLE`
 * 944: `ATONE=.t.N. GLINT=g.INt` *includes* `THING`
 * 945: `POWER=...er REMIT=re... CRAVE=.ra.E BARGE=.ARGE` yields `LARGE`
+* 946: `STOVE=.to.. TOUGH=tO..H WORTH=.ORTH` *includes* `NORTH`

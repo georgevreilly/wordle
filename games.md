@@ -348,3 +348,4 @@ or an irregular past tense.
 * 944: `ATONE=.t.N. GLINT=g.INt` *includes* `THING`
 * 945: `POWER=...er REMIT=re... CRAVE=.ra.E BARGE=.ARGE` yields `LARGE`
 * 946: `STOVE=.to.. TOUGH=tO..H WORTH=.ORTH` *includes* `NORTH`
+* 947: `PERIL=.e... SHOVE=....e MATEY=.ate. ENACT=e.a.t` yields `TWEAK`

@@ -350,3 +350,4 @@ or an irregular past tense.
 * 946: `STOVE=.to.. TOUGH=tO..H WORTH=.ORTH` *includes* `NORTH`
 * 947: `PERIL=.e... SHOVE=....e MATEY=.ate. ENACT=e.a.t` yields `TWEAK`
 * 948: `AGENT=....t TOUCH=t.... STRIP=ST.i. STIFF=STI..` yields `STILL`
+* 949: `FIGHT=.i... PRIME=.ri.e` *includes `RELIC`

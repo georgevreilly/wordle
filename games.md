@@ -351,3 +351,4 @@ or an irregular past tense.
 * 947: `PERIL=.e... SHOVE=....e MATEY=.ate. ENACT=e.a.t` yields `TWEAK`
 * 948: `AGENT=....t TOUCH=t.... STRIP=ST.i. STIFF=STI..` yields `STILL`
 * 949: `FIGHT=.i... PRIME=.ri.e` *includes `RELIC`
+* 950: `DAILY=...l. LUNCH=l..C. CLOCK=.LOCK` *includes* `BLOCK`

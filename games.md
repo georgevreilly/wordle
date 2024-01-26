@@ -352,3 +352,4 @@ or an irregular past tense.
 * 948: `AGENT=....t TOUCH=t.... STRIP=ST.i. STIFF=STI..` yields `STILL`
 * 949: `FIGHT=.i... PRIME=.ri.e` *includes `RELIC`
 * 950: `DAILY=...l. LUNCH=l..C. CLOCK=.LOCK` *includes* `BLOCK`
+* 951: `UNTIE=..... BLAST=.La.. ALLOW=AL.O.` yields `ALOOF`

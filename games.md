@@ -353,3 +353,4 @@ or an irregular past tense.
 * 949: `FIGHT=.i... PRIME=.ri.e` *includes `RELIC`
 * 950: `DAILY=...l. LUNCH=l..C. CLOCK=.LOCK` *includes* `BLOCK`
 * 951: `UNTIE=..... BLAST=.La.. ALLOW=AL.O.` yields `ALOOF`
+* 952: `RADIO=.a... AMBLE=a...E STAKE=S.AKE` *includes* `SNAKE`

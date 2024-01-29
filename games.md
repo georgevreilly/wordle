@@ -355,3 +355,4 @@ or an irregular past tense.
 * 951: `UNTIE=..... BLAST=.La.. ALLOW=AL.O.` yields `ALOOF`
 * 952: `RADIO=.a... AMBLE=a...E STAKE=S.AKE` *includes* `SNAKE`
 * 953: `OLDER=...ER VIPER=...ER SABER=..BER CYBER=..BER TUBER=..BER` yields `EMBER`
+* 954: `MARSH=..... GLOVE=gl..e` yields `LEGGY`

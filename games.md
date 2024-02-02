@@ -359,3 +359,4 @@ or an irregular past tense.
 * 955: `BENCH=.e... SLOPE=.l.pe PLEAT=ple.. IMPEL=..PEL` yields `EXPEL`
 * 956: `SALTY=..L.Y MILKY=..LKY` yields `BULKY`
 * 957: `HAUNT=.a... AMBLE=A..lE` *includes* `ALIKE`
+* 958: `SWORE=....e DELAY=.el..` *includes* `CLEFT`

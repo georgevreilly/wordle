@@ -360,3 +360,4 @@ or an irregular past tense.
 * 956: `SALTY=..L.Y MILKY=..LKY` yields `BULKY`
 * 957: `HAUNT=.a... AMBLE=A..lE` *includes* `ALIKE`
 * 958: `SWORE=....e DELAY=.el..` *includes* `CLEFT`
+* 959: `CRAMP=cr.m. MERCY=M.rc.` yields `MICRO`

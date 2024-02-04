@@ -361,3 +361,4 @@ or an irregular past tense.
 * 957: `HAUNT=.a... AMBLE=A..lE` *includes* `ALIKE`
 * 958: `SWORE=....e DELAY=.el..` *includes* `CLEFT`
 * 959: `CRAMP=cr.m. MERCY=M.rc.` yields `MICRO`
+* 960: `FLOAT=..... CRIMP=.r... QUEER=..eer VERSE=VER.E` *includes* `VERGE`

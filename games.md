@@ -362,3 +362,4 @@ or an irregular past tense.
 * 958: `SWORE=....e DELAY=.el..` *includes* `CLEFT`
 * 959: `CRAMP=cr.m. MERCY=M.rc.` yields `MICRO`
 * 960: `FLOAT=..... CRIMP=.r... QUEER=..eer VERSE=VER.E` *includes* `VERGE`
+* 961: `ADOPT=...p. PLUME=pl..e WHELP=..elp` *includes* `REPEL`

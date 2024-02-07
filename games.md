@@ -364,3 +364,4 @@ or an irregular past tense.
 * 960: `FLOAT=..... CRIMP=.r... QUEER=..eer VERSE=VER.E` *includes* `VERGE`
 * 961: `ADOPT=...p. PLUME=pl..e WHELP=..elp` *includes* `REPEL`
 * 962: `CURIO=c..i. MANIC=...ic TWICE=.wIC.` yields `WHICH`
+* 963: `CHAOS=..a.. ALERT=A.ert` yields `AFTER`

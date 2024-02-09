@@ -366,3 +366,4 @@ or an irregular past tense.
 * 962: `CURIO=c..i. MANIC=...ic TWICE=.wIC.` yields `WHICH`
 * 963: `CHAOS=..a.. ALERT=A.ert` yields `AFTER`
 * 964: `WASTE=.a..E ANKLE=a..lE GLADE=.LA.E BLAME=.LA.E` *includes* `PLACE`
+* 965: `BOARD=..... FLUTE=f..t. SHIFT=S.IFt` yields `STIFF`

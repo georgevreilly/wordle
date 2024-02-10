@@ -367,3 +367,4 @@ or an irregular past tense.
 * 963: `CHAOS=..a.. ALERT=A.ert` yields `AFTER`
 * 964: `WASTE=.a..E ANKLE=a..lE GLADE=.LA.E BLAME=.LA.E` *includes* `PLACE`
 * 965: `BOARD=..... FLUTE=f..t. SHIFT=S.IFt` yields `STIFF`
+* 966: `WATCH=..... PROBE=.R..e` *includes* `FRIED`

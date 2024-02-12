@@ -369,3 +369,4 @@ or an irregular past tense.
 * 965: `BOARD=..... FLUTE=f..t. SHIFT=S.IFt` yields `STIFF`
 * 966: `WATCH=..... PROBE=.R..e` *includes* `FRIED`
 * 967: `YACHT=..... FLING=...n. UNDER=.n.ER` *includes* `NEVER`
+* 968: `CHILD=..... SUPER=s.p.. PASTY=PAST.` yields `PASTA`

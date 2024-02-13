@@ -370,3 +370,4 @@ or an irregular past tense.
 * 966: `WATCH=..... PROBE=.R..e` *includes* `FRIED`
 * 967: `YACHT=..... FLING=...n. UNDER=.n.ER` *includes* `NEVER`
 * 968: `CHILD=..... SUPER=s.p.. PASTY=PAST.` yields `PASTA`
+* 969: `WISPY=..s.. STANK=S.a.. SALVO=Sa... SUGAR=S..Ar` yields `SCRAM`

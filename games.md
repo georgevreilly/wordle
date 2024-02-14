@@ -371,3 +371,4 @@ or an irregular past tense.
 * 967: `YACHT=..... FLING=...n. UNDER=.n.ER` *includes* `NEVER`
 * 968: `CHILD=..... SUPER=s.p.. PASTY=PAST.` yields `PASTA`
 * 969: `WISPY=..s.. STANK=S.a.. SALVO=Sa... SUGAR=S..Ar` yields `SCRAM`
+* 970: `GROAN=..oaN BATON=.AtON` yields `TALON`

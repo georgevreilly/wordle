@@ -373,3 +373,4 @@ or an irregular past tense.
 * 969: `WISPY=..s.. STANK=S.a.. SALVO=Sa... SUGAR=S..Ar` yields `SCRAM`
 * 970: `GROAN=..oaN BATON=.AtON` yields `TALON`
 * 971: `LAUGH=.a... AFTER=A.t.. ADOPT=A.o.T` *includes* `ASCOT`
+* 972: `LOFTY=...t. STUNK=ST... STAVE=STA.. STAMP=STA..` *includes* `STASH`

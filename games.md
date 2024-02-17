@@ -374,3 +374,4 @@ or an irregular past tense.
 * 970: `GROAN=..oaN BATON=.AtON` yields `TALON`
 * 971: `LAUGH=.a... AFTER=A.t.. ADOPT=A.o.T` *includes* `ASCOT`
 * 972: `LOFTY=...t. STUNK=ST... STAVE=STA.. STAMP=STA..` *includes* `STASH`
+* 973: `TOWER=..... CHAMP=..Amp SPASM=spA.M` yields `PSALM`

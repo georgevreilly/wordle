@@ -27,7 +27,7 @@ EXCEPTIONAL_ANSWERS = {"GUANO", "SNAFU", "BALSA", "KAZOO"}
 def check_scores(first_game: int) -> list:
     vocabulary = read_vocabulary(WORD_FILE)
     answers = set(read_vocabulary(ANSWERS_FILE))
-    failures = []
+    game_failures = []
     game_results = GameResult.parse_file(GAMES_FILE)
     for gr in game_results:
         if first_game > gr.game_id:
@@ -36,17 +36,22 @@ def check_scores(first_game: int) -> list:
         print(
             f"{gr.game_id}: {gr.answer}: {' '.join(str(gs) for gs in gr.guess_scores)}"
         )
-        # TODO: throw an error for OUGHT=..g.. GRAVE=gr..e MERGE=..rGE (the 'e' in GRAVE)
+        score_failures = []
         for gs in gr.guess_scores:
             computed = WordleGuesses.score(gr.answer, gs.guess)
-            verdict = "✅ Correct" if computed == gs.score else "❌ Wrong!"
+            verdict = (
+                "\033[0;32m✅ Correct\033[0m"
+                if computed == gs.score
+                else "\033[0;31m❌ Wrong!\033[0m"
+            )
             print(
                 f"\tguess={gs.guess} score={gs.score} {computed=} "
                 f"‹{gs.emojis()}›  {verdict}"
             )
             if computed != gs.score:
-                failures.append((gr.answer, gs.guess, gs.score, computed))
+                score_failures.append((gr.answer, gs.guess, gs.score, computed))
 
+        assert not score_failures, f"{score_failures=}"
         parsed_guesses = WordleGuesses.parse(gr.guess_scores)
         parts = parsed_guesses.string_parts()
         gs2 = parts.pop("guess_scores")
@@ -79,14 +84,16 @@ def check_scores(first_game: int) -> list:
             f"\t{gr.verb}={gr.answer}, plausible=[{others}], "
             f"implausible=[{implausible}]"
         )
-    return failures
+        game_failures.extend(score_failures)
+
+    return game_failures
 
 
 def main() -> int:
     namespace = parse_args()
-    failures = check_scores(namespace.game)
-    if failures:
-        print(f"{failures=}")
+    game_failures = check_scores(namespace.game)
+    if game_failures:
+        print(f"{game_failures=}")
     return 0
 
 

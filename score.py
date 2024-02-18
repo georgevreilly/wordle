@@ -36,6 +36,7 @@ def check_scores(first_game: int) -> list:
         print(
             f"{gr.game_id}: {gr.answer}: {' '.join(str(gs) for gs in gr.guess_scores)}"
         )
+        # TODO: throw an error for OUGHT=..g.. GRAVE=gr..e MERGE=..rGE (the 'e' in GRAVE)
         for gs in gr.guess_scores:
             computed = WordleGuesses.score(gr.answer, gs.guess)
             verdict = "✅ Correct" if computed == gs.score else "❌ Wrong!"
@@ -58,7 +59,7 @@ def check_scores(first_game: int) -> list:
             word_list = vocabulary
         eligible = parsed_guesses.find_eligible(word_list)
         plausible = {p for p in eligible if p in answers}
-        assert gr.answer in eligible
+        assert gr.answer in eligible, f"{eligible=}"
         if gr.answer not in EXCEPTIONAL_ANSWERS:
             assert gr.answer in answers, f"{gr.game_id}: {gr.answer} in known answers"
         if "yields" == gr.verb:

@@ -376,3 +376,4 @@ or an irregular past tense.
 * 972: `LOFTY=...t. STUNK=ST... STAVE=STA.. STAMP=STA..` *includes* `STASH`
 * 973: `TOWER=..... CHAMP=..Amp SPASM=spA.M` yields `PSALM`
 * 974: `OUGHT=..g.. GRAVE=gr..E MERGE=..rGE` yields `RIDGE`
+* 975: `NOVEL=...e. REMIT=re.i. SPIRE=.pIrE GRIPE=.RIpE` *includes* `PRICE`

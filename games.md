@@ -378,3 +378,4 @@ or an irregular past tense.
 * 974: `OUGHT=..g.. GRAVE=gr..E MERGE=..rGE` yields `RIDGE`
 * 975: `NOVEL=...e. REMIT=re.i. SPIRE=.pIrE GRIPE=.RIpE` *includes* `PRICE`
 * 976: `FOUND=..... STRAP=.t.a. TABLE=tA...` *includes* `MATCH`
+* 977: `AGONY=..... FLUTE=.lu.. LUCID=lU.iD` yields `BUILD`

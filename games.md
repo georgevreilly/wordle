@@ -379,3 +379,4 @@ or an irregular past tense.
 * 975: `NOVEL=...e. REMIT=re.i. SPIRE=.pIrE GRIPE=.RIpE` *includes* `PRICE`
 * 976: `FOUND=..... STRAP=.t.a. TABLE=tA...` *includes* `MATCH`
 * 977: `AGONY=..... FLUTE=.lu.. LUCID=lU.iD` yields `BUILD`
+* 978: `VOTER=v..e. MAUVE=.a.Ve` yields `HEAVY`

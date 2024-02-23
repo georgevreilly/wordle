@@ -380,3 +380,4 @@ or an irregular past tense.
 * 976: `FOUND=..... STRAP=.t.a. TABLE=tA...` *includes* `MATCH`
 * 977: `AGONY=..... FLUTE=.lu.. LUCID=lU.iD` yields `BUILD`
 * 978: `VOTER=v..e. MAUVE=.a.Ve` yields `HEAVY`
+* 979: `HASTY=.a.t. TRADE=trA..` *includes* `APART`

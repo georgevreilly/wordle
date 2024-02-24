@@ -381,3 +381,4 @@ or an irregular past tense.
 * 977: `AGONY=..... FLUTE=.lu.. LUCID=lU.iD` yields `BUILD`
 * 978: `VOTER=v..e. MAUVE=.a.Ve` yields `HEAVY`
 * 979: `HASTY=.a.t. TRADE=trA..` *includes* `APART`
+* 980: `ETHIC=e..i. GRIPE=.ripe WIPER=.IPER` *includes* `PIPER`

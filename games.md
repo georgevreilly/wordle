@@ -383,3 +383,4 @@ or an irregular past tense.
 * 979: `HASTY=.a.t. TRADE=trA..` *includes* `APART`
 * 980: `ETHIC=e..i. GRIPE=.ripe WIPER=.IPER` *includes* `PIPER`
 * 981: `BRACE=..... THINK=thI.. WHIST=.hIst` yields `SMITH`
+* 982: `DINGY=..n.. NAVEL=n..E.` *includes* `OFTEN`

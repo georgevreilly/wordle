@@ -384,3 +384,4 @@ or an irregular past tense.
 * 980: `ETHIC=e..i. GRIPE=.ripe WIPER=.IPER` *includes* `PIPER`
 * 981: `BRACE=..... THINK=thI.. WHIST=.hIst` yields `SMITH`
 * 982: `DINGY=..n.. NAVEL=n..E.` *includes* `OFTEN`
+* 983: `PULSE=...SE RINSE=..NSE DENSE=.ENSE TENSE=.ENSE` yields `SENSE`

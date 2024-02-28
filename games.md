@@ -385,3 +385,4 @@ or an irregular past tense.
 * 981: `BRACE=..... THINK=thI.. WHIST=.hIst` yields `SMITH`
 * 982: `DINGY=..n.. NAVEL=n..E.` *includes* `OFTEN`
 * 983: `PULSE=...SE RINSE=..NSE DENSE=.ENSE TENSE=.ENSE` yields `SENSE`
+* 984: `SEPIA=.E.I. RELIC=.ElI.` yields `DEVIL`

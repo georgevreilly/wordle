@@ -387,3 +387,4 @@ or an irregular past tense.
 * 983: `PULSE=...SE RINSE=..NSE DENSE=.ENSE TENSE=.ENSE` yields `SENSE`
 * 984: `SEPIA=.E.I. RELIC=.ElI.` yields `DEVIL`
 * 985: `CHEAT=..ea. PLANE=..A.E BRAVE=..A.E QUAKE=..A.E` *includes* `IMAGE`
+* 986: `NICHE=..... GROUT=.ro.t AORTA=.ORT.` yields `FORTY`

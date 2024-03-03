@@ -174,9 +174,7 @@ def set_verbosity(namespace: argparse.Namespace) -> argparse.Namespace:
     level = (
         logging.DEBUG
         if namespace.verbose >= 2
-        else logging.INFO
-        if namespace.verbose >= 1
-        else logging.WARNING
+        else logging.INFO if namespace.verbose >= 1 else logging.WARNING
     )
     logging.basicConfig(level=level, stream=sys.stdout, format="%(message)s")
     return namespace

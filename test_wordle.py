@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 
 from __future__ import annotations
-from typing import Literal
-
-from wordle import WordleGuesses
 
 import pytest
+
+from wordle import WordleGuesses
 
 
 @pytest.mark.parametrize(
@@ -16,11 +15,7 @@ import pytest
         ("RIDGE", "MERGE", "..rGE"),
     ],
 )
-def test_score(
-    answer: Literal["RIDGE"],
-    guess: Literal["OUGHT", "GRAVE", "MERGE"],
-    expected: Literal["..g..", "gr..E", "..rGE"],
-):
+def test_score(answer: str, guess: str, expected: str):
     computed = WordleGuesses.score(answer, guess)
     assert computed == expected
 

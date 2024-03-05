@@ -391,3 +391,4 @@ or an irregular past tense.
 * 987: `UNDER=Un..r` yields `URBAN`
 * 988: `DAUNT=.a..t TRACK=t.A.. STAMP=STA.. STALE=STA.E` *includes* `STATE`
 * 989: `SWORD=..... FLINT=FL... FLUME=FL.ME` yields `FLAME`
+* 990: `TOKEN=....n GRAND=...n. WINCH=..NCH` *includes* `HUNCH`

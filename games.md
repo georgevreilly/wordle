@@ -392,3 +392,4 @@ or an irregular past tense.
 * 988: `DAUNT=.a..t TRACK=t.A.. STAMP=STA.. STALE=STA.E` *includes* `STATE`
 * 989: `SWORD=..... FLINT=FL... FLUME=FL.ME` yields `FLAME`
 * 990: `TOKEN=....n GRAND=...n. WINCH=..NCH` *includes* `HUNCH`
+* 991: `DRAKE=.rA.e LEARN=.EAR.` *includes* `TEARY`

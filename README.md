@@ -38,7 +38,8 @@ The [`score.py`](./score.py) script validates
 all of the `GUESS=SCORE` pairs in `games.md`.
 
 Previous Wordle answers can be found at
-[WordFinder](https://wordfinder.yourdictionary.com/wordle/answers/).
+[WordFinder](https://wordfinder.yourdictionary.com/wordle/answers/)
+or [Five Forks](https://www.fiveforks.com/wordle/).
 
 In addition, various statistics are computed in [`startwords.py`](./startwords.py),
 which really should be converted to a Jupyter notebook with graphs.

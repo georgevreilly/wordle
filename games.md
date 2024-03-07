@@ -393,3 +393,4 @@ or an irregular past tense.
 * 989: `SWORD=..... FLINT=FL... FLUME=FL.ME` yields `FLAME`
 * 990: `TOKEN=....n GRAND=...n. WINCH=..NCH` *includes* `HUNCH`
 * 991: `DRAKE=.rA.e LEARN=.EAR.` *includes* `TEARY`
+* 992: `CLAIM=CL... CLOUT=CLO..` *includes* `CLONE`

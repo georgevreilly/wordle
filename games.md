@@ -394,3 +394,4 @@ or an irregular past tense.
 * 990: `TOKEN=....n GRAND=...n. WINCH=..NCH` *includes* `HUNCH`
 * 991: `DRAKE=.rA.e LEARN=.EAR.` *includes* `TEARY`
 * 992: `CLAIM=CL... CLOUT=CLO..` *includes* `CLONE`
+* 993: `DIRTY=..R.Y CORNY=..R.Y PARRY=.AR.Y BARMY=.AR.Y` yields `EARLY`

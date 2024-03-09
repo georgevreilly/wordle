@@ -395,3 +395,4 @@ or an irregular past tense.
 * 991: `DRAKE=.rA.e LEARN=.EAR.` *includes* `TEARY`
 * 992: `CLAIM=CL... CLOUT=CLO..` *includes* `CLONE`
 * 993: `DIRTY=..R.Y CORNY=..R.Y PARRY=.AR.Y BARMY=.AR.Y` yields `EARLY`
+* 994: `CANDY=C.... CRIME=Cr..e CLERK=C.Er.` yields `CHEER`

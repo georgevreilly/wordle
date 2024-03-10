@@ -396,3 +396,4 @@ or an irregular past tense.
 * 992: `CLAIM=CL... CLOUT=CLO..` *includes* `CLONE`
 * 993: `DIRTY=..R.Y CORNY=..R.Y PARRY=.AR.Y BARMY=.AR.Y` yields `EARLY`
 * 994: `CANDY=C.... CRIME=Cr..e CLERK=C.Er.` yields `CHEER`
+* 995: `PARTY=par.. DRAPE=.RAp. CRAMP=.RA.P` yields `GRASP`

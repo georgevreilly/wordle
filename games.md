@@ -398,3 +398,4 @@ or an irregular past tense.
 * 994: `CANDY=C.... CRIME=Cr..e CLERK=C.Er.` yields `CHEER`
 * 995: `PARTY=par.. DRAPE=.RAp. CRAMP=.RA.P` yields `GRASP`
 * 996: `EARTH=e.... GLIDE=....e COVEN=...e. MESSY=.ES.Y` yields `PESKY`
+* 997: `REIGN=.E... DEPOT=.E... LEAFY=.EA.. BEACH=.EA.h` yields `HEAVE`

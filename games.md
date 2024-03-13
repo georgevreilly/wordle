@@ -399,3 +399,4 @@ or an irregular past tense.
 * 995: `PARTY=par.. DRAPE=.RAp. CRAMP=.RA.P` yields `GRASP`
 * 996: `EARTH=e.... GLIDE=....e COVEN=...e. MESSY=.ES.Y` yields `PESKY`
 * 997: `REIGN=.E... DEPOT=.E... LEAFY=.EA.. BEACH=.EA.h` yields `HEAVE`
+* 998: `BLEAK=.l.A. MORAL=.O.AL LOYAL=LO.AL` yields `LOCAL`

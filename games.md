@@ -401,3 +401,4 @@ or an irregular past tense.
 * 997: `REIGN=.E... DEPOT=.E... LEAFY=.EA.. BEACH=.EA.h` yields `HEAVE`
 * 998: `BLEAK=.l.A. MORAL=.O.AL LOYAL=LO.AL` yields `LOCAL`
 * 999: `CRASH=c..s. STUCK=S..C. SLICE=S.iCE` yields `SINCE`
+* 1000: `BIRTH=..rt. TROVE=tR..e CREST=.Re.T` yields `ERUPT`

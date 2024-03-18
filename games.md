@@ -404,3 +404,4 @@ or an irregular past tense.
 * 1000: `BIRTH=..rt. TROVE=tR..e CREST=.Re.T` yields `ERUPT`
 * 1001: `TAWNY=T..n. TONIC=TOnI.` yields `TOXIN`
 * 1002: `WASTE=..st. STUNK=St.n.` yields `SNORT`
+* 1003: `PULSE=p.lse` *includes* `SPELT`

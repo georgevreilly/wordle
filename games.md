@@ -405,3 +405,4 @@ or an irregular past tense.
 * 1001: `TAWNY=T..n. TONIC=TOnI.` yields `TOXIN`
 * 1002: `WASTE=..st. STUNK=St.n.` yields `SNORT`
 * 1003: `PULSE=p.lse` *includes* `SPELT`
+* 1004: `ADOPT=Ad... ACRID=A..id ASIDE=A.IDE` yields `ABIDE`

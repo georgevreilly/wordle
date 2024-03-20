@@ -406,3 +406,4 @@ or an irregular past tense.
 * 1002: `WASTE=..st. STUNK=St.n.` yields `SNORT`
 * 1003: `PULSE=p.lse` *includes* `SPELT`
 * 1004: `ADOPT=Ad... ACRID=A..id ASIDE=A.IDE` yields `ABIDE`
+* 1005: `ALIEN=.li.n UNLIT=.nli. VINYL=.IN.l` yields `LINGO`

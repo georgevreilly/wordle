@@ -410,3 +410,4 @@ or an irregular past tense.
 * 1006: `WREST=..es. SEDAN=Seda. SPADE=S.ADE` yields `SHADE`
 * 1007: `HOIST=..... CRAVE=c.a.e PECAN=.ECA. DECAL=DECA.` yields `DECAY`
 * 1008: `CHORE=...re REALM=Re... RIVET=RI.E. RIPEN=RI.EN` yields `RISEN`
+* 1009: `PHASE=....e WRECK=w.e.. BELOW=.elow DOWEL=.OWEL` *includes* `TOWEL`

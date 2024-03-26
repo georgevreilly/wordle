@@ -412,3 +412,4 @@ or an irregular past tense.
 * 1008: `CHORE=...re REALM=Re... RIVET=RI.E. RIPEN=RI.EN` yields `RISEN`
 * 1009: `PHASE=....e WRECK=w.e.. BELOW=.elow DOWEL=.OWEL` *includes* `TOWEL`
 * 1010: `OUTER=..... CLINK=.l... BADLY=.A.LY` *includes* `SALLY`
+* 1011: `TRAWL=.ra.. RAMEN=rAm.. MARCH=MAr.. MANOR=MA.OR MAJOR=MA.OR` yields `MAYOR`

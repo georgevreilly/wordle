@@ -413,3 +413,4 @@ or an irregular past tense.
 * 1009: `PHASE=....e WRECK=w.e.. BELOW=.elow DOWEL=.OWEL` *includes* `TOWEL`
 * 1010: `OUTER=..... CLINK=.l... BADLY=.A.LY` *includes* `SALLY`
 * 1011: `TRAWL=.ra.. RAMEN=rAm.. MARCH=MAr.. MANOR=MA.OR MAJOR=MA.OR` yields `MAYOR`
+* 1012: `DRAIN=....n NOVEL=n.... FUNNY=.u.N. SHUNT=S.UNt` *includes* `STUNG`

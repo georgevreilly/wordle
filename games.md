@@ -196,7 +196,7 @@ or an irregular past tense.
 * 792: `SCENT=s.E.T WREST=..EST` *includes* `QUEST`
 * 793: `CATER=ca.e. FECAL=.Eca. PEACH=.EACH` yields `BEACH`
 * 794: `SHOWN=S.... STINK=S.I.. SPIRE=SPI.E` yields `SPICE`
-* 795: `USAGE=....E GRIPE=.r..E CHORE=...rE REBBE=rE..E` includes `VERVE`
+* 795: `USAGE=....E GRIPE=.r..E CHORE=...rE REBBE=rE..E` *includes* `VERVE`
 * 796: `MASON=...o. OTHER=o...r ROCKY=rO..Y WORRY=WOR.Y` yields `WORDY`
 * 797: `JUDGE=....e CHEST=c.E.. WRECK=..Ec.` yields `OCEAN`
 * 798: `CHAFE=CH... CHIRP=CHir.` yields `CHOIR`
@@ -350,7 +350,7 @@ or an irregular past tense.
 * 946: `STOVE=.to.. TOUGH=tO..H WORTH=.ORTH` *includes* `NORTH`
 * 947: `PERIL=.e... SHOVE=....e MATEY=.ate. ENACT=e.a.t` yields `TWEAK`
 * 948: `AGENT=....t TOUCH=t.... STRIP=ST.i. STIFF=STI..` yields `STILL`
-* 949: `FIGHT=.i... PRIME=.ri.e` *includes `RELIC`
+* 949: `FIGHT=.i... PRIME=.ri.e` *includes* `RELIC`
 * 950: `DAILY=...l. LUNCH=l..C. CLOCK=.LOCK` *includes* `BLOCK`
 * 951: `UNTIE=..... BLAST=.La.. ALLOW=AL.O.` yields `ALOOF`
 * 952: `RADIO=.a... AMBLE=a...E STAKE=S.AKE` *includes* `SNAKE`

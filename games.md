@@ -417,3 +417,4 @@ or an irregular past tense.
 * 1013: `FRAME=..a.e ALIEN=a..e. SEDAN=Se.A.` *includes* `SPEAK`
 * 1014: `BASIC=.a... ALERT=aler.` *includes* `REALM`
 * 1015: `CRANK=cr... SCORE=.corE` yields `FORCE`
+* 1016: `MATCH=.At.. TAPER=TA... TALON=TA.O.` yields `TABOO`

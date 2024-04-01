@@ -418,3 +418,4 @@ or an irregular past tense.
 * 1014: `BASIC=.a... ALERT=aler.` *includes* `REALM`
 * 1015: `CRANK=cr... SCORE=.corE` yields `FORCE`
 * 1016: `MATCH=.At.. TAPER=TA... TALON=TA.O.` yields `TABOO`
+* 1017: `BUILD=....D GRAND=.R.ND TREND=.R.ND` yields `FROND`

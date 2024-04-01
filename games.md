@@ -419,3 +419,4 @@ or an irregular past tense.
 * 1015: `CRANK=cr... SCORE=.corE` yields `FORCE`
 * 1016: `MATCH=.At.. TAPER=TA... TALON=TA.O.` yields `TABOO`
 * 1017: `BUILD=....D GRAND=.R.ND TREND=.R.ND` yields `FROND`
+* 1018: `ATONE=....e CLERK=..er. FRIED=.r.e. REBUS=rE.Us` yields `SERUM`

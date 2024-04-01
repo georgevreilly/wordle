@@ -146,7 +146,7 @@ def find_disjoint_words3(anagrams: dict[str, list[str]]) -> list[list[str]]:
                 yield wordsets
             return
 
-        for cand_set, cand_word in available:
+        for cand_set, _cand_word in available:
             remaining = [av for av in available if not cand_set & av[0]]
             if attempt := search(
                 wordsets=wordsets + [cand_set],
@@ -167,10 +167,8 @@ def find_disjoint_words3(anagrams: dict[str, list[str]]) -> list[list[str]]:
             scores = [scrabble_score(w) for w in words]
             avg_score = sum(scores) // len(scores)
             score = to_base(avg_score, 36) + "".join(to_base(s, 36) for s in scores)
-            print(
-                score,
-                " ".join([anagrams[anagram_bitset[w]][0] for w in disjoint_words]),
-            )
+            words = ["/".join(anagrams[anagram_bitset[w]]) for w in disjoint_words]
+            print(score, " ".join(words))
     print(f"{count} calls to search")
     return results
 

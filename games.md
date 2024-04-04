@@ -421,3 +421,4 @@ or an irregular past tense.
 * 1017: `BUILD=....D GRAND=.R.ND TREND=.R.ND` yields `FROND`
 * 1018: `ATONE=....e CLERK=..er. FRIED=.r.e. REBUS=rE.Us` yields `SERUM`
 * 1019: `WRONG=..... CLIMB=.Li.. PLAID=PLAI.` yields `PLAIT`
+* 1020: `BLEAT=bL...` *includes* `CLIMB`

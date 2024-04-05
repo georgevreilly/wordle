@@ -422,3 +422,4 @@ or an irregular past tense.
 * 1018: `ATONE=....e CLERK=..er. FRIED=.r.e. REBUS=rE.Us` yields `SERUM`
 * 1019: `WRONG=..... CLIMB=.Li.. PLAID=PLAI.` yields `PLAIT`
 * 1020: `BLEAT=bL...` *includes* `CLIMB`
+* 1021: `DITCH=.it.. VOMIT=...iT` *includes* `WRIST`

@@ -423,3 +423,4 @@ or an irregular past tense.
 * 1019: `WRONG=..... CLIMB=.Li.. PLAID=PLAI.` yields `PLAIT`
 * 1020: `BLEAT=bL...` *includes* `CLIMB`
 * 1021: `DITCH=.it.. VOMIT=...iT` *includes* `WRIST`
+* 1022: `GROUT=..... SLAKE=..... CHIMP=chi.. WINCH=.INCH` yields `FINCH`

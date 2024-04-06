@@ -424,3 +424,4 @@ or an irregular past tense.
 * 1020: `BLEAT=bL...` *includes* `CLIMB`
 * 1021: `DITCH=.it.. VOMIT=...iT` *includes* `WRIST`
 * 1022: `GROUT=..... SLAKE=..... CHIMP=chi.. WINCH=.INCH` yields `FINCH`
+* 1023: `TRADE=..a.. WAGON=.a.o. AFOUL=a.o.l` *includes* `VOILA`

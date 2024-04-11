@@ -428,3 +428,4 @@ or an irregular past tense.
 * 1024: `ABODE=.b.de DEBUT=deb.. BLEED=B.EED` yields `BREED`
 * 1025: `MEDIA=ME... MERCY=MER..` yields `MERGE`
 * 1026: `SHRUG=.hr.. REACH=r...H` *includes* `BROTH`
+* 1027: `REIGN=.e... SHADE=s...E CLOSE=.loSE` yields `LOUSE`

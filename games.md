@@ -429,3 +429,4 @@ or an irregular past tense.
 * 1025: `MEDIA=ME... MERCY=MER..` yields `MERGE`
 * 1026: `SHRUG=.hr.. REACH=r...H` *includes* `BROTH`
 * 1027: `REIGN=.e... SHADE=s...E CLOSE=.loSE` yields `LOUSE`
+* 1028: `PRINT=..IN. BLINK=..IN. SHINE=.HIN.` *includes* `WHINY`

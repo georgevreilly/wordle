@@ -430,3 +430,4 @@ or an irregular past tense.
 * 1026: `SHRUG=.hr.. REACH=r...H` *includes* `BROTH`
 * 1027: `REIGN=.e... SHADE=s...E CLOSE=.loSE` yields `LOUSE`
 * 1028: `PRINT=..IN. BLINK=..IN. SHINE=.HIN.` *includes* `WHINY`
+* 1029: `WORLD=...l. LIGHT=l...t STALE=ST.le` yields `STEEL`

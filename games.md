@@ -432,3 +432,4 @@ or an irregular past tense.
 * 1028: `PRINT=..IN. BLINK=..IN. SHINE=.HIN.` *includes* `WHINY`
 * 1029: `WORLD=...l. LIGHT=l...t STALE=ST.le` yields `STEEL`
 * 1030: `MACRO=m.... FLUME=.L.M. SLIMY=.LIM.` yields `BLIMP`
+* 1031: `BRUSH=..U.. CLUMP=..U.P` yields `EQUIP`

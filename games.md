@@ -433,3 +433,4 @@ or an irregular past tense.
 * 1029: `WORLD=...l. LIGHT=l...t STALE=ST.le` yields `STEEL`
 * 1030: `MACRO=m.... FLUME=.L.M. SLIMY=.LIM.` yields `BLIMP`
 * 1031: `BRUSH=..U.. CLUMP=..U.P` yields `EQUIP`
+* 1032: `FOUND=...N. GLINT=...N. CRANK=..ANK` *includes* `SHANK`

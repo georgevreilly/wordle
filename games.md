@@ -434,3 +434,4 @@ or an irregular past tense.
 * 1030: `MACRO=m.... FLUME=.L.M. SLIMY=.LIM.` yields `BLIMP`
 * 1031: `BRUSH=..U.. CLUMP=..U.P` yields `EQUIP`
 * 1032: `FOUND=...N. GLINT=...N. CRANK=..ANK` *includes* `SHANK`
+* 1033: `COUNT=....t TAPER=T..e. THYME=Th..E` yields `TITHE`

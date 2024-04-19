@@ -435,4 +435,5 @@ or an irregular past tense.
 * 1031: `BRUSH=..U.. CLUMP=..U.P` yields `EQUIP`
 * 1032: `FOUND=...N. GLINT=...N. CRANK=..ANK` *includes* `SHANK`
 * 1033: `COUNT=....t TAPER=T..e. THYME=Th..E` yields `TITHE`
-* 1033: `DECAY=.eCa. PACER=.ACE.` yields `FACET`
+* 1034: `DECAY=.eCa. PACER=.ACE.` yields `FACET`
+* 1035: `WAGON=.A... BATCH=.A... FAIRY=.AIr.` yields `RAISE`

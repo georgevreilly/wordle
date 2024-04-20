@@ -437,3 +437,4 @@ or an irregular past tense.
 * 1033: `COUNT=....t TAPER=T..e. THYME=Th..E` yields `TITHE`
 * 1034: `DECAY=.eCa. PACER=.ACE.` yields `FACET`
 * 1035: `WAGON=.A... BATCH=.A... FAIRY=.AIr.` yields `RAISE`
+* 1036: `BOARD=....D FIELD=.i.lD LIPID=L..ID` yields `LUCID`

@@ -21,7 +21,7 @@ def parse_args() -> argparse.Namespace:
 
 
 # These answers to actual games were not in "answers.txt"
-EXCEPTIONAL_ANSWERS = {"GUANO", "SNAFU", "BALSA", "KAZOO"}
+EXCEPTIONAL_ANSWERS = {"GUANO", "SNAFU", "BALSA", "KAZOO", "LASER"}
 
 
 def check_scores(first_game: int) -> list:

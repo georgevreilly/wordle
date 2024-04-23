@@ -440,3 +440,4 @@ or an irregular past tense.
 * 1036: `BOARD=....D FIELD=.i.lD LIPID=L..ID` yields `LUCID`
 * 1037: `READY=....Y` *includes* `JOLLY`
 * 1038: `EARTH=eAr.. RAMEN=rA.E. CAPER=.A.ER WAGER=.A.ER BALER=.AlER` yields `LASER`
+* 1039: `CLOUD=..o.. OTHER=o..ER MOWER=.O.ER GONER=.O.ER POSER=.O.ER` *includes* `ROVER`

@@ -442,3 +442,4 @@ or an irregular past tense.
 * 1038: `EARTH=eAr.. RAMEN=rA.E. CAPER=.A.ER WAGER=.A.ER BALER=.AlER` yields `LASER`
 * 1039: `CLOUD=..o.. OTHER=o..ER MOWER=.O.ER GONER=.O.ER POSER=.O.ER` *includes* `ROVER`
 * 1040: `TRACK=tr... BLURT=...RT SPORT=..oRT` yields `OVERT`
+* 1041: `CAUSE=..... FLING=..in. WINDY=.in.. INBOX=IN.o.` yields `INTRO`

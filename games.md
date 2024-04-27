@@ -444,3 +444,4 @@ or an irregular past tense.
 * 1040: `TRACK=tr... BLURT=...RT SPORT=..oRT` yields `OVERT`
 * 1041: `CAUSE=..... FLING=..in. WINDY=.in.. INBOX=IN.o.` yields `INTRO`
 * 1042: `COURT=..... FLING=..i.. BIPED=.iP.D` yields `VAPID`
+* 1043: `CRATE=..a.e PLEAD=.LEA. GLEAN=GLEA.` yields `GLEAM`

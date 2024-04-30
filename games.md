@@ -447,3 +447,4 @@ or an irregular past tense.
 * 1043: `CRATE=..a.e PLEAD=.LEA. GLEAN=GLEA.` yields `GLEAM`
 * 1044: `ULTRA=u..r. HUMOR=.u..r` *includes* `PRUNE`
 * 1045: `LYING=..... CRUMB=CR... CRATE=CRAt.` yields `CRAFT`
+* 1046: `SHARD=...r. TUMOR=...or CROWN=.ROW. GROWL=.ROWL` yields `PROWL`

@@ -448,3 +448,4 @@ or an irregular past tense.
 * 1044: `ULTRA=u..r. HUMOR=.u..r` *includes* `PRUNE`
 * 1045: `LYING=..... CRUMB=CR... CRATE=CRAt.` yields `CRAFT`
 * 1046: `SHARD=...r. TUMOR=...or CROWN=.ROW. GROWL=.ROWL` yields `PROWL`
+* 1047: `SPARK=..AR. CHARM=..AR. GLARE=..AR.` *includes* `DIARY`

@@ -450,3 +450,4 @@ or an irregular past tense.
 * 1046: `SHARD=...r. TUMOR=...or CROWN=.ROW. GROWL=.ROWL` yields `PROWL`
 * 1047: `SPARK=..AR. CHARM=..AR. GLARE=..AR.` *includes* `DIARY`
 * 1048: `CLOUD=cL... PLACE=.L.CE` yields `SLICE`
+* 1049: `CRAVE=....e ENDOW=En.o.` yields `EBONY`

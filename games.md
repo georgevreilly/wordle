@@ -451,3 +451,4 @@ or an irregular past tense.
 * 1047: `SPARK=..AR. CHARM=..AR. GLARE=..AR.` *includes* `DIARY`
 * 1048: `CLOUD=cL... PLACE=.L.CE` yields `SLICE`
 * 1049: `CRAVE=....e ENDOW=En.o.` yields `EBONY`
+* 1050: `GOLEM=..Le. BELCH=.eL.. PULSE=.uL.E` yields `VALUE`

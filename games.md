@@ -454,3 +454,4 @@ or an irregular past tense.
 * 1050: `GOLEM=..Le. BELCH=.eL.. PULSE=.uL.E` yields `VALUE`
 * 1051: `PARTY=.a... ALIVE=al..e LEACH=lEac.` *includes* `DECAL`
 * 1052: `NAIVE=.a.VE CRAVE=..AVE` *includes* `SHAVE`
+* 1054: `BRIEF=..i.. MANIC=...i. DIVOT=.I.o.` *includes* `PIOUS`

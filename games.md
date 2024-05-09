@@ -455,3 +455,4 @@ or an irregular past tense.
 * 1051: `PARTY=.a... ALIVE=al..e LEACH=lEac.` *includes* `DECAL`
 * 1052: `NAIVE=.a.VE CRAVE=..AVE` *includes* `SHAVE`
 * 1054: `BRIEF=..i.. MANIC=...i. DIVOT=.I.o.` *includes* `PIOUS`
+* 1055: `INTER=...er BREAD=.re.. SURGE=..R.e MERRY=.ER.Y PERKY=.ERKY` yields `JERKY`

@@ -457,3 +457,4 @@ or an irregular past tense.
 * 1054: `BRIEF=..i.. MANIC=...i. DIVOT=.I.o.` *includes* `PIOUS`
 * 1055: `INTER=...er BREAD=.re.. SURGE=..R.e MERRY=.ER.Y PERKY=.ERKY` yields `JERKY`
 * 1056: `BLEAT=..ea. MAVEN=Ma.e.` *includes* `MEDIA`
+* 1057: `HEIST=..i.t TRAIN=T.ai.` yields `TIDAL`

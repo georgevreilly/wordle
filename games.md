@@ -458,3 +458,4 @@ or an irregular past tense.
 * 1055: `INTER=...er BREAD=.re.. SURGE=..R.e MERRY=.ER.Y PERKY=.ERKY` yields `JERKY`
 * 1056: `BLEAT=..ea. MAVEN=Ma.e.` *includes* `MEDIA`
 * 1057: `HEIST=..i.t TRAIN=T.ai.` yields `TIDAL`
+* 1058: `CHAFE=....e TRIED=tr.E. UTTER=u.TER` yields `OUTER`

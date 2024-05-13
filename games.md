@@ -459,3 +459,4 @@ or an irregular past tense.
 * 1056: `BLEAT=..ea. MAVEN=Ma.e.` *includes* `MEDIA`
 * 1057: `HEIST=..i.t TRAIN=T.ai.` yields `TIDAL`
 * 1058: `CHAFE=....e TRIED=tr.E. UTTER=u.TER` yields `OUTER`
+* 1059: `SOLVE=..... BRAIN=...IN UNPIN=u..IN` yields `CUMIN`

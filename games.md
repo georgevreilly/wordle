@@ -460,3 +460,4 @@ or an irregular past tense.
 * 1057: `HEIST=..i.t TRAIN=T.ai.` yields `TIDAL`
 * 1058: `CHAFE=....e TRIED=tr.E. UTTER=u.TER` yields `OUTER`
 * 1059: `SOLVE=..... BRAIN=...IN UNPIN=u..IN` yields `CUMIN`
+* 1060: `WEARY=..A.. PLAIN=..A.. COAST=..AS. QUASH=..AS.` yields `AMASS`

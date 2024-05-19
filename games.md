@@ -461,3 +461,8 @@ or an irregular past tense.
 * 1058: `CHAFE=....e TRIED=tr.E. UTTER=u.TER` yields `OUTER`
 * 1059: `SOLVE=..... BRAIN=...IN UNPIN=u..IN` yields `CUMIN`
 * 1060: `WEARY=..A.. PLAIN=..A.. COAST=..AS. QUASH=..AS.` yields `AMASS`
+* 1061: `ADULT=..... GROVE=..... WHISK=.hi..` *includes* `PINCH`
+* 1062: `PRIME=..... CLOUT=.l..t TALLY=talL.` *includes* `STALL`
+* 1063: `BEING=..... CLOUD=..ou. SOUTH=.out. TUMOR=TU.OR` yields `TUTOR`
+* 1064: `DEBUG=..b.. BLOAT=B.... BRINK=BRIN.` yields `BRINY`
+* 1065: `REALM=..... SHOUT=.h..t ITCHY=itch. PITCH=.ITCH DITCH=.ITCH` *includes* `HITCH`

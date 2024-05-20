@@ -466,3 +466,4 @@ or an irregular past tense.
 * 1063: `BEING=..... CLOUD=..ou. SOUTH=.out. TUMOR=TU.OR` yields `TUTOR`
 * 1064: `DEBUG=..b.. BLOAT=B.... BRINK=BRIN.` yields `BRINY`
 * 1065: `REALM=..... SHOUT=.h..t ITCHY=itch. PITCH=.ITCH DITCH=.ITCH` *includes* `HITCH`
+* 1066: `SLEPT=..e.. COVER=c..ER RACER=..CER` yields `NICER`

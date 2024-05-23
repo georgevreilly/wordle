@@ -467,3 +467,6 @@ or an irregular past tense.
 * 1064: `DEBUG=..b.. BLOAT=B.... BRINK=BRIN.` yields `BRINY`
 * 1065: `REALM=..... SHOUT=.h..t ITCHY=itch. PITCH=.ITCH DITCH=.ITCH` *includes* `HITCH`
 * 1066: `SLEPT=..e.. COVER=c..ER RACER=..CER` yields `NICER`
+* 1067: `MOURN=.o..n ALONE=..on. DONUT=DoN..` yields `DINGO`
+* 1068: `DEATH=.eAt. ENACT=E.A.T` yields `EXALT`
+* 1069: `OPIUM=..I.. CHIVE=.hI.. FAITH=..I.H` yields `SWISH`

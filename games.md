@@ -454,6 +454,7 @@ or an irregular past tense.
 * 1050: `GOLEM=..Le. BELCH=.eL.. PULSE=.uL.E` yields `VALUE`
 * 1051: `PARTY=.a... ALIVE=al..e LEACH=lEac.` *includes* `DECAL`
 * 1052: `NAIVE=.a.VE CRAVE=..AVE` *includes* `SHAVE`
+* 1053: `GRAVE=..... CLIMB=...m. MOUTH=M.uT.` yields `MUSTY`
 * 1054: `BRIEF=..i.. MANIC=...i. DIVOT=.I.o.` *includes* `PIOUS`
 * 1055: `INTER=...er BREAD=.re.. SURGE=..R.e MERRY=.ER.Y PERKY=.ERKY` yields `JERKY`
 * 1056: `BLEAT=..ea. MAVEN=Ma.e.` *includes* `MEDIA`

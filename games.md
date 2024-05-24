@@ -471,3 +471,4 @@ or an irregular past tense.
 * 1067: `MOURN=.o..n ALONE=..on. DONUT=DoN..` yields `DINGO`
 * 1068: `DEATH=.eAt. ENACT=E.A.T` yields `EXALT`
 * 1069: `OPIUM=..I.. CHIVE=.hI.. FAITH=..I.H` yields `SWISH`
+* 1070: `CHIEF=..Ie. SWINE=..I.E PRIZE=..I.E QUITE=..I.E` *includes* `GLIDE`

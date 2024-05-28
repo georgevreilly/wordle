@@ -475,3 +475,4 @@ or an irregular past tense.
 * 1071: `DRUNK=...n. NIGHT=nI..t MINTY=.Int.` yields `TITAN`
 * 1072: `DEBIT=.Eb.. BENCH=BE... BERRY=BE... BELOW=BEl..` *includes* `BEVEL`
 * 1073: `DOUGH=..... CRIME=.rI.e FLIER=..IER` yields `SKIER`
+* 1074: `SLIDE=s.i.. WHIST=..is. RISKY=.Is.. FICUS=.I.US` yields `MINUS`

@@ -476,3 +476,9 @@ or an irregular past tense.
 * 1072: `DEBIT=.Eb.. BENCH=BE... BERRY=BE... BELOW=BEl..` *includes* `BEVEL`
 * 1073: `DOUGH=..... CRIME=.rI.e FLIER=..IER` yields `SKIER`
 * 1074: `SLIDE=s.i.. WHIST=..is. RISKY=.Is.. FICUS=.I.US` yields `MINUS`
+* 1075: `NEIGH=..... SPLAY=.plA. PLEAT=Pl.A.` yields `PAPAL`
+* 1076: `HAVEN=..... CRUMB=..uM. TUMMY=.UMMY` *includes* `GUMMY`
+* 1077: `GUILT=..... CRAMP=C.A.. CHASE=CHAs.` yields `CHAOS`
+* 1078: `FEAST=..as. SALON=sA..N` yields `BASIN`
+* 1079: `SKATE=..A.. CLAIM=..A.. GRAPH=.RA.. BRAND=BRA..` yields `BRAVO`
+* 1080: `POLAR=...ar RAMEN=ra... CHART=..ARt` *includes* `STARK`

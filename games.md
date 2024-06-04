@@ -482,3 +482,4 @@ or an irregular past tense.
 * 1078: `FEAST=..as. SALON=sA..N` yields `BASIN`
 * 1079: `SKATE=..A.. CLAIM=..A.. GRAPH=.RA.. BRAND=BRA..` yields `BRAVO`
 * 1080: `POLAR=...ar RAMEN=ra... CHART=..ARt` *includes* `STARK`
+* 1081: `MANOR=m..Or BROOM=.ROOM` yields `GROOM`

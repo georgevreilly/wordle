@@ -483,3 +483,4 @@ or an irregular past tense.
 * 1079: `SKATE=..A.. CLAIM=..A.. GRAPH=.RA.. BRAND=BRA..` yields `BRAVO`
 * 1080: `POLAR=...ar RAMEN=ra... CHART=..ARt` *includes* `STARK`
 * 1081: `MANOR=m..Or BROOM=.ROOM` yields `GROOM`
+* 1082: `PANIC=.an.. GROAN=gRoAN` yields `ORGAN`

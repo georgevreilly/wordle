@@ -484,3 +484,4 @@ or an irregular past tense.
 * 1080: `POLAR=...ar RAMEN=ra... CHART=..ARt` *includes* `STARK`
 * 1081: `MANOR=m..Or BROOM=.ROOM` yields `GROOM`
 * 1082: `PANIC=.an.. GROAN=gRoAN` yields `ORGAN`
+* 1083: `GLARE=...re CREST=.re.t MITER=..tER TONER=t..ER` yields `ETHER`

@@ -485,3 +485,4 @@ or an irregular past tense.
 * 1081: `MANOR=m..Or BROOM=.ROOM` yields `GROOM`
 * 1082: `PANIC=.an.. GROAN=gRoAN` yields `ORGAN`
 * 1083: `GLARE=...re CREST=.re.t MITER=..tER TONER=t..ER` yields `ETHER`
+* 1084: `CHAIR=..... STOLE=..ole LOVED=lo.e. ELBOW=el.O.` *includes* `MELON`

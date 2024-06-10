@@ -488,3 +488,4 @@ or an irregular past tense.
 * 1084: `CHAIR=..... STOLE=..ole LOVED=lo.e. ELBOW=el.O.` *includes* `MELON`
 * 1085: `PRIDE=....E STOVE=....E BLAME=....E QUEUE=..e.E` *includes* `HENCE`
 * 1086: `BENCH=...c. CLIMB=C.... CROWN=CROW.` yields `CROWD`
+* 1087: `GUMBO=g.m.. MIDGE=M..G. MANGY=MANG.` yields `MANGA`

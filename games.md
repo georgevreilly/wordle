@@ -489,3 +489,4 @@ or an irregular past tense.
 * 1085: `PRIDE=....E STOVE=....E BLAME=....E QUEUE=..e.E` *includes* `HENCE`
 * 1086: `BENCH=...c. CLIMB=C.... CROWN=CROW.` yields `CROWD`
 * 1087: `GUMBO=g.m.. MIDGE=M..G. MANGY=MANG.` yields `MANGA`
+* 1088: `CRUSH=..Us. STUNK=S.UN. SLUNG=S.UNG` yields `SWUNG`

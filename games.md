@@ -490,3 +490,4 @@ or an irregular past tense.
 * 1086: `BENCH=...c. CLIMB=C.... CROWN=CROW.` yields `CROWD`
 * 1087: `GUMBO=g.m.. MIDGE=M..G. MANGY=MANG.` yields `MANGA`
 * 1088: `CRUSH=..Us. STUNK=S.UN. SLUNG=S.UNG` yields `SWUNG`
+* 1089: `OAKEN=...E. MITER=..TER` *includes* `DETER`

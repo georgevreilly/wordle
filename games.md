@@ -492,3 +492,4 @@ or an irregular past tense.
 * 1088: `CRUSH=..Us. STUNK=S.UN. SLUNG=S.UNG` yields `SWUNG`
 * 1089: `OAKEN=...E. MITER=..TER` *includes* `DETER`
 * 1090: `LOFTY=...t. TRUCE=t.... AMBIT=A...T ADAPT=A...T` yields `ANGST`
+* 1091: `TORCH=t.... SMITE=...t. ADULT=a.ULT` *includes* `VAULT`

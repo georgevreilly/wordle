@@ -494,3 +494,4 @@ or an irregular past tense.
 * 1090: `LOFTY=...t. TRUCE=t.... AMBIT=A...T ADAPT=A...T` yields `ANGST`
 * 1091: `TORCH=t.... SMITE=...t. ADULT=a.ULT` *includes* `VAULT`
 * 1092: `AUDIO=.ud.o CLOUD=..OUD` yields `PROUD`
+* 1093: `COVER=....r BRAIN=.R.in DRINK=dRIN.` yields `GRIND`

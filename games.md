@@ -495,3 +495,4 @@ or an irregular past tense.
 * 1091: `TORCH=t.... SMITE=...t. ADULT=a.ULT` *includes* `VAULT`
 * 1092: `AUDIO=.ud.o CLOUD=..OUD` yields `PROUD`
 * 1093: `COVER=....r BRAIN=.R.in DRINK=dRIN.` yields `GRIND`
+* 1094: `DUSTY=..... CRAVE=.R... BRINK=.RI.. FRILL=.RI..` *includes* `PRIOR`

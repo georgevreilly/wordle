@@ -496,3 +496,4 @@ or an irregular past tense.
 * 1092: `AUDIO=.ud.o CLOUD=..OUD` yields `PROUD`
 * 1093: `COVER=....r BRAIN=.R.in DRINK=dRIN.` yields `GRIND`
 * 1094: `DUSTY=..... CRAVE=.R... BRINK=.RI.. FRILL=.RI..` *includes* `PRIOR`
+* 1095: `SAINT=..... WORLD=.Or.. ROUGH=rO...` *includes* `COVER`

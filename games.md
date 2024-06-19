@@ -497,3 +497,4 @@ or an irregular past tense.
 * 1093: `COVER=....r BRAIN=.R.in DRINK=dRIN.` yields `GRIND`
 * 1094: `DUSTY=..... CRAVE=.R... BRINK=.RI.. FRILL=.RI..` *includes* `PRIOR`
 * 1095: `SAINT=..... WORLD=.Or.. ROUGH=rO...` *includes* `COVER`
+* 1096: `CHOIR=....r REALM=rE... BERRY=.ER..` *includes* `TERSE`

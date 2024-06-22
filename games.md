@@ -499,3 +499,4 @@ or an irregular past tense.
 * 1095: `SAINT=..... WORLD=.Or.. ROUGH=rO...` *includes* `COVER`
 * 1096: `CHOIR=....r REALM=rE... BERRY=.ER..` *includes* `TERSE`
 * 1097: `SHELF=S.E.. STEAK=StE.. SPENT=S.ENT` yields `SCENT`
+* 1098: `HERON=....n FLING=..IN. STINK=.tIN.` *includes* `PAINT`

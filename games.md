@@ -500,3 +500,4 @@ or an irregular past tense.
 * 1096: `CHOIR=....r REALM=rE... BERRY=.ER..` *includes* `TERSE`
 * 1097: `SHELF=S.E.. STEAK=StE.. SPENT=S.ENT` yields `SCENT`
 * 1098: `HERON=....n FLING=..IN. STINK=.tIN.` *includes* `PAINT`
+* 1099: `BULKY=..... GRIME=..I.e EVICT=E.ICT` yields `EDICT`

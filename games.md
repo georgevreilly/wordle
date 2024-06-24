@@ -502,3 +502,4 @@ or an irregular past tense.
 * 1098: `HERON=....n FLING=..IN. STINK=.tIN.` *includes* `PAINT`
 * 1099: `BULKY=..... GRIME=..I.e EVICT=E.ICT` yields `EDICT`
 * 1100: `BAKER=B..e. BELOW=Bel.. BIBLE=B..LE` yields `BUGLE`
+* 1101: `SPURN=..... CLOVE=.lo.. POLKA=.OL.. FOLLY=.OLLY` *includes* `DOLLY`

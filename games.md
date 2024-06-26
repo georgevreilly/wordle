@@ -503,3 +503,4 @@ or an irregular past tense.
 * 1099: `BULKY=..... GRIME=..I.e EVICT=E.ICT` yields `EDICT`
 * 1100: `BAKER=B..e. BELOW=Bel.. BIBLE=B..LE` yields `BUGLE`
 * 1101: `SPURN=..... CLOVE=.lo.. POLKA=.OL.. FOLLY=.OLLY` *includes* `DOLLY`
+* 1102: `ORGAN=or.a. VAPOR=vA.OR FAVOR=.AVOR` yields `SAVOR`

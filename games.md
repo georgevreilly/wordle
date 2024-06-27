@@ -505,3 +505,4 @@ or an irregular past tense.
 * 1101: `SPURN=..... CLOVE=.lo.. POLKA=.OL.. FOLLY=.OLLY` *includes* `DOLLY`
 * 1102: `ORGAN=or.a. VAPOR=vA.OR FAVOR=.AVOR` yields `SAVOR`
 * 1103: `VALUE=.a..e BEACH=.ea.. ANGER=aN.e. SNEAK=.NEAk` yields `KNEAD`
+* 1104: `ARGUE=.R..e FRESH=.Re.. TRIED=.R.Ed DRYER=dR.ER` yields `ORDER`

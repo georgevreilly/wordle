@@ -507,3 +507,4 @@ or an irregular past tense.
 * 1103: `VALUE=.a..e BEACH=.ea.. ANGER=aN.e. SNEAK=.NEAk` yields `KNEAD`
 * 1104: `ARGUE=.R..e FRESH=.Re.. TRIED=.R.Ed DRYER=dR.ER` yields `ORDER`
 * 1105: `CLEFT=..e.. SHADE=...dE DRIVE=DR.VE` yields `DROVE`
+* 1106: `MASON=.a... AFTER=a..er REACH=rEa..` yields `ZEBRA`

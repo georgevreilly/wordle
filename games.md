@@ -509,3 +509,4 @@ or an irregular past tense.
 * 1105: `CLEFT=..e.. SHADE=...dE DRIVE=DR.VE` yields `DROVE`
 * 1106: `MASON=.a... AFTER=a..er REACH=rEa..` yields `ZEBRA`
 * 1107: `PRIDE=...D. MOLDY=...DY` *includes* `BUDDY`
+* 1108: `SANDY=.a.d. DREAM=d.ea. ADOBE=AD..E` yields `ADAGE`

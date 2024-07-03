@@ -511,3 +511,4 @@ or an irregular past tense.
 * 1107: `PRIDE=...D. MOLDY=...DY` *includes* `BUDDY`
 * 1108: `SANDY=.a.d. DREAM=d.ea. ADOBE=AD..E` yields `ADAGE`
 * 1109: `THINK=..in. MANIC=.ani. DIVAN=.i.An` yields `INLAY`
+* 1110: `COURT=....t TABLE=T.... THINK=THI..` yields `THIGH`

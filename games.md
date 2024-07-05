@@ -513,3 +513,4 @@ or an irregular past tense.
 * 1109: `THINK=..in. MANIC=.ani. DIVAN=.i.An` yields `INLAY`
 * 1110: `COURT=....t TABLE=T.... THINK=THI..` yields `THIGH`
 * 1111: `YIELD=..e.d DEMON=DE... DEATH=DE.t.` *includes* `DEBUT`
+* 1112: `LABOR=....r WRING=.R... CRUST=CRUS.` yields `CRUSH`

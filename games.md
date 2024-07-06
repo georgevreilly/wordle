@@ -514,3 +514,4 @@ or an irregular past tense.
 * 1110: `COURT=....t TABLE=T.... THINK=THI..` yields `THIGH`
 * 1111: `YIELD=..e.d DEMON=DE... DEATH=DE.t.` *includes* `DEBUT`
 * 1112: `LABOR=....r WRING=.R... CRUST=CRUS.` yields `CRUSH`
+* 1113: `CREAM=c.... TOUCH=.o.c. SCOLD=SCO.. SCOOP=SCO..` yields `SCOFF`

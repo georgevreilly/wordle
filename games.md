@@ -515,3 +515,4 @@ or an irregular past tense.
 * 1111: `YIELD=..e.d DEMON=DE... DEATH=DE.t.` *includes* `DEBUT`
 * 1112: `LABOR=....r WRING=.R... CRUST=CRUS.` yields `CRUSH`
 * 1113: `CREAM=c.... TOUCH=.o.c. SCOLD=SCO.. SCOOP=SCO..` yields `SCOFF`
+* 1114: `LATCH=.A.c. CAIRN=CA..N CAPON=CA.ON` yields `CANON`

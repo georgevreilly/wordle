@@ -516,3 +516,4 @@ or an irregular past tense.
 * 1112: `LABOR=....r WRING=.R... CRUST=CRUS.` yields `CRUSH`
 * 1113: `CREAM=c.... TOUCH=.o.c. SCOLD=SCO.. SCOOP=SCO..` yields `SCOFF`
 * 1114: `LATCH=.A.c. CAIRN=CA..N CAPON=CA.ON` yields `CANON`
+* 1115: `CLAIM=..A.. SHAVE=SHA.E` *includes* `SHAPE`

@@ -518,3 +518,4 @@ or an irregular past tense.
 * 1114: `LATCH=.A.c. CAIRN=CA..N CAPON=CA.ON` yields `CANON`
 * 1115: `CLAIM=..A.. SHAVE=SHA.E` *includes* `SHAPE`
 * 1116: `MEDAL=.e.al ANKLE=a..lE LATHE=la..E` *includes* `BLARE`
+* 1117: `BLAST=..a.T CARET=.A..T HAUNT=.AUNT DAUNT=.AUNT VAUNT=.AUNT` *includes* `GAUNT`

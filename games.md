@@ -517,3 +517,4 @@ or an irregular past tense.
 * 1113: `CREAM=c.... TOUCH=.o.c. SCOLD=SCO.. SCOOP=SCO..` yields `SCOFF`
 * 1114: `LATCH=.A.c. CAIRN=CA..N CAPON=CA.ON` yields `CANON`
 * 1115: `CLAIM=..A.. SHAVE=SHA.E` *includes* `SHAPE`
+* 1116: `MEDAL=.e.al ANKLE=a..lE LATHE=la..E` *includes* `BLARE`

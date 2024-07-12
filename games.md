@@ -520,3 +520,4 @@ or an irregular past tense.
 * 1116: `MEDAL=.e.al ANKLE=a..lE LATHE=la..E` *includes* `BLARE`
 * 1117: `BLAST=..a.T CARET=.A..T HAUNT=.AUNT DAUNT=.AUNT VAUNT=.AUNT` *includes* `GAUNT`
 * 1118: `SHAPE=..a.e GLEAN=..ea. TAMER=.AME.` yields `CAMEO`
+* 1119: `CHAOS=..... GLINT=..i.. WIMPY=.I..Y FIERY=fI..Y` yields `JIFFY`

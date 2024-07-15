@@ -521,3 +521,4 @@ or an irregular past tense.
 * 1117: `BLAST=..a.T CARET=.A..T HAUNT=.AUNT DAUNT=.AUNT VAUNT=.AUNT` *includes* `GAUNT`
 * 1118: `SHAPE=..a.e GLEAN=..ea. TAMER=.AME.` yields `CAMEO`
 * 1119: `CHAOS=..... GLINT=..i.. WIMPY=.I..Y FIERY=fI..Y` yields `JIFFY`
+* 1120: `ALIEN=a..en` *includes* `ENACT`

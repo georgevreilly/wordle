@@ -522,3 +522,4 @@ or an irregular past tense.
 * 1118: `SHAPE=..a.e GLEAN=..ea. TAMER=.AME.` yields `CAMEO`
 * 1119: `CHAOS=..... GLINT=..i.. WIMPY=.I..Y FIERY=fI..Y` yields `JIFFY`
 * 1120: `ALIEN=a..en` *includes* `ENACT`
+* 1121: `BLACK=..... WHITE=..i.e DIVER=dIvE.` yields `VIDEO`

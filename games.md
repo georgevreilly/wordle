@@ -524,3 +524,4 @@ or an irregular past tense.
 * 1120: `ALIEN=a..en` *includes* `ENACT`
 * 1121: `BLACK=..... WHITE=..i.e DIVER=dIvE.` yields `VIDEO`
 * 1122: `SLOTH=S.O.. SWORE=SWO..` *includes* `SWOON`
+* 1123: `ARSON=...O. DIVOT=D..O.` yields `DECOY`

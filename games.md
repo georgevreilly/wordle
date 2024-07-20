@@ -527,3 +527,4 @@ or an irregular past tense.
 * 1123: `ARSON=...O. DIVOT=D..O.` yields `DECOY`
 * 1124: `RHINO=..I.. SLIMY=..I.. TWICE=t.I.E` yields `QUITE`
 * 1125: `FRESH=.re.. MITER=...er BEARD=.E.rd` yields `NERDY`
+* 1126: `BIRTH=..r.. DROVE=.r..e GAMER=...ER SUPER=...ER` *includes* `REFER`

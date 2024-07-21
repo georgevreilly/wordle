@@ -529,3 +529,4 @@ or an irregular past tense.
 * 1125: `FRESH=.re.. MITER=...er BEARD=.E.rd` yields `NERDY`
 * 1126: `BIRTH=..r.. DROVE=.r..e GAMER=...ER SUPER=...ER` *includes* `REFER`
 * 1127: `BREAK=...a. CHANT=.HA.T` *includes* `SHAFT`
+* 1128: `LIGHT=..... PRANK=p...K SPOOK=SP..K` yields `SPECK`

@@ -530,3 +530,4 @@ or an irregular past tense.
 * 1126: `BIRTH=..r.. DROVE=.r..e GAMER=...ER SUPER=...ER` *includes* `REFER`
 * 1127: `BREAK=...a. CHANT=.HA.T` *includes* `SHAFT`
 * 1128: `LIGHT=..... PRANK=p...K SPOOK=SP..K` yields `SPECK`
+* 1129: `AGENT=a.e.T DEALT=dea.T` yields `CADET`

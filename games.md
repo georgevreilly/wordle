@@ -532,3 +532,4 @@ or an irregular past tense.
 * 1128: `LIGHT=..... PRANK=p...K SPOOK=SP..K` yields `SPECK`
 * 1129: `AGENT=a.e.T DEALT=dea.T` yields `CADET`
 * 1130: `LEACH=..... WOUND=.o.N. STONY=..ON.` yields `PRONG`
+* 1131: `FLESH=F.e.. FIBER=F..er FORCE=FOR.E FORGE=FOR.E` yields `FORTE`

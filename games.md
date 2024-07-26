@@ -533,3 +533,5 @@ or an irregular past tense.
 * 1129: `AGENT=a.e.T DEALT=dea.T` yields `CADET`
 * 1130: `LEACH=..... WOUND=.o.N. STONY=..ON.` yields `PRONG`
 * 1131: `FLESH=F.e.. FIBER=F..er FORCE=FOR.E FORGE=FOR.E` yields `FORTE`
+* 1132: `GUARD=...r. CROWN=cro.. TORCH=.ORCH` yields `PORCH`
+* 1133: `UPSET=..s.. SLAIN=s.A.. BRASH=..ASH` yields `AWASH`

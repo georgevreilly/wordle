@@ -536,3 +536,4 @@ or an irregular past tense.
 * 1132: `GUARD=...r. CROWN=cro.. TORCH=.ORCH` yields `PORCH`
 * 1133: `UPSET=..s.. SLAIN=s.A.. BRASH=..ASH` yields `AWASH`
 * 1134: `MAYBE=....E STOLE=....E CHIVE=c.I.E PRICE=..ICE` yields `JUICE`
+* 1135: `CLEFT=c.... WINCH=...C. QUACK=...CK` yields `SMOCK`

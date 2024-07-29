@@ -537,3 +537,4 @@ or an irregular past tense.
 * 1133: `UPSET=..s.. SLAIN=s.A.. BRASH=..ASH` yields `AWASH`
 * 1134: `MAYBE=....E STOLE=....E CHIVE=c.I.E PRICE=..ICE` yields `JUICE`
 * 1135: `CLEFT=c.... WINCH=...C. QUACK=...CK` yields `SMOCK`
+* 1136: `DWELT=..e.. CRONE=.r..e FIBER=...ER PAGER=p..ER` *includes* `SUPER`

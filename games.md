@@ -538,3 +538,4 @@ or an irregular past tense.
 * 1134: `MAYBE=....E STOLE=....E CHIVE=c.I.E PRICE=..ICE` yields `JUICE`
 * 1135: `CLEFT=c.... WINCH=...C. QUACK=...CK` yields `SMOCK`
 * 1136: `DWELT=..e.. CRONE=.r..e FIBER=...ER PAGER=p..ER` *includes* `SUPER`
+* 1137: `STORM=...r. GRAPE=.ra.e CLEAR=.leAr` *includes* `FERAL`

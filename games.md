@@ -539,3 +539,4 @@ or an irregular past tense.
 * 1135: `CLEFT=c.... WINCH=...C. QUACK=...CK` yields `SMOCK`
 * 1136: `DWELT=..e.. CRONE=.r..e FIBER=...ER PAGER=p..ER` *includes* `SUPER`
 * 1137: `STORM=...r. GRAPE=.ra.e CLEAR=.leAr` *includes* `FERAL`
+* 1138: `ADMIT=..... CROWN=....n KNEEL=.nee. SENSE=.EN.E VENUE=.EN.E` yields `PENNE`

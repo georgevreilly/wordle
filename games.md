@@ -542,3 +542,4 @@ or an irregular past tense.
 * 1138: `ADMIT=..... CROWN=....n KNEEL=.nee. SENSE=.EN.E VENUE=.EN.E` yields `PENNE`
 * 1139: `WEIRD=..... CHAMP=CHA..` *includes* `CHALK`
 * 1140: `CRANK=..A.k` *includes* `FLAKE`
+* 1141: `GLAND=.lA.. SHALT=S.AL.` *includes* `SCALE`

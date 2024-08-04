@@ -543,3 +543,4 @@ or an irregular past tense.
 * 1139: `WEIRD=..... CHAMP=CHA..` *includes* `CHALK`
 * 1140: `CRANK=..A.k` *includes* `FLAKE`
 * 1141: `GLAND=.lA.. SHALT=S.AL.` *includes* `SCALE`
+* 1142: `BIGOT=...o. POLAR=.Ol.R LOVER=LO.ER LOSER=LO.ER LONER=LO.ER` yields `LOWER`

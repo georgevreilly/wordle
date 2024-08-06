@@ -545,3 +545,4 @@ or an irregular past tense.
 * 1141: `GLAND=.lA.. SHALT=S.AL.` *includes* `SCALE`
 * 1142: `BIGOT=...o. POLAR=.Ol.R LOVER=LO.ER LOSER=LO.ER LONER=LO.ER` yields `LOWER`
 * 1143: `PORCH=..... STAIN=s...n DENSE=.ensE` yields `ENSUE`
+* 1144: `MOIST=..i.. DINER=.in.. UNZIP=.N.I.` yields `ANVIL`

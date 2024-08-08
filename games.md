@@ -547,3 +547,4 @@ or an irregular past tense.
 * 1143: `PORCH=..... STAIN=s...n DENSE=.ensE` yields `ENSUE`
 * 1144: `MOIST=..i.. DINER=.in.. UNZIP=.N.I.` yields `ANVIL`
 * 1145: `LOFTY=..... GRAIN=..a.. ASKEW=a...W` yields `MACAW`
+* 1146: `GRIME=..... CLOWN=c.... STACK=S.aC.` yields `SAUCY`

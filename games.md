@@ -550,3 +550,4 @@ or an irregular past tense.
 * 1146: `GRIME=..... CLOWN=c.... STACK=S.aC.` yields `SAUCY`
 * 1147: `MOVIE=.o..E SHONE=..onE` *includes* `OUNCE`
 * 1148: `MOUTH=M.... MANIC=M..IC` *includes* `MEDIC`
+* 1149: `BATCH=...c. CLOVE=c.O.E` *includes* `SCONE`

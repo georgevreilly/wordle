@@ -553,3 +553,4 @@ or an irregular past tense.
 * 1149: `BATCH=...c. CLOVE=c.O.E` *includes* `SCONE`
 * 1150: `GLOAT=..... CHIME=..I.. DRINK=..I.k` *includes* `SKIFF`
 * 1151: `HAUNT=h..n. FINCH=.in.H` yields `NEIGH`
+* 1152: `CRYPT=.r... REALM=re... BIKER=...er WHERE=.H.RE` yields `SHORE`

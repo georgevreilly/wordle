@@ -556,3 +556,4 @@ or an irregular past tense.
 * 1152: `CRYPT=.r... REALM=re... BIKER=...er WHERE=.H.RE` yields `SHORE`
 * 1153: `GHOUL=..O.. STOVE=..O.. BROWN=.rO.N ADORN=A.ORN` yields `ACORN`
 * 1154: `PAGER=.a.er REACH=reAC.` *includes* `BRACE`
+* 1155: `CRANE=.r... VISOR=..sor ROUST=ro.st STROP=STro. STORK=STOR.` *includes* `STORM`

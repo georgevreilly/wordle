@@ -558,3 +558,4 @@ or an irregular past tense.
 * 1154: `PAGER=.a.er REACH=reAC.` *includes* `BRACE`
 * 1155: `CRANE=.r... VISOR=..sor ROUST=ro.st STROP=STro. STORK=STOR.` *includes* `STORM`
 * 1156: `HASTE=.A... PANIC=.AN.. MANLY=.ANlY` yields `LANKY`
+* 1157: `DRAIN=.r... BLURT=...rt VOTER=..TER` *includes* `METER`

@@ -560,3 +560,4 @@ or an irregular past tense.
 * 1156: `HASTE=.A... PANIC=.AN.. MANLY=.ANlY` yields `LANKY`
 * 1157: `DRAIN=.r... BLURT=...rt VOTER=..TER` *includes* `METER`
 * 1158: `CLERK=.le.. LEMON=lE... DEVIL=DE..l` *includes* `DELAY`
+* 1159: `THIEF=.h... ROUGH=..u.H` *includes* `MULCH`

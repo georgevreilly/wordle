@@ -561,3 +561,4 @@ or an irregular past tense.
 * 1157: `DRAIN=.r... BLURT=...rt VOTER=..TER` *includes* `METER`
 * 1158: `CLERK=.le.. LEMON=lE... DEVIL=DE..l` *includes* `DELAY`
 * 1159: `THIEF=.h... ROUGH=..u.H` *includes* `MULCH`
+* 1160: `RANDY=r.... GRIEF=.R.e. TROVE=tR..E` yields `BRUTE`

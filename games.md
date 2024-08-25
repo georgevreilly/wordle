@@ -564,3 +564,4 @@ or an irregular past tense.
 * 1160: `RANDY=r.... GRIEF=.R.e. TROVE=tR..E` yields `BRUTE`
 * 1161: `BLAME=.l..e DEVIL=.E..l WELCH=.ElCH` yields `LEECH`
 * 1162: `MORAL=....l LITHE=lIt.e` yields `FILET`
+* 1163: `SHAVE=S.A.E SLAKE=S.AkE` yields `SKATE`

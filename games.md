@@ -566,3 +566,4 @@ or an irregular past tense.
 * 1162: `MORAL=....l LITHE=lIt.e` yields `FILET`
 * 1163: `SHAVE=S.A.E SLAKE=S.AkE` yields `SKATE`
 * 1164: `SABER=Sa.e. SCALE=S.A.E STAGE=STA.E STATE=STA.E STAVE=STA.E` yields `STAKE`
+* 1165: `ANISE=.n... BLUNT=...n. HONOR=.on.r DROWN=.ROWN` *includes* `CROWN`

@@ -568,3 +568,4 @@ or an irregular past tense.
 * 1164: `SABER=Sa.e. SCALE=S.A.E STAGE=STA.E STATE=STA.E STAVE=STA.E` yields `STAKE`
 * 1165: `ANISE=.n... BLUNT=...n. HONOR=.on.r DROWN=.ROWN` *includes* `CROWN`
 * 1166: `CRATE=...tE STOLE=.t.lE` *includes* `LITHE`
+* 1167: `RELAY=..l.. LIGHT=l....` *includes* `FLUNK`

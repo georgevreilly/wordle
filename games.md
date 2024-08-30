@@ -569,3 +569,4 @@ or an irregular past tense.
 * 1165: `ANISE=.n... BLUNT=...n. HONOR=.on.r DROWN=.ROWN` *includes* `CROWN`
 * 1166: `CRATE=...tE STOLE=.t.lE` *includes* `LITHE`
 * 1167: `RELAY=..l.. LIGHT=l....` *includes* `FLUNK`
+* 1168: `PEARL=.eA.. SHAME=..A.E QUAKE=..AkE` yields `KNAVE`

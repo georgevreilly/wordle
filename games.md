@@ -570,3 +570,4 @@ or an irregular past tense.
 * 1166: `CRATE=...tE STOLE=.t.lE` *includes* `LITHE`
 * 1167: `RELAY=..l.. LIGHT=l....` *includes* `FLUNK`
 * 1168: `PEARL=.eA.. SHAME=..A.E QUAKE=..AkE` yields `KNAVE`
+* 1169: `FLASH=...s. SCOUT=S.OUT` *includes* `SPOUT`

@@ -572,3 +572,4 @@ or an irregular past tense.
 * 1168: `PEARL=.eA.. SHAME=..A.E QUAKE=..AkE` yields `KNAVE`
 * 1169: `FLASH=...s. SCOUT=S.OUT` *includes* `SPOUT`
 * 1170: `ADULT=..u.. BUNCH=.U..h HUMOR=hUm..` yields `MUSHY`
+* 1171: `NOVEL=...EL REBEL=...EL SPIEL=...EL` *includes* `CAMEL`

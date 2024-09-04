@@ -574,3 +574,4 @@ or an irregular past tense.
 * 1170: `ADULT=..u.. BUNCH=.U..h HUMOR=hUm..` yields `MUSHY`
 * 1171: `NOVEL=...EL REBEL=...EL SPIEL=...EL` *includes* `CAMEL`
 * 1172: `PERIL=...i. STING=.tIN. THINK=t.IN. JOINT=..INT` yields `FAINT`
+* 1173: `GRAIN=.r..N MOURN=...RN` yields `STERN`

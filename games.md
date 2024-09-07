@@ -576,3 +576,4 @@ or an irregular past tense.
 * 1172: `PERIL=...i. STING=.tIN. THINK=t.IN. JOINT=..INT` yields `FAINT`
 * 1173: `GRAIN=.r..N MOURN=...RN` yields `STERN`
 * 1174: `PANIC=..ni. INERT=ine.. WHINE=W.ine` yields `WIDEN`
+* 1175: `TRIAL=.r... SPURN=..urN` yields `RERUN`

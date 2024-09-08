@@ -578,3 +578,4 @@ or an irregular past tense.
 * 1174: `PANIC=..ni. INERT=ine.. WHINE=W.ine` yields `WIDEN`
 * 1175: `TRIAL=.r... SPURN=..urN` yields `RERUN`
 * 1176: `SCREW=..rEw WIPER=w..ER LOWER=.owER` yields `OWNER`
+* 1177: `SADLY=.ad.. DREAM=DR.a.` *includes* `DRAWN`

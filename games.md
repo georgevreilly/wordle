@@ -579,3 +579,4 @@ or an irregular past tense.
 * 1175: `TRIAL=.r... SPURN=..urN` yields `RERUN`
 * 1176: `SCREW=..rEw WIPER=w..ER LOWER=.owER` yields `OWNER`
 * 1177: `SADLY=.ad.. DREAM=DR.a.` *includes* `DRAWN`
+* 1178: `FERAL=.E... BENCH=bE... DEBUT=DEB.T` yields `DEBIT`

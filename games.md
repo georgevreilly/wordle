@@ -580,3 +580,4 @@ or an irregular past tense.
 * 1176: `SCREW=..rEw WIPER=w..ER LOWER=.owER` yields `OWNER`
 * 1177: `SADLY=.ad.. DREAM=DR.a.` *includes* `DRAWN`
 * 1178: `FERAL=.E... BENCH=bE... DEBUT=DEB.T` yields `DEBIT`
+* 1179: `TRUCK=.r... REPLY=RE.l. REVEL=RE.EL` yields `REBEL`

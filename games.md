@@ -581,3 +581,4 @@ or an irregular past tense.
 * 1177: `SADLY=.ad.. DREAM=DR.a.` *includes* `DRAWN`
 * 1178: `FERAL=.E... BENCH=bE... DEBUT=DEB.T` yields `DEBIT`
 * 1179: `TRUCK=.r... REPLY=RE.l. REVEL=RE.EL` yields `REBEL`
+* 1180: `CREAK=..ea. PETAL=.e.al LAXER=la.e. BLADE=.la.E ANGLE=A..LE` yields `AISLE`

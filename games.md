@@ -582,3 +582,4 @@ or an irregular past tense.
 * 1178: `FERAL=.E... BENCH=bE... DEBUT=DEB.T` yields `DEBIT`
 * 1179: `TRUCK=.r... REPLY=RE.l. REVEL=RE.EL` yields `REBEL`
 * 1180: `CREAK=..ea. PETAL=.e.al LAXER=la.e. BLADE=.la.E ANGLE=A..LE` yields `AISLE`
+* 1181: `LASER=.as.r SHARP=s.Ar. ROAST=r.AS. CRASS=.RASS` *includes* `BRASS`

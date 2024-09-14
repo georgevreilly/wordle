@@ -584,3 +584,4 @@ or an irregular past tense.
 * 1180: `CREAK=..ea. PETAL=.e.al LAXER=la.e. BLADE=.la.E ANGLE=A..LE` yields `AISLE`
 * 1181: `LASER=.as.r SHARP=s.Ar. ROAST=r.AS. CRASS=.RASS` *includes* `BRASS`
 * 1182: `STEAL=s..a. BRASH=.raSH MARSH=.ARSH` yields `HARSH`
+* 1183: `WORLD=.or.D CHORD=..OrD` *includes* `BROAD`

@@ -585,3 +585,4 @@ or an irregular past tense.
 * 1181: `LASER=.as.r SHARP=s.Ar. ROAST=r.AS. CRASS=.RASS` *includes* `BRASS`
 * 1182: `STEAL=s..a. BRASH=.raSH MARSH=.ARSH` yields `HARSH`
 * 1183: `WORLD=.or.D CHORD=..OrD` *includes* `BROAD`
+* 1184: `REIGN=RE... REACH=RE.c.` *includes* `RECUR`

@@ -586,3 +586,4 @@ or an irregular past tense.
 * 1182: `STEAL=s..a. BRASH=.raSH MARSH=.ARSH` yields `HARSH`
 * 1183: `WORLD=.or.D CHORD=..OrD` *includes* `BROAD`
 * 1184: `REIGN=RE... REACH=RE.c.` *includes* `RECUR`
+* 1185: `DELAY=.e..Y ENVOY=en.oY NOSEY=nO.EY MONEY=.ONEY` *includes* `HONEY`

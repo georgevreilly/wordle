@@ -21,7 +21,7 @@ def parse_args() -> argparse.Namespace:
 
 
 # These answers to actual games were not in "answers.txt"
-EXCEPTIONAL_ANSWERS = {"GUANO", "SNAFU", "BALSA", "KAZOO", "LASER", "PIOUS"}
+EXCEPTIONAL_ANSWERS = {"GUANO", "SNAFU", "BALSA", "KAZOO", "LASER", "PIOUS", "BEAUT"}
 
 
 def check_scores(first_game: int) -> list:
@@ -70,7 +70,9 @@ def check_scores(first_game: int) -> list:
         if "yields" == gr.verb:
             # I previously decided that any other possibilities would never be used
             assert len(eligible) >= 1, f"{gr.game_id} yields: {eligible}"
-            assert len(plausible) == 1, f"{gr.answer} == {plausible!r}"
+            assert (
+                len(plausible) == 1 or gr.answer in EXCEPTIONAL_ANSWERS
+            ), f"{gr.answer} == {plausible!r}"
         elif "includes" == gr.verb:
             assert len(eligible) > 1, f"{gr.game_id} includes: {eligible}"
             assert (

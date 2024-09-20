@@ -590,3 +590,4 @@ or an irregular past tense.
 * 1186: `HYPER=...e. CLEFT=..e.T DEBIT=.Eb.T BEGOT=BE..T BEAST=BEA.T` yields `BEAUT`
 * 1187: `MOUTH=..u.. UNDER=u.... QUAIL=.U..l LUCKY=lU..Y BULLY=.ULLY` *includes* `FULLY`
 * 1188: `LINER=...er RETCH=re... GRAPE=.R.pe` yields `PRESS`
+* 1189: `SCARY=S.... STOVE=S.O.E SLOPE=S.O.E SHONE=S.O.E` yields `SMOKE`

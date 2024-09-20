@@ -589,3 +589,4 @@ or an irregular past tense.
 * 1185: `DELAY=.e..Y ENVOY=en.oY NOSEY=nO.EY MONEY=.ONEY` *includes* `HONEY`
 * 1186: `HYPER=...e. CLEFT=..e.T DEBIT=.Eb.T BEGOT=BE..T BEAST=BEA.T` yields `BEAUT`
 * 1187: `MOUTH=..u.. UNDER=u.... QUAIL=.U..l LUCKY=lU..Y BULLY=.ULLY` *includes* `FULLY`
+* 1188: `LINER=...er RETCH=re... GRAPE=.R.pe` yields `PRESS`

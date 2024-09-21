@@ -591,3 +591,4 @@ or an irregular past tense.
 * 1187: `MOUTH=..u.. UNDER=u.... QUAIL=.U..l LUCKY=lU..Y BULLY=.ULLY` *includes* `FULLY`
 * 1188: `LINER=...er RETCH=re... GRAPE=.R.pe` yields `PRESS`
 * 1189: `SCARY=S.... STOVE=S.O.E SLOPE=S.O.E SHONE=S.O.E` yields `SMOKE`
+* 1190: `BONUS=..n.s SANER=S.nE. SHEEN=S.eEN` includes `SEVEN`

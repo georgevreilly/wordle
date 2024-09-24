@@ -594,3 +594,4 @@ or an irregular past tense.
 * 1190: `BONUS=..n.s SANER=S.nE. SHEEN=S.eEN` includes `SEVEN`
 * 1191: `BARGE=.a..e CLEAN=c.ea.` *includes* `TEACH`
 * 1192: `MONTH=m..t. TIMER=t.me.` *includes* `STEAM`
+* 1193: `SPEND=...nd DINKY=d.N.Y` *includes* `HANDY`

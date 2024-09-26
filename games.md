@@ -595,3 +595,4 @@ or an irregular past tense.
 * 1191: `BARGE=.a..e CLEAN=c.ea.` *includes* `TEACH`
 * 1192: `MONTH=m..t. TIMER=t.me.` *includes* `STEAM`
 * 1193: `SPEND=...nd DINKY=d.N.Y` *includes* `HANDY`
+* 1194: `SPEND=..... FLOUR=..o.r` *includes* `TORCH`

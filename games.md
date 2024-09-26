@@ -596,3 +596,4 @@ or an irregular past tense.
 * 1192: `MONTH=m..t. TIMER=t.me.` *includes* `STEAM`
 * 1193: `SPEND=...nd DINKY=d.N.Y` *includes* `HANDY`
 * 1194: `SPEND=..... FLOUR=..o.r` *includes* `TORCH`
+* 1195: `COULD=..... STAIN=.tA.n GRANT=..ANt` yields `THANK`

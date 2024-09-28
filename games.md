@@ -598,3 +598,4 @@ or an irregular past tense.
 * 1194: `SPEND=..... FLOUR=..o.r` *includes* `TORCH`
 * 1195: `COULD=..... STAIN=.tA.n GRANT=..ANt` yields `THANK`
 * 1196: `PANIC=.A.i. WAIVE=.AI.. DAILY=.AI.. FAIRY=FAI..` yields `FAITH`
+* 1197: `SIGHT=.i... PANIC=.anI.` *includes* `BRAIN`

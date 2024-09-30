@@ -600,3 +600,4 @@ or an irregular past tense.
 * 1196: `PANIC=.A.i. WAIVE=.AI.. DAILY=.AI.. FAIRY=FAI..` yields `FAITH`
 * 1197: `SIGHT=.i... PANIC=.anI.` *includes* `BRAIN`
 * 1198: `POINT=..i.. FRAIL=.r.i. DIVER=dI.ER CIDER=.IDER WIDER=.IDER` yields `RIDER`
+* 1199: `BRUSH=..u.. UNTIL=u...l` *includes* `CLOUD`

@@ -602,3 +602,4 @@ or an irregular past tense.
 * 1198: `POINT=..i.. FRAIL=.r.i. DIVER=dI.ER CIDER=.IDER WIDER=.IDER` yields `RIDER`
 * 1199: `BRUSH=..u.. UNTIL=u...l` *includes* `CLOUD`
 * 1200: `SHORT=..o.. WOULD=.O..d DOING=dO...` *includes* `MODEM`
+* 1201: `STORY=S.... SLINK=Sl... SCALE=S..Le SHELF=SHEL.` yields `SHELL`

@@ -603,3 +603,4 @@ or an irregular past tense.
 * 1199: `BRUSH=..u.. UNTIL=u...l` *includes* `CLOUD`
 * 1200: `SHORT=..o.. WOULD=.O..d DOING=dO...` *includes* `MODEM`
 * 1201: `STORY=S.... SLINK=Sl... SCALE=S..Le SHELF=SHEL.` yields `SHELL`
+* 1202: `ALIEN=a...N GROAN=g.oaN` yields `WAGON`

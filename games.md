@@ -605,3 +605,4 @@ or an irregular past tense.
 * 1201: `STORY=S.... SLINK=Sl... SCALE=S..Le SHELF=SHEL.` yields `SHELL`
 * 1202: `ALIEN=a...N GROAN=g.oaN` yields `WAGON`
 * 1203: `LYRIC=l..i. BLIND=.li.. FILTH=.Ilt. VITAL=.IT.l` yields `TITLE`
+* 1204: `DEATH=.e... MOVER=M..ER MIXER=MI.ER MISER=MI.ER` yields `MINER`

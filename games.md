@@ -606,3 +606,4 @@ or an irregular past tense.
 * 1202: `ALIEN=a...N GROAN=g.oaN` yields `WAGON`
 * 1203: `LYRIC=l..i. BLIND=.li.. FILTH=.Ilt. VITAL=.IT.l` yields `TITLE`
 * 1204: `DEATH=.e... MOVER=M..ER MIXER=MI.ER MISER=MI.ER` yields `MINER`
+* 1205: `THEIR=..e.R LOVER=L..ER LASER=LA.ER` *includes* `LAGER`

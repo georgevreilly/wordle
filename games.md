@@ -607,3 +607,4 @@ or an irregular past tense.
 * 1203: `LYRIC=l..i. BLIND=.li.. FILTH=.Ilt. VITAL=.IT.l` yields `TITLE`
 * 1204: `DEATH=.e... MOVER=M..ER MIXER=MI.ER MISER=MI.ER` yields `MINER`
 * 1205: `THEIR=..e.R LOVER=L..ER LASER=LA.ER` *includes* `LAGER`
+* 1206: `SILKY=..l.. LEACH=l.... FLOUT=FLOU.` yields `FLOUR`

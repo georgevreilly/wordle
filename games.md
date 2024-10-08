@@ -608,3 +608,4 @@ or an irregular past tense.
 * 1204: `DEATH=.e... MOVER=M..ER MIXER=MI.ER MISER=MI.ER` yields `MINER`
 * 1205: `THEIR=..e.R LOVER=L..ER LASER=LA.ER` *includes* `LAGER`
 * 1206: `SILKY=..l.. LEACH=l.... FLOUT=FLOU.` yields `FLOUR`
+* 1207: `MOUND=.O.N. CORNY=.O.N. GOING=.OIN.` *includes* `JOINT`

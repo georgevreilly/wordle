@@ -610,3 +610,4 @@ or an irregular past tense.
 * 1206: `SILKY=..l.. LEACH=l.... FLOUT=FLOU.` yields `FLOUR`
 * 1207: `MOUND=.O.N. CORNY=.O.N. GOING=.OIN.` *includes* `JOINT`
 * 1208: `BATHE=..... CLING=..... FRUMP=...M.` yields `MOMMY`
+* 1209: `MARSH=.AR..` *includes* `CARVE`

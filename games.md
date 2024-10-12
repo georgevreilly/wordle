@@ -612,3 +612,4 @@ or an irregular past tense.
 * 1208: `BATHE=..... CLING=..... FRUMP=...M.` yields `MOMMY`
 * 1209: `MARSH=.AR..` *includes* `CARVE`
 * 1210: `MISTY=..STY DUSTY=.USTY RUSTY=.USTY` *includes* `GUSTY`
+* 1211: `GAUNT=.a.nt TAWNY=ta.n.` *includes* `STAIN`

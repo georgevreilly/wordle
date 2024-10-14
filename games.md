@@ -614,3 +614,4 @@ or an irregular past tense.
 * 1210: `MISTY=..STY DUSTY=.USTY RUSTY=.USTY` *includes* `GUSTY`
 * 1211: `GAUNT=.a.nt TAWNY=ta.n.` *includes* `STAIN`
 * 1212: `SLEPT=..ep. PERCH=Per.. PAVER=P..er PRIME=PR..E PRUDE=PR..E` *includes* `PRONE`
+* 1213: `SCORE=..... BLANK=..a.. VAPID=.A... TATTY=tA...` yields `GAMUT`

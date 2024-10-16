@@ -616,3 +616,4 @@ or an irregular past tense.
 * 1212: `SLEPT=..ep. PERCH=Per.. PAVER=P..er PRIME=PR..E PRUDE=PR..E` *includes* `PRONE`
 * 1213: `SCORE=..... BLANK=..a.. VAPID=.A... TATTY=tA...` yields `GAMUT`
 * 1214: `USAGE=....e ENDOW=e..o. MOVER=.O.ER FOYER=.O.ER BOXER=.O.ER` *includes* `CORER`
+* 1215: `PANIC=.an..` *includes* `GRANT`

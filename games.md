@@ -617,3 +617,4 @@ or an irregular past tense.
 * 1213: `SCORE=..... BLANK=..a.. VAPID=.A... TATTY=tA...` yields `GAMUT`
 * 1214: `USAGE=....e ENDOW=e..o. MOVER=.O.ER FOYER=.O.ER BOXER=.O.ER` *includes* `CORER`
 * 1215: `PANIC=.an..` *includes* `GRANT`
+* 1216: `CLING=.l... MORAL=...al LATHE=lA.hE` yields `HALVE`

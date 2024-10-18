@@ -618,3 +618,4 @@ or an irregular past tense.
 * 1214: `USAGE=....e ENDOW=e..o. MOVER=.O.ER FOYER=.O.ER BOXER=.O.ER` *includes* `CORER`
 * 1215: `PANIC=.an..` *includes* `GRANT`
 * 1216: `CLING=.l... MORAL=...al LATHE=lA.hE` yields `HALVE`
+* 1217: `SPURT=S...T SLANT=S..NT SKINT=S.INT` yields `STINT`

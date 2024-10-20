@@ -620,3 +620,4 @@ or an irregular past tense.
 * 1216: `CLING=.l... MORAL=...al LATHE=lA.hE` yields `HALVE`
 * 1217: `SPURT=S...T SLANT=S..NT SKINT=S.INT` yields `STINT`
 * 1218: `VIDEO=.I.E. MINER=.I.ER WIPER=.I.ER BIKER=bI.ER` yields `FIBER`
+* 1219: `CURVE=c...e ENACT=e..c. DECOY=DeC.Y` yields `DICEY`

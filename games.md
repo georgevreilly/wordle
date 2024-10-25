@@ -624,3 +624,4 @@ or an irregular past tense.
 * 1220: `WATCH=..... SPINE=SP.n.` *includes* `SPOON`
 * 1221: `THING=tH... SHAFT=SH..T` *includes* `SHOUT`
 * 1222: `DEVIL=..... CROAK=..O.. SHOWN=..O.. BOOTY=.OO.Y` yields `GOOFY`
+* 1223: `ROUSE=.O.S. HOIST=.O.S. MOSSY=.OSSY` yields `BOSSY`

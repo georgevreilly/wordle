@@ -626,3 +626,4 @@ or an irregular past tense.
 * 1222: `DEVIL=..... CROAK=..O.. SHOWN=..O.. BOOTY=.OO.Y` yields `GOOFY`
 * 1223: `ROUSE=.O.S. HOIST=.O.S. MOSSY=.OSSY` yields `BOSSY`
 * 1224: `WATER=w...r DROWN=.ROWN CROWN=.ROWN BROWN=.ROWN GROWN=.ROWN` yields `FROWN`
+* 1225: `SLOTH=..... GRAIN=.Ra.. CREAM=.REA. BREAD=.REA.` *includes* `WREAK`

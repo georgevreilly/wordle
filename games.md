@@ -628,3 +628,4 @@ or an irregular past tense.
 * 1224: `WATER=w...r DROWN=.ROWN CROWN=.ROWN BROWN=.ROWN GROWN=.ROWN` yields `FROWN`
 * 1225: `SLOTH=..... GRAIN=.Ra.. CREAM=.REA. BREAD=.REA.` *includes* `WREAK`
 * 1226: `POACH=..a.. ALBUM=a.... CANDY=.ANDY` *includes* `SANDY`
+* 1227: `TWICE=.w... WOUND=w...d DRAWL=d.aw.` yields `BAWDY`

@@ -630,3 +630,4 @@ or an irregular past tense.
 * 1226: `POACH=..a.. ALBUM=a.... CANDY=.ANDY` *includes* `SANDY`
 * 1227: `TWICE=.w... WOUND=w...d DRAWL=d.aw.` yields `BAWDY`
 * 1228: `UNDER=un... BLUNT=..unt` *includes* `TUNIC`
+* 1229: `FORCE=....e WIDEN=...E. SHEET=s.eE.` yields `EASEL`

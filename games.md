@@ -631,3 +631,4 @@ or an irregular past tense.
 * 1227: `TWICE=.w... WOUND=w...d DRAWL=d.aw.` yields `BAWDY`
 * 1228: `UNDER=un... BLUNT=..unt` *includes* `TUNIC`
 * 1229: `FORCE=....e WIDEN=...E. SHEET=s.eE.` yields `EASEL`
+* 1230: `FLOCK=..... GRIPE=.rI.e` yields `WEIRD`

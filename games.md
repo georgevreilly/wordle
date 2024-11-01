@@ -632,3 +632,4 @@ or an irregular past tense.
 * 1228: `UNDER=un... BLUNT=..unt` *includes* `TUNIC`
 * 1229: `FORCE=....e WIDEN=...E. SHEET=s.eE.` yields `EASEL`
 * 1230: `FLOCK=..... GRIPE=.rI.e` yields `WEIRD`
+* 1231: `LAYER=..... STINK=Sti.. SHIFT=Shi.t SIGHT=SI.ht` yields `SIXTH`

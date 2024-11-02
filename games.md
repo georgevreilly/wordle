@@ -633,3 +633,4 @@ or an irregular past tense.
 * 1229: `FORCE=....e WIDEN=...E. SHEET=s.eE.` yields `EASEL`
 * 1230: `FLOCK=..... GRIPE=.rI.e` yields `WEIRD`
 * 1231: `LAYER=..... STINK=Sti.. SHIFT=Shi.t SIGHT=SI.ht` yields `SIXTH`
+* 1232: `GLINT=...n. KNAVE=.N... SNOWY=SNO..` yields `SNOOP`

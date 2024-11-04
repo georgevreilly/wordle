@@ -635,3 +635,4 @@ or an irregular past tense.
 * 1231: `LAYER=..... STINK=Sti.. SHIFT=Shi.t SIGHT=SI.ht` yields `SIXTH`
 * 1232: `GLINT=...n. KNAVE=.N... SNOWY=SNO..` yields `SNOOP`
 * 1233: `BEACH=BeA.. BRAVE=B.A.E BLADE=BLA.E BLAME=BLA.E` yields `BLAZE`
+* 1234: `OTHER=..... CLAIM=.l.i. SILLY=.Il.y` yields `VINYL`

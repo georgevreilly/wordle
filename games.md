@@ -637,3 +637,4 @@ or an irregular past tense.
 * 1233: `BEACH=BeA.. BRAVE=B.A.E BLADE=BLA.E BLAME=BLA.E` yields `BLAZE`
 * 1234: `OTHER=..... CLAIM=.l.i. SILLY=.Il.y` yields `VINYL`
 * 1235: `VOTER=.oTE. OFTEN=O.TE.` yields `OCTET`
+* 1236: `WOUND=..U.. CLUMP=.lU..` *includes* `TRULY`

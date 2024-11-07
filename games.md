@@ -638,3 +638,4 @@ or an irregular past tense.
 * 1234: `OTHER=..... CLAIM=.l.i. SILLY=.Il.y` yields `VINYL`
 * 1235: `VOTER=.oTE. OFTEN=O.TE.` yields `OCTET`
 * 1236: `WOUND=..U.. CLUMP=.lU..` *includes* `TRULY`
+* 1237: `GRIEF=...e. SOLVE=...ve HAVEN=..ven` yields `EVENT`

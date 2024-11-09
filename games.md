@@ -640,3 +640,4 @@ or an irregular past tense.
 * 1236: `WOUND=..U.. CLUMP=.lU..` *includes* `TRULY`
 * 1237: `GRIEF=...e. SOLVE=...ve HAVEN=..ven` yields `EVENT`
 * 1238: `SMOKE=....e DEALT=dEA.. HEARD=.EArd` yields `READY`
+* 1239: `HEIST=.e.s. SPACE=S...e SLEEK=SlE.. SMELL=S.ELL` yields `SWELL`

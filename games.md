@@ -641,3 +641,4 @@ or an irregular past tense.
 * 1237: `GRIEF=...e. SOLVE=...ve HAVEN=..ven` yields `EVENT`
 * 1238: `SMOKE=....e DEALT=dEA.. HEARD=.EArd` yields `READY`
 * 1239: `HEIST=.e.s. SPACE=S...e SLEEK=SlE.. SMELL=S.ELL` yields `SWELL`
+* 1240: `VENOM=.eN.. TUNER=..NER LINER=.iNER` yields `INNER`

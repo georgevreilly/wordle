@@ -30,6 +30,7 @@ EXCEPTIONAL_ANSWERS = {
     "PIOUS",
     "BEAUT",
     "MOMMY",
+    "PRIMP",
 }
 
 

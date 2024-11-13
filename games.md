@@ -643,3 +643,4 @@ or an irregular past tense.
 * 1239: `HEIST=.e.s. SPACE=S...e SLEEK=SlE.. SMELL=S.ELL` yields `SWELL`
 * 1240: `VENOM=.eN.. TUNER=..NER LINER=.iNER` yields `INNER`
 * 1241: `CRIES=c.i.s SONIC=So.IC` yields `STOIC`
+* 1242: `PANIC=..n.. NORTH=no... MELON=..loN BLOWN=.LOWN` yields `FLOWN`

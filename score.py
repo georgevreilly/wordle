@@ -31,6 +31,7 @@ EXCEPTIONAL_ANSWERS = {
     "BEAUT",
     "MOMMY",
     "PRIMP",
+    "UVULA",
 }
 
 

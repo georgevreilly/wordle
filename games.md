@@ -645,3 +645,4 @@ or an irregular past tense.
 * 1241: `CRIES=c.i.s SONIC=So.IC` yields `STOIC`
 * 1242: `PANIC=..n.. NORTH=no... MELON=..loN BLOWN=.LOWN` yields `FLOWN`
 * 1243: `BARGE=..r.. ROUND=r.... CRIMP=.RIMP` yields `PRIMP`
+* 1244: `BLAST=.la.. LAUGH=laU.. ADULT=a.UL.` yields `UVULA`

@@ -647,3 +647,4 @@ or an irregular past tense.
 * 1243: `BARGE=..r.. ROUND=r.... CRIMP=.RIMP` yields `PRIMP`
 * 1244: `BLAST=.la.. LAUGH=laU.. ADULT=a.UL.` yields `UVULA`
 * 1245: `BREAK=...ak KNACK=k.ac.` *includes* `TACKY`
+* 1246: `COURT=.o.r. GROVE=.rov. VALOR=V..OR` yields `VISOR`

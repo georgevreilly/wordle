@@ -648,3 +648,4 @@ or an irregular past tense.
 * 1244: `BLAST=.la.. LAUGH=laU.. ADULT=a.UL.` yields `UVULA`
 * 1245: `BREAK=...ak KNACK=k.ac.` *includes* `TACKY`
 * 1246: `COURT=.o.r. GROVE=.rov. VALOR=V..OR` yields `VISOR`
+* 1247: `TOWEL=T...l` *includes* `TALLY`

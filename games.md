@@ -650,3 +650,4 @@ or an irregular past tense.
 * 1246: `COURT=.o.r. GROVE=.rov. VALOR=V..OR` yields `VISOR`
 * 1247: `TOWEL=T...l` *includes* `TALLY`
 * 1248: `MICRO=.i.r. GRIEF=.Ri.f` *includes* `FRAIL`
+* 1249: `CLASH=..... WRITE=..I.. DOING=.OING` yields `GOING`

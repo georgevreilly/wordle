@@ -651,3 +651,4 @@ or an irregular past tense.
 * 1247: `TOWEL=T...l` *includes* `TALLY`
 * 1248: `MICRO=.i.r. GRIEF=.Ri.f` *includes* `FRAIL`
 * 1249: `CLASH=..... WRITE=..I.. DOING=.OING` yields `GOING`
+* 1250: `AFTER=...e. ELBOW=e.... SHINE=.hinE` *includes* `NICHE`

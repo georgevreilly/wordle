@@ -653,3 +653,4 @@ or an irregular past tense.
 * 1249: `CLASH=..... WRITE=..I.. DOING=.OING` yields `GOING`
 * 1250: `AFTER=...e. ELBOW=e.... SHINE=.hinE` *includes* `NICHE`
 * 1251: `PRINT=p.IN.` *includes* `SPINE`
+* 1252: `HINGE=....e CREST=.re.. REALM=rEAl.` yields `PEARL`

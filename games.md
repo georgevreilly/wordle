@@ -655,3 +655,4 @@ or an irregular past tense.
 * 1251: `PRINT=p.IN.` *includes* `SPINE`
 * 1252: `HINGE=....e CREST=.re.. REALM=rEAl.` yields `PEARL`
 * 1253: `EVICT=e.... GLOBE=.l..e LEARN=lE... JEWEL=JE..l` yields `JELLY`
+* 1254: `STRAW=st..w WASTE=w.st.` yields `TWIST`

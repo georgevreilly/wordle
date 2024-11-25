@@ -656,3 +656,4 @@ or an irregular past tense.
 * 1252: `HINGE=....e CREST=.re.. REALM=rEAl.` yields `PEARL`
 * 1253: `EVICT=e.... GLOBE=.l..e LEARN=lE... JEWEL=JE..l` yields `JELLY`
 * 1254: `STRAW=st..w WASTE=w.st.` yields `TWIST`
+* 1255: `ADEPT=..... SLING=...n. CROWN=.ROWN FROWN=.ROWN` yields `BROWN`

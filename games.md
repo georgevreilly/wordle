@@ -657,3 +657,4 @@ or an irregular past tense.
 * 1253: `EVICT=e.... GLOBE=.l..e LEARN=lE... JEWEL=JE..l` yields `JELLY`
 * 1254: `STRAW=st..w WASTE=w.st.` yields `TWIST`
 * 1255: `ADEPT=..... SLING=...n. CROWN=.ROWN FROWN=.ROWN` yields `BROWN`
+* 1256: `MUSIC=...ic PICKY=.Ic.. WINCE=WI.C.` yields `WITCH`

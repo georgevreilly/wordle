@@ -659,3 +659,4 @@ or an irregular past tense.
 * 1255: `ADEPT=..... SLING=...n. CROWN=.ROWN FROWN=.ROWN` yields `BROWN`
 * 1256: `MUSIC=...ic PICKY=.Ic.. WINCE=WI.C.` yields `WITCH`
 * 1257: `WOULD=...l. LIGHT=l.g.. GLASS=gLAs.` yields `SLANG`
+* 1258: `VIDEO=....o BONUS=.o... CLOTH=C.O.h` yields `CHOCK`

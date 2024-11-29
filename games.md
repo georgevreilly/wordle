@@ -660,3 +660,4 @@ or an irregular past tense.
 * 1256: `MUSIC=...ic PICKY=.Ic.. WINCE=WI.C.` yields `WITCH`
 * 1257: `WOULD=...l. LIGHT=l.g.. GLASS=gLAs.` yields `SLANG`
 * 1258: `VIDEO=....o BONUS=.o... CLOTH=C.O.h` yields `CHOCK`
+* 1259: `THANK=.h... BELCH=....h HUMOR=H..o.` *includes* `HIPPO`

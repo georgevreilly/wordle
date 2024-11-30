@@ -661,3 +661,4 @@ or an irregular past tense.
 * 1257: `WOULD=...l. LIGHT=l.g.. GLASS=gLAs.` yields `SLANG`
 * 1258: `VIDEO=....o BONUS=.o... CLOTH=C.O.h` yields `CHOCK`
 * 1259: `THANK=.h... BELCH=....h HUMOR=H..o.` *includes* `HIPPO`
+* 1260: `MERIT=m.... SMOCK=.mo.. NOMAD=.Omad` yields `DOGMA`

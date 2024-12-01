@@ -662,3 +662,4 @@ or an irregular past tense.
 * 1258: `VIDEO=....o BONUS=.o... CLOTH=C.O.h` yields `CHOCK`
 * 1259: `THANK=.h... BELCH=....h HUMOR=H..o.` *includes* `HIPPO`
 * 1260: `MERIT=m.... SMOCK=.mo.. NOMAD=.Omad` yields `DOGMA`
+* 1261: `SETUP=.e.u. CURSE=.u..E FLUKE=..U.E EXUDE=..U.E` *includes* `MAUVE`

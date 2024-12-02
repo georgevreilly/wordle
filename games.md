@@ -663,3 +663,4 @@ or an irregular past tense.
 * 1259: `THANK=.h... BELCH=....h HUMOR=H..o.` *includes* `HIPPO`
 * 1260: `MERIT=m.... SMOCK=.mo.. NOMAD=.Omad` yields `DOGMA`
 * 1261: `SETUP=.e.u. CURSE=.u..E FLUKE=..U.E EXUDE=..U.E` *includes* `MAUVE`
+* 1262: `VOTER=...e. CHIDE=..I.E SPIKE=..I.E MAIZE=..I.E` *includes* `GUILE`

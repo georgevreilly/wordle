@@ -665,3 +665,4 @@ or an irregular past tense.
 * 1261: `SETUP=.e.u. CURSE=.u..E FLUKE=..U.E EXUDE=..U.E` *includes* `MAUVE`
 * 1262: `VOTER=...e. CHIDE=..I.E SPIKE=..I.E MAIZE=..I.E` *includes* `GUILE`
 * 1263: `FIGHT=...h. HOUND=h.... CHAMP=.HA.. SHAVE=SHA.. SHARK=SHA.k` yields `SHAKY`
+* 1264: `FORCE=..rc. CRIMP=CR..p` yields `CRYPT`

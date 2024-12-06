@@ -667,3 +667,4 @@ or an irregular past tense.
 * 1263: `FIGHT=...h. HOUND=h.... CHAMP=.HA.. SHAVE=SHA.. SHARK=SHA.k` yields `SHAKY`
 * 1264: `FORCE=..rc. CRIMP=CR..p` yields `CRYPT`
 * 1265: `COULD=.o..d VIDEO=..Deo DODGE=.oD.e` yields `ENDOW`
+* 1266: `DOUBT=.o... CLOAK=..O.. FROWN=..O..` *includes* `SHOVE`

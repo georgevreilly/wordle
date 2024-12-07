@@ -668,3 +668,4 @@ or an irregular past tense.
 * 1264: `FORCE=..rc. CRIMP=CR..p` yields `CRYPT`
 * 1265: `COULD=.o..d VIDEO=..Deo DODGE=.oD.e` yields `ENDOW`
 * 1266: `DOUBT=.o... CLOAK=..O.. FROWN=..O..` *includes* `SHOVE`
+* 1267: `KNIFE=..i.. STAIR=...i. WIDOW=.I...` *includes* `HILLY`

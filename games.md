@@ -670,3 +670,4 @@ or an irregular past tense.
 * 1266: `DOUBT=.o... CLOAK=..O.. FROWN=..O..` *includes* `SHOVE`
 * 1267: `KNIFE=..i.. STAIR=...i. WIDOW=.I...` *includes* `HILLY`
 * 1268: `AGENT=a.EN.` yields `HYENA`
+* 1269: `CREPT=..... BUSHY=.u... WOUND=..UN.` *includes* `FLUNG`

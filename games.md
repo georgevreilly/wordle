@@ -671,3 +671,4 @@ or an irregular past tense.
 * 1267: `KNIFE=..i.. STAIR=...i. WIDOW=.I...` *includes* `HILLY`
 * 1268: `AGENT=a.EN.` yields `HYENA`
 * 1269: `CREPT=..... BUSHY=.u... WOUND=..UN.` *includes* `FLUNG`
+* 1270: `FROTH=..ot. TOWEL=to... DIVOT=.i.ot` *includes* `PATIO`

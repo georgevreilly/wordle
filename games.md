@@ -675,3 +675,4 @@ or an irregular past tense.
 * 1271: `CAUSE=..U.. WOULD=..Ul. LAUGH=l.U.. BLUNT=bLU..` yields `PLUMB`
 * 1272: `WREST=..... CLOAK=..... PINKY=.in.y DYING=.YING` yields `VYING`
 * 1273: `HORSE=.Or.e LOVER=.O.ER FOYER=.O.ER POKER=.O.ER TOWER=.O.ER` *includes* `BOXER`
+* 1274: `ABUSE=..... CLOUT=.lO..` *includes* `DROOL`

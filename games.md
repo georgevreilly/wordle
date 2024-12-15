@@ -676,3 +676,4 @@ or an irregular past tense.
 * 1272: `WREST=..... CLOAK=..... PINKY=.in.y DYING=.YING` yields `VYING`
 * 1273: `HORSE=.Or.e LOVER=.O.ER FOYER=.O.ER POKER=.O.ER TOWER=.O.ER` *includes* `BOXER`
 * 1274: `ABUSE=..... CLOUT=.lO..` *includes* `DROOL`
+* 1275: `BLOCK=....k KNAVE=kn...` *includes* `FUNKY`

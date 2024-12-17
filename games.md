@@ -678,3 +678,4 @@ or an irregular past tense.
 * 1274: `ABUSE=..... CLOUT=.lO..` *includes* `DROOL`
 * 1275: `BLOCK=....k KNAVE=kn...` *includes* `FUNKY`
 * 1276: `CHURN=..... GLOAT=..oaT` *includes* `BOAST`
+* 1277: `MIGHT=..... CLOVE=clO..` *includes* `SCOWL`

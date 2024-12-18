@@ -679,3 +679,4 @@ or an irregular past tense.
 * 1275: `BLOCK=....k KNAVE=kn...` *includes* `FUNKY`
 * 1276: `CHURN=..... GLOAT=..oaT` *includes* `BOAST`
 * 1277: `MIGHT=..... CLOVE=clO..` *includes* `SCOWL`
+* 1278: `LOGIC=..... BRASH=....h THINK=th...` yields `HEFTY`

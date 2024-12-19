@@ -680,3 +680,4 @@ or an irregular past tense.
 * 1276: `CHURN=..... GLOAT=..oaT` *includes* `BOAST`
 * 1277: `MIGHT=..... CLOVE=clO..` *includes* `SCOWL`
 * 1278: `LOGIC=..... BRASH=....h THINK=th...` yields `HEFTY`
+* 1279: `SALTY=Sa.tY` yields `STRAY`

@@ -681,3 +681,4 @@ or an irregular past tense.
 * 1277: `MIGHT=..... CLOVE=clO..` *includes* `SCOWL`
 * 1278: `LOGIC=..... BRASH=....h THINK=th...` yields `HEFTY`
 * 1279: `SALTY=Sa.tY` yields `STRAY`
+* 1280: `PRISM=...S. CLASH=.LASH` *includes* `FLASH`

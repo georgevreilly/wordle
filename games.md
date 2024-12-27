@@ -686,3 +686,4 @@ or an irregular past tense.
 * 1282: `TREAD=.R.a. FRANK=.RAn. GRAIN=.RA.N` *includes* `BRAWN`
 * 1283: `DAIRY=.A... LANCE=.An.. BATON=.A..n HAUNT=.AUN.` *includes* `SAUNA`
 * 1284: `BREAD=..ea. NAVEL=.A.el LATHE=lA..E MAPLE=.A.LE` yields `EAGLE`
+* 1285: `OLIVE=....E FRAME=.rA.E STARE=S.ARE PUNCH=....h` yields `SHARE`

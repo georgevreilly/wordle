@@ -685,3 +685,4 @@ or an irregular past tense.
 * 1281: `BONUS=B.... BLAZE=BLA.E BLAME=BLA.E` *includes* `BLADE`
 * 1282: `TREAD=.R.a. FRANK=.RAn. GRAIN=.RA.N` *includes* `BRAWN`
 * 1283: `DAIRY=.A... LANCE=.An.. BATON=.A..n HAUNT=.AUN.` *includes* `SAUNA`
+* 1284: `BREAD=..ea. NAVEL=.A.el LATHE=lA..E MAPLE=.A.LE` yields `EAGLE`

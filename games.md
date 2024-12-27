@@ -688,3 +688,4 @@ or an irregular past tense.
 * 1284: `BREAD=..ea. NAVEL=.A.el LATHE=lA..E MAPLE=.A.LE` yields `EAGLE`
 * 1285: `OLIVE=....E FRAME=.rA.E STARE=S.ARE PUNCH=....h` yields `SHARE`
 * 1286: `PROVE=..... CLOUT=..... GNASH=..a.. MAWKY=.a...` yields `AFFIX`
+* 1287: `SURLY=..r.. CRAMP=.RA.. GRAVE=GRA.. GRAFT=GRA.. GRAND=GRAn.` yields `GRAIN`

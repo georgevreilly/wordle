@@ -689,3 +689,4 @@ or an irregular past tense.
 * 1285: `OLIVE=....E FRAME=.rA.E STARE=S.ARE PUNCH=....h` yields `SHARE`
 * 1286: `PROVE=..... CLOUT=..... GNASH=..a.. MAWKY=.a...` yields `AFFIX`
 * 1287: `SURLY=..r.. CRAMP=.RA.. GRAVE=GRA.. GRAFT=GRA.. GRAND=GRAn.` yields `GRAIN`
+* 1288: `WHOLE=....e MEDIC=.Ed.c DECAY=DEC.Y` yields `DECRY`

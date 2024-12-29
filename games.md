@@ -690,3 +690,4 @@ or an irregular past tense.
 * 1286: `PROVE=..... CLOUT=..... GNASH=..a.. MAWKY=.a...` yields `AFFIX`
 * 1287: `SURLY=..r.. CRAMP=.RA.. GRAVE=GRA.. GRAFT=GRA.. GRAND=GRAn.` yields `GRAIN`
 * 1288: `WHOLE=....e MEDIC=.Ed.c DECAY=DEC.Y` yields `DECRY`
+* 1289: `ENTRY=..... CLOUD=..o.. BANJO=bA..O` yields `MAMBO`

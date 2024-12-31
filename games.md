@@ -692,3 +692,4 @@ or an irregular past tense.
 * 1288: `WHOLE=....e MEDIC=.Ed.c DECAY=DEC.Y` yields `DECRY`
 * 1289: `ENTRY=..... CLOUD=..o.. BANJO=bA..O` yields `MAMBO`
 * 1290: `SADLY=Sa... STAIN=STA.. STARK=STAR. START=STAR.` yields `STARE`
+* 1291: `CLOUD=.l.U. MOGUL=m..Ul` yields `LEMUR`

@@ -694,3 +694,4 @@ or an irregular past tense.
 * 1290: `SADLY=Sa... STAIN=STA.. STARK=STAR. START=STAR.` yields `STARE`
 * 1291: `CLOUD=.l.U. MOGUL=m..Ul` yields `LEMUR`
 * 1292: `COVEN=..ven VENAL=vEn..` yields `NERVE`
+* 1293: `BONUS=.o..s STORE=s.O.E CLOSE=C.OSE` yields `CHOSE`

@@ -696,3 +696,4 @@ or an irregular past tense.
 * 1292: `COVEN=..ven VENAL=vEn..` yields `NERVE`
 * 1293: `BONUS=.o..s STORE=s.O.E CLOSE=C.OSE` yields `CHOSE`
 * 1294: `COUGH=C...h CHIVE=CH..e CHEAT=CHEA.` yields `CHEAP`
+* 1295: `PLANE=.la.e` *includes* `RELAX`

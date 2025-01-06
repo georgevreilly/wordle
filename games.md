@@ -698,3 +698,4 @@ or an irregular past tense.
 * 1294: `COUGH=C...h CHIVE=CH..e CHEAT=CHEA.` yields `CHEAP`
 * 1295: `PLANE=.la.e` *includes* `RELAX`
 * 1296: `FELON=.e... STAVE=....e DEMUR=.e..R` *includes* `CYBER`
+* 1297: `SHIFT=S.i.. SOLID=S..I. SEPIA=S.pI.` yields `SPRIG`

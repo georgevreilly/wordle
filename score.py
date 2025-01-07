@@ -32,6 +32,7 @@ EXCEPTIONAL_ANSWERS = {
     "MOMMY",
     "PRIMP",
     "UVULA",
+    "ATLAS"
 }
 
 
@@ -77,7 +78,7 @@ def check_scores(first_game: int) -> list:
         plausible = {p for p in eligible if p in answers}
         assert gr.answer in eligible, f"{eligible=}"
         if gr.answer not in EXCEPTIONAL_ANSWERS:
-            assert gr.answer in answers, f"{gr.game_id}: {gr.answer} in known answers"
+            assert gr.answer in answers, f"{gr.game_id}: {gr.answer} not in known answers"
         if "yields" == gr.verb:
             # I previously decided that any other possibilities would never be used
             assert len(eligible) >= 1, f"{gr.game_id} yields: {eligible}"

@@ -700,3 +700,4 @@ or an irregular past tense.
 * 1296: `FELON=.e... STAVE=....e DEMUR=.e..R` *includes* `CYBER`
 * 1297: `SHIFT=S.i.. SOLID=S..I. SEPIA=S.pI.` yields `SPRIG`
 * 1298: `AFTER=A.t.. ABOUT=A...t ATTIC=AT...` yields `ATLAS`
+* 1299: `MOUNT=....T BLAST=..A.T CRAFT=.RAFT` *includes* `DRAFT`

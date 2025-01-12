@@ -704,3 +704,4 @@ or an irregular past tense.
 * 1300: `CLOTH=..... GRIPE=.r..e DEMUR=.e..R` *includes* `WAFER`
 * 1301: `WITCH=w..c. CROWN=CR.W.` yields `CRAWL`
 * 1302: `MODEL=..d.. DAIRY=D.i.Y DITTY=DI..Y DIZZY=DI..Y` yields `DINGY`
+* 1303: `DRONE=..o.. BOGUS=.O... VOMIT=.O..t POOCH=.O... FOLLY=.Ol..` yields `TOTAL`

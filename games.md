@@ -703,3 +703,4 @@ or an irregular past tense.
 * 1299: `MOUNT=....T BLAST=..A.T CRAFT=.RAFT` *includes* `DRAFT`
 * 1300: `CLOTH=..... GRIPE=.r..e DEMUR=.e..R` *includes* `WAFER`
 * 1301: `WITCH=w..c. CROWN=CR.W.` yields `CRAWL`
+* 1302: `MODEL=..d.. DAIRY=D.i.Y DITTY=DI..Y DIZZY=DI..Y` yields `DINGY`

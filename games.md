@@ -708,3 +708,4 @@ or an irregular past tense.
 * 1304: `GLOBE=.LO.. SLOTH=.LO.. FLOOR=.LO.. CLOWN=CLO.. CLOCK=CLO.K` yields `CLOAK`
 * 1305: `BERTH=..... DINKY=..N.Y MANLY=.AN.Y CANNY=cAN.Y` yields `FANCY`
 * 1306: `LURCH=...C. WINCE=..nC. KNOCK=KN.CK` yields `KNACK`
+* 1307: `FLAIR=FL.i. FLICK=FLI..` *includes* `FLINT`

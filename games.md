@@ -709,3 +709,4 @@ or an irregular past tense.
 * 1305: `BERTH=..... DINKY=..N.Y MANLY=.AN.Y CANNY=cAN.Y` yields `FANCY`
 * 1306: `LURCH=...C. WINCE=..nC. KNOCK=KN.CK` yields `KNACK`
 * 1307: `FLAIR=FL.i. FLICK=FLI..` *includes* `FLINT`
+* 1308: `REIGN=re... CATER=...er DROVE=.RO.E BLINK=.....` *includes* `PROSE`

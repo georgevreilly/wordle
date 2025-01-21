@@ -32,7 +32,8 @@ EXCEPTIONAL_ANSWERS = {
     "MOMMY",
     "PRIMP",
     "UVULA",
-    "ATLAS"
+    "ATLAS",
+    "SQUID",
 }
 
 

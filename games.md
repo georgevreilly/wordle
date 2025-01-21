@@ -712,3 +712,4 @@ or an irregular past tense.
 * 1308: `REIGN=re... CATER=...er DROVE=.RO.E BLINK=.....` *includes* `PROSE`
 * 1309: `VIRAL=.I..l LIGHT=lI... MILKY=.IL.Y` *includes* `SILLY`
 * 1310: `WRONG=wro.. OWNER=ow.ER TOWER=.OWER POWER=.OWER BERMS=.er..` *includes* `ROWER`
+* 1311: `CHEAT=..... BLIND=..i.D OVOID=...ID RIGID=...ID` yields `SQUID`

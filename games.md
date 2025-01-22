@@ -714,3 +714,4 @@ or an irregular past tense.
 * 1310: `WRONG=wro.. OWNER=ow.ER TOWER=.OWER POWER=.OWER BERMS=.er..` *includes* `ROWER`
 * 1311: `CHEAT=..... BLIND=..i.D OVOID=...ID RIGID=...ID` yields `SQUID`
 * 1312: `NUDGE=n..g. BRING=..ING CLING=c.ING ACING=.CING` yields `ICING`
+* 1313: `CLASH=c.A.H PEACH=.EACH` *includes* `REACH`

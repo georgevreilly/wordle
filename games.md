@@ -716,3 +716,4 @@ or an irregular past tense.
 * 1312: `NUDGE=n..g. BRING=..ING CLING=c.ING ACING=.CING` yields `ICING`
 * 1313: `CLASH=c.A.H PEACH=.EACH` *includes* `REACH`
 * 1314: `COAST=..... GRIPE=.r.pe HYPER=..PER` *includes* `UPPER`
+* 1315: `TAKEN=...e. SHOVE=....E PRIDE=pR..E` yields `CREPE`

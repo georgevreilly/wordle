@@ -717,3 +717,4 @@ or an irregular past tense.
 * 1313: `CLASH=c.A.H PEACH=.EACH` *includes* `REACH`
 * 1314: `COAST=..... GRIPE=.r.pe HYPER=..PER` *includes* `UPPER`
 * 1315: `TAKEN=...e. SHOVE=....E PRIDE=pR..E` yields `CREPE`
+* 1316: `CHEAT=C.... CLINK=C.I.. CHIRP=C.IrP` *includes* `CRISP`

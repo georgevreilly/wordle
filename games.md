@@ -721,3 +721,4 @@ or an irregular past tense.
 * 1317: `CHOIR=..... STANK=S..N. SPEND=S..N. SLUNG=S.uN.` yields `SUNNY`
 * 1318: `ALIEN=....n SNOUT=Sn.uT` *includes* `SHUNT`
 * 1319: `GUILD=..... BREAK=.re.. OTHER=...ER NEVER=.EVER SEVER=.EVER` yields `FEVER`
+* 1320: `CHAOS=..... UNIFY=U.... UTTER=U..ER UNDER=U.DER` yields `UDDER`

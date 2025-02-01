@@ -724,3 +724,4 @@ or an irregular past tense.
 * 1320: `CHAOS=..... UNIFY=U.... UTTER=U..ER UNDER=U.DER` yields `UDDER`
 * 1321: `PLANE=.la.E SHALE=s.alE` yields `FALSE`
 * 1322: `BLAME=..A.. GRAFT=..A.T CHANT=..A.T` *includes* `TOAST`
+* 1323: `SHADY=..... CLOUT=....T MERIT=.eriT` *includes* `RIVET`

@@ -725,3 +725,4 @@ or an irregular past tense.
 * 1321: `PLANE=.la.E SHALE=s.alE` yields `FALSE`
 * 1322: `BLAME=..A.. GRAFT=..A.T CHANT=..A.T` *includes* `TOAST`
 * 1323: `SHADY=..... CLOUT=....T MERIT=.eriT` *includes* `RIVET`
+* 1324: `WHILE=.H..E THOSE=.HO.E` *includes* `CHORE`

@@ -727,3 +727,4 @@ or an irregular past tense.
 * 1323: `SHADY=..... CLOUT=....T MERIT=.eriT` *includes* `RIVET`
 * 1324: `WHILE=.H..E THOSE=.HO.E` *includes* `CHORE`
 * 1325: `ACTOR=....r DRIVE=.r.vE` *includes* `REVUE`
+* 1326: `BARON=...o. OUGHT=o..ht THOSE=ThO..` yields `TOOTH`

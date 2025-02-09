@@ -732,3 +732,4 @@ or an irregular past tense.
 * 1328: `CRIME=..i.. STAIN=...I. FLUID=.luI.` yields `PUPIL`
 * 1329: `YACHT=.a.ht TRASH=t.AsH` yields `SWATH`
 * 1330: `SNARL=S.... SCOPE=S..pe SPIED=Sp.E. SHEEP=S.EEP` *includes* `STEEP`
+* 1331: `ARSON=..son SNOUT=snoU.` yields `BONUS`

@@ -735,3 +735,4 @@ or an irregular past tense.
 * 1331: `ARSON=..son SNOUT=snoU.` yields `BONUS`
 * 1332: `DECAL=d.... UNDID=..d.. MOODY=.OODY WOODY=.OODY` yields `GOODY`
 * 1333: `FELON=.e.o. OTHER=o..er GROVE=.rO.E ADORE=..ORE SPORE=S.ORE` *includes* `SCORE`
+* 1334: `DRAIN=draI.` *includes* `RAPID`

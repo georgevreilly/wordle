@@ -34,6 +34,7 @@ EXCEPTIONAL_ANSWERS = {
     "UVULA",
     "ATLAS",
     "SQUID",
+    "RUMBA",
 }
 
 

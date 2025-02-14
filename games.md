@@ -737,3 +737,4 @@ or an irregular past tense.
 * 1333: `FELON=.e.o. OTHER=o..er GROVE=.rO.E ADORE=..ORE SPORE=S.ORE` *includes* `SCORE`
 * 1334: `DRAIN=draI.` *includes* `RAPID`
 * 1335: `STUDY=..u.. GROUP=.r.u. CURVE=.Ur.. QUILL=.U...` yields `RUMBA`
+* 1336: `FAVOR=..... STILE=.ti.. UNDID=..di.` *includes* `DITTY`

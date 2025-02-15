@@ -738,3 +738,4 @@ or an irregular past tense.
 * 1334: `DRAIN=draI.` *includes* `RAPID`
 * 1335: `STUDY=..u.. GROUP=.r.u. CURVE=.Ur.. QUILL=.U...` yields `RUMBA`
 * 1336: `FAVOR=..... STILE=.ti.. UNDID=..di.` *includes* `DITTY`
+* 1337: `ITCHY=..c.. BRACE=.R.c. CROWD=CRO.. CROUP=CRO..` *includes* `CROOK`

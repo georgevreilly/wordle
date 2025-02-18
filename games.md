@@ -740,4 +740,5 @@ or an irregular past tense.
 * 1336: `FAVOR=..... STILE=.ti.. UNDID=..di.` *includes* `DITTY`
 * 1337: `ITCHY=..c.. BRACE=.R.c. CROWD=CRO.. CROUP=CRO..` *includes* `CROOK`
 * 1338: `ULTRA=u...a AMUSE=a.usE` yields `SUAVE`
-* 1338: `CHIRP=..ir. RIVET=ri..t INTRO=i.tr. TRAIN=TRAI.` yields `TRAIL`
+* 1339: `CHIRP=..ir. RIVET=ri..t INTRO=i.tr. TRAIN=TRAI.` yields `TRAIL`
+* 1340: `FRAUD=....d DEMON=de..n SNIDE=.NidE` yields `INDIE`

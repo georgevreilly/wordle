@@ -35,6 +35,7 @@ EXCEPTIONAL_ANSWERS = {
     "ATLAS",
     "SQUID",
     "RUMBA",
+    "INDIE",
 }
 
 

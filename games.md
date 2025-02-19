@@ -742,3 +742,4 @@ or an irregular past tense.
 * 1338: `ULTRA=u...a AMUSE=a.usE` yields `SUAVE`
 * 1339: `CHIRP=..ir. RIVET=ri..t INTRO=i.tr. TRAIN=TRAI.` yields `TRAIL`
 * 1340: `FRAUD=....d DEMON=de..n SNIDE=.NidE` yields `INDIE`
+* 1341: `PEARS=..a.. BATON=.A... CAVIL=.A..l LAUGH=lA... DALLY=dA.LY` yields `MADLY`

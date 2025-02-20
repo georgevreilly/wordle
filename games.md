@@ -743,3 +743,4 @@ or an irregular past tense.
 * 1339: `CHIRP=..ir. RIVET=ri..t INTRO=i.tr. TRAIN=TRAI.` yields `TRAIL`
 * 1340: `FRAUD=....d DEMON=de..n SNIDE=.NidE` yields `INDIE`
 * 1341: `PEARS=..a.. BATON=.A... CAVIL=.A..l LAUGH=lA... DALLY=dA.LY` yields `MADLY`
+* 1342: `WASTE=.a... BLANK=..A.. CHAMP=chA..` yields `ROACH`

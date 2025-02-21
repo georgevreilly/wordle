@@ -40,10 +40,7 @@ def render_html_table(guess_scores: list[GuessScore]) -> str:
 
     rows = []
     for gs in guess_scores:
-        row = [
-            f"<td class={css_class(gs, i)}>{gs.guess[i]}</td>"
-            for i in range(WORDLE_LEN)
-        ]
+        row = [f"<td class={css_class(gs, i)}>{gs.guess[i]}</td>" for i in range(WORDLE_LEN)]
         rows.append("<tr>" + " ".join(row) + "</tr>")
     return "<table class='wordle'>\n  " + "\n  ".join(rows) + "\n</table>"
 

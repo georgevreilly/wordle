@@ -73,9 +73,7 @@ class WordleGuesses:
 
     def __repr__(self) -> str:
         parts = ", ".join(
-            f"{k}={v}"
-            for k, v in self.string_parts().items()
-            if k not in {"guess_scores"}
+            f"{k}={v}" for k, v in self.string_parts().items() if k not in {"guess_scores"}
         )
         return f"{self.__class__.__name__}({parts})"
 
@@ -207,9 +205,7 @@ class WordleGuesses:
         # Compute `valid`, a multi-set of the correct and present letters in all guesses
         valid: Counter[str] = Counter()
         for gs in self.guess_scores:
-            valid |= Counter(
-                g for g, t in zip(gs.guess, gs.tiles) if t is not TileState.ABSENT
-            )
+            valid |= Counter(g for g, t in zip(gs.guess, gs.tiles) if t is not TileState.ABSENT)
         correct = Counter(c for c in mask1 if c is not None)
         # Compute `present`, a multi-set of the valid letters
         # whose correct position is not yet known; i.e., PRESENT in any row.
@@ -240,8 +236,7 @@ class WordleGuesses:
 
         self.mask = [m1 or m2 for m1, m2 in zip(mask1, mask2)]
         logging.info(
-            f"\toptimize: {dash_mask(mask1)} | {dash_mask(mask2)}"
-            f" => {dash_mask(self.mask)}"
+            f"\toptimize: {dash_mask(mask1)} | {dash_mask(mask2)}" f" => {dash_mask(self.mask)}"
         )
         return mask2
 

@@ -37,9 +37,7 @@ def sort_key(word: str) -> str:
     return "".join(sorted(word_letters(word)))
 
 
-def eligible_anagrams(
-    vocabulary: list[str], word_len: int = WORDLE_LEN
-) -> dict[str, list[str]]:
+def eligible_anagrams(vocabulary: list[str], word_len: int = WORDLE_LEN) -> dict[str, list[str]]:
     anagrams: dict[str, list[str]] = defaultdict(list)
     for word in vocabulary:
         # Include only words with distinct letters (no repeats)

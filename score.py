@@ -48,9 +48,7 @@ def check_scores(first_game: int) -> list:
         if first_game > gr.game_id:
             continue
 
-        print(
-            f"{gr.game_id}: {gr.answer}: {' '.join(str(gs) for gs in gr.guess_scores)}"
-        )
+        print(f"{gr.game_id}: {gr.answer}: {' '.join(str(gs) for gs in gr.guess_scores)}")
         score_failures = []
         for gs in gr.guess_scores:
             computed = WordleGuesses.score(gr.answer, gs.guess)
@@ -60,8 +58,7 @@ def check_scores(first_game: int) -> list:
                 else "\033[0;31m❌ Wrong!\033[0m"
             )
             print(
-                f"\tguess={gs.guess} score={gs.score} {computed=} "
-                f"‹{gs.emojis()}›  {verdict}"
+                f"\tguess={gs.guess} score={gs.score} {computed=} " f"‹{gs.emojis()}›  {verdict}"
             )
             if computed != gs.score:
                 score_failures.append((gr.answer, gs.guess, gs.score, computed))
@@ -97,10 +94,7 @@ def check_scores(first_game: int) -> list:
             raise ValueError(f"Unknown {gr.verb}")
         implausible = " ".join(sorted(r for r in eligible if r not in plausible))
         others = " ".join(sorted(plausible - {gr.answer}))
-        print(
-            f"\t{gr.verb}={gr.answer}, plausible=[{others}], "
-            f"implausible=[{implausible}]"
-        )
+        print(f"\t{gr.verb}={gr.answer}, plausible=[{others}], " f"implausible=[{implausible}]")
         game_failures.extend(score_failures)
 
     return game_failures

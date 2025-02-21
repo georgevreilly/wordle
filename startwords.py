@@ -45,8 +45,7 @@ for w in WORDS:
         pos_pop[c][i] += 1
 
 frequencies = {
-    letter: count / total_letters
-    for letter, count in rev_sort_by_count(letter_counts.items())
+    letter: count / total_letters for letter, count in rev_sort_by_count(letter_counts.items())
 }
 
 for i, (letter, freq) in enumerate(frequencies.items()):
@@ -96,9 +95,7 @@ for i, x in enumerate(topwords, 1):
 print("\n\nBest Start Words, weighted by position\n")
 for letter in AtoZ:
     topwords2 = rev_sort_by_count(alpha_words[letter])[: namespace.top_per_letter]
-    best_words = " ".join(
-        ws[0] for ws in topwords2 if ws[1] >= namespace.threshold_score
-    )
+    best_words = " ".join(ws[0] for ws in topwords2 if ws[1] >= namespace.threshold_score)
     print(f"{letter}: {best_words}")
 
 

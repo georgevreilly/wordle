@@ -746,3 +746,4 @@ or an irregular past tense.
 * 1342: `WASTE=.a... BLANK=..A.. CHAMP=chA..` yields `ROACH`
 * 1343: `THIEF=...e. BLADE=.L..E FLUME=.L..E SLOPE=.LO.E` *includes* `CLOVE`
 * 1344: `NOISE=....e PETAL=.e.A. SHEAF=..EA. BREAD=.REA. WREAK=.REA.` yields `CREAM`
+* 1345: `PLANE=....e SERUM=.er.. Fiber hover odder` yields OTTER

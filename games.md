@@ -747,3 +747,4 @@ or an irregular past tense.
 * 1343: `THIEF=...e. BLADE=.L..E FLUME=.L..E SLOPE=.LO.E` *includes* `CLOVE`
 * 1344: `NOISE=....e PETAL=.e.A. SHEAF=..EA. BREAD=.REA. WREAK=.REA.` yields `CREAM`
 * 1345: `PLANE=....e SERUM=.er.. FIBER=...ER HOVER=.o.ER ODDER=O..ER` yields `OTTER`
+* 1346: `SLEPT=.L... CLIMB=.L... ALONG=aL.Ng` yields `GLAND`

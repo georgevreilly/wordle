@@ -748,3 +748,4 @@ or an irregular past tense.
 * 1344: `NOISE=....e PETAL=.e.A. SHEAF=..EA. BREAD=.REA. WREAK=.REA.` yields `CREAM`
 * 1345: `PLANE=....e SERUM=.er.. FIBER=...ER HOVER=.o.ER ODDER=O..ER` yields `OTTER`
 * 1346: `SLEPT=.L... CLIMB=.L... ALONG=aL.Ng` yields `GLAND`
+* 1347: `ALONE=....e GRIEF=.R.E. CRUEL=.R.E. BREED=.R.Ed` yields `DRYER`

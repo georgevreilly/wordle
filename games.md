@@ -750,3 +750,4 @@ or an irregular past tense.
 * 1346: `SLEPT=.L... CLIMB=.L... ALONG=aL.Ng` yields `GLAND`
 * 1347: `ALONE=....e GRIEF=.R.E. CRUEL=.R.E. BREED=.R.Ed` yields `DRYER`
 * 1348: `BATHE=.a... FLANK=..A.. GRAVY=.rA.. SWARM=.WAR.` yields `AWARD`
+* 1349: `DAILY=d..l. OLDER=olDe. MODEL=.ODel` yields `LODGE`

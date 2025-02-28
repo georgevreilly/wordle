@@ -752,3 +752,4 @@ or an irregular past tense.
 * 1348: `BATHE=.a... FLANK=..A.. GRAVY=.rA.. SWARM=.WAR.` yields `AWARD`
 * 1349: `DAILY=d..l. OLDER=olDe. MODEL=.ODel` yields `LODGE`
 * 1350: `POWER=..... BLANK=..... SQUID=..u.. YUMMY=.U..Y HUGGY=.U..Y` yields `FUZZY`
+* 1351: `BEACH=.e..h LITHE=...he SHEEP=.h.E.` *includes* `HOVER`

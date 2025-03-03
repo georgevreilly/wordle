@@ -755,3 +755,4 @@ or an irregular past tense.
 * 1351: `BEACH=.e..h LITHE=...he SHEEP=.h.E.` *includes* `HOVER`
 * 1352: `COAST=....t TEPID=tE.id` yields `DEITY`
 * 1353: `TOWER=...eR MYLAR=...AR RADAR=...AR FUBAR=...AR CIGAR=...AR` *includes* `SPEAR`
+* 1354: `UNDER=...e. STYLE=....e CHEAP=CHE..` yields `CHECK`

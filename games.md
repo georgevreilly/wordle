@@ -756,3 +756,4 @@ or an irregular past tense.
 * 1352: `COAST=....t TEPID=tE.id` yields `DEITY`
 * 1353: `TOWER=...eR MYLAR=...AR RADAR=...AR FUBAR=...AR CIGAR=...AR` *includes* `SPEAR`
 * 1354: `UNDER=...e. STYLE=....e CHEAP=CHE..` yields `CHECK`
+* 1355: `SPLIT=S.... SHANK=S.... SERUM=S.RUM` yields `SCRUM`

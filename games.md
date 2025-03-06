@@ -758,3 +758,4 @@ or an irregular past tense.
 * 1354: `UNDER=...e. STYLE=....e CHEAP=CHE..` yields `CHECK`
 * 1355: `SPLIT=S.... SHANK=S.... SERUM=S.RUM` yields `SCRUM`
 * 1356: `ADMIT=A...T` *includes* `ALERT`
+* 1357: `LOUSY=.o... DIVOT=...Ot BATON=..tO. TENOR=T..Or` *includes* `TROOP`

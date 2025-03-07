@@ -759,3 +759,4 @@ or an irregular past tense.
 * 1355: `SPLIT=S.... SHANK=S.... SERUM=S.RUM` yields `SCRUM`
 * 1356: `ADMIT=A...T` *includes* `ALERT`
 * 1357: `LOUSY=.o... DIVOT=...Ot BATON=..tO. TENOR=T..Or` *includes* `TROOP`
+* 1358: `FRIED=...E. HOTEL=...EL` *includes* `NAVEL`

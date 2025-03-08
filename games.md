@@ -760,3 +760,4 @@ or an irregular past tense.
 * 1356: `ADMIT=A...T` *includes* `ALERT`
 * 1357: `LOUSY=.o... DIVOT=...Ot BATON=..tO. TENOR=T..Or` *includes* `TROOP`
 * 1358: `FRIED=...E. HOTEL=...EL` *includes* `NAVEL`
+* 1359: `ROUGH=r..g. GRAPE=GR..e` *includes* `GREED`

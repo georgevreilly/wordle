@@ -761,3 +761,4 @@ or an irregular past tense.
 * 1357: `LOUSY=.o... DIVOT=...Ot BATON=..tO. TENOR=T..Or` *includes* `TROOP`
 * 1358: `FRIED=...E. HOTEL=...EL` *includes* `NAVEL`
 * 1359: `ROUGH=r..g. GRAPE=GR..e` *includes* `GREED`
+* 1360: `WHIST=..Ist STING=StI..` *includes* `SPITE`

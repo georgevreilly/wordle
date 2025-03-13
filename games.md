@@ -762,3 +762,4 @@ or an irregular past tense.
 * 1358: `FRIED=...E. HOTEL=...EL` *includes* `NAVEL`
 * 1359: `ROUGH=r..g. GRAPE=GR..e` *includes* `GREED`
 * 1360: `WHIST=..Ist STING=StI..` *includes* `SPITE`
+* 1361: `AFIRE=a..r. DRAWL=.RA.. CRANK=cRA.K` yields `TRACK`

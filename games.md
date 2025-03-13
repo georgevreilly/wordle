@@ -763,3 +763,4 @@ or an irregular past tense.
 * 1359: `ROUGH=r..g. GRAPE=GR..e` *includes* `GREED`
 * 1360: `WHIST=..Ist STING=StI..` *includes* `SPITE`
 * 1361: `AFIRE=a..r. DRAWL=.RA.. CRANK=cRA.K` yields `TRACK`
+* 1362: `GRACE=g.a.. AXING=a..ng TANGY=.ANG. MANGA=MANG.` yields `MANGO`

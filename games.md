@@ -764,3 +764,4 @@ or an irregular past tense.
 * 1360: `WHIST=..Ist STING=StI..` *includes* `SPITE`
 * 1361: `AFIRE=a..r. DRAWL=.RA.. CRANK=cRA.K` yields `TRACK`
 * 1362: `GRACE=g.a.. AXING=a..ng TANGY=.ANG. MANGA=MANG.` yields `MANGO`
+* 1363: `SHAME=sHA.E` *includes* `CHASE`

@@ -766,3 +766,4 @@ or an irregular past tense.
 * 1362: `GRACE=g.a.. AXING=a..ng TANGY=.ANG. MANGA=MANG.` yields `MANGO`
 * 1363: `SHAME=sHA.E` *includes* `CHASE`
 * 1364: `CRAMP=c...p PUNCH=P..C.` yields `PIECE`
+* 1365: `BIRTH=..... GLOVE=.l..E PULSE=..l.E` *includes* `LADLE`

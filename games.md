@@ -773,3 +773,4 @@ or an irregular past tense.
 * 1369: `PLAID=p.A.. SPARE=SPAR.` yields `SPARK`
 * 1370: `SOUTH=s..T. WASTE=.ASTE PASTE=.ASTE` *includes* `BASTE`
 * 1371: `MAKER=...e. SPITE=....E WHOLE=....E UNDUE=unD.E` yields `NUDGE`
+* 1372: `STYLE=...LE BUGLE=b..LE CABLE=.aBLE` yields `AMBLE`

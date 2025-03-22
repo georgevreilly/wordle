@@ -770,3 +770,4 @@ or an irregular past tense.
 * 1366: `MEDIA=m...a CHAMP=..AMP` *includes* `STAMP`
 * 1367: `STOMP=s.o.. ARSON=a.So.` yields `LASSO`
 * 1368: `RAISE=r.i.e FRIED=.riE. LIVER=.I.ER MINER=mI.ER` yields `TIMER`
+* 1369: `PLAID=p.A.. SPARE=SPAR.` yields `SPARK`

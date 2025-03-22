@@ -772,3 +772,4 @@ or an irregular past tense.
 * 1368: `RAISE=r.i.e FRIED=.riE. LIVER=.I.ER MINER=mI.ER` yields `TIMER`
 * 1369: `PLAID=p.A.. SPARE=SPAR.` yields `SPARK`
 * 1370: `SOUTH=s..T. WASTE=.ASTE PASTE=.ASTE` *includes* `BASTE`
+* 1371: `MAKER=...e. SPITE=....E WHOLE=....E UNDUE=unD.E` yields `NUDGE`

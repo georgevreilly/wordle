@@ -775,3 +775,4 @@ or an irregular past tense.
 * 1371: `MAKER=...e. SPITE=....E WHOLE=....E UNDUE=unD.E` yields `NUDGE`
 * 1372: `STYLE=...LE BUGLE=b..LE CABLE=.aBLE` yields `AMBLE`
 * 1373: `CRUFT=..... SLANG=..... WHOOP=..o.p POKEY=pO.EY` yields `DOPEY`
+* 1374: `BROWN=....n STINK=...n. ENSUE=.N..E` yields `ANGLE`

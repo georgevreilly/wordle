@@ -777,3 +777,4 @@ or an irregular past tense.
 * 1373: `CRUFT=..... SLANG=..... WHOOP=..o.p POKEY=pO.EY` yields `DOPEY`
 * 1374: `BROWN=....n STINK=...n. ENSUE=.N..E` yields `ANGLE`
 * 1375: `HUMPS=h...s SHAVE=SH..e SHELL=SHEL.` yields `SHELF`
+* 1376: `PUNCH=..... BREAD=b.e.. GLOBE=.Lobe` yields `ELBOW`

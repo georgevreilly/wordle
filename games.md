@@ -779,3 +779,4 @@ or an irregular past tense.
 * 1375: `HUMPS=h...s SHAVE=SH..e SHELL=SHEL.` yields `SHELF`
 * 1376: `PUNCH=..... BREAD=b.e.. GLOBE=.Lobe` yields `ELBOW`
 * 1377: `FLUKE=....e BREAD=..E.. SPENT=S.E.T SWEET=S.EET` yields `SHEET`
+* 1378: `EARLY=e.R.. SERUM=sER.. TERSE=.ERSE` yields `VERSE`

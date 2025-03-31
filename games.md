@@ -782,3 +782,4 @@ or an irregular past tense.
 * 1378: `EARLY=e.R.. SERUM=sER.. TERSE=.ERSE` yields `VERSE`
 * 1379: `GRIME=.r... LARCH=..R.. FORTY=.OR.Y` *includes* `SORRY`
 * 1380: `WROTE=..OT. CLOTH=..OT. BOOTY=..OT.` yields `QUOTA`
+* 1381: `MEANT=....t STRIP=.t... TOUCH=tO...` *includes* `BOOTY`

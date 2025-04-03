@@ -785,3 +785,4 @@ or an irregular past tense.
 * 1381: `MEANT=....t STRIP=.t... TOUCH=tO...` *includes* `BOOTY`
 * 1382: `FRAUD=..... GLOBE=.l..e WHEEL=w.eEL` yields `JEWEL`
 * 1383: `WHINE=....E DROVE=.r..E SPARE=s..rE REUSE=r.uSE` yields `CURSE`
+* 1384: `CLEAN=..EA. STEAM=S.EA. SPEAR=S.EAR SWEAR=S.EAR` yields `SHEAR`

@@ -1,17 +1,19 @@
 #!/bin/bash
 
-if [ "$(uname)" == "Darwin" ]; then 
-    gnused="gsed"
-else
-    gnused="sed"
+if [ "$(uname)" == "Linux" ]; then
+    cbcopy="wl-copy"
+elif [ "$(uname)" == "Darwin" ]; then
+    cbcopy="pbcopy"
 fi
 
-game="$1"
-result="$(grep "$game" games.md | "$gnused" -E 's/^.+`([^`]+)`.+`([^`]+)`$/\1 => \2/')"
+if [ -n "$1" ]; then
+    line="$(grep "$1" games.md)"
+else
+    line="$(tail -1 games.md)"
+fi
+
+# shellcheck disable=SC2016
+result="$(echo "$line" | sed -E 's/^.+`([^`]+)`.+`([^`]+)`$/\1 => \2/')"
 echo "$result"
 
-if [ "$(uname)" == "Linux" ]; then
-    wl-copy "$result"
-elif [ "$(uname)" == "Darwin" ]; then 
-    echo "$result" | pbcopy
-fi
+echo "$result" | "$cbcopy"

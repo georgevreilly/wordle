@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if [ "$(uname)" == "Darwin" ]; then 
+    gnused="gsed"
+else
+    gnused="sed"
+fi
+
+game="$1"
+result="$(grep "$game" games.md | "$gnused" -E 's/^.+`([^`]+)`.+`([^`]+)`$/\1 => \2/')"
+echo "$result"
+
+if [ "$(uname)" == "Linux" ]; then
+    wl-copy "$result"
+elif [ "$(uname)" == "Darwin" ]; then 
+    echo "$result" | pbcopy
+fi

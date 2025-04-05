@@ -1,11 +1,5 @@
 #!/bin/bash
 
-if [ "$(uname)" == "Linux" ]; then
-    cbcopy="wl-copy"
-elif [ "$(uname)" == "Darwin" ]; then
-    cbcopy="pbcopy"
-fi
-
 if [ -n "$1" ]; then
     line="$(grep "$1" games.md)"
 else
@@ -16,4 +10,8 @@ fi
 result="$(echo "$line" | sed -E 's/^.+`([^`]+)`.+`([^`]+)`$/\1 => \2/')"
 echo "$result"
 
-echo "$result" | "$cbcopy"
+if [ "$(uname)" == "Linux" ]; then
+    echo "$result" | wl-copy
+elif [ "$(uname)" == "Darwin" ]; then
+    echo "$result" | pbcopy
+fi

@@ -787,3 +787,4 @@ or an irregular past tense.
 * 1383: `WHINE=....E DROVE=.r..E SPARE=s..rE REUSE=r.uSE` yields `CURSE`
 * 1384: `CLEAN=..EA. STEAM=S.EA. SPEAR=S.EAR SWEAR=S.EAR` yields `SHEAR`
 * 1385: `CRAFT=.R... DRINK=.RI.k` yields `KRILL`
+* 1386: `CRASH=..A.. BLANK=..A.. QUAFF=..Af.` yields `FOAMY`

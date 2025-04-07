@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Copy results of a game to clipboard in the form GUESSES => ANSWER
+
 if [ -n "$1" ]; then
     line="$(grep "$1:" games.md)"
 else

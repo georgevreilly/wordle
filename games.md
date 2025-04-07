@@ -789,3 +789,4 @@ or an irregular past tense.
 * 1385: `CRAFT=.R... DRINK=.RI.k` yields `KRILL`
 * 1386: `CRASH=..A.. BLANK=..A.. QUAFF=..Af.` yields `FOAMY`
 * 1387: `WHOLE=...L. STALK=..aL. APPLY=a..L.` yields `VILLA`
+* 1388: `SCONE=....e BLEND=.le.. GAVEL=.A.EL` *includes* `HAZEL`

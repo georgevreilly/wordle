@@ -3,7 +3,10 @@
 # Copy results of a game to clipboard in the form GUESSES => ANSWER
 
 if [ -n "$1" ]; then
-    line="$(grep "$1:" games.md)"
+    if ! line="$(grep "$1:" games.md)"; then
+        echo "Can't find '$1'"
+        exit 1
+    fi
 else
     line="$(tail -1 games.md)"
 fi

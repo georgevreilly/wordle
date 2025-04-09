@@ -791,3 +791,4 @@ or an irregular past tense.
 * 1387: `WHOLE=...L. STALK=..aL. APPLY=a..L.` yields `VILLA`
 * 1388: `SCONE=....e BLEND=.le.. GAVEL=.A.EL` *includes* `HAZEL`
 * 1389: `SHEAR=S.ear` *includes* `SPARE`
+* 1390: `AMONG=a.... CLEAT=..EAT SWEAT=.wEAT` yields `WHEAT`

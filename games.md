@@ -792,3 +792,4 @@ or an irregular past tense.
 * 1388: `SCONE=....e BLEND=.le.. GAVEL=.A.EL` *includes* `HAZEL`
 * 1389: `SHEAR=S.ear` *includes* `SPARE`
 * 1390: `AMONG=a.... CLEAT=..EAT SWEAT=.wEAT` yields `WHEAT`
+* 1391: `GRIFT=.r..t PARTY=..Rt. STRUM=.tRu.` yields `TURBO`

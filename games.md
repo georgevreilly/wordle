@@ -794,3 +794,4 @@ or an irregular past tense.
 * 1390: `AMONG=a.... CLEAT=..EAT SWEAT=.wEAT` yields `WHEAT`
 * 1391: `GRIFT=.r..t PARTY=..Rt. STRUM=.tRu.` yields `TURBO`
 * 1392: `ANKLE=A.... AVOID=A.o.. AORTA=AoR..` yields `ARROW`
+* 1393: `GRIEF=.r.e. WAVER=...er SCORE=s..rE TERSE=..RSE` *includes* `NURSE`

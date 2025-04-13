@@ -795,3 +795,4 @@ or an irregular past tense.
 * 1391: `GRIFT=.r..t PARTY=..Rt. STRUM=.tRu.` yields `TURBO`
 * 1392: `ANKLE=A.... AVOID=A.o.. AORTA=AoR..` yields `ARROW`
 * 1393: `GRIEF=.r.e. WAVER=...er SCORE=s..rE TERSE=..RSE` *includes* `NURSE`
+* 1394: `CROWN=..... STARK=..a.. BELAY=..la.` *includes* `LAUGH`

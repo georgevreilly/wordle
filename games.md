@@ -796,3 +796,4 @@ or an irregular past tense.
 * 1392: `ANKLE=A.... AVOID=A.o.. AORTA=AoR..` yields `ARROW`
 * 1393: `GRIEF=.r.e. WAVER=...er SCORE=s..rE TERSE=..RSE` *includes* `NURSE`
 * 1394: `CROWN=..... STARK=..a.. BELAY=..la.` *includes* `LAUGH`
+* 1395: `YEARN=.e.r. DIVER=...er FRESH=.RES.` *includes* `CREST`

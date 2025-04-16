@@ -798,3 +798,4 @@ or an irregular past tense.
 * 1394: `CROWN=..... STARK=..a.. BELAY=..la.` *includes* `LAUGH`
 * 1395: `YEARN=.e.r. DIVER=...er FRESH=.RES.` *includes* `CREST`
 * 1396: `OCEAN=..eaN MAVEN=.a.EN` *includes* `ASHEN`
+* 1397: `ATONE=a.o.. LABOR=la.or ROYAL=rO.AL` *includes* `MORAL`

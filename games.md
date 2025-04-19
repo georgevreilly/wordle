@@ -801,3 +801,4 @@ or an irregular past tense.
 * 1397: `ATONE=a.o.. LABOR=la.or ROYAL=rO.AL` *includes* `MORAL`
 * 1398: `GRAFT=....t TOWEL=to... STOMP=STO.. STONY=STO..  STOCK=STO..` yields `STOOD`
 * 1399: `CHAOS=..... BLINK=..i.. MIXER=.I.er FIERY=.Ier. RIDGE=rIdGE` yields `DIRGE`
+* 1400: `OCEAN=o...n NORTH=no... SNOWY=.No..` yields `INBOX`

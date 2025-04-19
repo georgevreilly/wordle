@@ -107,7 +107,7 @@ class WordleGuesses:
         return "".join(parts)
 
     @classmethod
-    def parse(cls, guess_scores: list[GuessScore]) -> "WordleGuesses":
+    def parse(cls, guess_scores: list[GuessScore], optimize=True) -> "WordleGuesses":
         mask: list[str | None] = [None for _ in range(WORDLE_LEN)]
         valid: set[str] = set()
         invalid: set[str] = set()
@@ -135,7 +135,8 @@ class WordleGuesses:
 
         parsed_guesses = cls(mask, valid, invalid, wrong_spot, guess_scores)
         logging.info(parsed_guesses)
-        parsed_guesses.optimize()
+        if optimize:
+            parsed_guesses.optimize()
         return parsed_guesses
 
     def is_eligible(self, word: str) -> bool:

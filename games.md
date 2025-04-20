@@ -802,3 +802,4 @@ or an irregular past tense.
 * 1398: `GRAFT=....t TOWEL=to... STOMP=STO.. STONY=STO..  STOCK=STO..` yields `STOOD`
 * 1399: `CHAOS=..... BLINK=..i.. MIXER=.I.er FIERY=.Ier. RIDGE=rIdGE` yields `DIRGE`
 * 1400: `OCEAN=o...n NORTH=no... SNOWY=.No..` yields `INBOX`
+* 1401: `JARLS=.A... PANIC=PA..c` yields `PATCH`

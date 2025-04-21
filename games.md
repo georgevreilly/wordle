@@ -803,3 +803,4 @@ or an irregular past tense.
 * 1399: `CHAOS=..... BLINK=..i.. MIXER=.I.er FIERY=.Ier. RIDGE=rIdGE` yields `DIRGE`
 * 1400: `OCEAN=o...n NORTH=no... SNOWY=.No..` yields `INBOX`
 * 1401: `JARLS=.A... PANIC=PA..c` yields `PATCH`
+* 1402: `MONEY=...e. FLECK=..e.. BRAVE=..A.E SHAPE=S.ApE` *includes* `SPATE`

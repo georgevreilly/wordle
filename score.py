@@ -36,6 +36,7 @@ EXCEPTIONAL_ANSWERS = {
     "SQUID",
     "RUMBA",
     "INDIE",
+    "SPATE",
 }
 
 

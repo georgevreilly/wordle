@@ -805,3 +805,4 @@ or an irregular past tense.
 * 1401: `JARLS=.A... PANIC=PA..c` yields `PATCH`
 * 1402: `MONEY=...e. FLECK=..e.. BRAVE=..A.E SHAPE=S.ApE` *includes* `SPATE`
 * 1403: `OPTIC=..T.. LATER=.aT.r` yields `ARTSY`
+* 1404: `STACK=..... GRIPE=....E FLUME=....E` *includes* `OZONE`

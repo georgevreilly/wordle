@@ -806,3 +806,4 @@ or an irregular past tense.
 * 1402: `MONEY=...e. FLECK=..e.. BRAVE=..A.E SHAPE=S.ApE` *includes* `SPATE`
 * 1403: `OPTIC=..T.. LATER=.aT.r` yields `ARTSY`
 * 1404: `STACK=..... GRIPE=....E FLUME=....E` *includes* `OZONE`
+* 1405: `FINAL=.iN.. TONIC=..NI.` *includes* `GENIE`

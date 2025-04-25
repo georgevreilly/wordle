@@ -807,3 +807,4 @@ or an irregular past tense.
 * 1403: `OPTIC=..T.. LATER=.aT.r` yields `ARTSY`
 * 1404: `STACK=..... GRIPE=....E FLUME=....E` *includes* `OZONE`
 * 1405: `FINAL=.iN.. TONIC=..NI.` *includes* `GENIE`
+* 1406: `HAUNT=...n. BRINE=...n. PLONK=..Onk` yields `KNOWN`

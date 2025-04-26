@@ -808,3 +808,4 @@ or an irregular past tense.
 * 1404: `STACK=..... GRIPE=....E FLUME=....E` *includes* `OZONE`
 * 1405: `FINAL=.iN.. TONIC=..NI.` *includes* `GENIE`
 * 1406: `HAUNT=...n. BRINE=...n. PLONK=..Onk` yields `KNOWN`
+* 1407: `LOATH=l.A.H` *includes* `CLASH`

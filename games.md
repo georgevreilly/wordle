@@ -809,3 +809,4 @@ or an irregular past tense.
 * 1405: `FINAL=.iN.. TONIC=..NI.` *includes* `GENIE`
 * 1406: `HAUNT=...n. BRINE=...n. PLONK=..Onk` yields `KNOWN`
 * 1407: `LOATH=l.A.H` *includes* `CLASH`
+* 1408: `LAITY=....Y MERRY=.E..Y PESKY=.E..Y` *includes* `WEEDY`

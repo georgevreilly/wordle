@@ -810,3 +810,4 @@ or an irregular past tense.
 * 1406: `HAUNT=...n. BRINE=...n. PLONK=..Onk` yields `KNOWN`
 * 1407: `LOATH=l.A.H` *includes* `CLASH`
 * 1408: `LAITY=....Y MERRY=.E..Y PESKY=.E..Y` *includes* `WEEDY`
+* 1409: `RAPID=....d DEMON=D.M..` yields `DUMMY`

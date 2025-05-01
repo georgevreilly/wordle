@@ -813,3 +813,4 @@ or an irregular past tense.
 * 1409: `RAPID=....d DEMON=D.M..` yields `DUMMY`
 * 1410: `SLUMP=sL... FLASK=.L.S. CLOSE=.L.S.` yields `BLISS`
 * 1411: `COUNT=..... DRIVE=dri.e WIDER=.idER` yields `IDLER`
+* 1412: `LAYER=.a.e. SHAVE=..a.e AGENT=A.E.T` yields `ADEPT`

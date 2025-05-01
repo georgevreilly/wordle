@@ -812,3 +812,4 @@ or an irregular past tense.
 * 1408: `LAITY=....Y MERRY=.E..Y PESKY=.E..Y` *includes* `WEEDY`
 * 1409: `RAPID=....d DEMON=D.M..` yields `DUMMY`
 * 1410: `SLUMP=sL... FLASK=.L.S. CLOSE=.L.S.` yields `BLISS`
+* 1411: `COUNT=..... DRIVE=dri.e WIDER=.idER` yields `IDLER`

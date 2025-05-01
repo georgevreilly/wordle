@@ -4,7 +4,7 @@
 
 game="$1"
 if [ -n "$game" ]; then
-    if ! line="$(grep "$game:" games.md)"; then
+    if ! line="$(grep " $game:" games.md)"; then
         echo "Can't find '$game'"
         exit 1
     fi

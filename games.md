@@ -815,3 +815,4 @@ or an irregular past tense.
 * 1411: `COUNT=..... DRIVE=dri.e WIDER=.idER` yields `IDLER`
 * 1412: `LAYER=.a.e. SHAVE=..a.e AGENT=A.E.T` yields `ADEPT`
 * 1413: `WHISK=WH.S.` yields `WHOSE`
+* 1414: `CHALK=..a.. ANGER=a.... BASIC=.As.. SAVVY=sA..Y TASTY=tAs.Y` yields `PATSY`

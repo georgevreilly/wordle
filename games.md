@@ -817,3 +817,4 @@ or an irregular past tense.
 * 1413: `WHISK=WH.S.` yields `WHOSE`
 * 1414: `CHALK=..a.. ANGER=a.... BASIC=.As.. SAVVY=sA..Y TASTY=tAs.Y` yields `PATSY`
 * 1415: `SCARY=...r. REMIT=r...T BRUNT=.Ru.T GROUT=.ROUT` yields `TROUT`
+* 1416: `BENCH=....H TRASH=...SH FLUSH=..USH` yields `SHUSH`

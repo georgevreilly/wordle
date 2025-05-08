@@ -820,3 +820,4 @@ or an irregular past tense.
 * 1416: `BENCH=....H TRASH=...SH FLUSH=..USH` yields `SHUSH`
 * 1417: `MAYOR=..... CLING=..I.. SPIKE=S.I.E` *includes* `SUITE`
 * 1418: `SETUP=..... CLIMB=c..m. MARCH=MA.ch` yields `MACHO`
+* 1419: `PEONY=....Y GRAVY=..a.Y APPLY=a..lY SALTY=.AL.Y` yields `BALMY`

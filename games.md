@@ -822,3 +822,4 @@ or an irregular past tense.
 * 1418: `SETUP=..... CLIMB=c..m. MARCH=MA.ch` yields `MACHO`
 * 1419: `PEONY=....Y GRAVY=..a.Y APPLY=a..lY SALTY=.AL.Y` yields `BALMY`
 * 1420: `ULTRA=..tr. STRIP=.trip PRINT=pRI.t` yields `TRIPE`
+* 1421: `GUILT=....T CHEST=..eST BEAST=.EAST` *includes* `YEAST`

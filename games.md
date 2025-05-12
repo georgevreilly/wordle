@@ -824,3 +824,4 @@ or an irregular past tense.
 * 1420: `ULTRA=..tr. STRIP=.trip PRINT=pRI.t` yields `TRIPE`
 * 1421: `GUILT=....T CHEST=..eST BEAST=.EAST` *includes* `YEAST`
 * 1422: `BADGE=..d.e DEMON=De.o. DOPEY=DO.E.` yields `DOWEL`
+* 1423: `TUMOR=..... GLAND=..... CHIVE=c.i.e` yields `BICEP`

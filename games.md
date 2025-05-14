@@ -826,3 +826,4 @@ or an irregular past tense.
 * 1422: `BADGE=..d.e DEMON=De.o. DOPEY=DO.E.` yields `DOWEL`
 * 1423: `TUMOR=..... GLAND=..... CHIVE=c.i.e` yields `BICEP`
 * 1424: `BLAST=..A.. CRAMP=.rA.. GUARD=..AR. WHARF=w.AR.` yields `AWARE`
+* 1425: `METAL=..... PROUD=..o.. SONIC=.ON.. BONNY=BON..` yields `BONGO`

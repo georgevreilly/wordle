@@ -827,3 +827,4 @@ or an irregular past tense.
 * 1423: `TUMOR=..... GLAND=..... CHIVE=c.i.e` yields `BICEP`
 * 1424: `BLAST=..A.. CRAMP=.rA.. GUARD=..AR. WHARF=w.AR.` yields `AWARE`
 * 1425: `METAL=..... PROUD=..o.. SONIC=.ON.. BONNY=BON..` yields `BONGO`
+* 1426: `CRONY=.r... REALM=rea.. WAGER=.AGER PAGER=.AGER` yields `EAGER`

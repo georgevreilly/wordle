@@ -828,3 +828,4 @@ or an irregular past tense.
 * 1424: `BLAST=..A.. CRAMP=.rA.. GUARD=..AR. WHARF=w.AR.` yields `AWARE`
 * 1425: `METAL=..... PROUD=..o.. SONIC=.ON.. BONNY=BON..` yields `BONGO`
 * 1426: `CRONY=.r... REALM=rea.. WAGER=.AGER PAGER=.AGER` yields `EAGER`
+* 1427: `BOWER=..... SLAIN=...i. PITCH=.It.H` yields `FIFTH`

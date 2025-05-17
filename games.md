@@ -829,3 +829,4 @@ or an irregular past tense.
 * 1425: `METAL=..... PROUD=..o.. SONIC=.ON.. BONNY=BON..` yields `BONGO`
 * 1426: `CRONY=.r... REALM=rea.. WAGER=.AGER PAGER=.AGER` yields `EAGER`
 * 1427: `BOWER=..... SLAIN=...i. PITCH=.It.H` yields `FIFTH`
+* 1428: `COUNT=.o.n. PYLON=...oN ORGAN=oRg.N` *includes* `GROWN`

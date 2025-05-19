@@ -831,3 +831,4 @@ or an irregular past tense.
 * 1427: `BOWER=..... SLAIN=...i. PITCH=.It.H` yields `FIFTH`
 * 1428: `COUNT=.o.n. PYLON=...oN ORGAN=oRg.N` *includes* `GROWN`
 * 1429: `BLAME=.l... SCOLD=...lD LIPID=LI.ID` yields `LIVID`
+* 1430: `CREAK=c.... LUNCH=...CH` *includes* `PITCH`

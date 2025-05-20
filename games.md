@@ -832,3 +832,4 @@ or an irregular past tense.
 * 1428: `COUNT=.o.n. PYLON=...oN ORGAN=oRg.N` *includes* `GROWN`
 * 1429: `BLAME=.l... SCOLD=...lD LIPID=LI.ID` yields `LIVID`
 * 1430: `CREAK=c.... LUNCH=...CH` *includes* `PITCH`
+* 1431: `COUNT=.O.N. HORNY=.ORN.` yields `BORNE`

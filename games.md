@@ -834,3 +834,4 @@ or an irregular past tense.
 * 1430: `CREAK=c.... LUNCH=...CH` *includes* `PITCH`
 * 1431: `COUNT=.O.N. HORNY=.ORN.` yields `BORNE`
 * 1432: `SCALP=..Al. LEANT=l.A.. FRAIL=.rA.l` yields `ALARM`
+* 1433: `YEARN=..... CLIMB=.li.. LIGHT=li... SWILL=..il. POLIO=.OLIO` yields `FOLIO`

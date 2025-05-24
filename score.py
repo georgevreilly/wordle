@@ -37,6 +37,7 @@ EXCEPTIONAL_ANSWERS = {
     "RUMBA",
     "INDIE",
     "SPATE",
+    "SUEDE",
 }
 
 

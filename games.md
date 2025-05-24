@@ -836,3 +836,4 @@ or an irregular past tense.
 * 1432: `SCALP=..Al. LEANT=l.A.. FRAIL=.rA.l` yields `ALARM`
 * 1433: `YEARN=..... CLIMB=.li.. LIGHT=li... SWILL=..il. POLIO=.OLIO` yields `FOLIO`
 * 1434: `COMET=c.... PINCH=...Ch SHACK=SH.CK` yields `SHUCK`
+* 1435: `PANIC=..... STOVE=S...E SURGE=SU..E` yields `SUEDE`

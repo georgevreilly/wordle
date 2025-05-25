@@ -38,6 +38,7 @@ EXCEPTIONAL_ANSWERS = {
     "INDIE",
     "SPATE",
     "SUEDE",
+    "GRIFT",
 }
 
 

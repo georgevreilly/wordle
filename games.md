@@ -838,3 +838,4 @@ or an irregular past tense.
 * 1434: `COMET=c.... PINCH=...Ch SHACK=SH.CK` yields `SHUCK`
 * 1435: `PANIC=..... STOVE=S...E SURGE=SU..E` yields `SUEDE`
 * 1436: `VIRAL=.ir.. CRIED=.RI.. WRIST=.RI.T` *includes* `GRIFT`
+* 1437: `CLOUT=..O.. BROAD=.RO.d` *includes* `DRONE`

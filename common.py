@@ -13,12 +13,12 @@ from dataclasses import dataclass
 from enum import Enum
 from typing import ClassVar
 
-DICT_FILE = "/usr/share/dict/words"
-CURR_DIR = os.path.abspath(os.path.dirname(__file__))
-WORD_FILE = os.path.join(CURR_DIR, "wordle.txt")
-ANSWERS_FILE = os.path.join(CURR_DIR, "answers.txt")
-GAMES_FILE = os.path.join(os.path.dirname(__file__), "games.md")
-WORDLE_LEN = 5
+DICT_FILE: str = "/usr/share/dict/words"
+CURR_DIR: str = os.path.abspath(os.path.dirname(__file__))
+WORD_FILE: str = os.path.join(CURR_DIR, "wordle.txt")
+ANSWERS_FILE: str = os.path.join(CURR_DIR, "answers.txt")
+GAMES_FILE: str = os.path.join(os.path.dirname(__file__), "games.md")
+WORDLE_LEN: int = 5
 
 
 class WordleError(Exception):
@@ -178,7 +178,7 @@ def read_vocabulary(word_file: str = WORD_FILE) -> list[str]:
     words = set()
     ascii_uppercase = set(string.ascii_uppercase)
     for w in fileinput.input(files=(word_file,)):
-        if 'a' <= w[0] <= 'z':
+        if "a" <= w[0] <= "z":
             w = w.upper().strip()
             if len(w) == WORDLE_LEN and all(c in ascii_uppercase for c in w):
                 words.add(w)

@@ -5,7 +5,6 @@
 from __future__ import annotations
 
 import argparse
-import os
 import subprocess
 
 from common import (
@@ -65,8 +64,7 @@ def run_pipe(cmd_line: str) -> str:
         cmd_line,
         stdout=subprocess.PIPE,
         shell=True,
-        # env=os.environ | dict(LC_ALL="C")
-        ).stdout.decode()
+    ).stdout.decode()
 
 
 def main() -> int:

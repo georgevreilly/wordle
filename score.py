@@ -14,9 +14,11 @@ from wordle import WordleGuesses
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Score Validator")
     parser.set_defaults(
-        game=0,
+        first_game=0,
+        last_game=9999,
     )
-    parser.add_argument("--game", "-g", type=int, help="Game to start with; e.g., 723")
+    parser.add_argument("--first-game", "-g", type=int, help="Game to start with; e.g., 723")
+    parser.add_argument("--last-game", "-l", type=int, help="Game to end with; e.g., 726")
     return parser.parse_args()
 
 
@@ -42,15 +44,14 @@ EXCEPTIONAL_ANSWERS = {
 }
 
 
-def check_scores(first_game: int) -> list:
+def check_scores(first_game: int, last_game: int) -> list:
     vocabulary = read_vocabulary(WORD_FILE)
     answers = set(read_vocabulary(ANSWERS_FILE))
     game_failures = []
-    game_results = GameResult.parse_file(GAMES_FILE)
+    game_results = [
+        gr for gr in GameResult.parse_file(GAMES_FILE) if first_game <= gr.game_id <= last_game
+    ]
     for gr in game_results:
-        if first_game > gr.game_id:
-            continue
-
         print(f"{gr.game_id}: {gr.answer}: {' '.join(str(gs) for gs in gr.guess_scores)}")
         score_failures = []
         for gs in gr.guess_scores:
@@ -105,7 +106,7 @@ def check_scores(first_game: int) -> list:
 
 def main() -> int:
     namespace = parse_args()
-    game_failures = check_scores(namespace.game)
+    game_failures = check_scores(namespace.first_game, namespace.last_game)
     if game_failures:
         print(f"{game_failures=}")
     return 0

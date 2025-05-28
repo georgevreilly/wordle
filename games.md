@@ -840,3 +840,4 @@ or an irregular past tense.
 * 1436: `VIRAL=.ir.. CRIED=.RI.. WRIST=.RI.T` *includes* `GRIFT`
 * 1437: `CLOUT=..O.. BROAD=.RO.d` *includes* `DRONE`
 * 1438: `PANEL=p.... CHIMP=....p SPURT=SP.RT` yields `SPORT`
+* 1439: `ARGUE=ar... SONAR=.O.AR MOLAR=.OLAR` yields `POLAR`

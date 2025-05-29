@@ -841,3 +841,4 @@ or an irregular past tense.
 * 1437: `CLOUT=..O.. BROAD=.RO.d` *includes* `DRONE`
 * 1438: `PANEL=p.... CHIMP=....p SPURT=SP.RT` yields `SPORT`
 * 1439: `ARGUE=ar... SONAR=.O.AR MOLAR=.OLAR` yields `POLAR`
+* 1440: `OLDER=..... SCANT=s.A..` *includes* `QUASH`

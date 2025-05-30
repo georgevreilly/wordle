@@ -842,3 +842,4 @@ or an irregular past tense.
 * 1438: `PANEL=p.... CHIMP=....p SPURT=SP.RT` yields `SPORT`
 * 1439: `ARGUE=ar... SONAR=.O.AR MOLAR=.OLAR` yields `POLAR`
 * 1440: `OLDER=..... SCANT=s.A..` *includes* `QUASH`
+* 1441: `BLINK=..I.. GRIST=..I.. CHIDE=..Id.` yields `IDIOM`

@@ -844,3 +844,4 @@ or an irregular past tense.
 * 1440: `OLDER=..... SCANT=s.A..` *includes* `QUASH`
 * 1441: `BLINK=..I.. GRIST=..I.. CHIDE=..Id.` yields `IDIOM`
 * 1442: `BINGE=bi... RABID=.ABI.` yields `HABIT`
+* 1443: `MOURN=.OUr. ROUTE=ROU..` yields `ROUGH`

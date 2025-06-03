@@ -846,3 +846,4 @@ or an irregular past tense.
 * 1442: `BINGE=bi... RABID=.ABI.` yields `HABIT`
 * 1443: `MOURN=.OUr. ROUTE=ROU..` yields `ROUGH`
 * 1444: `AMITY=..... COUGH=..... SWEEP=..EEp` yields `PREEN`
+* 1445: `SMEAR=.m.a. CLAIM=..aIm MAFIA=ma.I. ADMIT=ADMI.` yields `ADMIN`

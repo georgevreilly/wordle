@@ -847,3 +847,4 @@ or an irregular past tense.
 * 1443: `MOURN=.OUr. ROUTE=ROU..` yields `ROUGH`
 * 1444: `AMITY=..... COUGH=..... SWEEP=..EEp` yields `PREEN`
 * 1445: `SMEAR=.m.a. CLAIM=..aIm MAFIA=ma.I. ADMIT=ADMI.` yields `ADMIN`
+* 1446: `SCION=sc... CHEST=C.eS. CAUSE=Ca.SE` yields `CEASE`

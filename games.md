@@ -848,3 +848,4 @@ or an irregular past tense.
 * 1444: `AMITY=..... COUGH=..... SWEEP=..EEp` yields `PREEN`
 * 1445: `SMEAR=.m.a. CLAIM=..aIm MAFIA=ma.I. ADMIT=ADMI.` yields `ADMIN`
 * 1446: `SCION=sc... CHEST=C.eS. CAUSE=Ca.SE` yields `CEASE`
+* 1447: `BLEAT=...at TRAIN=t.a.. WATCH=.AT.. PATTY=.AT..` yields `DATUM`

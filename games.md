@@ -851,3 +851,4 @@ or an irregular past tense.
 * 1447: `BLEAT=...at TRAIN=t.a.. WATCH=.AT.. PATTY=.AT..` yields `DATUM`
 * 1448: `RETCH=.e... SNARE=....e VOWEL=...e. EQUIP=E..i.` yields `EDIFY`
 * 1449: `GLOAT=..... CHUNK=..U.. BRUSH=.rUS.` yields `REUSE`
+* 1450: `SPRIG=s.... CHEST=..eS. AMUSE=a..SE` *includes* `LEASE`

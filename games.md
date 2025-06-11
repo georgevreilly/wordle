@@ -854,3 +854,4 @@ or an irregular past tense.
 * 1450: `SPRIG=s.... CHEST=..eS. AMUSE=a..SE` *includes* `LEASE`
 * 1451: `MOURN=.O.R. WORRY=.O.R. COURT=.O.R. HOARD=.OARD` yields `BOARD`
 * 1452: `WIDER=..... CLOUT=....t STANK=.ta.. BATTY=.At.Y` yields `TAFFY`
+* 1453: `MISER=.i... CLING=.Li..` *includes* `PLAID`

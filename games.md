@@ -855,3 +855,4 @@ or an irregular past tense.
 * 1451: `MOURN=.O.R. WORRY=.O.R. COURT=.O.R. HOARD=.OARD` yields `BOARD`
 * 1452: `WIDER=..... CLOUT=....t STANK=.ta.. BATTY=.At.Y` yields `TAFFY`
 * 1453: `MISER=.i... CLING=.Li..` *includes* `PLAID`
+* 1454: `SPIRE=..i.e DEBIT=.e.i. GIVEN=.IvEN` yields `VIXEN`

@@ -28,6 +28,14 @@ table.wordle tr td.absent {
     background-color: #838184;
 }
 
+table.wordle tr td.empty {
+    border-width: 2px;
+    border-color: #d3d6da;
+    border-style: solid;
+    height: 58px;
+    width: 58px;
+}
+
 table.wordle tr td.gs {
     font-family: 'Source Code Pro', monospace;
     color: black;

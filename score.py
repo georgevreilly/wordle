@@ -5,6 +5,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import re
 
 from common import ANSWERS_FILE, GAMES_FILE, WORD_FILE, GameResult, read_vocabulary
@@ -12,14 +13,24 @@ from wordle import WordleGuesses
 
 
 def parse_args() -> argparse.Namespace:
-    parser = argparse.ArgumentParser(description="Score Validator")
+    parser = argparse.ArgumentParser(
+        description=f"Score Validator for {os.path.basename(GAMES_FILE)}",
+        epilog="Use a negative argument (such as -3) to handle the last N games",
+    )
     parser.set_defaults(
         first_game=0,
         last_game=9999,
     )
     parser.add_argument("--first-game", "-g", type=int, help="Game to start with; e.g., 723")
     parser.add_argument("--last-game", "-l", type=int, help="Game to end with; e.g., 726")
-    return parser.parse_args()
+    namespace, argv = parser.parse_known_args()
+    if argv:
+        arg = argv[0]
+        if arg[0] == "-" and arg[1:].isdigit():
+            namespace.first_game = int(arg)
+        else:
+            raise ValueError(f"Expected negative integer, such as -2: {arg=}")
+    return namespace
 
 
 # These answers to actual games were not in "answers.txt"
@@ -48,9 +59,11 @@ def check_scores(first_game: int, last_game: int) -> list:
     vocabulary = read_vocabulary(WORD_FILE)
     answers = set(read_vocabulary(ANSWERS_FILE))
     game_failures = []
-    game_results = [
-        gr for gr in GameResult.parse_file(GAMES_FILE) if first_game <= gr.game_id <= last_game
-    ]
+    game_results = GameResult.parse_file(GAMES_FILE)
+    if first_game < 0:
+        game_results = game_results[first_game:]
+    else:
+        game_results = [gr for gr in game_results if first_game <= gr.game_id <= last_game]
     for gr in game_results:
         print(f"{gr.game_id}: {gr.answer}: {' '.join(str(gs) for gs in gr.guess_scores)}")
         score_failures = []

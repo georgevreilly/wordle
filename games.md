@@ -858,3 +858,4 @@ or an irregular past tense.
 * 1454: `SPIRE=..i.e DEBIT=.e.i. GIVEN=.IvEN` yields `VIXEN`
 * 1455: `ANGRY=..g.. GLOBE=gl.bE BULGE=B.LGE` yields `BILGE`
 * 1456: `TRUCE=t.... SAINT=s...T` *includes* `GHOST`
+* 1457: `CLUNG=.lu.. BUILT=.Uil. LURID=lU.I.` *includes* `QUAIL`

@@ -859,3 +859,4 @@ or an irregular past tense.
 * 1455: `ANGRY=..g.. GLOBE=gl.bE BULGE=B.LGE` yields `BILGE`
 * 1456: `TRUCE=t.... SAINT=s...T` *includes* `GHOST`
 * 1457: `CLUNG=.lu.. BUILT=.Uil. LURID=lU.I.` *includes* `QUAIL`
+* 1458: `WEARY=.E..Y BENDY=.E..Y PESKY=PE..Y` yields `PETTY`

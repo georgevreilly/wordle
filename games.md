@@ -861,3 +861,4 @@ or an irregular past tense.
 * 1457: `CLUNG=.lu.. BUILT=.Uil. LURID=lU.I.` *includes* `QUAIL`
 * 1458: `WEARY=.E..Y BENDY=.E..Y PESKY=PE..Y` yields `PETTY`
 * 1459: `ADEPT=a..p. PANIC=Pan.. PLANK=P.ANK` yields `PRANK`
+* 1460: `ROUSE=..u..` *includes* `MUNCH`

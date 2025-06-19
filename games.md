@@ -862,3 +862,4 @@ or an irregular past tense.
 * 1458: `WEARY=.E..Y BENDY=.E..Y PESKY=PE..Y` yields `PETTY`
 * 1459: `ADEPT=a..p. PANIC=Pan.. PLANK=P.ANK` yields `PRANK`
 * 1460: `ROUSE=..u..` *includes* `MUNCH`
+* 1461: `BOGUS=.o.u. HUMOR=.U.or OUTRE=oU.r.` yields `CURIO`

@@ -52,6 +52,7 @@ EXCEPTIONAL_ANSWERS = {
     "SPATE",
     "SUEDE",
     "GRIFT",
+    "TAUPE",
 }
 
 

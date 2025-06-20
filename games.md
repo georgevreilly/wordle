@@ -863,3 +863,4 @@ or an irregular past tense.
 * 1459: `ADEPT=a..p. PANIC=Pan.. PLANK=P.ANK` yields `PRANK`
 * 1460: `ROUSE=..u..` *includes* `MUNCH`
 * 1461: `BOGUS=.o.u. HUMOR=.U.or OUTRE=oU.r.` yields `CURIO`
+* 1462: `BERTH=.e.t. CLEAT=..eat STAVE=.ta.E` yields `TAUPE`

@@ -864,3 +864,4 @@ or an irregular past tense.
 * 1460: `ROUSE=..u..` *includes* `MUNCH`
 * 1461: `BOGUS=.o.u. HUMOR=.U.or OUTRE=oU.r.` yields `CURIO`
 * 1462: `BERTH=.e.t. CLEAT=..eat STAVE=.ta.E` yields `TAUPE`
+* 1463: `PHONE=....E BLADE=.LADE` yields `GLADE`

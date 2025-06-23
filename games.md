@@ -866,3 +866,4 @@ or an irregular past tense.
 * 1462: `BERTH=.e.t. CLEAT=..eat STAVE=.ta.E` yields `TAUPE`
 * 1463: `PHONE=....E BLADE=.LADE` yields `GLADE`
 * 1464: `PATCH=..t.h THINK=TH... THOSE=TH... THUMB=THum.` yields `THRUM`
+* 1465: `WHINE=..... FLOAT=.lo.. COULD=.o.Ld` yields `ODDLY`

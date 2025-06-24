@@ -867,3 +867,4 @@ or an irregular past tense.
 * 1463: `PHONE=....E BLADE=.LADE` yields `GLADE`
 * 1464: `PATCH=..t.h THINK=TH... THOSE=TH... THUMB=THum.` yields `THRUM`
 * 1465: `WHINE=..... FLOAT=.lo.. COULD=.o.Ld` yields `ODDLY`
+* 1466: `VOTER=..te. WHITE=..ITE` *includes* `ELITE`

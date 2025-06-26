@@ -869,3 +869,4 @@ or an irregular past tense.
 * 1465: `WHINE=..... FLOAT=.lo.. COULD=.o.Ld` yields `ODDLY`
 * 1466: `VOTER=..te. WHITE=..ITE` *includes* `ELITE`
 * 1467: `BLUNT=..... CHAFE=C..F.` yields `COMFY`
+* 1468: `VICAR=....R FLOUR=f.o.R` yields `OFFER`

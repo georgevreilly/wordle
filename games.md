@@ -871,3 +871,4 @@ or an irregular past tense.
 * 1467: `BLUNT=..... CHAFE=C..F.` yields `COMFY`
 * 1468: `VICAR=....R FLOUR=f.o.R` yields `OFFER`
 * 1469: `STAND=..An. KNAVE=.nA.. CHAIN=..AIN GRAIN=..AIN` yields `PLAIN`
+* 1470: `CRIME=...M.` *includes* `STUMP`

@@ -872,3 +872,4 @@ or an irregular past tense.
 * 1468: `VICAR=....R FLOUR=f.o.R` yields `OFFER`
 * 1469: `STAND=..An. KNAVE=.nA.. CHAIN=..AIN GRAIN=..AIN` yields `PLAIN`
 * 1470: `CRIME=...M.` *includes* `STUMP`
+* 1471: `PRIDE=..i.. DINKY=.I..Y SILLY=.I..Y FIFTY=.I.TY` *includes* `WITTY`

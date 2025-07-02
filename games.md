@@ -875,3 +875,4 @@ or an irregular past tense.
 * 1471: `PRIDE=..i.. DINKY=.I..Y SILLY=.I..Y FIFTY=.I.TY` *includes* `WITTY`
 * 1472: `CARGO=..... SLIME=.LI..` *includes* `BLINK`
 * 1473: `NORTH=.O... BOUND=.O..d MODEL=MOd.l` yields `MOLDY`
+* 1474: `DEBUG=...U. SHOUT=...U. AWFUL=...U.` yields `INCUR`

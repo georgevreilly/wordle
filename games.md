@@ -877,3 +877,4 @@ or an irregular past tense.
 * 1473: `NORTH=.O... BOUND=.O..d MODEL=MOd.l` yields `MOLDY`
 * 1474: `DEBUG=...U. SHOUT=...U. AWFUL=...U.` yields `INCUR`
 * 1475: `FLUKE=..... PRINT=P.... POACH=PO...` yields `POPPY`
+* 1476: `LATCH=...c. CRIMP=Cr... COVER=C.ver` yields `CURVE`

@@ -879,3 +879,4 @@ or an irregular past tense.
 * 1475: `FLUKE=..... PRINT=P.... POACH=PO...` yields `POPPY`
 * 1476: `LATCH=...c. CRIMP=Cr... COVER=C.ver` yields `CURVE`
 * 1477: `BUYER=B..ER BAKER=BA.ER` yields `BALER`
+* 1478: `EMAIL=..aI. PANIC=.a.I. TIBIA=t..IA` yields `ATRIA`

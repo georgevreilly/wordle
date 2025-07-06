@@ -53,6 +53,7 @@ EXCEPTIONAL_ANSWERS = {
     "SUEDE",
     "GRIFT",
     "TAUPE",
+    "ATRIA",
 }
 
 

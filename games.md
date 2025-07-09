@@ -882,3 +882,4 @@ or an irregular past tense.
 * 1478: `EMAIL=..aI. PANIC=.a.I. TIBIA=t..IA` yields `ATRIA`
 * 1479: `CHASM=...s. SPLIT=S.liT` yields `STILT`
 * 1480: `CLAIM=..a.. ANGER=a..er BREAD=.READ` *includes* `DREAD`
+* 1481: `DRONE=..one FELON=.elon` yields `NOVEL`

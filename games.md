@@ -883,3 +883,4 @@ or an irregular past tense.
 * 1479: `CHASM=...s. SPLIT=S.liT` yields `STILT`
 * 1480: `CLAIM=..a.. ANGER=a..er BREAD=.READ` *includes* `DREAD`
 * 1481: `DRONE=..one FELON=.elon` yields `NOVEL`
+* 1482: `TIMER=..M.. HUMAN=.UM.. BUMPY=.UMPY` *includes* `JUMPY`

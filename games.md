@@ -884,3 +884,4 @@ or an irregular past tense.
 * 1480: `CLAIM=..a.. ANGER=a..er BREAD=.READ` *includes* `DREAD`
 * 1481: `DRONE=..one FELON=.elon` yields `NOVEL`
 * 1482: `TIMER=..M.. HUMAN=.UM.. BUMPY=.UMPY` *includes* `JUMPY`
+* 1483: `SOLVE=..... CRIMP=.R... WRATH=.RA.. FRAUD=.RA.D GRAND=.RAND` yields `BRAND`

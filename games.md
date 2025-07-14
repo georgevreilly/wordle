@@ -887,3 +887,4 @@ or an irregular past tense.
 * 1483: `SOLVE=..... CRIMP=.R... WRATH=.RA.. FRAUD=.RA.D GRAND=.RAND` yields `BRAND`
 * 1484: `FRONT=..... CLIMB=.lI.. SKILL=..IL. WHILE=..ILE GUILE=..ILE` yields `EXILE`
 * 1485: `RANCH=..n.. BLUNT=...n. DOZEN=.o.en` *includes* `GNOME`
+* 1486: `VALUE=...u. UNIFY=UNi..` *includes* `UNDID`

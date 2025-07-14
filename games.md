@@ -886,4 +886,4 @@ or an irregular past tense.
 * 1482: `TIMER=..M.. HUMAN=.UM.. BUMPY=.UMPY` *includes* `JUMPY`
 * 1483: `SOLVE=..... CRIMP=.R... WRATH=.RA.. FRAUD=.RA.D GRAND=.RAND` yields `BRAND`
 * 1484: `FRONT=..... CLIMB=.lI.. SKILL=..IL. WHILE=..ILE GUILE=..ILE` yields `EXILE`
-
+* 1485: `RANCH=..n.. BLUNT=...n. DOZEN=.o.en` *includes* `GNOME`

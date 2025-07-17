@@ -890,3 +890,4 @@ or an irregular past tense.
 * 1486: `VALUE=...u. UNIFY=UNi..` *includes* `UNDID`
 * 1487: `FAVOR=F..o. FOUND=FO... FOGGY=FO...` *includes* `FOIST`
 * 1488: `ROWDY=r...Y ANGRY=.n.rY BRINY=.r.nY` yields `NERVY`
+* 1489: `OCEAN=o..A. MOLAR=MOlA.` yields `MODAL`

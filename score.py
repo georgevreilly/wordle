@@ -55,6 +55,7 @@ EXCEPTIONAL_ANSWERS = {
     "TAUPE",
     "ATRIA",
     "NERVY",
+    "LORIS",
 }
 
 

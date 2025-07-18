@@ -891,3 +891,4 @@ or an irregular past tense.
 * 1487: `FAVOR=F..o. FOUND=FO... FOGGY=FO...` *includes* `FOIST`
 * 1488: `ROWDY=r...Y ANGRY=.n.rY BRINY=.r.nY` yields `NERVY`
 * 1489: `OCEAN=o..A. MOLAR=MOlA.` yields `MODAL`
+* 1490: `SHORE=s.or. ROUST=rO.s. LOSER=LOs.r` yields `LORIS`

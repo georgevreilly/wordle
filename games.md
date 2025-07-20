@@ -893,3 +893,4 @@ or an irregular past tense.
 * 1489: `OCEAN=o..A. MOLAR=MOlA.` yields `MODAL`
 * 1490: `SHORE=s.or. ROUST=rO.s. LOSER=LOs.r` yields `LORIS`
 * 1491: `VOICE=.o... BATON=...o. GHOST=..Os.` *includes* `SWORD`
+* 1492: `SUPER=..... FLOAT=.L.a. CLANK=.LANK` yields `BLANK`

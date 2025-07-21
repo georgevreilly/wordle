@@ -894,3 +894,4 @@ or an irregular past tense.
 * 1490: `SHORE=s.or. ROUST=rO.s. LOSER=LOs.r` yields `LORIS`
 * 1491: `VOICE=.o... BATON=...o. GHOST=..Os.` *includes* `SWORD`
 * 1492: `SUPER=..... FLOAT=.L.a. CLANK=.LANK` yields `BLANK`
+* 1493: `DAUNT=....t TRIPE=T.i..` *includes* `TIZZY`

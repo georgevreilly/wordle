@@ -56,6 +56,7 @@ EXCEPTIONAL_ANSWERS = {
     "ATRIA",
     "NERVY",
     "LORIS",
+    "TIZZY",
 }
 
 

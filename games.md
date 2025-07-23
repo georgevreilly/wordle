@@ -896,3 +896,4 @@ or an irregular past tense.
 * 1492: `SUPER=..... FLOAT=.L.a. CLANK=.LANK` yields `BLANK`
 * 1493: `DAUNT=....t TRIPE=T.i..` *includes* `TIZZY`
 * 1494: `PESTO=...t. TARDY=t.R..` yields `BURNT`
+* 1495: `SHARD=..ar. RAMEN=rA.E. TAPER=tA.ER LATER=.ATER CATER=.ATER` *includes* `WATER`

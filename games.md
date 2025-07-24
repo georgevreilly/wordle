@@ -897,3 +897,4 @@ or an irregular past tense.
 * 1493: `DAUNT=....t TRIPE=T.i..` *includes* `TIZZY`
 * 1494: `PESTO=...t. TARDY=t.R..` yields `BURNT`
 * 1495: `SHARD=..ar. RAMEN=rA.E. TAPER=tA.ER LATER=.ATER CATER=.ATER` *includes* `WATER`
+* 1496: `KNIFE=k...E SPOKE=...KE BRAKE=..AKE` *includes* `QUAKE`

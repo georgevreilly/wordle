@@ -898,3 +898,4 @@ or an irregular past tense.
 * 1494: `PESTO=...t. TARDY=t.R..` yields `BURNT`
 * 1495: `SHARD=..ar. RAMEN=rA.E. TAPER=tA.ER LATER=.ATER CATER=.ATER` *includes* `WATER`
 * 1496: `KNIFE=k...E SPOKE=...KE BRAKE=..AKE` *includes* `QUAKE`
+* 1497: `WOVEN=.O.E. MODEL=.O.E. POKER=.O.ER ROGER=.OgER` yields `GOFER`

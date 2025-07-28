@@ -901,3 +901,4 @@ or an irregular past tense.
 * 1497: `WOVEN=.O.E. MODEL=.O.E. POKER=.O.ER ROGER=.OgER` yields `GOFER`
 * 1498: `WATER=.At.. TALON=tA..n FAINT=.A.NT GAUNT=.AUNT` *includes* `HAUNT`
 * 1499: `CLOTH=.lO.h` *includes* `WHOLE`
+* 1500: `TRADE=..a.. MANIC=.A... SALLY=SA..Y` *includes* `SAVVY`

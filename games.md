@@ -903,3 +903,4 @@ or an irregular past tense.
 * 1499: `CLOTH=.lO.h` *includes* `WHOLE`
 * 1500: `TRADE=..a.. MANIC=.A... SALLY=SA..Y` *includes* `SAVVY`
 * 1501: `SOAPY=.oa.. BATON=.a.o. CROAK=..oa.` *includes* `OMEGA`
+* 1502: `OAKEN=.a... BLAST=..as. SCRAP=s..A.` yields `ASSAY`

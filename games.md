@@ -904,3 +904,4 @@ or an irregular past tense.
 * 1500: `TRADE=..a.. MANIC=.A... SALLY=SA..Y` *includes* `SAVVY`
 * 1501: `SOAPY=.oa.. BATON=.a.o. CROAK=..oa.` *includes* `OMEGA`
 * 1502: `OAKEN=.a... BLAST=..as. SCRAP=s..A.` yields `ASSAY`
+* 1503: `CABIN=...i. MITRE=.i.r. DRILL=.RILL GRILL=.RILL` *includes* `FRILL`

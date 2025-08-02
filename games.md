@@ -906,3 +906,4 @@ or an irregular past tense.
 * 1502: `OAKEN=.a... BLAST=..as. SCRAP=s..A.` yields `ASSAY`
 * 1503: `CABIN=...i. MITRE=.i.r. DRILL=.RILL GRILL=.RILL` *includes* `FRILL`
 * 1504: `BIRTH=B.... BOSUN=Bo..n` *includes* `BANJO`
+* 1505: `WHORE=..... GLINT=...NT STUNT=..UNT VAUNT=.AUNT` *includes* `DAUNT`

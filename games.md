@@ -908,3 +908,4 @@ or an irregular past tense.
 * 1504: `BIRTH=B.... BOSUN=Bo..n` *includes* `BANJO`
 * 1505: `WHORE=..... GLINT=...NT STUNT=..UNT VAUNT=.AUNT` *includes* `DAUNT`
 * 1506: `DOING=..... BRASH=..... CLUMP=.lump` yields `LUMPY`
+* 1507: `LURCH=..r.. RIVET=RI...` *includes* `RIGID`

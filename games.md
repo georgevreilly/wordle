@@ -909,3 +909,4 @@ or an irregular past tense.
 * 1505: `WHORE=..... GLINT=...NT STUNT=..UNT VAUNT=.AUNT` *includes* `DAUNT`
 * 1506: `DOING=..... BRASH=..... CLUMP=.lump` yields `LUMPY`
 * 1507: `LURCH=..r.. RIVET=RI...` *includes* `RIGID`
+* 1508: `NAIVE=..... CLOUT=..O.t STOOP=STO.. STORY=STOR. STORM=STOR.` yields `STORK`

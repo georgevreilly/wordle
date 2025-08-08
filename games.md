@@ -912,3 +912,4 @@ or an irregular past tense.
 * 1508: `NAIVE=..... CLOUT=..O.t STOOP=STO.. STORY=STOR. STORM=STOR.` yields `STORK`
 * 1509: `BRUSH=.R... CRAVE=.Ra.. ARMOR=aR.o. ORGAN=oRgAN` yields `GROAN`
 * 1510: `ROYAL=rO.AL` *includes* `CORAL`
+* 1511: `SHELF=..e.. GROVE=....E QUITE=.ui.E` yields `IMBUE`

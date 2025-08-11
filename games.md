@@ -915,3 +915,4 @@ or an irregular past tense.
 * 1511: `SHELF=..e.. GROVE=....E QUITE=.ui.E` yields `IMBUE`
 * 1512: `MAYBE=.A... CAVIL=.A..L` *includes* `NASAL`
 * 1513: `ADOPT=....t STINK=.tin. INTER=int..` *includes* `MINTY`
+* 1514: `MUSIC=.us.. SLURP=S.U..` *includes* `SOUTH`

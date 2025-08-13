@@ -58,6 +58,7 @@ EXCEPTIONAL_ANSWERS = {
     "LORIS",
     "TIZZY",
     "GOFER",
+    "KEFIR",
 }
 
 

@@ -918,3 +918,4 @@ or an irregular past tense.
 * 1514: `MUSIC=.us.. SLURP=S.U..` *includes* `SOUTH`
 * 1515: `ALERT=a.... SHANK=..an. BANDY=.and.` yields `NOMAD`
 * 1516: `CLANK=....k MUSKY=...k. BIKER=.ikeR` yields `KEFIR`
+* 1517: `PORCH=..... STINK=...nk KNAVE=KN..e KNEEL=KNE.L` yields `KNELL`

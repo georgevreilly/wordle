@@ -60,6 +60,7 @@ EXCEPTIONAL_ANSWERS = {
     "GOFER",
     "KEFIR",
     "KNELL",
+    "MATTE",
 }
 
 

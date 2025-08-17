@@ -921,3 +921,4 @@ or an irregular past tense.
 * 1517: `PORCH=..... STINK=...nk KNAVE=KN..e KNEEL=KNE.L` yields `KNELL`
 * 1518: `SCANT=..... GROWL=....L DEVIL=.EV.L BEVEL=.EVEL` yields `LEVEL`
 * 1519: `OLIVE=....E GRATE=..aTE WASTE=.A.TE HAUTE=.A.TE LATTE=.ATTE` yields `MATTE`
+* 1520: `CROWN=..o.. MOULT=.OUl. LOUPE=LOU..` yields `LOUSY`

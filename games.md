@@ -922,3 +922,4 @@ or an irregular past tense.
 * 1518: `SCANT=..... GROWL=....L DEVIL=.EV.L BEVEL=.EVEL` yields `LEVEL`
 * 1519: `OLIVE=....E GRATE=..aTE WASTE=.A.TE HAUTE=.A.TE LATTE=.ATTE` yields `MATTE`
 * 1520: `CROWN=..o.. MOULT=.OUl. LOUPE=LOU..` yields `LOUSY`
+* 1521: `HARDY=..... CHIMP=..i.. INLET=I..e.` yields `ISSUE`

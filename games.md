@@ -923,3 +923,4 @@ or an irregular past tense.
 * 1519: `OLIVE=....E GRATE=..aTE WASTE=.A.TE HAUTE=.A.TE LATTE=.ATTE` yields `MATTE`
 * 1520: `CROWN=..o.. MOULT=.OUl. LOUPE=LOU..` yields `LOUSY`
 * 1521: `HARDY=..... CHIMP=..i.. INLET=I..e.` yields `ISSUE`
+* 1522: `WRUNG=wr... STRAW=..r.w LOWER=.OW.r DOWRY=dOWrY` yields `ROWDY`

@@ -924,3 +924,4 @@ or an irregular past tense.
 * 1520: `CROWN=..o.. MOULT=.OUl. LOUPE=LOU..` yields `LOUSY`
 * 1521: `HARDY=..... CHIMP=..i.. INLET=I..e.` yields `ISSUE`
 * 1522: `WRUNG=wr... STRAW=..r.w LOWER=.OW.r DOWRY=dOWrY` yields `ROWDY`
+* 1523: `IVORY=..... STAMP=..AM. BLAME=.LAM.` yields `LLAMA`

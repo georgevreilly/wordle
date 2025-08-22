@@ -926,3 +926,4 @@ or an irregular past tense.
 * 1522: `WRUNG=wr... STRAW=..r.w LOWER=.OW.r DOWRY=dOWrY` yields `ROWDY`
 * 1523: `IVORY=..... STAMP=..AM. BLAME=.LAM.` yields `LLAMA`
 * 1524: `ALIEN=.l.e. BULGE=..l.e LEERY=le...` yields `EXTOL`
+* 1525: `CODER=....r GRIFT=.r..t STRAY=.traY` yields `RATTY`

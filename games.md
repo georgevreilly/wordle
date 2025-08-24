@@ -928,3 +928,4 @@ or an irregular past tense.
 * 1524: `ALIEN=.l.e. BULGE=..l.e LEERY=le...` yields `EXTOL`
 * 1525: `CODER=....r GRIFT=.r..t STRAY=.traY` yields `RATTY`
 * 1526: `DANCE=..n.. BLOWN=..o.N MORON=...ON PITON=.i.ON` *includes* `UNION`
+* 1527: `COAST=.o.s. SLOPE=S.OpE SPOKE=SPO.E` yields `SPORE`

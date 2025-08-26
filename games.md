@@ -930,3 +930,4 @@ or an irregular past tense.
 * 1526: `DANCE=..n.. BLOWN=..o.N MORON=...ON PITON=.i.ON` *includes* `UNION`
 * 1527: `COAST=.o.s. SLOPE=S.OpE SPOKE=SPO.E` yields `SPORE`
 * 1528: `BOGUS=..... CHIEF=.hi.. HILLY=hI...` *includes* `MIRTH`
+* 1529: `UNITY=.N... GNOME=.N..e SNEAK=.Nea.` yields `ANNEX`

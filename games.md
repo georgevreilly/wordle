@@ -931,3 +931,4 @@ or an irregular past tense.
 * 1527: `COAST=.o.s. SLOPE=S.OpE SPOKE=SPO.E` yields `SPORE`
 * 1528: `BOGUS=..... CHIEF=.hi.. HILLY=hI...` *includes* `MIRTH`
 * 1529: `UNITY=.N... GNOME=.N..e SNEAK=.Nea.` yields `ANNEX`
+* 1530: `DEVIL=.e... GRATE=.r.te STERN=.ter. OUTER=o.tER` yields `TOWER`

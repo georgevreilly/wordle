@@ -933,3 +933,4 @@ or an irregular past tense.
 * 1529: `UNITY=.N... GNOME=.N..e SNEAK=.Nea.` yields `ANNEX`
 * 1530: `DEVIL=.e... GRATE=.r.te STERN=.ter. OUTER=o.tER` yields `TOWER`
 * 1531: `CANTO=...t. STUMP=St..p SPELT=SP.lT` yields `SPLIT`
+* 1532: `DOUBT=....T MERIT=..r.T GRANT=GRA.T` yields `GRAFT`

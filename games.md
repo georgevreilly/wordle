@@ -934,3 +934,4 @@ or an irregular past tense.
 * 1530: `DEVIL=.e... GRATE=.r.te STERN=.ter. OUTER=o.tER` yields `TOWER`
 * 1531: `CANTO=...t. STUMP=St..p SPELT=SP.lT` yields `SPLIT`
 * 1532: `DOUBT=....T MERIT=..r.T GRANT=GRA.T` yields `GRAFT`
+* 1533: `VENAL=.e.al ANKLE=a..lE BLAME=.LA.E FLARE=.LA.E GLADE=.LA.E` *includes* `ELATE`

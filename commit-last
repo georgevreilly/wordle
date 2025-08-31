@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# shellcheck disable=SC2016
+game="$(tail -1 games.md | sed -E 's/^\* ([0-9]+):.*$/\1/')"
+
+git commit --all --message="$game"

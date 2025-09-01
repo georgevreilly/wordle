@@ -1,8 +1,17 @@
 #!/bin/bash
-DIR="$( dirname -- "${BASH_SOURCE[0]}"; )"
-# shellcheck disable=SC2016
-IFS=' ' read -r -a guess_scores < <(grep "$1" $DIR/games.md | sed 's/[^`]*`\([^`]*\)`.*/\1/')
 
-IFS=$'\n' read -d '' -r -a guess_scores < <(grep "$1" $DIR/games.md | grep -o ".....=....." && printf '\0')
-echo "${#guess_scores[@]}: ${guess_scores[@]}"
-$DIR/wordle.py "${guess_scores[@]}"
+if [ -z "$1" ]; then
+    echo "Specify an answer word"
+    exit 1
+fi
+
+DIR="$( dirname -- "${BASH_SOURCE[0]}"; )"
+if ! LINE=$(grep "\`$1\`$" "$DIR/games.md"); then
+    echo "Answer '$1' not found"
+    exit 1
+fi
+
+IFS=$'\n' read -d '' -r -a guess_scores < <(echo "$LINE" | grep -o ".....=....." && printf '\0')
+
+echo "$LINE"
+"$DIR/wordle.py" "${guess_scores[@]}"

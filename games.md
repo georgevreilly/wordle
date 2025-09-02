@@ -937,3 +937,4 @@ or an irregular past tense.
 * 1533: `VENAL=.e.al ANKLE=a..lE BLAME=.LA.E FLARE=.LA.E GLADE=.LA.E` *includes* `ELATE`
 * 1534: `DONUT=....t PLATE=Plate` yields `PETAL`
 * 1535: `WEARY=.EA.. DEATH=.EAt. MEANT=.EA.T BEAST=.EAST` *includes* `LEAST`
+* 1536: `LABOR=..... GLINT=g.i.T EIGHT=.IGHT FIGHT=.IGHT` *includes* `MIGHT`

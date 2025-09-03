@@ -4,3 +4,7 @@
 game="$(tail -1 games.md | sed -E 's/^\* ([0-9]+):.*$/\1/')"
 
 git commit --all --message="$game"
+
+if [ "$1" = "-p" ] || [ "$1" = "--push" ]; then
+    git push
+fi

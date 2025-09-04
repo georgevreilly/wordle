@@ -939,3 +939,4 @@ or an irregular past tense.
 * 1535: `WEARY=.EA.. DEATH=.EAt. MEANT=.EA.T BEAST=.EAST` *includes* `LEAST`
 * 1536: `LABOR=..... GLINT=g.i.T EIGHT=.IGHT FIGHT=.IGHT` *includes* `MIGHT`
 * 1537: `CHARM=ch... LYNCH=...CH BOTCH=..TCH DITCH=..TCH HUTCH=..TCH` yields `FETCH`
+* 1538: `COAST=..... FLING=.L.N.` *includes* `BLEND`

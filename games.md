@@ -941,3 +941,4 @@ or an irregular past tense.
 * 1537: `CHARM=ch... LYNCH=...CH BOTCH=..TCH DITCH=..TCH HUTCH=..TCH` yields `FETCH`
 * 1538: `COAST=..... FLING=.L.N.` *includes* `BLEND`
 * 1539: `GIFTS=.ift. FLINT=f.I.T` yields `DRIFT`
+* 1540: `URBAN=u.b.. BLUFF=Blu..` *includes* `BULGE`

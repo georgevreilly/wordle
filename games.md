@@ -943,3 +943,4 @@ or an irregular past tense.
 * 1539: `GIFTS=.ift. FLINT=f.I.T` yields `DRIFT`
 * 1540: `URBAN=u.b.. BLUFF=Blu..` *includes* `BULGE`
 * 1541: `RESIN=rE..n NERVE=nEr..` yields `TENOR`
+* 1542: `HINGE=hi... CHILD=CHI..` *includes* `CHIRP`

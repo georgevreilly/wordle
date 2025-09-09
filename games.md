@@ -944,3 +944,4 @@ or an irregular past tense.
 * 1540: `URBAN=u.b.. BLUFF=Blu..` *includes* `BULGE`
 * 1541: `RESIN=rE..n NERVE=nEr..` yields `TENOR`
 * 1542: `HINGE=hi... CHILD=CHI..` *includes* `CHIRP`
+* 1543: `WRATH=.R.t. CRUST=cR..t TRICE=TRIC.` yields `TRICK`

@@ -946,3 +946,4 @@ or an irregular past tense.
 * 1542: `HINGE=hi... CHILD=CHI..` *includes* `CHIRP`
 * 1543: `WRATH=.R.t. CRUST=cR..t TRICE=TRIC.` yields `TRICK`
 * 1544: `LOWER=.O... BOUGH=.OU.. MOUND=.OU..` *includes* `POUTY`
+* 1545: `CRUEL=Cr... CORNY=C.r.. CHIRP=CHir.` yields `CHAIR`

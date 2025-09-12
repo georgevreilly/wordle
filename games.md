@@ -947,3 +947,4 @@ or an irregular past tense.
 * 1543: `WRATH=.R.t. CRUST=cR..t TRICE=TRIC.` yields `TRICK`
 * 1544: `LOWER=.O... BOUGH=.OU.. MOUND=.OU..` *includes* `POUTY`
 * 1545: `CRUEL=Cr... CORNY=C.r.. CHIRP=CHir.` yields `CHAIR`
+* 1546: `MAYBE=...b. BLUNT=b...t` yields `THROB`

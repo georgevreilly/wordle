@@ -949,3 +949,4 @@ or an irregular past tense.
 * 1545: `CRUEL=Cr... CORNY=C.r.. CHIRP=CHir.` yields `CHAIR`
 * 1546: `MAYBE=...b. BLUNT=b...t` yields `THROB`
 * 1547: `UNITY=.ni.. MANIC=.AnI. BASIN=.A.In` yields `NADIR`
+* 1548: `SNAKE=sn... BISON=.ison` yields `NOISY`

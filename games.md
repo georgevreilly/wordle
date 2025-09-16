@@ -951,3 +951,4 @@ or an irregular past tense.
 * 1547: `UNITY=.ni.. MANIC=.AnI. BASIN=.A.In` yields `NADIR`
 * 1548: `SNAKE=sn... BISON=.ison` yields `NOISY`
 * 1549: `MASON=.a.on GONAD=gona. AGONY=AgON.` yields `ALONG`
+* 1550: `CANST=....t WROTE=...Te DEATH=.E.T. PETTY=.E.TY` yields `LEFTY`

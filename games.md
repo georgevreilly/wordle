@@ -952,3 +952,4 @@ or an irregular past tense.
 * 1548: `SNAKE=sn... BISON=.ison` yields `NOISY`
 * 1549: `MASON=.a.on GONAD=gona. AGONY=AgON.` yields `ALONG`
 * 1550: `CANST=....t WROTE=...Te DEATH=.E.T. PETTY=.E.TY` yields `LEFTY`
+* 1551: `GAMUT=....t STOLE=.t..e TEPID=TE...` *includes* `TEETH`

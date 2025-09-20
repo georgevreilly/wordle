@@ -954,3 +954,4 @@ or an irregular past tense.
 * 1550: `CANST=....t WROTE=...Te DEATH=.E.T. PETTY=.E.TY` yields `LEFTY`
 * 1551: `GAMUT=....t STOLE=.t..e TEPID=TE...` *includes* `TEETH`
 * 1552: `CHASM=..... GLINT=..In.` *includes* `KNIFE`
+* 1553: `FORGE=..r.e RIVET=r..Et` *includes* `LATER`

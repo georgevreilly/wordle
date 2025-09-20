@@ -955,3 +955,4 @@ or an irregular past tense.
 * 1551: `GAMUT=....t STOLE=.t..e TEPID=TE...` *includes* `TEETH`
 * 1552: `CHASM=..... GLINT=..In.` *includes* `KNIFE`
 * 1553: `FORGE=..r.e RIVET=r..Et` *includes* `LATER`
+* 1554: `STRIP=..r.. GRAND=.r..d ODDER=.d.ER` yields `DEFER`

@@ -958,3 +958,4 @@ or an irregular past tense.
 * 1554: `STRIP=..r.. GRAND=.r..d ODDER=.d.ER` yields `DEFER`
 * 1555: `CHOIR=C.o..` *includes* `COVEN`
 * 1556: `GRIEF=..I.. WHIST=..I.. QUICK=QUI..` yields `QUILL`
+* 1557: `DECOR=...o. BLOWN=..o.. SOUTH=.OUTH YOUTH=.OUTH` yields `MOUTH`

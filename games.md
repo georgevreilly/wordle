@@ -957,3 +957,4 @@ or an irregular past tense.
 * 1553: `FORGE=..r.e RIVET=r..Et` *includes* `LATER`
 * 1554: `STRIP=..r.. GRAND=.r..d ODDER=.d.ER` yields `DEFER`
 * 1555: `CHOIR=C.o..` *includes* `COVEN`
+* 1556: `GRIEF=..I.. WHIST=..I.. QUICK=QUI..` yields `QUILL`

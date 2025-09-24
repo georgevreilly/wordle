@@ -959,3 +959,4 @@ or an irregular past tense.
 * 1555: `CHOIR=C.o..` *includes* `COVEN`
 * 1556: `GRIEF=..I.. WHIST=..I.. QUICK=QUI..` yields `QUILL`
 * 1557: `DECOR=...o. BLOWN=..o.. SOUTH=.OUTH YOUTH=.OUTH` yields `MOUTH`
+* 1558: `SPOIL=....l LASER=l.... CLUMP=.LU..` *includes* `BLUNT`

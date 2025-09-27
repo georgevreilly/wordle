@@ -961,3 +961,5 @@ or an irregular past tense.
 * 1557: `DECOR=...o. BLOWN=..o.. SOUTH=.OUTH YOUTH=.OUTH` yields `MOUTH`
 * 1558: `SPOIL=....l LASER=l.... CLUMP=.LU..` *includes* `BLUNT`
 * 1559: `MEANT=.eA.. BLADE=..AdE` *includes* `DRAPE`
+* 1560: `UNFIT=..... SHORE=.....` *includes* `DALLY`
+* 1561: `DEIGN=..I.. SPILT=..I.t TRICK=tRI..` yields `FRITZ`

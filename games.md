@@ -963,3 +963,4 @@ or an irregular past tense.
 * 1559: `MEANT=.eA.. BLADE=..AdE` *includes* `DRAPE`
 * 1560: `UNFIT=..... SHORE=.....` *includes* `DALLY`
 * 1561: `DEIGN=..I.. SPILT=..I.t TRICK=tRI..` yields `FRITZ`
+* 1562: `TUNED=...E. LOSER=.O.E. POKEY=.O.EY FOGEY=.OgEY` yields `GOOEY`

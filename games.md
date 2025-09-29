@@ -964,3 +964,4 @@ or an irregular past tense.
 * 1560: `UNFIT=..... SHORE=.....` *includes* `DALLY`
 * 1561: `DEIGN=..I.. SPILT=..I.t TRICK=tRI..` yields `FRITZ`
 * 1562: `TUNED=...E. LOSER=.O.E. POKEY=.O.EY FOGEY=.OgEY` yields `GOOEY`
+* 1563: `MOREL=....L FINAL=.I..L VIGIL=vI.IL` yields `CIVIL`

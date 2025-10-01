@@ -966,3 +966,4 @@ or an irregular past tense.
 * 1562: `TUNED=...E. LOSER=.O.E. POKEY=.O.EY FOGEY=.OgEY` yields `GOOEY`
 * 1563: `MOREL=....L FINAL=.I..L VIGIL=vI.IL` yields `CIVIL`
 * 1564: `STERN=s.E.. BLESS=..ES. POESY=..ES.` yields `GEESE`
+* 1565: `AGENT=..... CHOIR=..OI.` *includes* `SPOIL`

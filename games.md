@@ -967,3 +967,4 @@ or an irregular past tense.
 * 1563: `MOREL=....L FINAL=.I..L VIGIL=vI.IL` yields `CIVIL`
 * 1564: `STERN=s.E.. BLESS=..ES. POESY=..ES.` yields `GEESE`
 * 1565: `AGENT=..... CHOIR=..OI.` *includes* `SPOIL`
+* 1566: `SHRUG=.h... BOTCH=..t.H DEATH=d..TH` yields `WIDTH`

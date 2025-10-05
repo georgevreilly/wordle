@@ -970,3 +970,4 @@ or an irregular past tense.
 * 1566: `SHRUG=.h... BOTCH=..t.H DEATH=d..TH` yields `WIDTH`
 * 1567: `MIDGE=m.... CAROM=.a..M ALBUM=a...M` yields `SPASM`
 * 1568: `EMAIL=e.a.l CLEAN=.leA.` *includes* `RELAY`
+* 1569: `ASIDE=a...E PLATE=PLA.E` *includes* `PLANE`

@@ -972,3 +972,4 @@ or an irregular past tense.
 * 1568: `EMAIL=e.a.l CLEAN=.leA.` *includes* `RELAY`
 * 1569: `ASIDE=a...E PLATE=PLA.E` *includes* `PLANE`
 * 1570: `BOUGH=..U.. CLUMP=..Um.` *includes* `AMUSE`
+* 1571: `SLURP=.l... HOTEL=.o..l` *includes* `NYLON`

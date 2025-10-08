@@ -973,3 +973,4 @@ or an irregular past tense.
 * 1569: `ASIDE=a...E PLATE=PLA.E` *includes* `PLANE`
 * 1570: `BOUGH=..U.. CLUMP=..Um.` *includes* `AMUSE`
 * 1571: `SLURP=.l... HOTEL=.o..l` *includes* `NYLON`
+* 1572: `LEAPT=..a.. MANIC=.aN.. SONAR=.oNa.` yields `ANNOY`

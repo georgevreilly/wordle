@@ -977,3 +977,4 @@ or an irregular past tense.
 * 1573: `SHARP=.har. RANCH=rA..h` *includes* `HARDY`
 * 1574: `COATS=..... GRIPE=.r..e` *includes* `LEVER`
 * 1575: `SHORE=S.... SWANK=S.A.K` *includes* `STACK`
+* 1576: `BENCH=..n.. SNORT=.no.. DOWNY=dOwN.` yields `WOUND`

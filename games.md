@@ -976,3 +976,4 @@ or an irregular past tense.
 * 1572: `LEAPT=..a.. MANIC=.aN.. SONAR=.oNa.` yields `ANNOY`
 * 1573: `SHARP=.har. RANCH=rA..h` *includes* `HARDY`
 * 1574: `COATS=..... GRIPE=.r..e` *includes* `LEVER`
+* 1575: `SHORE=S.... SWANK=S.A.K` *includes* `STACK`

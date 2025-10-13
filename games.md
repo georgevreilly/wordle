@@ -978,3 +978,4 @@ or an irregular past tense.
 * 1574: `COATS=..... GRIPE=.r..e` *includes* `LEVER`
 * 1575: `SHORE=S.... SWANK=S.A.K` *includes* `STACK`
 * 1576: `BENCH=..n.. SNORT=.no.. DOWNY=dOwN.` yields `WOUND`
+* 1577: `FIEND=..e.D` *includes* `BEARD`

@@ -980,3 +980,4 @@ or an irregular past tense.
 * 1576: `BENCH=..n.. SNORT=.no.. DOWNY=dOwN.` yields `WOUND`
 * 1577: `FIEND=..e.D` *includes* `BEARD`
 * 1578: `LITHE=..... WRONG=.ro.. MANOR=m..or` yields `FORUM`
+* 1579: `EMPTY=..p.. PRANK=p.... SPILL=SP...` yields `SPOOF`

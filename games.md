@@ -981,3 +981,4 @@ or an irregular past tense.
 * 1577: `FIEND=..e.D` *includes* `BEARD`
 * 1578: `LITHE=..... WRONG=.ro.. MANOR=m..or` yields `FORUM`
 * 1579: `EMPTY=..p.. PRANK=p.... SPILL=SP...` yields `SPOOF`
+* 1580: `OPIUM=..... STAVE=.ta.. CARAT=CA..t CATCH=CAT..` yields `CATTY`

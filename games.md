@@ -982,3 +982,4 @@ or an irregular past tense.
 * 1578: `LITHE=..... WRONG=.ro.. MANOR=m..or` yields `FORUM`
 * 1579: `EMPTY=..p.. PRANK=p.... SPILL=SP...` yields `SPOOF`
 * 1580: `OPIUM=..... STAVE=.ta.. CARAT=CA..t CATCH=CAT..` yields `CATTY`
+* 1581: `THIEF=..... SPARK=s..r. CROSS=.ROSS DROSS=.ROSS` yields `GROSS`

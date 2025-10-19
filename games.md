@@ -984,3 +984,4 @@ or an irregular past tense.
 * 1580: `OPIUM=..... STAVE=.ta.. CARAT=CA..t CATCH=CAT..` yields `CATTY`
 * 1581: `THIEF=..... SPARK=s..r. CROSS=.ROSS DROSS=.ROSS` yields `GROSS`
 * 1582: `GRASP=..a.. ABOUT=a.... LADEN=.A.EN MAVEN=.AVEN` yields `HAVEN`
+* 1583: `SCENT=..E.. BREAK=..EA.` *includes* `IDEAL`

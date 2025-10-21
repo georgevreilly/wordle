@@ -986,3 +986,4 @@ or an irregular past tense.
 * 1582: `GRASP=..a.. ABOUT=a.... LADEN=.A.EN MAVEN=.AVEN` yields `HAVEN`
 * 1583: `SCENT=..E.. BREAK=..EA.` *includes* `IDEAL`
 * 1584: `DIRTY=.I... MINCE=mI...` *includes* `LIMBO`
+* 1585: `BRISK=..... CLAMP=..... GROVE=..o.e` *includes* `DETOX`

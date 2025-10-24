@@ -989,3 +989,4 @@ or an irregular past tense.
 * 1585: `BRISK=..... CLAMP=..... GROVE=..o.e` *includes* `DETOX`
 * 1586: `TAPER=t.... SHUNT=S.UNT` yields `STUNT`
 * 1587: `HORDE=..rd. DRIFT=DRI..` *includes* `DRILL`
+* 1588: `CLEFT=..e.t TROVE=Tr..e TUNER=TU.ER` yields `TUBER`

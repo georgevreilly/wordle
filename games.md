@@ -990,3 +990,4 @@ or an irregular past tense.
 * 1586: `TAPER=t.... SHUNT=S.UNT` yields `STUNT`
 * 1587: `HORDE=..rd. DRIFT=DRI..` *includes* `DRILL`
 * 1588: `CLEFT=..e.t TROVE=Tr..e TUNER=TU.ER` yields `TUBER`
+* 1589: `MAYBE=.A..E CARVE=.A..E FABLE=.A..E HAUTE=.AU.E PAUSE=.AU.E` *includes* `GAUGE`

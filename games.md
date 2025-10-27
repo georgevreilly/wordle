@@ -992,3 +992,4 @@ or an irregular past tense.
 * 1588: `CLEFT=..e.t TROVE=Tr..e TUNER=TU.ER` yields `TUBER`
 * 1589: `MAYBE=.A..E CARVE=.A..E FABLE=.A..E HAUTE=.AU.E PAUSE=.AU.E` *includes* `GAUGE`
 * 1590: `OUGHT=.u... UNDER=u.... SLUMP=.LUMP CLUMP=.LUMP` yields `PLUMP`
+* 1591: `CHASM=..... BLOKE=....e QUIET=..iet TEPID=tE.ID` yields `FETID`

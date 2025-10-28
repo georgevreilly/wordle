@@ -993,3 +993,4 @@ or an irregular past tense.
 * 1589: `MAYBE=.A..E CARVE=.A..E FABLE=.A..E HAUTE=.AU.E PAUSE=.AU.E` *includes* `GAUGE`
 * 1590: `OUGHT=.u... UNDER=u.... SLUMP=.LUMP CLUMP=.LUMP` yields `PLUMP`
 * 1591: `CHASM=..... BLOKE=....e QUIET=..iet TEPID=tE.ID` yields `FETID`
+* 1592: `SOLAR=.OL.. FOLIC=.OL.. DOLLY=.OLLY JOLLY=.OLLY` *includes* `HOLLY`

@@ -994,3 +994,4 @@ or an irregular past tense.
 * 1590: `OUGHT=.u... UNDER=u.... SLUMP=.LUMP CLUMP=.LUMP` yields `PLUMP`
 * 1591: `CHASM=..... BLOKE=....e QUIET=..iet TEPID=tE.ID` yields `FETID`
 * 1592: `SOLAR=.OL.. FOLIC=.OL.. DOLLY=.OLLY JOLLY=.OLLY` *includes* `HOLLY`
+* 1593: `TOWER=...er REALM=reAl.` *includes* `GLARE`

@@ -996,3 +996,4 @@ or an irregular past tense.
 * 1592: `SOLAR=.OL.. FOLIC=.OL.. DOLLY=.OLLY JOLLY=.OLLY` *includes* `HOLLY`
 * 1593: `TOWER=...er REALM=reAl.` *includes* `GLARE`
 * 1594: `MOVER=...e. GLEAN=.lea. LEACH=Lea.h` yields `LATHE`
+* 1595: `SCARY=..ar. ARGUE=Ar...` *includes* `ABHOR`

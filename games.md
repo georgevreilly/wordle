@@ -998,3 +998,4 @@ or an irregular past tense.
 * 1594: `MOVER=...e. GLEAN=.lea. LEACH=Lea.h` yields `LATHE`
 * 1595: `SCARY=..ar. ARGUE=Ar...` *includes* `ABHOR`
 * 1596: `GHOUL=..o.L NOVEL=.O.EL VOWEL=.O.EL` *includes* `MOTEL`
+* 1597: `SHARK=..ar. TARDY=.Ard. RADAR=RAd..` *includes* `RABID`

@@ -1000,3 +1000,4 @@ or an irregular past tense.
 * 1596: `GHOUL=..o.L NOVEL=.O.EL VOWEL=.O.EL` *includes* `MOTEL`
 * 1597: `SHARK=..ar. TARDY=.Ard. RADAR=RAd..` *includes* `RABID`
 * 1598: `MATCH=.a... BLAND=..a.. ARGUE=A...E` yields `AWOKE`
+* 1599: `UNITY=un... FLUNK=..un. BONUS=..NU. ANNUM=..NU.` yields `VENUE`

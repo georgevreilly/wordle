@@ -1001,3 +1001,4 @@ or an irregular past tense.
 * 1597: `SHARK=..ar. TARDY=.Ard. RADAR=RAd..` *includes* `RABID`
 * 1598: `MATCH=.a... BLAND=..a.. ARGUE=A...E` yields `AWOKE`
 * 1599: `UNITY=un... FLUNK=..un. BONUS=..NU. ANNUM=..NU.` yields `VENUE`
+* 1600: `HADST=h..sT SHUNT=SH..T` *includes* `SHORT`

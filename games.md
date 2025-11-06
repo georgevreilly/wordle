@@ -1002,3 +1002,4 @@ or an irregular past tense.
 * 1598: `MATCH=.a... BLAND=..a.. ARGUE=A...E` yields `AWOKE`
 * 1599: `UNITY=un... FLUNK=..un. BONUS=..NU. ANNUM=..NU.` yields `VENUE`
 * 1600: `HADST=h..sT SHUNT=SH..T` *includes* `SHORT`
+* 1601: `VOTER=...e. BLAME=....E SHINE=s.I.E ASIDE=.sI.E` yields `GUISE`

@@ -1004,3 +1004,4 @@ or an irregular past tense.
 * 1600: `HADST=h..sT SHUNT=SH..T` *includes* `SHORT`
 * 1601: `VOTER=...e. BLAME=....E SHINE=s.I.E ASIDE=.sI.E` yields `GUISE`
 * 1602: `PLANK=Pl... PILOT=Pil..` *includes* `PERIL`
+* 1603: `GAUDY=.a... SLANT=s.a.. ASKEW=As.e.` *includes* `ARISE`

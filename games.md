@@ -1006,3 +1006,4 @@ or an irregular past tense.
 * 1602: `PLANK=Pl... PILOT=Pil..` *includes* `PERIL`
 * 1603: `GAUDY=.a... SLANT=s.a.. ASKEW=As.e.` *includes* `ARISE`
 * 1604: `SMOKE=....E GRAVE=g...E BULGE=.U.gE` yields `FUGUE`
+* 1605: `WEARY=..a.Y ALLOY=a...Y HASTY=.A.tY TACKY=TA..Y TANGY=TA..Y` *includes* `TABBY`

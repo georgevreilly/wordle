@@ -1008,3 +1008,4 @@ or an irregular past tense.
 * 1604: `SMOKE=....E GRAVE=g...E BULGE=.U.gE` yields `FUGUE`
 * 1605: `WEARY=..a.Y ALLOY=a...Y HASTY=.A.tY TACKY=TA..Y TANGY=TA..Y` *includes* `TABBY`
 * 1606: `DEVIL=...i. SKINT=..i.. FIFTH=.I... CIRCA=.I... PIGGY=.Ig..` yields `GIZMO`
+* 1607: `CHURL=c.U.. ACUTE=.cU.E` yields `DEUCE`

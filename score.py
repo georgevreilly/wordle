@@ -62,6 +62,7 @@ EXCEPTIONAL_ANSWERS = {
     "KNELL",
     "MATTE",
     "GIZMO",
+    "TINGE",
 }
 
 

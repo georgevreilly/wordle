@@ -1010,3 +1010,4 @@ or an irregular past tense.
 * 1606: `DEVIL=...i. SKINT=..i.. FIFTH=.I... CIRCA=.I... PIGGY=.Ig..` yields `GIZMO`
 * 1607: `CHURL=c.U.. ACUTE=.cU.E` yields `DEUCE`
 * 1608: `SWORN=....n NAVEL=n..e. THINE=T.inE` yields `TINGE`
+* 1609: `SMEAR=....r ROUND=r.u.D` yields `LURID`

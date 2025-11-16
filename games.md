@@ -1012,3 +1012,4 @@ or an irregular past tense.
 * 1608: `SWORN=....n NAVEL=n..e. THINE=T.inE` yields `TINGE`
 * 1609: `SMEAR=....r ROUND=r.u.D` yields `LURID`
 * 1610: `TEACH=...c. CRIMP=C.... CLOWN=CL..n` yields `CLUNG`
+* 1611: `CORNY=..... SPITE=..i.e DEVIL=de.il IDEAL=idE.l FIELD=.IELD` yields `WIELD`

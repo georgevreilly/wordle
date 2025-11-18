@@ -1014,3 +1014,4 @@ or an irregular past tense.
 * 1610: `TEACH=...c. CRIMP=C.... CLOWN=CL..n` yields `CLUNG`
 * 1611: `CORNY=..... SPITE=..i.e DEVIL=de.il IDEAL=idE.l FIELD=.IELD` yields `WIELD`
 * 1612: `PURGE=p.... SCAMP=.cAMP CHAMP=C.AMP` yields `CLAMP`
+* 1613: `ETHIC=e..i. RINSE=.in.E` *includes* `OPINE`

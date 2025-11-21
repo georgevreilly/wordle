@@ -1017,3 +1017,4 @@ or an irregular past tense.
 * 1613: `ETHIC=e..i. RINSE=.in.E` *includes* `OPINE`
 * 1614: `MERCY=Mer..` *includes* `MAKER`
 * 1615: `SCORN=...r. RIVET=r.ve.` *includes* `GRAVE`
+* 1616: `ACRID=..... BLUNT=.l... WHOLE=w.ole` yields `VOWEL`

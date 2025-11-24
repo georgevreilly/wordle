@@ -1019,3 +1019,4 @@ or an irregular past tense.
 * 1615: `SCORN=...r. RIVET=r.ve.` *includes* `GRAVE`
 * 1616: `ACRID=..... BLUNT=.l... WHOLE=w.ole` yields `VOWEL`
 * 1617: `GUSTY=...t. TABLE=T.... TWIXT=T.I.. THINK=THI.K` yields `THICK`
+* 1618: `DRIFT=..... SHONE=...N. FLUNK=..uN.` yields `BUNNY`

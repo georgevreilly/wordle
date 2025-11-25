@@ -1021,3 +1021,4 @@ or an irregular past tense.
 * 1617: `GUSTY=...t. TABLE=T.... TWIXT=T.I.. THINK=THI.K` yields `THICK`
 * 1618: `DRIFT=..... SHONE=...N. FLUNK=..uN.` yields `BUNNY`
 * 1619: `AUGHT=.ugh. GHOUL=ghou. COUGH=.OUGH BOUGH=.OUGH` *includes* `DOUGH`
+* 1620: `ORATE=..a.e MEDAL=.edAl` yields `PLEAD`

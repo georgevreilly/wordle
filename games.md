@@ -1023,3 +1023,4 @@ or an irregular past tense.
 * 1619: `AUGHT=.ugh. GHOUL=ghou. COUGH=.OUGH BOUGH=.OUGH` *includes* `DOUGH`
 * 1620: `ORATE=..a.e MEDAL=.edAl` yields `PLEAD`
 * 1621: `STOIC=..o.. MORAL=.O..L` *includes* `HOVEL`
+* 1622: `SNORT=...rT GRIST=.ri.T MERIT=mErIT` yields `REMIT`

@@ -1024,3 +1024,4 @@ or an irregular past tense.
 * 1620: `ORATE=..a.e MEDAL=.edAl` yields `PLEAD`
 * 1621: `STOIC=..o.. MORAL=.O..L` *includes* `HOVEL`
 * 1622: `SNORT=...rT GRIST=.ri.T MERIT=mErIT` yields `REMIT`
+* 1623: `GRAVY=..... THINK=..i.. COMIC=CO.IC` yields `COLIC`

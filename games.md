@@ -1025,3 +1025,4 @@ or an irregular past tense.
 * 1621: `STOIC=..o.. MORAL=.O..L` *includes* `HOVEL`
 * 1622: `SNORT=...rT GRIST=.ri.T MERIT=mErIT` yields `REMIT`
 * 1623: `GRAVY=..... THINK=..i.. COMIC=CO.IC` yields `COLIC`
+* 1624: `PATCH=..... SLINK=..... QUERY=.u.r. RUMOR=ru...` yields `GRUFF`

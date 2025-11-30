@@ -1026,3 +1026,4 @@ or an irregular past tense.
 * 1622: `SNORT=...rT GRIST=.ri.T MERIT=mErIT` yields `REMIT`
 * 1623: `GRAVY=..... THINK=..i.. COMIC=CO.IC` yields `COLIC`
 * 1624: `PATCH=..... SLINK=..... QUERY=.u.r. RUMOR=ru...` yields `GRUFF`
+* 1625: `CARVE=..... SHOUT=...u. PUPIL=.U... BUNNY=.U..Y MUDDY=MU..Y` *includes* `MUGGY`

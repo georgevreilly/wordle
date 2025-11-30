@@ -64,6 +64,7 @@ EXCEPTIONAL_ANSWERS = {
     "GIZMO",
     "TINGE",
     "COLIC",
+    "MUGGY",
 }
 
 

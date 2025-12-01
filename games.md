@@ -1027,3 +1027,4 @@ or an irregular past tense.
 * 1623: `GRAVY=..... THINK=..i.. COMIC=CO.IC` yields `COLIC`
 * 1624: `PATCH=..... SLINK=..... QUERY=.u.r. RUMOR=ru...` yields `GRUFF`
 * 1625: `CARVE=..... SHOUT=...u. PUPIL=.U... BUNNY=.U..Y MUDDY=MU..Y` *includes* `MUGGY`
+* 1626: `FIERY=..e.. GLADE=.lA.e EXALT=e.Al.` *includes* `LEACH`

@@ -1028,3 +1028,4 @@ or an irregular past tense.
 * 1624: `PATCH=..... SLINK=..... QUERY=.u.r. RUMOR=ru...` yields `GRUFF`
 * 1625: `CARVE=..... SHOUT=...u. PUPIL=.U... BUNNY=.U..Y MUDDY=MU..Y` *includes* `MUGGY`
 * 1626: `FIERY=..e.. GLADE=.lA.e EXALT=e.Al.` *includes* `LEACH`
+* 1627: `DRIVE=..i.. TULIP=t..i. GIANT=.ia.t` yields `CACTI`

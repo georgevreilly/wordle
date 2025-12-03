@@ -1029,3 +1029,4 @@ or an irregular past tense.
 * 1625: `CARVE=..... SHOUT=...u. PUPIL=.U... BUNNY=.U..Y MUDDY=MU..Y` *includes* `MUGGY`
 * 1626: `FIERY=..e.. GLADE=.lA.e EXALT=e.Al.` *includes* `LEACH`
 * 1627: `DRIVE=..i.. TULIP=t..i. GIANT=.ia.t` yields `CACTI`
+* 1628: `REACT=.ea.t EATEN=eAt.. WASTE=.ASTE PASTE=.ASTE` *includes* `HASTE`

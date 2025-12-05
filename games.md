@@ -1031,3 +1031,4 @@ or an irregular past tense.
 * 1627: `DRIVE=..i.. TULIP=t..i. GIANT=.ia.t` yields `CACTI`
 * 1628: `REACT=.ea.t EATEN=eAt.. WASTE=.ASTE PASTE=.ASTE` *includes* `HASTE`
 * 1629: `ARGUE=...u. COULD=..ul. UNLIT=u.LIt` yields `TULIP`
+* 1630: `CLEFT=..... ORGAN=o.gan GUANO=g.aNo AGONY=AgON.` yields `AMONG`

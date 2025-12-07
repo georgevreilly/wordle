@@ -1033,3 +1033,4 @@ or an irregular past tense.
 * 1629: `ARGUE=...u. COULD=..ul. UNLIT=u.LIt` yields `TULIP`
 * 1630: `CLEFT=..... ORGAN=o.gan GUANO=g.aNo AGONY=AgON.` yields `AMONG`
 * 1631: `SUITE=s.It. HOIST=..IST` *includes* `WAIST`
+* 1632: `TRULY=t.Ul.` *includes* `FLUTE`

@@ -1036,3 +1036,4 @@ or an irregular past tense.
 * 1632: `TRULY=t.Ul.` *includes* `FLUTE`
 * 1633: `CLOAK=...a. AMBER=a...r RADIX=ra... GRAFT=GRA..` *includes* `GRAVY`
 * 1634: `CAMPY=..... SHINE=S.InE` yields `SNIDE`
+* 1635: `WATER=.a.er REACH=reA..` *includes* `ERASE`

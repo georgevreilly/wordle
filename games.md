@@ -1034,3 +1034,4 @@ or an irregular past tense.
 * 1630: `CLEFT=..... ORGAN=o.gan GUANO=g.aNo AGONY=AgON.` yields `AMONG`
 * 1631: `SUITE=s.It. HOIST=..IST` *includes* `WAIST`
 * 1632: `TRULY=t.Ul.` *includes* `FLUTE`
+* 1633: `CLOAK=...a. AMBER=a...r RADIX=ra... GRAFT=GRA..` *includes* `GRAVY`

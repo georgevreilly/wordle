@@ -1038,3 +1038,4 @@ or an irregular past tense.
 * 1634: `CAMPY=..... SHINE=S.InE` yields `SNIDE`
 * 1635: `WATER=.a.er REACH=reA..` *includes* `ERASE`
 * 1636: `REPAY=.e... SMITE=s...e BLESS=..ESS` *includes* `GUESS`
+* 1637: `GUEST=.u..t STUNK=.tU.K` yields `TRUCK`

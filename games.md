@@ -1040,3 +1040,4 @@ or an irregular past tense.
 * 1636: `REPAY=.e... SMITE=s...e BLESS=..ESS` *includes* `GUESS`
 * 1637: `GUEST=.u..t STUNK=.tU.K` yields `TRUCK`
 * 1638: `DRAIN=.r.i. SHIRT=s.ir. RISKY=rIS.. VISOR=.IS.R WISER=.ISER` yields `MISER`
+* 1639: `OPERA=..... HUMID=...i. WITTY=wi...` *includes* `SWING`

@@ -1041,3 +1041,4 @@ or an irregular past tense.
 * 1637: `GUEST=.u..t STUNK=.tU.K` yields `TRUCK`
 * 1638: `DRAIN=.r.i. SHIRT=s.ir. RISKY=rIS.. VISOR=.IS.R WISER=.ISER` yields `MISER`
 * 1639: `OPERA=..... HUMID=...i. WITTY=wi...` *includes* `SWING`
+* 1640: `GIVEN=g.... SUGAR=..g.. BOOGY=.O.GY` yields `DODGY`

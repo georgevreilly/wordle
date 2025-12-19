@@ -1045,3 +1045,4 @@ or an irregular past tense.
 * 1641: `DOWEL=...e. BRIDE=....E STAGE=S..gE` yields `SEGUE`
 * 1642: `WEIRD=...r. GROUT=GR... GRAVY=GRA.. GRASP=GRAS.` yields `GRASS`
 * 1643: `RISEN=R.... ROUGH=R.ug.` yields `RUGBY`
+* 1644: `CEDAR=....r ROUST=r.... DRINK=.r...` yields `MYRRH`

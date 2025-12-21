@@ -1047,3 +1047,4 @@ or an irregular past tense.
 * 1643: `RISEN=R.... ROUGH=R.ug.` yields `RUGBY`
 * 1644: `CEDAR=....r ROUST=r.... DRINK=.r...` yields `MYRRH`
 * 1645: `BUYER=...e. SCONE=....E GLADE=....E` *includes* `WHITE`
+* 1646: `MOLAR=..l.. LUPIN=lU.i.` *includes* `QUILT`

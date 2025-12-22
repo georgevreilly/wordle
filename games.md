@@ -1048,3 +1048,4 @@ or an irregular past tense.
 * 1644: `CEDAR=....r ROUST=r.... DRINK=.r...` yields `MYRRH`
 * 1645: `BUYER=...e. SCONE=....E GLADE=....E` *includes* `WHITE`
 * 1646: `MOLAR=..l.. LUPIN=lU.i.` *includes* `QUILT`
+* 1647: `LADEN=....n TONIC=.ON.c` yields `CONCH`

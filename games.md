@@ -1049,3 +1049,4 @@ or an irregular past tense.
 * 1645: `BUYER=...e. SCONE=....E GLADE=....E` *includes* `WHITE`
 * 1646: `MOLAR=..l.. LUPIN=lU.i.` *includes* `QUILT`
 * 1647: `LADEN=....n TONIC=.ON.c` yields `CONCH`
+* 1648: `THINE=t.IN. PRINT=..INT FLINT=.LINT` yields `GLINT`

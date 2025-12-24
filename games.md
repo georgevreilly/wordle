@@ -1050,3 +1050,4 @@ or an irregular past tense.
 * 1646: `MOLAR=..l.. LUPIN=lU.i.` *includes* `QUILT`
 * 1647: `LADEN=....n TONIC=.ON.c` yields `CONCH`
 * 1648: `THINE=t.IN. PRINT=..INT FLINT=.LINT` yields `GLINT`
+* 1649: `VITRO=....o SOUND=So... SLOPE=SlOp.` yields `SPOOL`

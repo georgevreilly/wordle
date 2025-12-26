@@ -1052,3 +1052,4 @@ or an irregular past tense.
 * 1648: `THINE=t.IN. PRINT=..INT FLINT=.LINT` yields `GLINT`
 * 1649: `VITRO=....o SOUND=So... SLOPE=SlOp.` yields `SPOOL`
 * 1650: `NOTCH=..... GRASP=.R.Sp PRISE=PRIS.` yields `PRISM`
+* 1651: `BOARD=....D CHILD=....D UNWED=...ED` *includes* `SPEED`

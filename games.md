@@ -1053,3 +1053,4 @@ or an irregular past tense.
 * 1649: `VITRO=....o SOUND=So... SLOPE=SlOp.` yields `SPOOL`
 * 1650: `NOTCH=..... GRASP=.R.Sp PRISE=PRIS.` yields `PRISM`
 * 1651: `BOARD=....D CHILD=....D UNWED=...ED` *includes* `SPEED`
+* 1652: `DELAY=...a. GRANT=..a.t TABOO=tAb..` yields `BATCH`

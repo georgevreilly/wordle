@@ -1054,3 +1054,4 @@ or an irregular past tense.
 * 1650: `NOTCH=..... GRASP=.R.Sp PRISE=PRIS.` yields `PRISM`
 * 1651: `BOARD=....D CHILD=....D UNWED=...ED` *includes* `SPEED`
 * 1652: `DELAY=...a. GRANT=..a.t TABOO=tAb..` yields `BATCH`
+* 1653: `SWORN=..o.. COULD=.o... PIVOT=...OT` yields `ABBOT`

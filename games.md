@@ -1057,3 +1057,4 @@ or an irregular past tense.
 * 1653: `SWORN=..o.. COULD=.o... PIVOT=...OT` yields `ABBOT`
 * 1654: `CRISP=.Ri.. IRATE=iR.t.` *includes* `FRUIT`
 * 1655: `BLADE=...de DEMUR=DE..R` *includes* `DECOR`
+* 1656: `FAULT=..... GROVE=.r..e MINER=.InEr` *includes* `SIREN`

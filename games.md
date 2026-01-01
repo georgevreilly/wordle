@@ -1058,3 +1058,4 @@ or an irregular past tense.
 * 1654: `CRISP=.Ri.. IRATE=iR.t.` *includes* `FRUIT`
 * 1655: `BLADE=...de DEMUR=DE..R` *includes* `DECOR`
 * 1656: `FAULT=..... GROVE=.r..e MINER=.InEr` *includes* `SIREN`
+* 1657: `TUNER=...e. SHADE=..a.E MAPLE=.A.LE` *includes* `FABLE`

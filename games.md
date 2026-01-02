@@ -1059,3 +1059,4 @@ or an irregular past tense.
 * 1655: `BLADE=...de DEMUR=DE..R` *includes* `DECOR`
 * 1656: `FAULT=..... GROVE=.r..e MINER=.InEr` *includes* `SIREN`
 * 1657: `TUNER=...e. SHADE=..a.E MAPLE=.A.LE` *includes* `FABLE`
+* 1658: `HEAVY=..... CLOUT=..O.. WRONG=.RO..` *includes* `PROOF`

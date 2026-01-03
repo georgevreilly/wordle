@@ -65,6 +65,7 @@ EXCEPTIONAL_ANSWERS = {
     "TINGE",
     "COLIC",
     "MUGGY",
+    "SITAR",
 }
 
 
@@ -87,9 +88,7 @@ def check_scores(first_game: int, last_game: int) -> list:
                 if computed == gs.score
                 else "\033[0;31m❌ Wrong!\033[0m"
             )
-            print(
-                f"\tguess={gs.guess} score={gs.score} {computed=} " f"‹{gs.emojis()}›  {verdict}"
-            )
+            print(f"\tguess={gs.guess} score={gs.score} {computed=} ‹{gs.emojis()}›  {verdict}")
             if computed != gs.score:
                 score_failures.append((gr.answer, gs.guess, gs.score, computed))
 
@@ -112,19 +111,19 @@ def check_scores(first_game: int, last_game: int) -> list:
         if "yields" == gr.verb:
             # I previously decided that any other possibilities would never be used
             assert len(eligible) >= 1, f"{gr.game_id} yields: {eligible}"
-            assert (
-                len(plausible) == 1 or gr.answer in EXCEPTIONAL_ANSWERS
-            ), f"{gr.answer} == {plausible!r}"
+            assert len(plausible) == 1 or gr.answer in EXCEPTIONAL_ANSWERS, (
+                f"{gr.answer} == {plausible!r}"
+            )
         elif "includes" == gr.verb:
             assert len(eligible) > 1, f"{gr.game_id} includes: {eligible}"
-            assert (
-                len(plausible) > 1 or gr.answer in EXCEPTIONAL_ANSWERS
-            ), f"{gr.answer} in {plausible}"
+            assert len(plausible) > 1 or gr.answer in EXCEPTIONAL_ANSWERS, (
+                f"{gr.answer} in {plausible}"
+            )
         else:
             raise ValueError(f"Unknown {gr.verb}")
         implausible = " ".join(sorted(r for r in eligible if r not in plausible))
         others = " ".join(sorted(plausible - {gr.answer}))
-        print(f"\t{gr.verb}={gr.answer}, plausible=[{others}], " f"implausible=[{implausible}]")
+        print(f"\t{gr.verb}={gr.answer}, plausible=[{others}], implausible=[{implausible}]")
         game_failures.extend(score_failures)
 
     return game_failures

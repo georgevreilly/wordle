@@ -1060,3 +1060,4 @@ or an irregular past tense.
 * 1656: `FAULT=..... GROVE=.r..e MINER=.InEr` *includes* `SIREN`
 * 1657: `TUNER=...e. SHADE=..a.E MAPLE=.A.LE` *includes* `FABLE`
 * 1658: `HEAVY=..... CLOUT=..O.. WRONG=.RO..` *includes* `PROOF`
+* 1659: `SMOCK=S.... SUGAR=S..AR SWEAR=S..AR SIZAR=SI.AR` yields `SITAR`

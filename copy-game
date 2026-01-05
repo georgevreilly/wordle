@@ -2,16 +2,24 @@
 
 # Copy results of a game to clipboard in the form GUESSES => ANSWER
 
+# Default to most recent game
+line="$(tail -1 games.md)"
+# shellcheck disable=SC2016
+newest="$(echo "$line" | sed -E 's/^\* ([0-9]+):.*$/\1/')"
+
 game="$1"
-if [ -n "$game" ]; then
+
+if [[ -n "$game" ]]; then
+    if [[ $game == -* ]]; then
+        # negative number => offset from newest game
+        game="$((newest + game))"
+    fi
     if ! line="$(grep " $game:" games.md)"; then
         echo "Can't find '$game'"
         exit 1
     fi
 else
-    line="$(tail -1 games.md)"
-    # shellcheck disable=SC2016
-    game="$(echo "$line" | sed -E 's/^\* ([0-9]+):.*$/\1/')"
+    game="$newest"
 fi
 
 # shellcheck disable=SC2016

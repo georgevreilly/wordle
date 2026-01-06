@@ -1063,3 +1063,4 @@ or an irregular past tense.
 * 1659: `SMOCK=S.... SUGAR=S..AR SWEAR=S..AR SIZAR=SI.AR` yields `SITAR`
 * 1660: `RISEN=..Se. WASTE=..S.E` yields `POSSE`
 * 1661: `ALOUD=.l... SPLIT=..Li. MILKY=.IL.Y` *includes* `FILLY`
+* 1662: `TOADY=.O... COVER=.O... BOING=.O... HOKUM=hO..m` yields `OOMPH`

@@ -66,6 +66,7 @@ EXCEPTIONAL_ANSWERS = {
     "COLIC",
     "MUGGY",
     "SITAR",
+    "OOMPH",
 }
 
 

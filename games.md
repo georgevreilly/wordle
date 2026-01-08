@@ -1064,3 +1064,4 @@ or an irregular past tense.
 * 1660: `RISEN=..Se. WASTE=..S.E` yields `POSSE`
 * 1661: `ALOUD=.l... SPLIT=..Li. MILKY=.IL.Y` *includes* `FILLY`
 * 1662: `TOADY=.O... COVER=.O... BOING=.O... HOKUM=hO..m` yields `OOMPH`
+* 1663: `FECAL=.ECA. DECAY=.ECA. RECAP=.ECAp` yields `PECAN`

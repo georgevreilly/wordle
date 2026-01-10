@@ -1067,3 +1067,4 @@ or an irregular past tense.
 * 1663: `FECAL=.ECA. DECAY=.ECA. RECAP=.ECAp` yields `PECAN`
 * 1664: `FROST=...ST WHIST=...ST` *includes* `BLAST`
 * 1665: `WIELD=.Ie.. VIPER=.I.e. SINCE=.I..e` yields `EIGHT`
+* 1666: `TABLE=.A... WAGON=.A..n FANCY=.ANc.` *includes* `MANIC`

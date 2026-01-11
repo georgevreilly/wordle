@@ -1068,3 +1068,4 @@ or an irregular past tense.
 * 1664: `FROST=...ST WHIST=...ST` *includes* `BLAST`
 * 1665: `WIELD=.Ie.. VIPER=.I.e. SINCE=.I..e` yields `EIGHT`
 * 1666: `TABLE=.A... WAGON=.A..n FANCY=.ANc.` *includes* `MANIC`
+* 1667: `NICHE=..... GLOAT=...a. FRAUD=.rAu. UNARY=u.AR.` yields `QUARK`

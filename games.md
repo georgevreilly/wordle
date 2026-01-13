@@ -1070,3 +1070,4 @@ or an irregular past tense.
 * 1666: `TABLE=.A... WAGON=.A..n FANCY=.ANc.` *includes* `MANIC`
 * 1667: `NICHE=..... GLOAT=...a. FRAUD=.rAu. UNARY=u.AR.` yields `QUARK`
 * 1668: `DRAWL=.Ra.L` yields `TRIAL`
+* 1669: `SURGE=.U.g. GUILT=GU... GUAVA=GU... GUMMY=GUM..` yields `GUMBO`

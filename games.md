@@ -1072,3 +1072,4 @@ or an irregular past tense.
 * 1668: `DRAWL=.Ra.L` yields `TRIAL`
 * 1669: `SURGE=.U.g. GUILT=GU... GUAVA=GU... GUMMY=GUM..` yields `GUMBO`
 * 1670: `HUMOR=...o. BOAST=.oa.. ANODE=A.Od.` yields `AVOID`
+* 1671: `BLIND=..... WREAK=...a. MATCH=ma.ch CHAMP=CHAm.` yields `CHASM`

@@ -1075,3 +1075,4 @@ or an irregular past tense.
 * 1671: `BLIND=..... WREAK=...a. MATCH=ma.ch CHAMP=CHAm.` yields `CHASM`
 * 1672: `GAVEL=.A.E. MAKER=.A.ER WATER=.A.ER SABER=.A.ER` *includes* `RACER`
 * 1673: `VAPOR=....r ROUTE=r...e WRECK=.rE.. QUERY=..ERY LEERY=..ERY` yields `FIERY`
+* 1674: `DEIGN=..... WRATH=..a.. CAULK=cau.. SCUBA=Scu.a` yields `SUMAC`

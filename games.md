@@ -1076,3 +1076,4 @@ or an irregular past tense.
 * 1672: `GAVEL=.A.E. MAKER=.A.ER WATER=.A.ER SABER=.A.ER` *includes* `RACER`
 * 1673: `VAPOR=....r ROUTE=r...e WRECK=.rE.. QUERY=..ERY LEERY=..ERY` yields `FIERY`
 * 1674: `DEIGN=..... WRATH=..a.. CAULK=cau.. SCUBA=Scu.a` yields `SUMAC`
+* 1675: `AGILE=a...e MAVEN=.A.EN WAKEN=WA.EN` yields `WAXEN`

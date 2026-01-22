@@ -1079,3 +1079,4 @@ or an irregular past tense.
 * 1675: `AGILE=a...e MAVEN=.A.EN WAKEN=WA.EN` yields `WAXEN`
 * 1676: `DECRY=....Y SLIMY=Sl..Y` *includes* `SULLY`
 * 1677: `DEBIT=..BI.` *includes* `CUBIC`
+* 1678: `SHOCK=...cK CRANK=C..NK` yields `CLINK`

@@ -1080,3 +1080,4 @@ or an irregular past tense.
 * 1676: `DECRY=....Y SLIMY=Sl..Y` *includes* `SULLY`
 * 1677: `DEBIT=..BI.` *includes* `CUBIC`
 * 1678: `SHOCK=...cK CRANK=C..NK` yields `CLINK`
+* 1679: `SLOTH=..o.. BOUND=Bo.n. BACON=BA.ON` yields `BARON`

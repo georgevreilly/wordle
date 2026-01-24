@@ -1081,3 +1081,4 @@ or an irregular past tense.
 * 1677: `DEBIT=..BI.` *includes* `CUBIC`
 * 1678: `SHOCK=...cK CRANK=C..NK` yields `CLINK`
 * 1679: `SLOTH=..o.. BOUND=Bo.n. BACON=BA.ON` yields `BARON`
+* 1680: `COVET=C.... CHAIN=C..i. CRISP=C.I.. CLICK=CLI..` *includes* `CLIFF`

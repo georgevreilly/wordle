@@ -1084,3 +1084,4 @@ or an irregular past tense.
 * 1680: `COVET=C.... CHAIN=C..i. CRISP=C.I.. CLICK=CLI..` *includes* `CLIFF`
 * 1681: `REALM=r.... CROWD=.r... SKIRT=S..rT` yields `STRUT`
 * 1682: `GAUDY=.a... BRASH=.Ra.. WREAK=.REAK` *includes* `FREAK`
+* 1683: `SHAFT=s.... BRISK=...sk MUSKY=.USKY` yields `DUSKY`

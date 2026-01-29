@@ -1086,3 +1086,4 @@ or an irregular past tense.
 * 1682: `GAUDY=.a... BRASH=.Ra.. WREAK=.REAK` *includes* `FREAK`
 * 1683: `SHAFT=s.... BRISK=...sk MUSKY=.USKY` yields `DUSKY`
 * 1684: `NICHE=..c.e CLEAN=Cle..` *includes* `CRUEL`
+* 1685: `SWAIN=..A.. CHALK=..Alk FLAKE=FLAK.` yields `FLAKY`

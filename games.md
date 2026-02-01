@@ -1089,3 +1089,4 @@ or an irregular past tense.
 * 1685: `SWAIN=..A.. CHALK=..Alk FLAKE=FLAK.` yields `FLAKY`
 * 1686: `STEAM=....m MUNCH=mU... RUMOR=.UMo. GUMBO=.UMBO` yields `JUMBO`
 * 1687: `BELCH=..L.. MILKY=..L.. TULIP=t.L..` *includes* `ALLOT`
+* 1688: `BAGEL=..... FRUIT=...i. QUICK=..I.. SWISH=S.I..` yields `SPINY`

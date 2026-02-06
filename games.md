@@ -1094,3 +1094,4 @@ or an irregular past tense.
 * 1690: `CLOAK=..... BRING=..I.g GUISE=g.I.e` yields `WEIGH`
 * 1691: `PANEL=...e. SHOVE=.H..E SHIRE=.HI.E CHIME=CHI.E` yields `CHIDE`
 * 1692: `FLECK=..... BASIN=..s.. STROP=S..OP` yields `SWOOP`
+* 1693: `NURSE=....e SHELF=..el. DELAY=.ela.` *includes* `GAVEL`

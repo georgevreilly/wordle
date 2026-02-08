@@ -1096,3 +1096,4 @@ or an irregular past tense.
 * 1692: `FLECK=..... BASIN=..s.. STROP=S..OP` yields `SWOOP`
 * 1693: `NURSE=....e SHELF=..el. DELAY=.ela.` *includes* `GAVEL`
 * 1694: `PIETA=..Eta CHEAT=..EAT GREAT=..EAT SWEAT=..EAT` yields `BLEAT`
+* 1695: `GLEAN=..e.. BROKE=b...e DEBUT=deB..` yields `EMBED`

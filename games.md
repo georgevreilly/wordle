@@ -1097,3 +1097,4 @@ or an irregular past tense.
 * 1693: `NURSE=....e SHELF=..el. DELAY=.ela.` *includes* `GAVEL`
 * 1694: `PIETA=..Eta CHEAT=..EAT GREAT=..EAT SWEAT=..EAT` yields `BLEAT`
 * 1695: `GLEAN=..e.. BROKE=b...e DEBUT=deB..` yields `EMBED`
+* 1696: `TWAIN=..... BLUSH=.l... DOWEL=.o.el` yields `CELLO`

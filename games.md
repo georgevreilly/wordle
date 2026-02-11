@@ -1099,3 +1099,4 @@ or an irregular past tense.
 * 1695: `GLEAN=..e.. BROKE=b...e DEBUT=deB..` yields `EMBED`
 * 1696: `TWAIN=..... BLUSH=.l... DOWEL=.o.el` yields `CELLO`
 * 1697: `BOUGH=..... CRAMP=c.... SINCE=S.ncE` yields `SCENE`
+* 1698: `PSALM=..a.. HAVEN=.aveN` yields `VEGAN`

@@ -1100,3 +1100,4 @@ or an irregular past tense.
 * 1696: `TWAIN=..... BLUSH=.l... DOWEL=.o.el` yields `CELLO`
 * 1697: `BOUGH=..... CRAMP=c.... SINCE=S.ncE` yields `SCENE`
 * 1698: `PSALM=..a.. HAVEN=.aveN` yields `VEGAN`
+* 1699: `VOTER=...er REALM=re... WRECK=.re.. SHIRE=S..rE` yields `SURGE`

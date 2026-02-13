@@ -1101,3 +1101,4 @@ or an irregular past tense.
 * 1697: `BOUGH=..... CRAMP=c.... SINCE=S.ncE` yields `SCENE`
 * 1698: `PSALM=..a.. HAVEN=.aveN` yields `VEGAN`
 * 1699: `VOTER=...er REALM=re... WRECK=.re.. SHIRE=S..rE` yields `SURGE`
+* 1700: `ATONE=..O.. CHORD=chO.. POOCH=.OOCH` yields `MOOCH`

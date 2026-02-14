@@ -1102,3 +1102,4 @@ or an irregular past tense.
 * 1698: `PSALM=..a.. HAVEN=.aveN` yields `VEGAN`
 * 1699: `VOTER=...er REALM=re... WRECK=.re.. SHIRE=S..rE` yields `SURGE`
 * 1700: `ATONE=..O.. CHORD=chO.. POOCH=.OOCH` yields `MOOCH`
+* 1701: `YIELD=...l. CLOWN=.LO.. FLOOR=.LOO.` *includes* `BLOOM`

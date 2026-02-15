@@ -1103,3 +1103,4 @@ or an irregular past tense.
 * 1699: `VOTER=...er REALM=re... WRECK=.re.. SHIRE=S..rE` yields `SURGE`
 * 1700: `ATONE=..O.. CHORD=chO.. POOCH=.OOCH` yields `MOOCH`
 * 1701: `YIELD=...l. CLOWN=.LO.. FLOOR=.LOO.` *includes* `BLOOM`
+* 1702: `AUGHT=.u... UNDER=u.... LOUSY=l.Us. SLUMP=SlU..` *includes* `SKULL`

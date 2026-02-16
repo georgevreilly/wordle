@@ -1104,3 +1104,4 @@ or an irregular past tense.
 * 1700: `ATONE=..O.. CHORD=chO.. POOCH=.OOCH` yields `MOOCH`
 * 1701: `YIELD=...l. CLOWN=.LO.. FLOOR=.LOO.` *includes* `BLOOM`
 * 1702: `AUGHT=.u... UNDER=u.... LOUSY=l.Us. SLUMP=SlU..` *includes* `SKULL`
+* 1703: `MOURN=.O.r. ROACH=RO... ROBIN=RO...` *includes* `ROOST`

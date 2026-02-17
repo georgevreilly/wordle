@@ -1105,3 +1105,4 @@ or an irregular past tense.
 * 1701: `YIELD=...l. CLOWN=.LO.. FLOOR=.LOO.` *includes* `BLOOM`
 * 1702: `AUGHT=.u... UNDER=u.... LOUSY=l.Us. SLUMP=SlU..` *includes* `SKULL`
 * 1703: `MOURN=.O.r. ROACH=RO... ROBIN=RO...` *includes* `ROOST`
+* 1704: `FROND=....D VALID=.a..D STEAD=S..AD` yields `SQUAD`

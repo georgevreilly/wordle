@@ -1106,3 +1106,4 @@ or an irregular past tense.
 * 1702: `AUGHT=.u... UNDER=u.... LOUSY=l.Us. SLUMP=SlU..` *includes* `SKULL`
 * 1703: `MOURN=.O.r. ROACH=RO... ROBIN=RO...` *includes* `ROOST`
 * 1704: `FROND=....D VALID=.a..D STEAD=S..AD` yields `SQUAD`
+* 1705: `BEGOT=..Go. SOGGY=.OG.. LOGIC=lOG..` yields `MOGUL`

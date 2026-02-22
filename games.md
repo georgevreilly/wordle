@@ -1110,3 +1110,4 @@ or an irregular past tense.
 * 1706: `ALOFT=..o.T DIVOT=.i.oT POINT=.OI.T JOIST=.OIST` *includes* `HOIST`
 * 1707: `SPARK=S.A.K STALK=STA.K` *includes* `STANK`
 * 1708: `ABIDE=A...E ATONE=A...E AMUSE=A...E APACE=A.A.E` *includes* `AWAKE`
+* 1709: `AVERT=av... CAVIL=.av..` *includes* `GUAVA`

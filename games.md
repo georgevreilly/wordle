@@ -1108,3 +1108,4 @@ or an irregular past tense.
 * 1704: `FROND=....D VALID=.a..D STEAD=S..AD` yields `SQUAD`
 * 1705: `BEGOT=..Go. SOGGY=.OG.. LOGIC=lOG..` yields `MOGUL`
 * 1706: `ALOFT=..o.T DIVOT=.i.oT POINT=.OI.T JOIST=.OIST` *includes* `HOIST`
+* 1707: `SPARK=S.A.K STALK=STA.K` *includes* `STANK`

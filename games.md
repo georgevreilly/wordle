@@ -1111,3 +1111,4 @@ or an irregular past tense.
 * 1707: `SPARK=S.A.K STALK=STA.K` *includes* `STANK`
 * 1708: `ABIDE=A...E ATONE=A...E AMUSE=A...E APACE=A.A.E` *includes* `AWAKE`
 * 1709: `AVERT=av... CAVIL=.av..` *includes* `GUAVA`
+* 1710: `CHAOS=c.a.. WATCH=.aTc. OCTAL=.cTa. ANTIC=A.TIC` yields `ATTIC`

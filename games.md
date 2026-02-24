@@ -1112,3 +1112,4 @@ or an irregular past tense.
 * 1708: `ABIDE=A...E ATONE=A...E AMUSE=A...E APACE=A.A.E` *includes* `AWAKE`
 * 1709: `AVERT=av... CAVIL=.av..` *includes* `GUAVA`
 * 1710: `CHAOS=c.a.. WATCH=.aTc. OCTAL=.cTa. ANTIC=A.TIC` yields `ATTIC`
+* 1711: `CHIEF=...E. MOVER=...ER SUPER=.U.ER TUBER=.UbER` yields `BUYER`

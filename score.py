@@ -68,6 +68,7 @@ EXCEPTIONAL_ANSWERS = {
     "SITAR",
     "OOMPH",
     "MOOCH",
+    "SHRED",
 }
 
 

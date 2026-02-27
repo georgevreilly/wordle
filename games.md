@@ -1115,3 +1115,4 @@ or an irregular past tense.
 * 1711: `CHIEF=...E. MOVER=...ER SUPER=.U.ER TUBER=.UbER` yields `BUYER`
 * 1712: `CHIME=.H..e SHELF=SHe..` *includes* `SHRED`
 * 1713: `FOUNT=...n. NAVEL=nA.el` yields `LANCE`
+* 1714: `ADMIT=.d.i. DIRTY=DI..Y` *includes* `DIZZY`

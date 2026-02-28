@@ -69,6 +69,7 @@ EXCEPTIONAL_ANSWERS = {
     "OOMPH",
     "MOOCH",
     "SHRED",
+    "HYDRA",
 }
 
 

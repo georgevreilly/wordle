@@ -1116,3 +1116,4 @@ or an irregular past tense.
 * 1712: `CHIME=.H..e SHELF=SHe..` *includes* `SHRED`
 * 1713: `FOUNT=...n. NAVEL=nA.el` yields `LANCE`
 * 1714: `ADMIT=.d.i. DIRTY=DI..Y` *includes* `DIZZY`
+* 1715: `HADST=HaD..` yields `HYDRA`

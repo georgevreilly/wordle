@@ -1117,3 +1117,4 @@ or an irregular past tense.
 * 1713: `FOUNT=...n. NAVEL=nA.el` yields `LANCE`
 * 1714: `ADMIT=.d.i. DIRTY=DI..Y` *includes* `DIZZY`
 * 1715: `HADST=HaD..` yields `HYDRA`
+* 1716: `SLURP=.LU.. FLUNK=FLU.k` yields `FLUKE`

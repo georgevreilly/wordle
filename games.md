@@ -1118,3 +1118,4 @@ or an irregular past tense.
 * 1714: `ADMIT=.d.i. DIRTY=DI..Y` *includes* `DIZZY`
 * 1715: `HADST=HaD..` yields `HYDRA`
 * 1716: `SLURP=.LU.. FLUNK=FLU.k` yields `FLUKE`
+* 1717: `INGOT=i.... FRAIL=...il CLIMB=.LIM.` *includes* `SLIME`

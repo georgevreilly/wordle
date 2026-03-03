@@ -1119,3 +1119,4 @@ or an irregular past tense.
 * 1715: `HADST=HaD..` yields `HYDRA`
 * 1716: `SLURP=.LU.. FLUNK=FLU.k` yields `FLUKE`
 * 1717: `INGOT=i.... FRAIL=...il CLIMB=.LIM.` *includes* `SLIME`
+* 1718: `ANIME=.ni.e DINER=.INE. SINEW=.INE.` *includes* `LINEN`

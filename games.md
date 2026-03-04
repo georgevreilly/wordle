@@ -1120,3 +1120,4 @@ or an irregular past tense.
 * 1716: `SLURP=.LU.. FLUNK=FLU.k` yields `FLUKE`
 * 1717: `INGOT=i.... FRAIL=...il CLIMB=.LIM.` *includes* `SLIME`
 * 1718: `ANIME=.ni.e DINER=.INE. SINEW=.INE.` *includes* `LINEN`
+* 1719: `DWELT=..E.T SPENT=..E.T CHEAT=.HE.T` yields `THEFT`

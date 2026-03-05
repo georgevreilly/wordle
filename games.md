@@ -1121,3 +1121,4 @@ or an irregular past tense.
 * 1717: `INGOT=i.... FRAIL=...il CLIMB=.LIM.` *includes* `SLIME`
 * 1718: `ANIME=.ni.e DINER=.INE. SINEW=.INE.` *includes* `LINEN`
 * 1719: `DWELT=..E.T SPENT=..E.T CHEAT=.HE.T` yields `THEFT`
+* 1720: `AUGHT=...h. SHONE=SH..e SHELF=SHE.. SHEIK=SHE..` *includes* `SHEEP`

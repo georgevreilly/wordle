@@ -1123,3 +1123,4 @@ or an irregular past tense.
 * 1719: `DWELT=..E.T SPENT=..E.T CHEAT=.HE.T` yields `THEFT`
 * 1720: `AUGHT=...h. SHONE=SH..e SHELF=SHE.. SHEIK=SHE..` *includes* `SHEEP`
 * 1721: `STAVE=..... FROND=...n. HUNKY=.UNKY` *includes* `GUNKY`
+* 1722: `WHINE=....E DRAPE=....E QUOTE=.uo.E` *includes* `VOGUE`

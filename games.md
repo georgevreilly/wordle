@@ -1124,3 +1124,4 @@ or an irregular past tense.
 * 1720: `AUGHT=...h. SHONE=SH..e SHELF=SHE.. SHEIK=SHE..` *includes* `SHEEP`
 * 1721: `STAVE=..... FROND=...n. HUNKY=.UNKY` *includes* `GUNKY`
 * 1722: `WHINE=....E DRAPE=....E QUOTE=.uo.E` *includes* `VOGUE`
+* 1723: `LADEN=L.... LOUSY=LO..Y BEFIT=b....` yields `LOBBY`

@@ -1125,3 +1125,4 @@ or an irregular past tense.
 * 1721: `STAVE=..... FROND=...n. HUNKY=.UNKY` *includes* `GUNKY`
 * 1722: `WHINE=....E DRAPE=....E QUOTE=.uo.E` *includes* `VOGUE`
 * 1723: `LADEN=L.... LOUSY=LO..Y BEFIT=b....` yields `LOBBY`
+* 1724: `ENDOW=..... SPURT=s...t` *includes* `HASTY`

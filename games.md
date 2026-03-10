@@ -1126,3 +1126,4 @@ or an irregular past tense.
 * 1722: `WHINE=....E DRAPE=....E QUOTE=.uo.E` *includes* `VOGUE`
 * 1723: `LADEN=L.... LOUSY=LO..Y BEFIT=b....` yields `LOBBY`
 * 1724: `ENDOW=..... SPURT=s...t` *includes* `HASTY`
+* 1725: `WHORL=.HO.L` *includes* `SHOAL`

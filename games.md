@@ -1128,3 +1128,4 @@ or an irregular past tense.
 * 1724: `ENDOW=..... SPURT=s...t` *includes* `HASTY`
 * 1725: `WHORL=.HO.L` *includes* `SHOAL`
 * 1726: `BOWER=...e. GLADE=...De CADDY=..DDY` yields `TEDDY`
+* 1727: `SLEPT=SlE..` *includes* `SMELL`

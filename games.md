@@ -1130,3 +1130,4 @@ or an irregular past tense.
 * 1726: `BOWER=...e. GLADE=...De CADDY=..DDY` yields `TEDDY`
 * 1727: `SLEPT=SlE..` *includes* `SMELL`
 * 1728: `PSALM=..a.. BEGAT=.e.at WATER=.ATE. OATEN=.ATEN` yields `EATEN`
+* 1729: `REIGN=.e..n SHONE=...nE HENCE=..n.E UNDUE=.N..E KNAVE=kNa.E` yields `ANKLE`

@@ -1131,3 +1131,4 @@ or an irregular past tense.
 * 1727: `SLEPT=SlE..` *includes* `SMELL`
 * 1728: `PSALM=..a.. BEGAT=.e.at WATER=.ATE. OATEN=.ATEN` yields `EATEN`
 * 1729: `REIGN=.e..n SHONE=...nE HENCE=..n.E UNDUE=.N..E KNAVE=kNa.E` yields `ANKLE`
+* 1730: `VALID=.a..d DRAWN=dRA.. TRADE=.RADE` yields `GRADE`

@@ -1133,3 +1133,4 @@ or an irregular past tense.
 * 1729: `REIGN=.e..n SHONE=...nE HENCE=..n.E UNDUE=.N..E KNAVE=kNa.E` yields `ANKLE`
 * 1730: `VALID=.a..d DRAWN=dRA.. TRADE=.RADE` yields `GRADE`
 * 1731: `SNAIL=..A.. CHAMP=..AM. FRAME=.RAM.` yields `DRAMA`
+* 1732: `BRUTE=..... CLOWN=CL... CLAMP=CLA.P` yields `CLASP`

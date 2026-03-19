@@ -1135,3 +1135,4 @@ or an irregular past tense.
 * 1731: `SNAIL=..A.. CHAMP=..AM. FRAME=.RAM.` yields `DRAMA`
 * 1732: `BRUTE=..... CLOWN=CL... CLAMP=CLA.P` yields `CLASP`
 * 1733: `TWAIN=..a.. AROSE=A....` *includes* `AMPLY`
+* 1734: `LAPSE=.a..e DREAM=.reA. FERAL=.ErA. REBAR=REbA.` yields `REHAB`

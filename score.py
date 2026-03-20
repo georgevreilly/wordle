@@ -71,6 +71,7 @@ EXCEPTIONAL_ANSWERS = {
     "SHRED",
     "HYDRA",
     "GUNKY",
+    "OASIS",
 }
 
 

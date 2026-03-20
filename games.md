@@ -1136,3 +1136,4 @@ or an irregular past tense.
 * 1732: `BRUTE=..... CLOWN=CL... CLAMP=CLA.P` yields `CLASP`
 * 1733: `TWAIN=..a.. AROSE=A....` *includes* `AMPLY`
 * 1734: `LAPSE=.a..e DREAM=.reA. FERAL=.ErA. REBAR=REbA.` yields `REHAB`
+* 1735: `PYLON=...o. TOUGH=.o... VISOR=.iSo.` yields `OASIS`

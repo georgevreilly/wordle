@@ -1137,3 +1137,4 @@ or an irregular past tense.
 * 1733: `TWAIN=..a.. AROSE=A....` *includes* `AMPLY`
 * 1734: `LAPSE=.a..e DREAM=.reA. FERAL=.ErA. REBAR=REbA.` yields `REHAB`
 * 1735: `PYLON=...o. TOUGH=.o... VISOR=.iSo.` yields `OASIS`
+* 1736: `CYBER=c.... SCANT=Sc... SHOCK=S..CK SPICK=S.ICK` yields `SLICK`

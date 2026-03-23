@@ -1139,3 +1139,4 @@ or an irregular past tense.
 * 1735: `PYLON=...o. TOUGH=.o... VISOR=.iSo.` yields `OASIS`
 * 1736: `CYBER=c.... SCANT=Sc... SHOCK=S..CK SPICK=S.ICK` yields `SLICK`
 * 1737: `YACHT=.A... MAPLE=.A.l. VALID=.AlI.` yields `BASIL`
+* 1738: `UNFED=..fe. SHEAF=S.e.F` yields `SERIF`

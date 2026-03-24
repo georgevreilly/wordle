@@ -1140,3 +1140,4 @@ or an irregular past tense.
 * 1736: `CYBER=c.... SCANT=Sc... SHOCK=S..CK SPICK=S.ICK` yields `SLICK`
 * 1737: `YACHT=.A... MAPLE=.A.l. VALID=.AlI.` yields `BASIL`
 * 1738: `UNFED=..fe. SHEAF=S.e.F` yields `SERIF`
+* 1739: `BIRCH=B.r.. BROWN=BRO.. BROKE=BRO.. BROAD=BRO.D` yields `BROOD`

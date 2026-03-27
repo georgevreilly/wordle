@@ -1143,3 +1143,4 @@ or an irregular past tense.
 * 1739: `BIRCH=B.r.. BROWN=BRO.. BROKE=BRO.. BROAD=BRO.D` yields `BROOD`
 * 1740: `CORAL=..r.. GRIPE=.ri.e MERIT=.eri. RIVEN=rI.E. DWARF=.w.r.` yields `WISER`
 * 1741: `INGOT=i...T MERIT=.E.IT DEBIT=.EbIT` yields `BEFIT`
+* 1742: `ROUTE=ro... CROWN=.rO.. FLOUR=..O.r` yields `IVORY`

@@ -1144,3 +1144,4 @@ or an irregular past tense.
 * 1740: `CORAL=..r.. GRIPE=.ri.e MERIT=.eri. RIVEN=rI.E. DWARF=.w.r.` yields `WISER`
 * 1741: `INGOT=i...T MERIT=.E.IT DEBIT=.EbIT` yields `BEFIT`
 * 1742: `ROUTE=ro... CROWN=.rO.. FLOUR=..O.r` yields `IVORY`
+* 1743: `GUISE=..... CLOTH=..Ot. ABOUT=A.O.T ADOPT=A.O.T` yields `AFOOT`

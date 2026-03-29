@@ -1145,3 +1145,4 @@ or an irregular past tense.
 * 1741: `INGOT=i...T MERIT=.E.IT DEBIT=.EbIT` yields `BEFIT`
 * 1742: `ROUTE=ro... CROWN=.rO.. FLOUR=..O.r` yields `IVORY`
 * 1743: `GUISE=..... CLOTH=..Ot. ABOUT=A.O.T ADOPT=A.O.T` yields `AFOOT`
+* 1744: `WHEAT=.H... CHIMP=CH.MP` yields `CHUMP`

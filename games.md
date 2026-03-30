@@ -1147,3 +1147,4 @@ or an irregular past tense.
 * 1743: `GUISE=..... CLOTH=..Ot. ABOUT=A.O.T ADOPT=A.O.T` yields `AFOOT`
 * 1744: `WHEAT=.H... CHIMP=CH.MP` yields `CHUMP`
 * 1745: `FOYER=.O.E. GOLEM=.O.Em` *includes* `COMET`
+* 1746: `ORBIT=..... PLEAD=p..a. CAMPY=.amp.` *includes* `SWAMP`

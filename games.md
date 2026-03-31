@@ -1148,3 +1148,4 @@ or an irregular past tense.
 * 1744: `WHEAT=.H... CHIMP=CH.MP` yields `CHUMP`
 * 1745: `FOYER=.O.E. GOLEM=.O.Em` *includes* `COMET`
 * 1746: `ORBIT=..... PLEAD=p..a. CAMPY=.amp.` *includes* `SWAMP`
+* 1747: `WINCH=.I... DIVOT=.I... MISER=.I... FILLY=FI..Y` yields `FIZZY`

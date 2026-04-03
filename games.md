@@ -1151,3 +1151,4 @@ or an irregular past tense.
 * 1747: `WINCH=.I... DIVOT=.I... MISER=.I... FILLY=FI..Y` yields `FIZZY`
 * 1748: `ULCER=...ER DIVER=...ER WATER=...ER BOXER=bO.ER` yields `SOBER`
 * 1749: `WRACK=..... BEGUN=.eg.n HINGE=.INGE` yields `SINGE`
+* 1750: `AMBIT=a.... SHANK=S.an.` *includes* `SANDY`

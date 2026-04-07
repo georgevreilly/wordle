@@ -1155,3 +1155,4 @@ or an irregular past tense.
 * 1751: `DUCHY=....Y NASTY=n...Y PINKY=..n.Y EBONY=E.onY ENJOY=EN.OY` yields `ENVOY`
 * 1752: `GLAND=...n. MINER=..n.r CHURN=...RN` yields `SWORN`
 * 1753: `OCHRE=....E STAVE=s...E ISSUE=.s..E GEESE=.E.SE` yields `DENSE`
+* 1754: `MOTEL=..tEl VALET=..LET GILET=.iLET` *includes* `INLET`

@@ -72,6 +72,7 @@ EXCEPTIONAL_ANSWERS = {
     "HYDRA",
     "GUNKY",
     "OASIS",
+    "CAROM",
 }
 
 

@@ -1157,3 +1157,4 @@ or an irregular past tense.
 * 1753: `OCHRE=....E STAVE=s...E ISSUE=.s..E GEESE=.E.SE` yields `DENSE`
 * 1754: `MOTEL=..tEl VALET=..LET GILET=.iLET` *includes* `INLET`
 * 1755: `BUTCH=..... MINOR=..n..` *includes* `LADEN`
+* 1756: `SHARD=..ar. ARGUE=ar... PARTY=.AR.. CAROL=CARO. NIMBY=..m..` yields `CAROM`

@@ -1159,3 +1159,4 @@ or an irregular past tense.
 * 1755: `BUTCH=..... MINOR=..n..` *includes* `LADEN`
 * 1756: `SHARD=..ar. ARGUE=ar... PARTY=.AR.. CAROL=CARO. NIMBY=..m..` yields `CAROM`
 * 1757: `SMITE=....E GLOBE=....E PRAWN=PR...` yields `PRUDE`
+* 1758: `SMELT=..el. ELBOW=eL... GLIDE=.L..e FLYER=.LyE.` yields `ALLEY`

@@ -1161,3 +1161,4 @@ or an irregular past tense.
 * 1757: `SMITE=....E GLOBE=....E PRAWN=PR...` yields `PRUDE`
 * 1758: `SMELT=..el. ELBOW=eL... GLIDE=.L..e FLYER=.LyE.` yields `ALLEY`
 * 1759: `SWARD=..... GLINT=.Lin.` yields `ELFIN`
+* 1760: `AUGER=...e. CHIVE=C...E CLONE=Cl..E` yields `CYCLE`

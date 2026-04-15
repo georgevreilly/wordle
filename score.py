@@ -73,6 +73,7 @@ EXCEPTIONAL_ANSWERS = {
     "GUNKY",
     "OASIS",
     "CAROM",
+    "CUBIT",
 }
 
 

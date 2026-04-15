@@ -1163,3 +1163,4 @@ or an irregular past tense.
 * 1759: `SWARD=..... GLINT=.Lin.` yields `ELFIN`
 * 1760: `AUGER=...e. CHIVE=C...E CLONE=Cl..E` yields `CYCLE`
 * 1761: `FORUM=...U. CHEAT=..e.. UNDUE=.n.Ue ENNUI=en.U.` yields `BEGUN`
+* 1762: `BISON=bi... HABIT=..BIT` *includes* `CUBIT`

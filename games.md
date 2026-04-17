@@ -1165,3 +1165,4 @@ or an irregular past tense.
 * 1761: `FORUM=...U. CHEAT=..e.. UNDUE=.n.Ue ENNUI=en.U.` yields `BEGUN`
 * 1762: `BISON=bi... HABIT=..BIT` *includes* `CUBIT`
 * 1763: `VENAL=.E..l RELIC=.EL.. BELLY=BELL.` yields `BELLE`
+* 1764: `FLYER=..y.. HANDY=.a.DY COADY=.OADY` yields `TOADY`

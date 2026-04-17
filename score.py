@@ -74,6 +74,7 @@ EXCEPTIONAL_ANSWERS = {
     "OASIS",
     "CAROM",
     "CUBIT",
+    "TOADY",
 }
 
 

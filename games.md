@@ -1166,3 +1166,4 @@ or an irregular past tense.
 * 1762: `BISON=bi... HABIT=..BIT` *includes* `CUBIT`
 * 1763: `VENAL=.E..l RELIC=.EL.. BELLY=BELL.` yields `BELLE`
 * 1764: `FLYER=..y.. HANDY=.a.DY COADY=.OADY` yields `TOADY`
+* 1765: `BLEAT=...at STAMP=STA.. STARK=STA.. STAID=STA.D` yields `STAND`

@@ -1170,3 +1170,4 @@ or an irregular past tense.
 * 1766: `BOLUS=..... WRATH=W.A..` yields `WEAVE`
 * 1767: `FLINT=.L... CLASP=CL..P` yields `CLUMP`
 * 1768: `DOING=.o.n. BATON=...on SLURP=S..R. SWORN=S.ORn SHORN=S.ORn` yields `SNORE`
+* 1769: `ETHIC=et... DUVET=...ET TENET=Te.ET` yields `TWEET`

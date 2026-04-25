@@ -1173,3 +1173,4 @@ or an irregular past tense.
 * 1769: `ETHIC=et... DUVET=...ET TENET=Te.ET` yields `TWEET`
 * 1770: `GHOUL=...u. UNDER=und.r` yields `DRUNK`
 * 1771: `PLUCK=..... GRIEF=...E. WAXEN=W..EN WOVEN=WO.EN` yields `WOMEN`
+* 1772: `FARCE=..... DIVOT=...o. COUGH=.o.g. GLOOM=GLO..` yields `GLOSS`

@@ -1175,3 +1175,4 @@ or an irregular past tense.
 * 1771: `PLUCK=..... GRIEF=...E. WAXEN=W..EN WOVEN=WO.EN` yields `WOMEN`
 * 1772: `FARCE=..... DIVOT=...o. COUGH=.o.g. GLOOM=GLO..` yields `GLOSS`
 * 1773: `BIDET=.i.e. RELIC=rE.I. SEPIA=.E.I.` yields `EERIE`
+* 1774: `HINGE=..... FLOAT=...a. WRACK=..ACK SMACK=..ACK` *includes* `QUACK`

@@ -1176,3 +1176,4 @@ or an irregular past tense.
 * 1772: `FARCE=..... DIVOT=...o. COUGH=.o.g. GLOOM=GLO..` yields `GLOSS`
 * 1773: `BIDET=.i.e. RELIC=rE.I. SEPIA=.E.I.` yields `EERIE`
 * 1774: `HINGE=..... FLOAT=...a. WRACK=..ACK SMACK=..ACK` *includes* `QUACK`
+* 1775: `BIRTH=..R.. SURGE=.UR.. CURVY=.UR.. AURAL=.URAL MURAL=.URAL` yields `RURAL`

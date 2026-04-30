@@ -1178,3 +1178,4 @@ or an irregular past tense.
 * 1774: `HINGE=..... FLOAT=...a. WRACK=..ACK SMACK=..ACK` *includes* `QUACK`
 * 1775: `BIRTH=..R.. SURGE=.UR.. CURVY=.UR.. AURAL=.URAL MURAL=.URAL` yields `RURAL`
 * 1776: `BOAST=.o... OUNCE=o..C. FLOCK=..OCK CRIMP=CR...` yields `CROCK`
+* 1777: `HARPY=...p. SPOUT=.p.u. FIEND=..e..` yields `PLUME`

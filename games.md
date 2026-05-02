@@ -1180,3 +1180,4 @@ or an irregular past tense.
 * 1776: `BOAST=.o... OUNCE=o..C. FLOCK=..OCK CRIMP=CR...` yields `CROCK`
 * 1777: `HARPY=...p. SPOUT=.p.u. FIEND=..e..` yields `PLUME`
 * 1778: `CHEFS=..... GLINT=g.IN. BROWN=BR..n` yields `BRING`
+* 1779: `DECOR=..... STAIN=..... BUGGY=.U..Y` *includes* `PUFFY`

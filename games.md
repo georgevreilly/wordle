@@ -1181,3 +1181,4 @@ or an irregular past tense.
 * 1777: `HARPY=...p. SPOUT=.p.u. FIEND=..e..` yields `PLUME`
 * 1778: `CHEFS=..... GLINT=g.IN. BROWN=BR..n` yields `BRING`
 * 1779: `DECOR=..... STAIN=..... BUGGY=.U..Y` *includes* `PUFFY`
+* 1780: `GHOST=...s. SLAIN=s..i. MISER=.ISER WISER=.ISER` yields `RISER`

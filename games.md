@@ -1191,3 +1191,4 @@ or an irregular past tense.
 * 1787: `ARGUE=....e WHELP=w.eL.` yields `NEWLY`
 * 1788: `MOUSE=.o... CLOAK=CLO.K` yields `CLOCK`
 * 1789: `CASTE=..... FLUNK=..... PRISM=..... GOODY=.O.DY HOWDY=.OWDY` yields `DOWDY`
+* 1790: `DATUM=.A... PANIC=.A... SAVOR=.AV.R` yields `WAVER`

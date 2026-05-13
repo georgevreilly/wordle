@@ -1186,3 +1186,4 @@ or an irregular past tense.
 * 1782: `ETHOS=e.... CRIME=..i.e WIDEN=.I.EN LIVEN=LI.EN LINEN=LI.EN` yields `LIKEN`
 * 1783: `RESIN=.e... GLOBE=g..bE` *includes* `BUDGE`
 * 1784: `REHAB=r..ab BRAIN=bra.. LABOR=.aB.r` yields `UMBRA`
+* 1785: `INLAY=in.a. MANIC=.AnI.` *includes* `SATIN`

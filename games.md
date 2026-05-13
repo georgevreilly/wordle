@@ -1189,3 +1189,4 @@ or an irregular past tense.
 * 1785: `INLAY=in.a. MANIC=.AnI.` *includes* `SATIN`
 * 1786: `BINGE=..... SHORT=...r. FRAUD=.ra.. PARRY=PAR..` yields `PARKA`
 * 1787: `ARGUE=....e WHELP=w.eL.` yields `NEWLY`
+* 1788: `MOUSE=.o... CLOAK=CLO.K` yields `CLOCK`

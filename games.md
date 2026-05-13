@@ -1187,3 +1187,4 @@ or an irregular past tense.
 * 1783: `RESIN=.e... GLOBE=g..bE` *includes* `BUDGE`
 * 1784: `REHAB=r..ab BRAIN=bra.. LABOR=.aB.r` yields `UMBRA`
 * 1785: `INLAY=in.a. MANIC=.AnI.` *includes* `SATIN`
+* 1786: `BINGE=..... SHORT=...r. FRAUD=.ra.. PARRY=PAR..` yields `PARKA`

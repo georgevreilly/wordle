@@ -1185,3 +1185,4 @@ or an irregular past tense.
 * 1781: `NOVEL=....l LIGHT=L..ht` yields `LATCH`
 * 1782: `ETHOS=e.... CRIME=..i.e WIDEN=.I.EN LIVEN=LI.EN LINEN=LI.EN` yields `LIKEN`
 * 1783: `RESIN=.e... GLOBE=g..bE` *includes* `BUDGE`
+* 1784: `REHAB=r..ab BRAIN=bra.. LABOR=.aB.r` yields `UMBRA`

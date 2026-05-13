@@ -1183,3 +1183,4 @@ or an irregular past tense.
 * 1779: `DECOR=..... STAIN=..... BUGGY=.U..Y` *includes* `PUFFY`
 * 1780: `GHOST=...s. SLAIN=s..i. MISER=.ISER WISER=.ISER` yields `RISER`
 * 1781: `NOVEL=....l LIGHT=L..ht` yields `LATCH`
+* 1782: `ETHOS=e.... CRIME=..i.e WIDEN=.I.EN LIVEN=LI.EN LINEN=LI.EN` yields `LIKEN`

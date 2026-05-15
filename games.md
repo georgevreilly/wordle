@@ -1193,3 +1193,4 @@ or an irregular past tense.
 * 1789: `CASTE=..... FLUNK=..... PRISM=..... GOODY=.O.DY HOWDY=.OWDY` yields `DOWDY`
 * 1790: `DATUM=.A... PANIC=.A... SAVOR=.AV.R` yields `WAVER`
 * 1791: `MATCH=...c. CLONE=C...e CREEP=CREE.` *includes* `CREED`
+* 1792: `SHIRE=...re MOUND=MO... MOREL=MOrE.` *includes* `MOVER`

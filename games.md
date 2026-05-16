@@ -1194,3 +1194,4 @@ or an irregular past tense.
 * 1790: `DATUM=.A... PANIC=.A... SAVOR=.AV.R` yields `WAVER`
 * 1791: `MATCH=...c. CLONE=C...e CREEP=CREE.` *includes* `CREED`
 * 1792: `SHIRE=...re MOUND=MO... MOREL=MOrE.` *includes* `MOVER`
+* 1793: `OPTIC=..... SHARE=..a.. LANKY=la..y ALKYL=al.y.` yields `BYLAW`

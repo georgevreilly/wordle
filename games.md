@@ -1195,3 +1195,4 @@ or an irregular past tense.
 * 1791: `MATCH=...c. CLONE=C...e CREEP=CREE.` *includes* `CREED`
 * 1792: `SHIRE=...re MOUND=MO... MOREL=MOrE.` *includes* `MOVER`
 * 1793: `OPTIC=..... SHARE=..a.. LANKY=la..y ALKYL=al.y.` yields `BYLAW`
+* 1794: `REACT=..A.t TWAIN=t.A.. STALL=.tAl.` yields `LOATH`

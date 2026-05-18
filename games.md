@@ -1196,3 +1196,4 @@ or an irregular past tense.
 * 1792: `SHIRE=...re MOUND=MO... MOREL=MOrE.` *includes* `MOVER`
 * 1793: `OPTIC=..... SHARE=..a.. LANKY=la..y ALKYL=al.y.` yields `BYLAW`
 * 1794: `REACT=..A.t TWAIN=t.A.. STALL=.tAl.` yields `LOATH`
+* 1795: `CRUSH=..us. MINUS=...us SUAVE=sU... FUSSY=.US.Y` *includes* `DUSTY`

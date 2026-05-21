@@ -1199,3 +1199,4 @@ or an irregular past tense.
 * 1795: `CRUSH=..us. MINUS=...us SUAVE=sU... FUSSY=.US.Y` *includes* `DUSTY`
 * 1796: `FARCE=..rCe ERECT=.REC.` yields `WRECK`
 * 1797: `FLESH=..e.. MEDIC=.e... PRATE=.ra.E BARGE=.aRgE ARGUE=Arg.E` yields `AGREE`
+* 1798: `RECAP=..CA.` *includes* `VOCAL`

@@ -1200,3 +1200,4 @@ or an irregular past tense.
 * 1796: `FARCE=..rCe ERECT=.REC.` yields `WRECK`
 * 1797: `FLESH=..e.. MEDIC=.e... PRATE=.ra.E BARGE=.aRgE ARGUE=Arg.E` yields `AGREE`
 * 1798: `RECAP=..CA.` *includes* `VOCAL`
+* 1799: `LOATH=....h CHIRP=CH... CHUNK=CHU.K` yields `CHUCK`

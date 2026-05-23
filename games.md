@@ -1201,3 +1201,4 @@ or an irregular past tense.
 * 1797: `FLESH=..e.. MEDIC=.e... PRATE=.ra.E BARGE=.aRgE ARGUE=Arg.E` yields `AGREE`
 * 1798: `RECAP=..CA.` *includes* `VOCAL`
 * 1799: `LOATH=....h CHIRP=CH... CHUNK=CHU.K` yields `CHUCK`
+* 1800: `ALERT=..E.. SHEIK=..Ei. PIEZO=.IE.. FIEND=.IEn.` yields `NIECE`

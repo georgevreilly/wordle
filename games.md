@@ -1202,3 +1202,4 @@ or an irregular past tense.
 * 1798: `RECAP=..CA.` *includes* `VOCAL`
 * 1799: `LOATH=....h CHIRP=CH... CHUNK=CHU.K` yields `CHUCK`
 * 1800: `ALERT=..E.. SHEIK=..Ei. PIEZO=.IE.. FIEND=.IEn.` yields `NIECE`
+* 1801: `SCOPE=s.... TRASH=t..s. MUSTY=..St.` yields `VISIT`

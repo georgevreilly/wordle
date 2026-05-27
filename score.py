@@ -75,6 +75,7 @@ EXCEPTIONAL_ANSWERS = {
     "CAROM",
     "CUBIT",
     "TOADY",
+    "DIVOT",
 }
 
 

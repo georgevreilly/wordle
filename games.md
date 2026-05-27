@@ -1205,3 +1205,4 @@ or an irregular past tense.
 * 1801: `SCOPE=s.... TRASH=t..s. MUSTY=..St.` yields `VISIT`
 * 1802: `NOVEL=.O... TONIC=.O..c COUGH=COU.H` yields `COUCH`
 * 1803: `SKEIN=S.... SLURP=S.U..` *includes* `STUFF`
+* 1804: `CHASM=..... GLINT=..i.T` *includes* `DIVOT`

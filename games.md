@@ -1206,3 +1206,4 @@ or an irregular past tense.
 * 1802: `NOVEL=.O... TONIC=.O..c COUGH=COU.H` yields `COUCH`
 * 1803: `SKEIN=S.... SLURP=S.U..` *includes* `STUFF`
 * 1804: `CHASM=..... GLINT=..i.T` *includes* `DIVOT`
+* 1805: `BEGAT=..ga. GAUDY=ga... AGAIN=.gA.n` *includes* `CLANG`

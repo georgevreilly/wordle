@@ -34,49 +34,8 @@ def parse_args() -> argparse.Namespace:
 
 
 # These answers to actual games were not in "answers.txt"
-EXCEPTIONAL_ANSWERS = {
-    "GUANO",
-    "SNAFU",
-    "BALSA",
-    "KAZOO",
-    "LASER",
-    "PIOUS",
-    "BEAUT",
-    "MOMMY",
-    "PRIMP",
-    "UVULA",
-    "ATLAS",
-    "SQUID",
-    "RUMBA",
-    "INDIE",
-    "SPATE",
-    "SUEDE",
-    "GRIFT",
-    "TAUPE",
-    "ATRIA",
-    "NERVY",
-    "LORIS",
-    "TIZZY",
-    "GOFER",
-    "KEFIR",
-    "KNELL",
-    "MATTE",
-    "GIZMO",
-    "TINGE",
-    "COLIC",
-    "MUGGY",
-    "SITAR",
-    "OOMPH",
-    "MOOCH",
-    "SHRED",
-    "HYDRA",
-    "GUNKY",
-    "OASIS",
-    "CAROM",
-    "CUBIT",
-    "TOADY",
-    "DIVOT",
-}
+with open("exceptional_answers.txt") as f:
+    EXCEPTIONAL_ANSWERS = set(w.strip() for w in f.readlines())
 
 
 def check_scores(first_game: int, last_game: int) -> list:

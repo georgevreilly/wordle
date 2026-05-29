@@ -1207,3 +1207,4 @@ or an irregular past tense.
 * 1803: `SKEIN=S.... SLURP=S.U..` *includes* `STUFF`
 * 1804: `CHASM=..... GLINT=..i.T` *includes* `DIVOT`
 * 1805: `BEGAT=..ga. GAUDY=ga... AGAIN=.gA.n` *includes* `CLANG`
+* 1806: `LATCH=l.... BOWEL=...el ELIDE=.lI.E GUILE=..ILE` yields `SMILE`

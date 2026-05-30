@@ -1208,3 +1208,4 @@ or an irregular past tense.
 * 1804: `CHASM=..... GLINT=..i.T` *includes* `DIVOT`
 * 1805: `BEGAT=..ga. GAUDY=ga... AGAIN=.gA.n` *includes* `CLANG`
 * 1806: `LATCH=l.... BOWEL=...el ELIDE=.lI.E GUILE=..ILE` yields `SMILE`
+* 1807: `HAUNT=..U.t TRUCK=t.U.. DUMPY=du...` yields `ETUDE`

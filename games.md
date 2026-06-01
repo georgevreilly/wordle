@@ -1209,3 +1209,4 @@ or an irregular past tense.
 * 1805: `BEGAT=..ga. GAUDY=ga... AGAIN=.gA.n` *includes* `CLANG`
 * 1806: `LATCH=l.... BOWEL=...el ELIDE=.lI.E GUILE=..ILE` yields `SMILE`
 * 1807: `HAUNT=..U.t TRUCK=t.U.. DUMPY=du...` yields `ETUDE`
+* 1808: `LEARN=l.... PLONK=.l... GUILT=..IL. CHILL=CHIL. CHILD=CHIL.` yields `CHILI`

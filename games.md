@@ -1210,3 +1210,4 @@ or an irregular past tense.
 * 1806: `LATCH=l.... BOWEL=...el ELIDE=.lI.E GUILE=..ILE` yields `SMILE`
 * 1807: `HAUNT=..U.t TRUCK=t.U.. DUMPY=du...` yields `ETUDE`
 * 1808: `LEARN=l.... PLONK=.l... GUILT=..IL. CHILL=CHIL. CHILD=CHIL.` yields `CHILI`
+* 1809: `SMOTE=s.... FLASH=..as. BASIC=BASI. BASIN=BASI.` yields `BASIS`

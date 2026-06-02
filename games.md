@@ -1211,3 +1211,4 @@ or an irregular past tense.
 * 1807: `HAUNT=..U.t TRUCK=t.U.. DUMPY=du...` yields `ETUDE`
 * 1808: `LEARN=l.... PLONK=.l... GUILT=..IL. CHILL=CHIL. CHILD=CHIL.` yields `CHILI`
 * 1809: `SMOTE=s.... FLASH=..as. BASIC=BASI. BASIN=BASI.` yields `BASIS`
+* 1810: `LIMBO=....o OUGHT=o..ht THORN=tho.n MONTH=.OntH` yields `NOTCH`

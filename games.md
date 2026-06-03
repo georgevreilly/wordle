@@ -1212,3 +1212,4 @@ or an irregular past tense.
 * 1808: `LEARN=l.... PLONK=.l... GUILT=..IL. CHILL=CHIL. CHILD=CHIL.` yields `CHILI`
 * 1809: `SMOTE=s.... FLASH=..as. BASIC=BASI. BASIN=BASI.` yields `BASIS`
 * 1810: `LIMBO=....o OUGHT=o..ht THORN=tho.n MONTH=.OntH` yields `NOTCH`
+* 1811: `SHOWY=..o.Y ENVOY=...OY` yields `ALLOY`

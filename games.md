@@ -1214,3 +1214,4 @@ or an irregular past tense.
 * 1810: `LIMBO=....o OUGHT=o..ht THORN=tho.n MONTH=.OntH` yields `NOTCH`
 * 1811: `SHOWY=..o.Y ENVOY=...OY` yields `ALLOY`
 * 1812: `SCION=...on GNOME=.no.. NORTH=NO...` yields `NOBLY`
+* 1813: `GAVEL=..... CROWD=.ro.. HUMOR=h.mor` yields `MORPH`

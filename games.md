@@ -1216,3 +1216,4 @@ or an irregular past tense.
 * 1812: `SCION=...on GNOME=.no.. NORTH=NO...` yields `NOBLY`
 * 1813: `GAVEL=..... CROWD=.ro.. HUMOR=h.mor` yields `MORPH`
 * 1814: `OUNCE=.u... STUMP=.tUM.` yields `THUMB`
+* 1815: `BAWDY=.A... CARVE=.A... PAINT=.Ai.. OASIS=.A.I.` *includes* `MAFIA`

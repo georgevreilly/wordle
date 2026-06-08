@@ -1217,3 +1217,4 @@ or an irregular past tense.
 * 1813: `GAVEL=..... CROWD=.ro.. HUMOR=h.mor` yields `MORPH`
 * 1814: `OUNCE=.u... STUMP=.tUM.` yields `THUMB`
 * 1815: `BAWDY=.A... CARVE=.A... PAINT=.Ai.. OASIS=.A.I.` *includes* `MAFIA`
+* 1816: `VIRUS=..r.. LONER=....r CRAMP=.rA..` *includes* `WHARF`

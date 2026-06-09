@@ -1218,3 +1218,4 @@ or an irregular past tense.
 * 1814: `OUNCE=.u... STUMP=.tUM.` yields `THUMB`
 * 1815: `BAWDY=.A... CARVE=.A... PAINT=.Ai.. OASIS=.A.I.` *includes* `MAFIA`
 * 1816: `VIRUS=..r.. LONER=....r CRAMP=.rA..` *includes* `WHARF`
+* 1817: `GRAVE=g.a.. SWANG=..ang MANGY=.anG.` yields `ALIGN`

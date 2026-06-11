@@ -1220,3 +1220,4 @@ or an irregular past tense.
 * 1816: `VIRUS=..r.. LONER=....r CRAMP=.rA..` *includes* `WHARF`
 * 1817: `GRAVE=g.a.. SWANG=..ang MANGY=.anG.` yields `ALIGN`
 * 1818: `CARGO=..... SPUME=s...e` *includes* `TESTY`
+* 1819: `WIDTH=.....` *includes* `BREAK`

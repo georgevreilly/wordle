@@ -1222,3 +1222,4 @@ or an irregular past tense.
 * 1818: `CARGO=..... SPUME=s...e` *includes* `TESTY`
 * 1819: `WIDTH=.....` *includes* `BREAK`
 * 1820: `VAULT=..uL. UNCLE=u..Le` yields `QUELL`
+* 1821: `ARSON=a.s.. SHAFT=S.a.. SAVVY=Sa... SCUBA=S...A` *includes* `SEPIA`

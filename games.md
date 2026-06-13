@@ -1221,3 +1221,4 @@ or an irregular past tense.
 * 1817: `GRAVE=g.a.. SWANG=..ang MANGY=.anG.` yields `ALIGN`
 * 1818: `CARGO=..... SPUME=s...e` *includes* `TESTY`
 * 1819: `WIDTH=.....` *includes* `BREAK`
+* 1820: `VAULT=..uL. UNCLE=u..Le` yields `QUELL`

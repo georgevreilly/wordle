@@ -1223,3 +1223,4 @@ or an irregular past tense.
 * 1819: `WIDTH=.....` *includes* `BREAK`
 * 1820: `VAULT=..uL. UNCLE=u..Le` yields `QUELL`
 * 1821: `ARSON=a.s.. SHAFT=S.a.. SAVVY=Sa... SCUBA=S...A` *includes* `SEPIA`
+* 1822: `OPTIC=o..I. SOLID=.olI.` yields `BROIL`

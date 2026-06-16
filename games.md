@@ -1225,3 +1225,4 @@ or an irregular past tense.
 * 1821: `ARSON=a.s.. SHAFT=S.a.. SAVVY=Sa... SCUBA=S...A` *includes* `SEPIA`
 * 1822: `OPTIC=o..I. SOLID=.olI.` yields `BROIL`
 * 1823: `TONAL=...a. VAPID=.a... CRASH=..A.. AWAKE=A.A.E` yields `AMAZE`
+* 1824: `SWEPT=..e.t TEACH=Te... TUBER=T..E.` *includes* `TOKEN`

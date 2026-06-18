@@ -1226,3 +1226,4 @@ or an irregular past tense.
 * 1822: `OPTIC=o..I. SOLID=.olI.` yields `BROIL`
 * 1823: `TONAL=...a. VAPID=.a... CRASH=..A.. AWAKE=A.A.E` yields `AMAZE`
 * 1824: `SWEPT=..e.t TEACH=Te... TUBER=T..E.` *includes* `TOKEN`
+* 1825: `CAIRN=...Rn SNORT=.N.Rt` yields `ENTRY`

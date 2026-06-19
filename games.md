@@ -1227,3 +1227,4 @@ or an irregular past tense.
 * 1823: `TONAL=...a. VAPID=.a... CRASH=..A.. AWAKE=A.A.E` yields `AMAZE`
 * 1824: `SWEPT=..e.t TEACH=Te... TUBER=T..E.` *includes* `TOKEN`
 * 1825: `CAIRN=...Rn SNORT=.N.Rt` yields `ENTRY`
+* 1826: `TALON=...o. ROUGH=.o... SCOPE=..O.e` yields `EMOJI`

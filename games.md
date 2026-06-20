@@ -1229,3 +1229,4 @@ or an irregular past tense.
 * 1825: `CAIRN=...Rn SNORT=.N.Rt` yields `ENTRY`
 * 1826: `TALON=...o. ROUGH=.o... SCOPE=..O.e` yields `EMOJI`
 * 1827: `FLUID=....d DEMON=De... BARGE=.ar.E DRAPE=DRA.E` yields `DRAKE`
+* 1828: `FOCAL=...al BLAND=bLa.. ALBUM=ALb..` yields `ALIBI`

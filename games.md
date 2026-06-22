@@ -1231,3 +1231,4 @@ or an irregular past tense.
 * 1827: `FLUID=....d DEMON=De... BARGE=.ar.E DRAPE=DRA.E` yields `DRAKE`
 * 1828: `FOCAL=...al BLAND=bLa.. ALBUM=ALb..` yields `ALIBI`
 * 1829: `PALSY=.a... ANGER=a..e. STAVE=.tAvE` yields `OVATE`
+* 1830: `GRUNT=.ru.. RUMOR=rU..r` *includes* `CURRY`

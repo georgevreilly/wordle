@@ -1,2 +1,7 @@
 #!/bin/sh
-shuf answers.txt | python3 -c 'import sys; l = [(w.strip(), len(set(w.strip()))) for w in sys.stdin]; l = [w for w, c in l if c == 5]; print("\n".join(l))' | head -30
+shuf answers.txt |
+python3 -c 'import sys
+l = [(w.strip(), len(set(w.strip()))) for w in sys.stdin]
+l = [w for w, c in l if c == 5]
+print("\n".join(l))' |
+head -30

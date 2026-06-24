@@ -1233,3 +1233,4 @@ or an irregular past tense.
 * 1829: `PALSY=.a... ANGER=a..e. STAVE=.tAvE` yields `OVATE`
 * 1830: `GRUNT=.ru.. RUMOR=rU..r` *includes* `CURRY`
 * 1831: `GLOAT=..... DUMPY=.U... BUNCH=.U... QUIRK=QU.r.` yields `QUEER`
+* 1832: `BASTE=...T. MOUTH=..uT.` *includes* `UNITY`

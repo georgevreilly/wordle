@@ -1235,3 +1235,4 @@ or an irregular past tense.
 * 1831: `GLOAT=..... DUMPY=.U... BUNCH=.U... QUIRK=QU.r.` yields `QUEER`
 * 1832: `BASTE=...T. MOUTH=..uT.` *includes* `UNITY`
 * 1833: `CLASH=c.a.. ACTOR=ACt..` yields `ACUTE`
+* 1834: `AMEND=..... CLOUT=c.O.. SCOFF=SCO..` yields `SCOOP`

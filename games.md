@@ -1238,3 +1238,4 @@ or an irregular past tense.
 * 1834: `AMEND=..... CLOUT=c.O.. SCOFF=SCO..` yields `SCOOP`
 * 1835: `HOARD=..... SWINE=....E FLUTE=....E` yields `EMCEE`
 * 1836: `EBONY=e.... CHASE=C...E` *includes* `CRUDE`
+* 1837: `INERT=..... MANGY=....Y HUSKY=.U..Y` *includes* `PUPPY`

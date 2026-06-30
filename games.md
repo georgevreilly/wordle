@@ -1239,3 +1239,4 @@ or an irregular past tense.
 * 1835: `HOARD=..... SWINE=....E FLUTE=....E` yields `EMCEE`
 * 1836: `EBONY=e.... CHASE=C...E` *includes* `CRUDE`
 * 1837: `INERT=..... MANGY=....Y HUSKY=.U..Y` *includes* `PUPPY`
+* 1838: `GUISE=.u..e UNDER=u.deR` yields `DEMUR`

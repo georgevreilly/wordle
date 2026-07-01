@@ -1240,3 +1240,4 @@ or an irregular past tense.
 * 1836: `EBONY=e.... CHASE=C...E` *includes* `CRUDE`
 * 1837: `INERT=..... MANGY=....Y HUSKY=.U..Y` *includes* `PUPPY`
 * 1838: `GUISE=.u..e UNDER=u.deR` yields `DEMUR`
+* 1839: `BUDGE=....e CHEST=..e.. PALER=.A.E.` *includes* `MAVEN`

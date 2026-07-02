@@ -1241,3 +1241,4 @@ or an irregular past tense.
 * 1837: `INERT=..... MANGY=....Y HUSKY=.U..Y` *includes* `PUPPY`
 * 1838: `GUISE=.u..e UNDER=u.deR` yields `DEMUR`
 * 1839: `BUDGE=....e CHEST=..e.. PALER=.A.E.` *includes* `MAVEN`
+* 1840: `MANGE=.An.. NASTY=nA.t. PAINT=.A.nt` *includes* `BATON`

@@ -1244,3 +1244,4 @@ or an irregular past tense.
 * 1840: `MANGE=.An.. NASTY=nA.t. PAINT=.A.nt` *includes* `BATON`
 * 1841: `MINER=.I... PILOT=PI... PITCH=PI... PIGGY=PI...` yields `PIZZA`
 * 1842: `ARGUE=a.... CLASP=..As. SHAFT=S.A.. SWANK=SWA..` yields `SWAMI`
+* 1843: `ALOFT=..o.t TONIC=TO... TOUGH=TO... TOWER=TO...` yields `TODDY`

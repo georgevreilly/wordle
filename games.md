@@ -1246,3 +1246,4 @@ or an irregular past tense.
 * 1842: `ARGUE=a.... CLASP=..As. SHAFT=S.A.. SWANK=SWA..` yields `SWAMI`
 * 1843: `ALOFT=..o.t TONIC=TO... TOUGH=TO... TOWER=TO...` yields `TODDY`
 * 1844: `DWARF=..... SCONE=S..N. SLINK=SLIN.` yields `SLING`
+* 1845: `POSIT=.o... GROWN=..o.N` *includes* `DEMON`

@@ -1248,3 +1248,4 @@ or an irregular past tense.
 * 1844: `DWARF=..... SCONE=S..N. SLINK=SLIN.` yields `SLING`
 * 1845: `POSIT=.o... GROWN=..o.N` *includes* `DEMON`
 * 1846: `LAGER=.a.e. DECAY=de.a. ADEPT=AdE..` yields `AMEND`
+* 1847: `MORPH=..... UNTIE=.n... CLANK=Clan.` yields `CANAL`

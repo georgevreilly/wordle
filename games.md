@@ -1249,3 +1249,4 @@ or an irregular past tense.
 * 1845: `POSIT=.o... GROWN=..o.N` *includes* `DEMON`
 * 1846: `LAGER=.a.e. DECAY=de.a. ADEPT=AdE..` yields `AMEND`
 * 1847: `MORPH=..... UNTIE=.n... CLANK=Clan.` yields `CANAL`
+* 1848: `LONER=..n.. SNACK=.na.. DIVAN=.ivAN` yields `AVIAN`

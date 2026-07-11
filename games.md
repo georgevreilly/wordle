@@ -1250,3 +1250,4 @@ or an irregular past tense.
 * 1846: `LAGER=.a.e. DECAY=de.a. ADEPT=AdE..` yields `AMEND`
 * 1847: `MORPH=..... UNTIE=.n... CLANK=Clan.` yields `CANAL`
 * 1848: `LONER=..n.. SNACK=.na.. DIVAN=.ivAN` yields `AVIAN`
+* 1849: `SCORE=.c... CHUMP=C.... CLINK=CL..K` yields `CLACK`

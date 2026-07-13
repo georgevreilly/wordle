@@ -1252,3 +1252,4 @@ or an irregular past tense.
 * 1848: `LONER=..n.. SNACK=.na.. DIVAN=.ivAN` yields `AVIAN`
 * 1849: `SCORE=.c... CHUMP=C.... CLINK=CL..K` yields `CLACK`
 * 1850: `DEIGN=..... LOFTY=.o.t. STORK=STO.. STOMP=STO..` yields `STOUT`
+* 1851: `BASTE=.aste YEAST=.east STEAM=STEA. STEAL=STEA. STEAD=STEA.` yields `STEAK`

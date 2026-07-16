@@ -1254,3 +1254,4 @@ or an irregular past tense.
 * 1850: `DEIGN=..... LOFTY=.o.t. STORK=STO.. STOMP=STO..` yields `STOUT`
 * 1851: `BASTE=.aste YEAST=.east STEAM=STEA. STEAL=STEA. STEAD=STEA.` yields `STEAK`
 * 1852: `PRISM=P..s. PUSHY=P.sh.` yields `PSHAW`
+* 1853: `BLUNT=B.u.t BUTCH=BUT..` yields `BUTTE`

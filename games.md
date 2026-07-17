@@ -1255,3 +1255,4 @@ or an irregular past tense.
 * 1851: `BASTE=.aste YEAST=.east STEAM=STEA. STEAL=STEA. STEAD=STEA.` yields `STEAK`
 * 1852: `PRISM=P..s. PUSHY=P.sh.` yields `PSHAW`
 * 1853: `BLUNT=B.u.t BUTCH=BUT..` yields `BUTTE`
+* 1854: `OPINE=....e METAL=.E.AL EQUAL=e..AL` *includes* `LEGAL`

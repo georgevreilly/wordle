@@ -1256,3 +1256,4 @@ or an irregular past tense.
 * 1852: `PRISM=P..s. PUSHY=P.sh.` yields `PSHAW`
 * 1853: `BLUNT=B.u.t BUTCH=BUT..` yields `BUTTE`
 * 1854: `OPINE=....e METAL=.E.AL EQUAL=e..AL` *includes* `LEGAL`
+* 1855: `SHARD=.h... TOUGH=tO..H BOTCH=BOt.H` yields `BOOTH`

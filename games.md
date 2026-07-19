@@ -1258,3 +1258,4 @@ or an irregular past tense.
 * 1854: `OPINE=....e METAL=.E.AL EQUAL=e..AL` *includes* `LEGAL`
 * 1855: `SHARD=.h... TOUGH=tO..H BOTCH=BOt.H` yields `BOOTH`
 * 1856: `PUDGY=.u... UNCLE=unc.. CHUNK=CHUn.` yields `CHURN`
+* 1857: `GUISE=..i.e INERT=i.er. WIDER=.IdER` yields `DIVER`

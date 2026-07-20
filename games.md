@@ -1259,3 +1259,4 @@ or an irregular past tense.
 * 1855: `SHARD=.h... TOUGH=tO..H BOTCH=BOt.H` yields `BOOTH`
 * 1856: `PUDGY=.u... UNCLE=unc.. CHUNK=CHUn.` yields `CHURN`
 * 1857: `GUISE=..i.e INERT=i.er. WIDER=.IdER` yields `DIVER`
+* 1858: `GRIMY=..I.. SLINK=SlI.. STILE=S.IL. SPILL=S.ILL SWILL=S.ILL` yields `SHILL`

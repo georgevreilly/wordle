@@ -1263,3 +1263,4 @@ or an irregular past tense.
 * 1859: `AWOKE=..o.. NOTCH=.O... GOURD=.O.R. SORRY=.ORRY` yields `LORRY`
 * 1860: `RAYON=r..o. CROWD=.Ro..` *includes* `ORBIT`
 * 1861: `BRACE=..... SHOUT=...ut NUTTY=.UTTY` yields `PUTTY`
+* 1862: `SUING=..... CAPER=.a... BLOAT=.LOa. ALOOF=ALO..` yields `ALOHA`

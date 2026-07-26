@@ -1265,3 +1265,4 @@ or an irregular past tense.
 * 1861: `BRACE=..... SHOUT=...ut NUTTY=.UTTY` yields `PUTTY`
 * 1862: `SUING=..... CAPER=.a... BLOAT=.LOa. ALOOF=ALO..` yields `ALOHA`
 * 1863: `FLECK=..e.. DRONE=.R..E GRIPE=GR.PE` yields `GRAPE`
+* 1864: `BORNE=.Or.e RODEO=rO.E. WHISK=...s. LOSER=.OSER` yields `POSER`

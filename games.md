@@ -1266,3 +1266,4 @@ or an irregular past tense.
 * 1862: `SUING=..... CAPER=.a... BLOAT=.LOa. ALOOF=ALO..` yields `ALOHA`
 * 1863: `FLECK=..e.. DRONE=.R..E GRIPE=GR.PE` yields `GRAPE`
 * 1864: `BORNE=.Or.e RODEO=rO.E. WHISK=...s. LOSER=.OSER` yields `POSER`
+* 1865: `LURID=..r.. REACH=r.a.. STRAP=S.rA.` yields `SONAR`

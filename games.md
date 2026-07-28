@@ -1267,3 +1267,4 @@ or an irregular past tense.
 * 1863: `FLECK=..e.. DRONE=.R..E GRIPE=GR.PE` yields `GRAPE`
 * 1864: `BORNE=.Or.e RODEO=rO.E. WHISK=...s. LOSER=.OSER` yields `POSER`
 * 1865: `LURID=..r.. REACH=r.a.. STRAP=S.rA.` yields `SONAR`
+* 1866: `MOIST=..... BANDY=.A... LAGER=lA.e.` *includes* `VALVE`

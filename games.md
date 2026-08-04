@@ -1274,3 +1274,4 @@ or an irregular past tense.
 * 1870: `SHIED=...e. FLAME=.la.e PETAL=PE.AL` yields `PENAL`
 * 1871: `SPENT=.pe.. PEARL=pE.rl` *includes* `REPLY`
 * 1872: `DICEY=.i... PRINT=..i.t ATTIC=..TI.` yields `MOTIF`
+* 1873: `FLAIR=...I. SHEIK=s..I. VISIT=..SIT` yields `POSIT`

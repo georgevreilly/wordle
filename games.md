@@ -1273,3 +1273,4 @@ or an irregular past tense.
 * 1869: `GAMUT=...u. UNCLE=u..l. LUPIN=lu... CLUCK=.LU.. BLUFF=.LU..` yields `SLUSH`
 * 1870: `SHIED=...e. FLAME=.la.e PETAL=PE.AL` yields `PENAL`
 * 1871: `SPENT=.pe.. PEARL=pE.rl` *includes* `REPLY`
+* 1872: `DICEY=.i... PRINT=..i.t ATTIC=..TI.` yields `MOTIF`

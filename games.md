@@ -1275,3 +1275,4 @@ or an irregular past tense.
 * 1871: `SPENT=.pe.. PEARL=pE.rl` *includes* `REPLY`
 * 1872: `DICEY=.i... PRINT=..i.t ATTIC=..TI.` yields `MOTIF`
 * 1873: `FLAIR=...I. SHEIK=s..I. VISIT=..SIT` yields `POSIT`
+* 1874: `BIOME=.i..E SHINE=..I.E WRITE=.RI.E DRIVE=.RI.E` *includes* `GRIPE`

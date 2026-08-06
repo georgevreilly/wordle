@@ -1276,3 +1276,4 @@ or an irregular past tense.
 * 1872: `DICEY=.i... PRINT=..i.t ATTIC=..TI.` yields `MOTIF`
 * 1873: `FLAIR=...I. SHEIK=s..I. VISIT=..SIT` yields `POSIT`
 * 1874: `BIOME=.i..E SHINE=..I.E WRITE=.RI.E DRIVE=.RI.E` *includes* `GRIPE`
+* 1875: `BLAME=....e SPENT=..en. CHOIR=...i. WIDEN=.i.eN` yields `FEIGN`

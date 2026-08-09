@@ -1279,3 +1279,4 @@ or an irregular past tense.
 * 1875: `BLAME=....e SPENT=..en. CHOIR=...i. WIDEN=.i.eN` yields `FEIGN`
 * 1876: `GHOUL=..... FREAK=.R... BRINY=.RI.Y PRICY=PRI.Y` yields `PRIVY`
 * 1877: `FORGE=..... DITCH=...c.` *includes* `CLUNK`
+* 1878: `YEAST=.e.s. SMILE=S.I.E PRUNE=p..nE SPINE=SpInE` yields `SNIPE`

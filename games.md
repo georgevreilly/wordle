@@ -1280,3 +1280,4 @@ or an irregular past tense.
 * 1876: `GHOUL=..... FREAK=.R... BRINY=.RI.Y PRICY=PRI.Y` yields `PRIVY`
 * 1877: `FORGE=..... DITCH=...c.` *includes* `CLUNK`
 * 1878: `YEAST=.e.s. SMILE=S.I.E PRUNE=p..nE SPINE=SpInE` yields `SNIPE`
+* 1879: `WAIVE=....E SCONE=.c.nE HENCE=.ENCE` *includes* `FENCE`

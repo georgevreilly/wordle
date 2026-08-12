@@ -1282,3 +1282,4 @@ or an irregular past tense.
 * 1878: `YEAST=.e.s. SMILE=S.I.E PRUNE=p..nE SPINE=SpInE` yields `SNIPE`
 * 1879: `WAIVE=....E SCONE=.c.nE HENCE=.ENCE` *includes* `FENCE`
 * 1880: `FROTH=..... AMBLE=.m... MUSIC=m..i.` yields `WIMPY`
+* 1881: `HYENA=h...a` *includes* `CRASH`

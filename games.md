@@ -1284,3 +1284,4 @@ or an irregular past tense.
 * 1880: `FROTH=..... AMBLE=.m... MUSIC=m..i.` yields `WIMPY`
 * 1881: `HYENA=h...a` *includes* `CRASH`
 * 1882: `HONEY=.o.e. BELOW=.E.o. TEMPO=.E..o REORG=.EO.g` yields `GEODE`
+* 1883: `GRAIL=....l FLOUT=.lO.. WOOLY=.OOl.` yields `LOOSE`

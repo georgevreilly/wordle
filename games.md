@@ -1286,3 +1286,4 @@ or an irregular past tense.
 * 1882: `HONEY=.o.e. BELOW=.E.o. TEMPO=.E..o REORG=.EO.g` yields `GEODE`
 * 1883: `GRAIL=....l FLOUT=.lO.. WOOLY=.OOl.` yields `LOOSE`
 * 1884: `ERASE=..as. SLING=s.i.. BASIC=.asIC` yields `ASPIC`
+* 1885: `OPTIC=..ti. STINK=.tI.. TRIAL=TRI..` *includes* `TRIBE`

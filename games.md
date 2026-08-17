@@ -1287,3 +1287,4 @@ or an irregular past tense.
 * 1883: `GRAIL=....l FLOUT=.lO.. WOOLY=.OOl.` yields `LOOSE`
 * 1884: `ERASE=..as. SLING=s.i.. BASIC=.asIC` yields `ASPIC`
 * 1885: `OPTIC=..ti. STINK=.tI.. TRIAL=TRI..` *includes* `TRIBE`
+* 1886: `CLAIM=...I. DROIT=.r.It` *includes* `STRIP`

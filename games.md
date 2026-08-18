@@ -1288,3 +1288,4 @@ or an irregular past tense.
 * 1884: `ERASE=..as. SLING=s.i.. BASIC=.asIC` yields `ASPIC`
 * 1885: `OPTIC=..ti. STINK=.tI.. TRIAL=TRI..` *includes* `TRIBE`
 * 1886: `CLAIM=...I. DROIT=.r.It` *includes* `STRIP`
+* 1887: `FAULT=...L. SKILL=..ILL DRILL=.RILL` yields `GRILL`

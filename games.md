@@ -1289,3 +1289,4 @@ or an irregular past tense.
 * 1885: `OPTIC=..ti. STINK=.tI.. TRIAL=TRI..` *includes* `TRIBE`
 * 1886: `CLAIM=...I. DROIT=.r.It` *includes* `STRIP`
 * 1887: `FAULT=...L. SKILL=..ILL DRILL=.RILL` yields `GRILL`
+* 1888: `CHARM=...rm MERIT=M.R..` *includes* `MURKY`

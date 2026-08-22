@@ -1292,3 +1292,4 @@ or an irregular past tense.
 * 1888: `CHARM=...rm MERIT=M.R..` *includes* `MURKY`
 * 1889: `SHALT=..A.t CRATE=cRAtE` yields `TRACE`
 * 1890: `TOPIC=..p.. PLANK=P.An.` yields `PRAWN`
+* 1891: `CATER=...E. WOVEN=.o.EN` yields `OLDEN`

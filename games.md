@@ -1294,3 +1294,4 @@ or an irregular past tense.
 * 1890: `TOPIC=..p.. PLANK=P.An.` yields `PRAWN`
 * 1891: `CATER=...E. WOVEN=.o.EN` yields `OLDEN`
 * 1892: `WAGER=....r ROUND=R.uN.` yields `RUNNY`
+* 1893: `ROBIN=...i. QUITE=..I.. WHISK=..I.K FLICK=.LICK` yields `CLICK`

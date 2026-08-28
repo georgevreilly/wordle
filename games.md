@@ -1298,3 +1298,4 @@ or an irregular past tense.
 * 1894: `FOYER=.o... CLOUT=C.o..` *includes* `CAPON`
 * 1895: `SIREN=....n FLANK=...n. NUTTY=nut..` *includes* `UNCUT`
 * 1896: `INSET=.n.Et OFTEN=..tEN TAKEN=T..EN` yields `TWEEN`
+* 1897: `NADIR=..d.. DOUBT=do.b.` yields `BLOOD`

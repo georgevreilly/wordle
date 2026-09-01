@@ -1302,3 +1302,4 @@ or an irregular past tense.
 * 1898: `SKATE=...te FETCH=.eT.. VOTER=..TE.` *includes* `INTEL`
 * 1899: `PRUNE=..UN. BLUNT=..UN. CHUNK=..UN. SWUNG=..UN. FOUND=.OUND` yields `MOUND`
 * 1900: `FAULT=..... SHOVE=....e BENDY=.E... MERCH=mEr..` yields `REMIX`
+* 1901: `PRIVY=.r... ADORE=...re ULCER=ul.ER` yields `RULER`

@@ -1304,3 +1304,4 @@ or an irregular past tense.
 * 1900: `FAULT=..... SHOVE=....e BENDY=.E... MERCH=mEr..` yields `REMIX`
 * 1901: `PRIVY=.r... ADORE=...re ULCER=ul.ER` yields `RULER`
 * 1902: `PANIC=...i. GLIDE=..I.. TWIST=..IST MOIST=.OIST HOIST=.OIST` *includes* `JOIST`
+* 1903: `SHACK=..a.. ANGLE=a.G.e` *includes* `WAGER`

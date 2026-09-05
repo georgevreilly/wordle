@@ -1305,3 +1305,4 @@ or an irregular past tense.
 * 1901: `PRIVY=.r... ADORE=...re ULCER=ul.ER` yields `RULER`
 * 1902: `PANIC=...i. GLIDE=..I.. TWIST=..IST MOIST=.OIST HOIST=.OIST` *includes* `JOIST`
 * 1903: `SHACK=..a.. ANGLE=a.G.e` *includes* `WAGER`
+* 1904: `BLOAT=..o.. VIGOR=...o. SOUND=SOU.. SOUSE=SOU..` yields `SOUPY`

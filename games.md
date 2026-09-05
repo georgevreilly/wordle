@@ -1306,3 +1306,4 @@ or an irregular past tense.
 * 1902: `PANIC=...i. GLIDE=..I.. TWIST=..IST MOIST=.OIST HOIST=.OIST` *includes* `JOIST`
 * 1903: `SHACK=..a.. ANGLE=a.G.e` *includes* `WAGER`
 * 1904: `BLOAT=..o.. VIGOR=...o. SOUND=SOU.. SOUSE=SOU..` yields `SOUPY`
+* 1905: `FOCAL=..... SINGE=.i.GE` yields `BEIGE`

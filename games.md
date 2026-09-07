@@ -1308,3 +1308,4 @@ or an irregular past tense.
 * 1904: `BLOAT=..o.. VIGOR=...o. SOUND=SOU.. SOUSE=SOU..` yields `SOUPY`
 * 1905: `FOCAL=..... SINGE=.i.GE` yields `BEIGE`
 * 1906: `DOWEL=d...l SCALD=...lD LIVID=li..D GUILD=..IlD` yields `BLIND`
+* 1907: `MEDIA=.e.i. INERT=ine.. WHINE=..ine GIVEN=.IVEN` yields `LIVEN`

@@ -1311,3 +1311,4 @@ or an irregular past tense.
 * 1907: `MEDIA=.e.i. INERT=ine.. WHINE=..ine GIVEN=.IVEN` yields `LIVEN`
 * 1908: `TOPIC=t.... STANK=st... GUSTY=.Ust.` *includes* `BURST`
 * 1909: `LIGHT=l.... CLEAN=.l... PROWL=.R..l` yields `DRYLY`
+* 1910: `CLEFT=..e.t TEACH=tea.. WATER=.aTER` yields `ASTER`

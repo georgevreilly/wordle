@@ -233,7 +233,7 @@ or an irregular past tense.
 * 829: `UNCLE=...l. BLOAT=.loA. MORAL=.O.AL` yields `LOYAL`
 * 830: `EIGHT=ei... MOVIE=m..iE CRIME=..ImE` yields `SMILE`
 * 831: `BONUS=.O... HOTEL=hO... POACH=.OACH` *includes* `COACH`
-* 832: `REGAL=re.a. AFTER=A..er ARENA=Are.. ADORE=A..RE` *includes* `AZURE`
+* 832: `REGAL=re.a. AFTER=A..er ARENA=Are.. ADORE=A..RE` yields `AZURE`
 * 833: `NOISE=..... CRAMP=..a.. BALKY=.A..Y JAGGY=.A..Y DAFFY=DA..Y` yields `DADDY`
 * 834: `SIGHT=....T CLOUT=....T MEANT=.E..T` yields `BERET`
 * 835: `FRAME=.r.me REMIT=rEm.. SERUM=.ER.m` *includes* `MERRY`
@@ -463,7 +463,7 @@ or an irregular past tense.
 * 1059: `SOLVE=..... BRAIN=...IN UNPIN=u..IN` yields `CUMIN`
 * 1060: `WEARY=..A.. PLAIN=..A.. COAST=..AS. QUASH=..AS.` yields `AMASS`
 * 1061: `ADULT=..... GROVE=..... WHISK=.hi..` *includes* `PINCH`
-* 1062: `PRIME=..... CLOUT=.l..t TALLY=talL.` *includes* `STALL`
+* 1062: `PRIME=..... CLOUT=.l..t TALLY=talL.` yields `STALL`
 * 1063: `BEING=..... CLOUD=..ou. SOUTH=.out. TUMOR=TU.OR` yields `TUTOR`
 * 1064: `DEBUG=..b.. BLOAT=B.... BRINK=BRIN.` yields `BRINY`
 * 1065: `REALM=..... SHOUT=.h..t ITCHY=itch. PITCH=.ITCH DITCH=.ITCH` *includes* `HITCH`
@@ -927,7 +927,7 @@ or an irregular past tense.
 * 1523: `IVORY=..... STAMP=..AM. BLAME=.LAM.` yields `LLAMA`
 * 1524: `ALIEN=.l.e. BULGE=..l.e LEERY=le...` yields `EXTOL`
 * 1525: `CODER=....r GRIFT=.r..t STRAY=.traY` yields `RATTY`
-* 1526: `DANCE=..n.. BLOWN=..o.N MORON=...ON PITON=.i.ON` *includes* `UNION`
+* 1526: `DANCE=..n.. BLOWN=..o.N MORON=...ON PITON=.i.ON` yields `UNION`
 * 1527: `COAST=.o.s. SLOPE=S.OpE SPOKE=SPO.E` yields `SPORE`
 * 1528: `BOGUS=..... CHIEF=.hi.. HILLY=hI...` *includes* `MIRTH`
 * 1529: `UNITY=.N... GNOME=.N..e SNEAK=.Nea.` yields `ANNEX`

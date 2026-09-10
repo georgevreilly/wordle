@@ -58,6 +58,8 @@ class WordleGuesses:
     invalid: set[str]  # Black/Absent
     wrong_spot: list[set[str]]  # Wrong spot (Yellow/Present)
     guess_scores: list[GuessScore]
+    needed: Counter[str]  # Min copies of each green/yellow letter
+    capped: dict[str, int]  # Max copies when a later copy was gray
 
     def string_parts(self) -> dict[str, Any]:
         unused = letter_set(set(string.ascii_uppercase) - self.valid - self.invalid)
@@ -67,6 +69,8 @@ class WordleGuesses:
             valid=letter_set(self.valid),
             invalid=letter_set(self.invalid),
             wrong_spot=letter_sets(self.wrong_spot),
+            needed="".join(c * n for c, n in sorted(self.needed.items()) if n),
+            capped=",".join(f"{c}:{n}" for c, n in sorted(self.capped.items())),
             unused=unused,
             guess_scores=[guess_scores],
         )
@@ -112,28 +116,36 @@ class WordleGuesses:
         valid: set[str] = set()
         invalid: set[str] = set()
         wrong_spot: list[set[str]] = [set() for _ in range(WORDLE_LEN)]
+        needed: Counter[str] = Counter()
+        capped: dict[str, int] = {}
 
         for gs in guess_scores:
+            found: Counter[str] = Counter()
             # First pass for correct and present
             for i, (t, g) in enumerate(zip(gs.tiles, gs.guess)):
                 if t is TileState.CORRECT:
                     mask[i] = g
                     valid.add(g)
+                    found[g] += 1
                 elif t is TileState.PRESENT:
                     wrong_spot[i].add(g)
                     valid.add(g)
+                    found[g] += 1
+
+            needed |= found
 
             # Second pass for absent letters
             for i, (t, g) in enumerate(zip(gs.tiles, gs.guess)):
                 if t is TileState.ABSENT:
                     if g in valid:
-                        # There are more instances of `g` in `gs.guess`
-                        # than in the answer
+                        # Extra copies of `g` in this guess: the answer has
+                        # exactly `found[g]` of them, and not in this slot.
                         wrong_spot[i].add(g)
+                        capped[g] = found[g] if g not in capped else min(capped[g], found[g])
                     else:
                         invalid.add(g)
 
-        parsed_guesses = cls(mask, valid, invalid, wrong_spot, guess_scores)
+        parsed_guesses = cls(mask, valid, invalid, wrong_spot, guess_scores, needed, capped)
         logging.info(parsed_guesses)
         if optimize:
             parsed_guesses.optimize()
@@ -141,9 +153,14 @@ class WordleGuesses:
 
     def is_eligible(self, word: str) -> bool:
         letters = {c for c in word}
-        if letters & self.valid != self.valid:
-            # Did not have the full set of green+yellow letters known to be valid
+        word_counts = Counter(word)
+        if any(word_counts[c] < n for c, n in self.needed.items()):
+            # Too few copies of a green/yellow letter (including duplicates)
             logging.debug("!Valid: %s", word)
+            return False
+        elif any(word_counts[c] > n for c, n in self.capped.items()):
+            # A gray duplicate showed this letter cannot appear this often
+            logging.debug("!Count: %s", word)
             return False
         elif any(m is not None and c != m for c, m in zip(word, self.mask)):
             # Couldn't find all the green/correct letters
@@ -168,9 +185,14 @@ class WordleGuesses:
     def is_ineligible(self, word: str) -> dict[str, str]:
         reasons = {}
         letters = {c for c in word}
+        word_counts = Counter(word)
         if missing := self.valid - (letters & self.valid):
             # Did not have the full set of green+yellow letters known to be valid
             reasons["Valid"] = f"missing {letter_set(missing)}"
+        elif short := {c: n for c, n in self.needed.items() if word_counts[c] < n}:
+            reasons["Valid"] = "needs " + "".join(c * n for c, n in sorted(short.items()))
+        if extra := {c: n for c, n in self.capped.items() if word_counts[c] > n}:
+            reasons["Count"] = "max " + ",".join(f"{c}:{n}" for c, n in sorted(extra.items()))
 
         mask = [(m if c != m else None) for c, m in zip(word, self.mask)]
         if any(mask):

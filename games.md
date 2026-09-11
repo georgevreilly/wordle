@@ -1312,3 +1312,4 @@ or an irregular past tense.
 * 1908: `TOPIC=t.... STANK=st... GUSTY=.Ust.` *includes* `BURST`
 * 1909: `LIGHT=l.... CLEAN=.l... PROWL=.R..l` yields `DRYLY`
 * 1910: `CLEFT=..e.t TEACH=tea.. WATER=.aTER` yields `ASTER`
+* 1911: `WIGHT=.I..t TIMER=tI... PITON=.It.n` yields `NIFTY`

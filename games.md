@@ -1313,3 +1313,4 @@ or an irregular past tense.
 * 1909: `LIGHT=l.... CLEAN=.l... PROWL=.R..l` yields `DRYLY`
 * 1910: `CLEFT=..e.t TEACH=tea.. WATER=.aTER` yields `ASTER`
 * 1911: `WIGHT=.I..t TIMER=tI... PITON=.It.n` yields `NIFTY`
+* 1912: `BLOAT=..o.. OUNCE=ou.c. COUGH=cOu..` yields `FOCUS`

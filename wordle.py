@@ -64,16 +64,16 @@ class WordleGuesses:
     def string_parts(self) -> dict[str, Any]:
         unused = letter_set(set(string.ascii_uppercase) - self.valid - self.invalid)
         guess_scores = ", ".join(f"{gs}|{gs.emojis()}" for gs in self.guess_scores)
-        return dict(
-            mask=dash_mask(self.mask),
-            valid=letter_set(self.valid),
-            invalid=letter_set(self.invalid),
-            wrong_spot=letter_sets(self.wrong_spot),
-            needed="".join(c * n for c, n in sorted(self.needed.items()) if n),
-            capped=",".join(f"{c}:{n}" for c, n in sorted(self.capped.items())),
-            unused=unused,
-            guess_scores=[guess_scores],
-        )
+        return {
+            "mask": dash_mask(self.mask),
+            "valid": letter_set(self.valid),
+            "invalid": letter_set(self.invalid),
+            "wrong_spot": letter_sets(self.wrong_spot),
+            "needed": "".join(c * n for c, n in sorted(self.needed.items()) if n),
+            "capped": ",".join(f"{c}:{n}" for c, n in sorted(self.capped.items())),
+            "unused": unused,
+            "guess_scores": [guess_scores],
+        }
 
     def __repr__(self) -> str:
         parts = ", ".join(
@@ -111,7 +111,7 @@ class WordleGuesses:
         return "".join(parts)
 
     @classmethod
-    def parse(cls, guess_scores: list[GuessScore], optimize=True) -> "WordleGuesses":
+    def parse(cls, guess_scores: list[GuessScore], optimize=True) -> WordleGuesses:
         mask: list[str | None] = [None for _ in range(WORDLE_LEN)]
         valid: set[str] = set()
         invalid: set[str] = set()
@@ -146,7 +146,7 @@ class WordleGuesses:
                         invalid.add(g)
 
         parsed_guesses = cls(mask, valid, invalid, wrong_spot, guess_scores, needed, capped)
-        logging.info(parsed_guesses)
+        logging.info("%s",parsed_guesses)
         if optimize:
             parsed_guesses.optimize()
         return parsed_guesses

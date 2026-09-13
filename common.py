@@ -38,7 +38,7 @@ class GuessScore:
     tiles: list[TileState]
 
     @classmethod
-    def make(cls, guess_score: str) -> "GuessScore":
+    def make(cls, guess_score: str) -> GuessScore:
         if guess_score.count("=") != 1:
             raise WordleError(f"Expected one '=' in {guess_score!r}")
         guess, score = guess_score.split("=")
@@ -54,9 +54,8 @@ class GuessScore:
             if state is TileState.CORRECT:
                 if guess[i] != score[i]:
                     raise WordleError(f"Mismatch at {i+1}: {guess}!={score}")
-            elif state is TileState.PRESENT:
-                if guess[i] != score[i].upper():
-                    raise WordleError(f"Mismatch at {i+1}: {guess}!={score}")
+            elif state is TileState.PRESENT and guess[i] != score[i].upper():
+                raise WordleError(f"Mismatch at {i+1}: {guess}!={score}")
             tiles.append(state)
         return cls(guess, score, tiles)
 
@@ -95,7 +94,7 @@ class GameResult:
     )
 
     @classmethod
-    def parse_game_result(cls, line: str) -> "GameResult" | None:
+    def parse_game_result(cls, line: str) -> GameResult | None:
         if line.startswith("* ") and line.count("`") == 4:
             m = cls.GAME_RE.match(line)
             assert m is not None, f"{line!r}"
@@ -108,7 +107,7 @@ class GameResult:
         return None
 
     @classmethod
-    def parse_file(cls, filename: str) -> "list[GameResult]":
+    def parse_file(cls, filename: str) -> list[GameResult]:
         with open(filename) as f:
             return [gr for line in f.read().splitlines() if (gr := cls.parse_game_result(line))]
 
@@ -210,34 +209,34 @@ def output_file(output: str | None, extension: str):
             f.close()
 
 
-SCRABBLE_POINTS = dict(
-    A=1,
-    B=3,
-    C=3,
-    D=2,
-    E=1,
-    F=4,
-    G=2,
-    H=4,
-    I=1,
-    J=8,
-    K=5,
-    L=1,
-    M=3,
-    N=1,
-    O=1,
-    P=3,
-    Q=10,
-    R=1,
-    S=1,
-    T=1,
-    U=1,
-    V=4,
-    W=4,
-    X=8,
-    Y=4,
-    Z=10,
-)
+SCRABBLE_POINTS = {
+    "A": 1,
+    "B": 3,
+    "C": 3,
+    "D": 2,
+    "E": 1,
+    "F": 4,
+    "G": 2,
+    "H": 4,
+    "I": 1,
+    "J": 8,
+    "K": 5,
+    "L": 1,
+    "M": 3,
+    "N": 1,
+    "O": 1,
+    "P": 3,
+    "Q": 10,
+    "R": 1,
+    "S": 1,
+    "T": 1,
+    "U": 1,
+    "V": 4,
+    "W": 4,
+    "X": 8,
+    "Y": 4,
+    "Z": 10,
+}
 
 
 def scrabble_score(word: str) -> int:

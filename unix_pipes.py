@@ -49,7 +49,7 @@ def parts(wg: WordleGuesses) -> dict[str, str | None]:
             + "".join([f"[^{letter_set(ws)}]" if ws else "." for ws in wg.wrong_spot])
             + "$'"
         )
-    return dict(mask=mask, valid=valid, invalid=invalid, wrong_spot=wrong_spot)
+    return {"mask": mask, "valid": valid, "invalid": invalid, "wrong_spot": wrong_spot}
 
 
 def pipes(wg: WordleGuesses, word_file: str) -> str:

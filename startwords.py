@@ -7,8 +7,8 @@ from __future__ import annotations
 import argparse
 import os
 from collections import defaultdict
+from collections.abc import Iterable
 from operator import itemgetter
-from typing import Iterable
 
 WORDLE_LEN = 5
 WORD_FILE = os.path.join(os.path.dirname(__file__), "wordle.txt")

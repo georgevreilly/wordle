@@ -1,12 +1,17 @@
-[tool.black]
-line-length = 99
+[project]
+name = "wordle"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "George V. Reilly", email = "george@reilly.org" }
+]
+requires-python = ">=3.13"
+dependencies = []
 
-[tool.isort]
-profile = "black"
-line_length = 99
+[project.scripts]
+wordle = "wordle:main"
 
-[tool.pylint.format]
-max-line-length = "99"
-
-[tool.ruff]
-line-length = 99
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"

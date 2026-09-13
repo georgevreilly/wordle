@@ -48,7 +48,7 @@ def render_html_table(guess_scores: list[GuessScore], show_unplayed=False) -> st
 
 
 def render_keyboard(guess_scores: list[GuessScore]):
-    ranks = dict(UNUSED=0, ABSENT=1, PRESENT=2, CORRECT=3)
+    ranks = {"UNUSED": 0, "ABSENT": 1, "PRESENT": 2, "CORRECT": 3}
     letters = {c: ranks["UNUSED"] for c in string.ascii_uppercase}
     css_classes = {v: k.lower() for k, v in ranks.items()}
     for gs in guess_scores:

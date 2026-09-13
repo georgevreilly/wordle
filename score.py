@@ -35,7 +35,7 @@ def parse_args() -> argparse.Namespace:
 
 # These answers to actual games were not in "answers.txt"
 with open("exceptional_answers.txt") as f:
-    EXCEPTIONAL_ANSWERS = set(w.strip() for w in f.readlines())
+    EXCEPTIONAL_ANSWERS = {w.strip() for w in f}
 
 
 def check_scores(first_game: int, last_game: int) -> list:

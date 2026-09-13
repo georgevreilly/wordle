@@ -86,7 +86,7 @@ def word_frozen_letters(word: str) -> frozenset[str]:
 def find_disjoint_words2(anagrams: dict[str, list[str]]) -> list[list[str]]:
     count = 0
     seen_permutations = set()
-    anagram_frozenset = {word_frozen_letters(k): k for k in anagrams.keys()}
+    anagram_frozenset = {word_frozen_letters(k): k for k in anagrams}
 
     def search(words: list[str], available: list[tuple[frozenset[str], str]]):
         nonlocal count
@@ -131,7 +131,7 @@ def bitset_word(bitset: int) -> str:
 def find_disjoint_words3(anagrams: dict[str, list[str]]) -> list[list[str]]:
     count = 0
     seen_permutations = set()
-    anagram_bitset = {word_bitset(k): k for k in anagrams.keys()}
+    anagram_bitset = {word_bitset(k): k for k in anagrams}
 
     def search(wordsets: list[int], available: list[tuple[int, str]]):
         nonlocal count

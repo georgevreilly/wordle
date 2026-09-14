@@ -1315,3 +1315,4 @@ or an irregular past tense.
 * 1911: `WIGHT=.I..t TIMER=tI... PITON=.It.n` yields `NIFTY`
 * 1912: `BLOAT=..o.. OUNCE=ou.c. COUGH=cOu..` yields `FOCUS`
 * 1913: `CAULK=..... SNIDE=sni.E` yields `RINSE`
+* 1914: `HYMEN=...e. DEBIT=DE..T` *includes* `DEALT`

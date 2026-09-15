@@ -1316,3 +1316,4 @@ or an irregular past tense.
 * 1912: `BLOAT=..o.. OUNCE=ou.c. COUGH=cOu..` yields `FOCUS`
 * 1913: `CAULK=..... SNIDE=sni.E` yields `RINSE`
 * 1914: `HYMEN=...e. DEBIT=DE..T` *includes* `DEALT`
+* 1915: `GROWN=...w. WHELP=W...p WIMPY=WI.PY` yields `WISPY`

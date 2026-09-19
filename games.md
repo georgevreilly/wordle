@@ -1320,3 +1320,4 @@ or an irregular past tense.
 * 1916: `MUSTY=...T. DEATH=.eaTh HAUTE=ha.Te` yields `THETA`
 * 1917: `CROUP=..O.. BLOWN=..OWn` yields `SNOWY`
 * 1918: `GUILE=....e READY=.ea.. MAVEN=.A.EN WAXEN=WA.EN` yields `WAKEN`
+* 1919: `AFOUL=..O.. CHOSE=.HOsE SHORE=SHO.E SHOVE=SHO.E` yields `SHONE`

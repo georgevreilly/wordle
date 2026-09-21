@@ -1322,3 +1322,4 @@ or an irregular past tense.
 * 1918: `GUILE=....e READY=.ea.. MAVEN=.A.EN WAXEN=WA.EN` yields `WAKEN`
 * 1919: `AFOUL=..O.. CHOSE=.HOsE SHORE=SHO.E SHOVE=SHO.E` yields `SHONE`
 * 1920: `DEBAR=.e.aR PALER=PA.ER` *includes* `PAGER`
+* 1921: `CLINK=....k DUSKY=..sK. STAKE=ST.KE` yields `STOKE`

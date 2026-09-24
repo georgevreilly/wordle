@@ -1325,3 +1325,4 @@ or an irregular past tense.
 * 1921: `CLINK=....k DUSKY=..sK. STAKE=ST.KE` yields `STOKE`
 * 1922: `FETID=F.t.. FROST=Fro.t` *includes* `FORTH`
 * 1923: `WAIST=...S. CRUSH=...S. PALSY=...SY BOSSY=..SSY` yields `MESSY`
+* 1924: `DINGY=..... SHUCK=s..c. ASCOT=.sco.` *includes* `COPSE`

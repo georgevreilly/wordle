@@ -1327,3 +1327,4 @@ or an irregular past tense.
 * 1923: `WAIST=...S. CRUSH=...S. PALSY=...SY BOSSY=..SSY` yields `MESSY`
 * 1924: `DINGY=..... SHUCK=s..c. ASCOT=.sco.` *includes* `COPSE`
 * 1925: `PINCH=..... LOAMY=l...Y TRULY=...lY` *includes* `ELEGY`
+* 1926: `PANEL=p...l SPLIT=Spl.. SLURP=SL..P` yields `SLOOP`

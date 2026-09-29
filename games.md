@@ -1330,3 +1330,4 @@ or an irregular past tense.
 * 1926: `PANEL=p...l SPLIT=Spl.. SLURP=SL..P` yields `SLOOP`
 * 1927: `OCTAL=..t.. MUSTY=.u.t. UNITE=un.t. BRUNT=.RUNt` yields `TRUNK`
 * 1928: `RULED=.u... SHUNT=S.U.. SQUIB=S.U.b` yields `SCUBA`
+* 1929: `ULCER=...ER VOTER=v..ER WAVER=..VER GRIND=.ri..` yields `RIVER`

@@ -1332,3 +1332,4 @@ or an irregular past tense.
 * 1928: `RULED=.u... SHUNT=S.U.. SQUIB=S.U.b` yields `SCUBA`
 * 1929: `ULCER=...ER VOTER=v..ER WAVER=..VER GRIND=.ri..` yields `RIVER`
 * 1930: `SUAVE=..... WHOMP=..... DRINK=.ri.. GIRLY=.Ir.Y` yields `RITZY`
+* 1931: `CLEFT=..... PUSHY=.us.Y MOUSY=..UsY` yields `USURY`

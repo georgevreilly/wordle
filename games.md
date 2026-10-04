@@ -1334,3 +1334,4 @@ or an irregular past tense.
 * 1930: `SUAVE=..... WHOMP=..... DRINK=.ri.. GIRLY=.Ir.Y` yields `RITZY`
 * 1931: `CLEFT=..... PUSHY=.us.Y MOUSY=..UsY` yields `USURY`
 * 1932: `LYRIC=..... SHAFT=..... UNDUE=....E EVOKE=ev..E` yields `PEEVE`
+* 1933: `SHIED=SH... SHOUT=SH... SHARP=SHA.. SHALL=SHA.. SHAKY=SHAk. SHANK=SHA.K` yields `SHACK`

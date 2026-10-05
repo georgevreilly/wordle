@@ -1336,3 +1336,4 @@ or an irregular past tense.
 * 1932: `LYRIC=..... SHAFT=..... UNDUE=....E EVOKE=ev..E` yields `PEEVE`
 * 1933: `SHIED=SH... SHOUT=SH... SHARP=SHA.. SHALL=SHA.. SHAKY=SHAk. SHANK=SHA.K` yields `SHACK`
 * 1934: `BAYOU=.a.o. MODAL=MO.a.` *includes* `MOCHA`
+* 1935: `BLEST=.l... LOAMY=l..mY` *includes* `DIMLY`

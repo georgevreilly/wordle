@@ -1337,3 +1337,4 @@ or an irregular past tense.
 * 1933: `SHIED=SH... SHOUT=SH... SHARP=SHA.. SHALL=SHA.. SHAKY=SHAk. SHANK=SHA.K` yields `SHACK`
 * 1934: `BAYOU=.a.o. MODAL=MO.a.` *includes* `MOCHA`
 * 1935: `BLEST=.l... LOAMY=l..mY` *includes* `DIMLY`
+* 1936: `BEGOT=.e.o. LOVER=.over DROVE=.ROVE` yields `PROVE`

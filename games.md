@@ -1338,3 +1338,4 @@ or an irregular past tense.
 * 1934: `BAYOU=.a.o. MODAL=MO.a.` *includes* `MOCHA`
 * 1935: `BLEST=.l... LOAMY=l..mY` *includes* `DIMLY`
 * 1936: `BEGOT=.e.o. LOVER=.over DROVE=.ROVE` yields `PROVE`
+* 1937: `ARGUE=.r..e MINER=...Er CREEP=.r.E. RODEO=r..E.` *includes* `STREW`

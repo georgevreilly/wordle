@@ -1,7 +1,7 @@
 #!/bin/sh
-shuf answers.txt |
+WORDLIST="${1:-answers.txt}"
+shuf "$WORDLIST" |
 python3 -c 'import sys
-l = [(w.strip(), len(set(w.strip()))) for w in sys.stdin]
-l = [w for w, c in l if c == 5]
+l = [w.strip() for w in sys.stdin if len(set(w.strip())) == 5]
 print("\n".join(l))' |
 head -30

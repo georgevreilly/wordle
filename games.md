@@ -1340,3 +1340,4 @@ or an irregular past tense.
 * 1936: `BEGOT=.e.o. LOVER=.over DROVE=.ROVE` yields `PROVE`
 * 1937: `ARGUE=.r..e MINER=...Er CREEP=.r.E. RODEO=r..E.` *includes* `STREW`
 * 1938: `GRIMY=.r.m. MANOR=MA.OR MAYOR=MA.OR` yields `MAJOR`
+* 1939: `BEGUN=B..u. BUDDY=BU..Y BURLY=BU..Y BUSHY=BU..Y` *includes* `BUMPY`

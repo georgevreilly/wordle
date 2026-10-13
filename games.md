@@ -1344,3 +1344,4 @@ or an irregular past tense.
 * 1940: `HEIST=..... BRUNG=..un. LUNCH=.unc.` yields `UNCAP`
 * 1941: `TAKEN=...E. MOREL=.O.EL HOVEL=.O.EL` *includes* `YODEL`
 * 1942: `LITHE=.I..e DIVER=dI.ER` *includes* `WIDER`
+* 1943: `TAUPE=...p. PLONK=P.... PIGGY=P...y` yields `PSYCH`

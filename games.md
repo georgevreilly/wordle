@@ -1345,3 +1345,4 @@ or an irregular past tense.
 * 1941: `TAKEN=...E. MOREL=.O.EL HOVEL=.O.EL` *includes* `YODEL`
 * 1942: `LITHE=.I..e DIVER=dI.ER` *includes* `WIDER`
 * 1943: `TAUPE=...p. PLONK=P.... PIGGY=P...y` yields `PSYCH`
+* 1944: `UNIFY=un... GRUNT=..un. BOSUN=...un` *includes* `DUNCE`

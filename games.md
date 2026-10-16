@@ -1347,3 +1347,4 @@ or an irregular past tense.
 * 1943: `TAUPE=...p. PLONK=P.... PIGGY=P...y` yields `PSYCH`
 * 1944: `UNIFY=un... GRUNT=..un. BOSUN=...un` *includes* `DUNCE`
 * 1945: `FETID=....d DOUGH=d...h` *includes* `SHADY`
+* 1946: `SNARK=..a.. VALID=.A... CAGEY=.Age. GAUGE=GA..E` yields `GAFFE`

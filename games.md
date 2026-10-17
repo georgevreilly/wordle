@@ -1348,3 +1348,4 @@ or an irregular past tense.
 * 1944: `UNIFY=un... GRUNT=..un. BOSUN=...un` *includes* `DUNCE`
 * 1945: `FETID=....d DOUGH=d...h` *includes* `SHADY`
 * 1946: `SNARK=..a.. VALID=.A... CAGEY=.Age. GAUGE=GA..E` yields `GAFFE`
+* 1947: `SATIN=.a..N CLEAN=...aN ARGON=Ar.oN` yields `ADORN`

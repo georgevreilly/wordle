@@ -1350,3 +1350,4 @@ or an irregular past tense.
 * 1946: `SNARK=..a.. VALID=.A... CAGEY=.Age. GAUGE=GA..E` yields `GAFFE`
 * 1947: `SATIN=.a..N CLEAN=...aN ARGON=Ar.oN` yields `ADORN`
 * 1948: `HAUNT=...Nt TWINE=t.IN.` *includes* `STINK`
+* 1949: `GLADE=....e SPENT=s.E.T QUEST=..EST CHEST=..EST` yields `WREST`

@@ -1352,3 +1352,4 @@ or an irregular past tense.
 * 1948: `HAUNT=...Nt TWINE=t.IN.` *includes* `STINK`
 * 1949: `GLADE=....e SPENT=s.E.T QUEST=..EST CHEST=..EST` yields `WREST`
 * 1950: `DURST=..... FLAME=....e HONEY=..NeY` yields `PENNY`
+* 1951: `BUILD=..... GRANT=.r..T SPORT=s..rT CREST=.resT` yields `RESET`

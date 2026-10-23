@@ -1354,3 +1354,4 @@ or an irregular past tense.
 * 1950: `DURST=..... FLAME=....e HONEY=..NeY` yields `PENNY`
 * 1951: `BUILD=..... GRANT=.r..T SPORT=s..rT CREST=.resT` yields `RESET`
 * 1952: `TILDE=Til.. TRAIL=TR.iL` yields `TRILL`
+* 1953: `POACH=.O..h HOTEL=HO.El` yields `HOLEY`

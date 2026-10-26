@@ -1356,3 +1356,4 @@ or an irregular past tense.
 * 1952: `TILDE=Til.. TRAIL=TR.iL` yields `TRILL`
 * 1953: `POACH=.O..h HOTEL=HO.El` yields `HOLEY`
 * 1954: `LADEN=..de. CRUDE=.R.de` yields `DRESS`
+* 1955: `MITER=...e. WHALE=....e EBONY=e...Y SEEDY=.EE.Y` yields `GEEKY`

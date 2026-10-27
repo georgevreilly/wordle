@@ -1357,3 +1357,4 @@ or an irregular past tense.
 * 1953: `POACH=.O..h HOTEL=HO.El` yields `HOLEY`
 * 1954: `LADEN=..de. CRUDE=.R.de` yields `DRESS`
 * 1955: `MITER=...e. WHALE=....e EBONY=e...Y SEEDY=.EE.Y` yields `GEEKY`
+* 1956: `FICUS=.I... DINER=.IN.. PINKY=.IN.. NINTH=.IN.. MINIM=.IN.. LINGO=.INGO` yields `BINGO`

@@ -1360,3 +1360,4 @@ or an irregular past tense.
 * 1956: `FICUS=.I... DINER=.IN.. PINKY=.IN.. NINTH=.IN.. MINIM=.IN.. LINGO=.INGO` yields `BINGO`
 * 1957: `ARGOT=.Rg.T GRIFT=GRI.T` yields `GRIST`
 * 1958: `SPILT=....t THROW=t.rO.` *includes* `MOTOR`
+* 1959: `GLYPH=.L... SLANT=SL... SLICK=SLI..` *includes* `SLIDE`

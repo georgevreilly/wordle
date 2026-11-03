@@ -1364,3 +1364,4 @@ or an irregular past tense.
 * 1960: `PRUDE=..... MISTY=....y KAYAK=.Ay..` yields `YAHOO`
 * 1961: `ALERT=..er. DIVER=.IvER` yields `VIPER`
 * 1962: `LITHE=..t.. BOAST=.o.sT SPORT=S.O.T SCOUT=SCO.T` yields `SCOOT`
+* 1963: `TRAMP=....p SPUNK=.pU..` *includes* `POUCH`

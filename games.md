@@ -1366,3 +1366,4 @@ or an irregular past tense.
 * 1962: `LITHE=..t.. BOAST=.o.sT SPORT=S.O.T SCOUT=SCO.T` yields `SCOOT`
 * 1963: `TRAMP=....p SPUNK=.pU..` *includes* `POUCH`
 * 1964: `BRICK=..... SHOUT=...ut TUMMY=tU..Y` *includes* `NUTTY`
+* 1965: `WAVES=.A... LANKY=.A... RADIO=rA...` *includes* `PARCH`

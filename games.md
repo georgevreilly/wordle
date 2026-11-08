@@ -1369,3 +1369,4 @@ or an irregular past tense.
 * 1965: `WAVES=.A... LANKY=.A... RADIO=rA...` *includes* `PARCH`
 * 1966: `EDICT=ed.C. DEUCE=De.C.` yields `DRECK`
 * 1967: `BOAST=..A.t CRATE=.RATE GRATE=.RATE IRATE=.RATE` yields `PRATE`
+* 1968: `BOARD=...r. GRIPE=.ri.. LYRIC=..Ri. MIRTH=.IRt.` yields `FIRST`

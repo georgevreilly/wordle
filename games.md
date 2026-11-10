@@ -1371,3 +1371,4 @@ or an irregular past tense.
 * 1967: `BOAST=..A.t CRATE=.RATE GRATE=.RATE IRATE=.RATE` yields `PRATE`
 * 1968: `BOARD=...r. GRIPE=.ri.. LYRIC=..Ri. MIRTH=.IRt.` yields `FIRST`
 * 1969: `PITHY=....Y GAUDY=.a..Y ARRAY=a...Y SCALY=..AlY LEAKY=L.A.Y` yields `LOAMY`
+* 1970: `GONAD=..... ETHIC=et..c CREST=cRe.t` yields `TRUCE`

@@ -1373,3 +1373,4 @@ or an irregular past tense.
 * 1969: `PITHY=....Y GAUDY=.a..Y ARRAY=a...Y SCALY=..AlY LEAKY=L.A.Y` yields `LOAMY`
 * 1970: `GONAD=..... ETHIC=et..c CREST=cRe.t` yields `TRUCE`
 * 1971: `DELTA=.el.. NOVEL=...el CLERK=.LE.. SLEEP=sLE.. FLESH=.LES.` yields `BLESS`
+* 1972: `THINE=t.... CLASP=..a.. ARGOT=ar..T QUART=..arT` yields `KARAT`

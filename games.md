@@ -1374,3 +1374,4 @@ or an irregular past tense.
 * 1970: `GONAD=..... ETHIC=et..c CREST=cRe.t` yields `TRUCE`
 * 1971: `DELTA=.el.. NOVEL=...el CLERK=.LE.. SLEEP=sLE.. FLESH=.LES.` yields `BLESS`
 * 1972: `THINE=t.... CLASP=..a.. ARGOT=ar..T QUART=..arT` yields `KARAT`
+* 1973: `CHIDE=..i.E INNER=i..e. AISLE=.i..E EERIE=...IE` yields `MOXIE`

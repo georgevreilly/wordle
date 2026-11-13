@@ -60,7 +60,7 @@ or an irregular past tense.
 * 656: `CLASP=.lA.. LEANT=LEA..` *includes* `LEAFY`
 * 657: `SPLIT=s.l.. BRACE=...c. CLOGS=clo.S LOCKS=LOC.S` yields `LOCUS`
 * 658: `MOURN=..... SCAPE=....E GLIDE=gl.dE` yields `LEDGE`
-* 659: `ANGRY=aN... ENACT=.NA..` yields `SNAFU`
+* 659: `ANGRY=aN... ENACT=.NA..` *includes* `SNAFU`
 * 660: `GLARE=...re STINK=...n. NERVE=ner.. BONER=..nER` yields `UNDER`
 * 661: `GLARE=.lA.. STALK=..AL.` yields `QUALM`
 * 662: `SURLY=..R.. CORED=.OR..` *includes* `BORAX`
@@ -439,7 +439,7 @@ or an irregular past tense.
 * 1035: `WAGON=.A... BATCH=.A... FAIRY=.AIr.` yields `RAISE`
 * 1036: `BOARD=....D FIELD=.i.lD LIPID=L..ID` yields `LUCID`
 * 1037: `READY=....Y` *includes* `JOLLY`
-* 1038: `EARTH=eAr.. RAMEN=rA.E. CAPER=.A.ER WAGER=.A.ER BALER=.AlER` yields `LASER`
+* 1038: `EARTH=eAr.. RAMEN=rA.E. CAPER=.A.ER WAGER=.A.ER BALER=.AlER` *includes* `LASER`
 * 1039: `CLOUD=..o.. OTHER=o..ER MOWER=.O.ER GONER=.O.ER POSER=.O.ER` *includes* `ROVER`
 * 1040: `TRACK=tr... BLURT=...RT SPORT=..oRT` yields `OVERT`
 * 1041: `CAUSE=..... FLING=..in. WINDY=.in.. INBOX=IN.o.` yields `INTRO`
@@ -736,7 +736,7 @@ or an irregular past tense.
 * 1332: `DECAL=d.... UNDID=..d.. MOODY=.OODY WOODY=.OODY` yields `GOODY`
 * 1333: `FELON=.e.o. OTHER=o..er GROVE=.rO.E ADORE=..ORE SPORE=S.ORE` *includes* `SCORE`
 * 1334: `DRAIN=draI.` *includes* `RAPID`
-* 1335: `STUDY=..u.. GROUP=.r.u. CURVE=.Ur.. QUILL=.U...` yields `RUMBA`
+* 1335: `STUDY=..u.. GROUP=.r.u. CURVE=.Ur.. QUILL=.U...` *includes* `RUMBA`
 * 1336: `FAVOR=..... STILE=.ti.. UNDID=..di.` *includes* `DITTY`
 * 1337: `ITCHY=..c.. BRACE=.R.c. CROWD=CRO.. CROUP=CRO..` *includes* `CROOK`
 * 1338: `ULTRA=u...a AMUSE=a.usE` yields `SUAVE`
@@ -1374,4 +1374,4 @@ or an irregular past tense.
 * 1970: `GONAD=..... ETHIC=et..c CREST=cRe.t` yields `TRUCE`
 * 1971: `DELTA=.el.. NOVEL=...el CLERK=.LE.. SLEEP=sLE.. FLESH=.LES.` yields `BLESS`
 * 1972: `THINE=t.... CLASP=..a.. ARGOT=ar..T QUART=..arT` yields `KARAT`
-* 1973: `CHIDE=..i.E INNER=i..e. AISLE=.i..E EERIE=...IE` yields `MOXIE`
+* 1973: `CHIDE=..i.E INNER=i..e. AISLE=.i..E EERIE=...IE` *includes* `MOXIE`

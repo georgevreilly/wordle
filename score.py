@@ -80,9 +80,9 @@ def check_scores(first_game: int, last_game: int) -> list:
         if "yields" == gr.verb:
             # I previously decided that any other possibilities would never be used
             assert len(eligible) >= 1, f"{gr.game_id} yields: {eligible}"
-            assert len(plausible) == 1 or gr.answer in EXCEPTIONAL_ANSWERS, (
-                f"{gr.answer} == {plausible!r}"
-            )
+            if gr.answer in EXCEPTIONAL_ANSWERS:
+                plausible.add(gr.answer)
+            assert 1 == len(plausible), f"{gr.answer} == {plausible!r}"
         elif "includes" == gr.verb:
             assert len(eligible) > 1, f"{gr.game_id} includes: {eligible}"
             assert len(plausible) > 1 or gr.answer in EXCEPTIONAL_ANSWERS, (

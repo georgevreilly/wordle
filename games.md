@@ -1375,3 +1375,4 @@ or an irregular past tense.
 * 1971: `DELTA=.el.. NOVEL=...el CLERK=.LE.. SLEEP=sLE.. FLESH=.LES.` yields `BLESS`
 * 1972: `THINE=t.... CLASP=..a.. ARGOT=ar..T QUART=..arT` yields `KARAT`
 * 1973: `CHIDE=..i.E INNER=i..e. AISLE=.i..E EERIE=...IE` *includes* `MOXIE`
+* 1974: `EMPTY=....Y ANGRY=an.rY` *includes* `RANDY`

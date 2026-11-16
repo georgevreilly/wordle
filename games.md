@@ -1377,3 +1377,4 @@ or an irregular past tense.
 * 1973: `CHIDE=..i.E INNER=i..e. AISLE=.i..E EERIE=...IE` *includes* `MOXIE`
 * 1974: `EMPTY=....Y ANGRY=an.rY` *includes* `RANDY`
 * 1975: `ANKLE=aNk.. KNACK=.NA.K` yields `SNARK`
+* 1976: `GUILD=...ld LADEN=lad.. MODAL=..daL` yields `DRAWL`

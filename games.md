@@ -1378,3 +1378,4 @@ or an irregular past tense.
 * 1974: `EMPTY=....Y ANGRY=an.rY` *includes* `RANDY`
 * 1975: `ANKLE=aNk.. KNACK=.NA.K` yields `SNARK`
 * 1976: `GUILD=...ld LADEN=lad.. MODAL=..daL` yields `DRAWL`
+* 1977: `SHIRK=s..r. CREST=.r.ST WORST=.OrST ROUST=RO.ST` *includes* `ROAST`

@@ -1382,3 +1382,4 @@ or an irregular past tense.
 * 1978: `REHAB=r...b BROIL=Br..l BURLY=Burl.` yields `BLURT`
 * 1979: `SYNOD=...o. FLOCK=.LOc.` *includes* `CLOUT`
 * 1980: `FRAIL=.Ra.. ARGUE=AR..E` yields `AROSE`
+* 1981: `BOYAR=..... GLIDE=....e SEVEN=Se..n SPENT=S.ENT SCENT=S.ENT` yields `STENT`

@@ -1383,3 +1383,4 @@ or an irregular past tense.
 * 1979: `SYNOD=...o. FLOCK=.LOc.` *includes* `CLOUT`
 * 1980: `FRAIL=.Ra.. ARGUE=AR..E` yields `AROSE`
 * 1981: `BOYAR=..... GLIDE=....e SEVEN=Se..n SPENT=S.ENT SCENT=S.ENT` yields `STENT`
+* 1982: `GUSTO=.u... UNDER=Unde.` yields `UPEND`

@@ -1386,3 +1386,4 @@ or an irregular past tense.
 * 1982: `GUSTO=.u... UNDER=Unde.` yields `UPEND`
 * 1983: `PYLON=..L.. VALID=..Li. FILER=FIL.. FILCH=FIL.H` yields `FILTH`
 * 1984: `WHINE=...ne BENDY=.en.. MAVEN=...En` *includes* `SNEER`
+* 1985: `KNIFE=..I.. CRIMP=c.I.p` yields `SPICY`

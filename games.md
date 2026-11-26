@@ -1387,3 +1387,4 @@ or an irregular past tense.
 * 1983: `PYLON=..L.. VALID=..Li. FILER=FIL.. FILCH=FIL.H` yields `FILTH`
 * 1984: `WHINE=...ne BENDY=.en.. MAVEN=...En` *includes* `SNEER`
 * 1985: `KNIFE=..I.. CRIMP=c.I.p` yields `SPICY`
+* 1986: `CRONY=...n. NAIVE=n...E UNDUE=.n..E SENSE=.ENSE` yields `TENSE`

@@ -1388,3 +1388,4 @@ or an irregular past tense.
 * 1984: `WHINE=...ne BENDY=.en.. MAVEN=...En` *includes* `SNEER`
 * 1985: `KNIFE=..I.. CRIMP=c.I.p` yields `SPICY`
 * 1986: `CRONY=...n. NAIVE=n...E UNDUE=.n..E SENSE=.ENSE` yields `TENSE`
+* 1987: `THANK=.Ha.. AHEAD=.HEA. CHEAP=.HEA. SHEAR=SHEA.` yields `SHEAF`

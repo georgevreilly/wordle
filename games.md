@@ -1389,3 +1389,4 @@ or an irregular past tense.
 * 1985: `KNIFE=..I.. CRIMP=c.I.p` yields `SPICY`
 * 1986: `CRONY=...n. NAIVE=n...E UNDUE=.n..E SENSE=.ENSE` yields `TENSE`
 * 1987: `THANK=.Ha.. AHEAD=.HEA. CHEAP=.HEA. SHEAR=SHEA.` yields `SHEAF`
+* 1988: `PLANE=..... SHORT=..O.. MOODY=.OO.Y BOOZY=.OOZY` yields `WOOZY`
